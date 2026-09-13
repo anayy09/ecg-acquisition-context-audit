@@ -39,7 +39,7 @@ spreads are in Supplementary, Table S7.
 
 > Sample: ICU admission, 24h: 6,407 ECGs, 3,626 patients, prevalence 0.1260; Mortality, 28d: 6,428 ECGs, 3,636 patients, prevalence 0.0422; Mortality, 365d: 6,428 ECGs, 3,636 patients, prevalence 0.1425.
 
-## Table 9. Every pre-declared quantitative target, and what it measured
+## Table 7. Every pre-declared quantitative target, and what it measured
 
 Each target was fixed in a committed comparison file before the
 run that tests it
@@ -52,11 +52,11 @@ existed.
 | Waveform gain retained with acquisition context held fixed | Mortality, 365d | at most 0.50 | 0.9313 [0.6631, 1.1583] | FAILED |
 | Horizon-ladder trend, four never-scored horizons | mortality 1, 7, 90, 180 d | negative, interval excluding zero | -0.8000 [-1.0000, +0.2000] | NOT SUPPORTED |
 
-> The recovery ratio clears 0.70 at the two labels that were not the pre-declared endpoint (Table 4); both are reported as exploratory.
+> The recovery ratio clears 0.70 at the two labels that were not the pre-declared endpoint (Supplementary, Table S9); both are reported as exploratory.
 
-> The retained-gain target is missed at all three labels and under both readings of its ambiguous formula (Table 6), not only at the endpoint shown here. Under the second reading the intervals at 28 days and at one year contain the target, so at those two the evidence is inconclusive rather than contrary; the outcome column reports the declared rule, which is read on the point estimate.
+> The retained-gain target is missed at all three labels and under both readings of its ambiguous formula (Table 5), not only at the endpoint shown here. Under the second reading the intervals at 28 days and at one year contain the target, so at those two the evidence is inconclusive rather than contrary; the outcome column reports the declared rule, which is read on the point estimate.
 
-## Table 4. Recovery ratio against the waveform arm
+## Table S9. Recovery ratio against the waveform arm
 
 `(AUROC_arm - 0.5) / (AUROC_R6 - 0.5)`, with the interval taken on the
 ratio itself: patients are resampled once and both AUROCs are
@@ -104,7 +104,7 @@ alone and the table says which.
 
 > No denominator brings the ratio to its registered target. The declared one is the most favourable of the four: under it the interval spans 0.70, while under the version-of-record macro and under our own 15-target macro the whole interval falls below the target. The preprint macro gives a slightly larger ratio than the declared denominator rather than a smaller one, which is the opposite of what this paper asserted before the cells existed.
 
-## Table S9. The reproduced cohort against the published counts
+## Table S10. The reproduced cohort against the published counts
 
 Every count the release states, beside ours, with the difference.
 Patients and stays match to the unit and the record count falls 38
@@ -149,7 +149,7 @@ different denominators and this table gives both.
 
 > Four stays carry two records both numbered 0, because their acquisition times tie and the ordering does not break ties. The first ECG of those stays is therefore ambiguous, and the first-record restriction covers four fewer distinct stays than it has records.
 
-## Table S10. The waveform reproduction under both scoring protocols
+## Table S11. The waveform reproduction under both scoring protocols
 
 EXPLORATORY, and not registered. The audited benchmark scores
 validation and test on the first record of each visit; this audit
@@ -171,7 +171,7 @@ smaller than the spread of the five seeds is not a difference.
 
 > The restriction keeps 6,080 records over 6,076 stays: four stays carry two records whose acquisition times tie, and both are kept rather than resolved by a tie-break nobody declared.
 
-## Table S12. The acquisition-context block against triage acuity alone
+## Table S13. The acquisition-context block against triage acuity alone
 
 EXPLORATORY, and not registered. Triage acuity is a clinician's
 severity judgement recorded before the ECG, and it is one of the
@@ -209,7 +209,7 @@ same cells Table 4 divides by.
 
 > This arm fits one ordinal feature, so every seed produces the same model and its seed-to-seed spread is exactly zero. The noise floor this paper judges differences against therefore does not exist for it, and the interval carries the uncertainty instead.
 
-## Table S13. The acquisition-context arm without its two emptied features
+## Table S14. The acquisition-context arm without its two emptied features
 
 EXPLORATORY, and not registered. MIMIC-IV shifts every date by a
 random whole-day offset per patient, so the recorded day of week
@@ -235,7 +235,7 @@ same records and the same resampled patients.
 
 > The two features are worth nothing measurable at any label: every paired difference is smaller than the seed-to-seed spread of the arm itself and every interval contains zero. The declared arm is reported as nine features because nine were declared, and it reads as seven.
 
-## Table S14. The recovery ratio under the waveform arm's own selection procedure
+## Table S15. The recovery ratio under the waveform arm's own selection procedure
 
 EXPLORATORY, and not registered. Every recovery ratio in this
 paper divides a tabular arm tuned per target over fifty trials by
@@ -259,7 +259,7 @@ same five seeds; only the selection changes.
 
 > Matching the waveform arm's selection procedure moves every recovery ratio by under a hundredth, slightly upward, which is within what the seeds alone move these arms and leaves the registered target missed as before. The tuning inequality is therefore worth almost nothing on the side of it that can be measured here. It does not follow that the whole inequality is worth little: what cannot be measured here is what a per-target waveform arm would reach, and that is the side the Limitations says is open.
 
-## Table S15. Calibration intercept, slope and Brier score
+## Table S16. Calibration intercept, slope and Brier score
 
 Three quantities the expected calibration error cannot give.
 The INTERCEPT is calibration-in-the-large, fitted with the slope
@@ -308,7 +308,7 @@ quantity itself.
 
 > The prevalence arm predicts one constant, so its probabilities have no spread and a calibration slope does not exist for it. It is reported as undefined rather than as whatever a singular fit stops on.
 
-## Table S11. The declared matching against a sensitivity without the weekday
+## Table S12. The declared matching against a sensitivity without the weekday
 
 EXPLORATORY, and it moves no reported result. The declared
 specification strata on four coarsened variables and row 8 is
@@ -355,17 +355,12 @@ rather than which records were kept.
 
 > The effective patient count, not the ECG count, bounds every claim in this panel. Almost every patient survives the restriction and most pairs do not, which is why these intervals are two to three times wider than those of Table 3 on the same records.
 
-## Table 6. Waveform gain retained: the declared secondary quantity
+## Table 5. Waveform gain retained: the declared secondary quantity
 
 `(R6 - R2)` within stratum over `(R6 - R2)` on the same rows without
 the pair restriction. The declared formula does not say which `R2` the
-numerator uses, so both readings are reported and neither was chosen
-after seeing them; they agree on the verdict.
-The FIRST column is the reading quoted in the abstract and the
-conclusion, which takes the within-stratum `R2` in the numerator.
-It is named here rather than left to be inferred, because a table
-that reports two readings of one quantity and quotes one of them
-elsewhere owes a reader the mapping.
+numerator takes, so both are given; the first is the reading quoted
+in the abstract and the conclusion.
 
 | Label | Retained, quoted reading [95% CI] | Meets target | Retained, unstratified R2 [95% CI] | Meets target | Declared target |
 |---|---|---|---|---|---|
@@ -469,7 +464,7 @@ here rather than contradicted.
 | `R3_acqctx_pre - R2_demo` | Mortality, 365d | 0.177 | 0.354 | All pairs | 15 |
 | `R4_demo_acq - R6_waveform` | ICU admission, 24h | 0.4368 | 0.4368 | All pairs | 15 |
 
-> This family is never pooled with the horizon ladder (Table 5), which carries its own Holm correction at its own declared size of 6.
+> This family is never pooled with the horizon ladder (Table 4), which carries its own Holm correction at its own declared size of 6.
 
 ## Table S5. Every declared contrast, as a paired difference
 
@@ -504,7 +499,7 @@ as no difference.
 
 > The three row 8 rows compare a within-stratum concordance against a plain AUROC on the same records, so they measure what the pair restriction costs rather than a difference between two models.
 
-## Table 5. The horizon ladder: a separate family, per-horizon differences
+## Table 4. The horizon ladder: a separate family, per-horizon differences
 
 `R3_acqctx_pre` minus `R2_demo` at each mortality horizon. The primary
 test covers only the four horizons no arm had been scored on. The two
@@ -564,20 +559,10 @@ cannot serve them all.
 
 ## Table 2. The waveform reproduction, and the only crop-level numbers here
 
-The published macro is computed over crop-level rows, four per record
-, so the reproduction gap is computed against that protocol. Two
-published versions of the audited benchmark exist and they report
-different figures for this arm, so the gap is reported against both.
-The version of record is the primary comparison; the preprint is
-the figure this reproduction was judged against while it was the
-only one available.
-The record-level macro is the mean of the five per-seed macros and is
-reported beside it; the benchmark publishes nothing at that unit, so it
-has no gap. Neither number may enter Table 3's columns and
-neither is comparable to any tabular arm. The record-level macro
-here is a mean of per-seed macros, while Table 3's row 6 is one
-AUROC on the seed-pooled score, so the two differ slightly by
-construction.
+Unweighted macro AUROC over the 15 deterioration targets, at crop
+level, which is the unit the benchmark publishes. Gaps are against
+both published versions. The record-level macro beside it is the
+mean of the five per-seed macros and has no published counterpart.
 
 | Arm | Unit | Published version | Local macro | Published [95% CI] | Gap | Inside |
 |---|---|---|---|---|---|---|
@@ -590,11 +575,9 @@ construction.
 
 > The published interval is wide because six of the fifteen deterioration targets carry fewer than fifty positives in the test fold and the unweighted macro gives each the same weight as targets carrying over eight hundred. A pass is evidence the reproduction is not badly wrong, not that it is precisely right.
 
-> `R7_waveform_demo_acq` is shown against the same published figures only for scale. It reproduces nothing, so falling outside is expected.
+> `R7_waveform_demo_acq` is shown against the same published figures for scale only; it reproduces nothing.
 
-> The local macro sits inside the published interval under both versions and on opposite sides of the published point estimate: below the version of record and above the preprint. No claim in this paper may rest on the direction of that gap.
-
-## Table 7. Calibration: expected calibration error under both declared schemes
+## Table S17. Calibration: expected calibration error under both declared schemes
 
 ECE reads the probability scale; every other table here reads only the
 ranking, and the two can disagree completely. The reference is not zero:
@@ -637,7 +620,7 @@ band under both schemes, because the choice of binning is a choice.
 
 > Both waveform arms over-predict at every label, by a factor running from about 1.8 to about 3.7 of the observed rate. The largest factor is at 28 days, where the observed rate is lowest; both columns it is computed from are in this table. They were fitted under focal BCE and their score is a mean over four crops and then over five seeds, and each of those moves the probability scale.
 
-## Table 8. Net benefit at the pre-declared threshold
+## Table 6. Net benefit at the pre-declared threshold
 
 Threshold 0.10, fixed from the clinical framing and recorded
 before any curve was computed, and quoted at

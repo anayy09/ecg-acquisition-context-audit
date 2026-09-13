@@ -48,8 +48,8 @@ Waveform gain retained with acquisition context held fixed & Mortality, 365d & a
 Horizon-ladder trend, four never-scored horizons & mortality 1, 7, 90, 180 d & negative, interval excluding zero & -0.8000 [-1.0000, +0.2000] & NOT SUPPORTED \\
 \bottomrule
 \end{tabular}
-\par\footnotesize The recovery ratio clears 0.70 at the two labels that were not the pre-declared endpoint (Table 4); both are reported as exploratory.
-\par\footnotesize The retained-gain target is missed at all three labels and under both readings of its ambiguous formula (Table 6), not only at the endpoint shown here. Under the second reading the intervals at 28 days and at one year contain the target, so at those two the evidence is inconclusive rather than contrary; the outcome column reports the declared rule, which is read on the point estimate.
+\par\footnotesize The recovery ratio clears 0.70 at the two labels that were not the pre-declared endpoint (Supplementary, Table S9); both are reported as exploratory.
+\par\footnotesize The retained-gain target is missed at all three labels and under both readings of its ambiguous formula (Table 5), not only at the endpoint shown here. Under the second reading the intervals at 28 days and at one year contain the target, so at those two the evidence is inconclusive rather than contrary; the outcome column reports the declared rule, which is read on the point estimate.
 \end{table}
 
 % PANEL T3
@@ -326,7 +326,7 @@ Arm & Label & Within stratum [95\% CI] & Plain, same rows & Effective patients &
 \begin{table}[t]
 \centering
 \small
-\caption{Waveform gain retained: the declared secondary quantity. (R6 - R2) within stratum over (R6 - R2) on the same rows without the pair restriction. The declared formula does not say which R2 the numerator uses, so both readings are reported and neither was chosen after seeing them; they agree on the verdict. The FIRST column is the reading quoted in the abstract and the conclusion, which takes the within-stratum R2 in the numerator. It is named here rather than left to be inferred, because a table that reports two readings of one quantity and quotes one of them elsewhere owes a reader the mapping.}
+\caption{Waveform gain retained: the declared secondary quantity. (R6 - R2) within stratum over (R6 - R2) on the same rows without the pair restriction. The declared formula does not say which R2 the numerator takes, so both are given; the first is the reading quoted in the abstract and the conclusion.}
 \label{tab:retained}
 \begin{tabular}{llllll}
 \toprule
@@ -433,7 +433,7 @@ Contrast & Label & Raw p & Holm p, final & Pairs & Family size m \\
 \texttt{R4\_demo\_acq - R6\_waveform} & ICU admission, 24h & 0.4368 & 0.4368 & All pairs & 15 \\
 \bottomrule
 \end{tabular}
-\par\footnotesize This family is never pooled with the horizon ladder (Table 5), which carries its own Holm correction at its own declared size of 6.
+\par\footnotesize This family is never pooled with the horizon ladder (Table 4), which carries its own Holm correction at its own declared size of 6.
 \end{table}
 
 % PANEL T5b
@@ -534,7 +534,7 @@ Arm & ICU admission, 24h & Mortality, 28d & Mortality, 365d \\
 \begin{table}[t]
 \centering
 \small
-\caption{The waveform reproduction, and the only crop-level numbers here. The published macro is computed over crop-level rows, four per record , so the reproduction gap is computed against that protocol. Two published versions of the audited benchmark exist and they report different figures for this arm, so the gap is reported against both. The version of record is the primary comparison; the preprint is the figure this reproduction was judged against while it was the only one available. The record-level macro is the mean of the five per-seed macros and is reported beside it; the benchmark publishes nothing at that unit, so it has no gap. Neither number may enter Table 3's columns and neither is comparable to any tabular arm. The record-level macro here is a mean of per-seed macros, while Table 3's row 6 is one AUROC on the seed-pooled score, so the two differ slightly by construction.}
+\caption{The waveform reproduction, and the only crop-level numbers here. Unweighted macro AUROC over the 15 deterioration targets, at crop level, which is the unit the benchmark publishes. Gaps are against both published versions. The record-level macro beside it is the mean of the five per-seed macros and has no published counterpart.}
 \label{tab:reproduction}
 \begin{tabular}{lllllll}
 \toprule
@@ -549,8 +549,7 @@ Arm & Unit & Published version & Local macro & Published [95\% CI] & Gap & Insid
 \bottomrule
 \end{tabular}
 \par\footnotesize The published interval is wide because six of the fifteen deterioration targets carry fewer than fifty positives in the test fold and the unweighted macro gives each the same weight as targets carrying over eight hundred. A pass is evidence the reproduction is not badly wrong, not that it is precisely right.
-\par\footnotesize R7\_waveform\_demo\_acq is shown against the same published figures only for scale. It reproduces nothing, so falling outside is expected.
-\par\footnotesize The local macro sits inside the published interval under both versions and on opposite sides of the published point estimate: below the version of record and above the preprint. No claim in this paper may rest on the direction of that gap.
+\par\footnotesize R7\_waveform\_demo\_acq is shown against the same published figures for scale only; it reproduces nothing.
 \end{table}
 
 % PANEL T9

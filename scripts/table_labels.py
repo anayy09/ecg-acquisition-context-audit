@@ -16,7 +16,7 @@ supplement, and that sharing was itself the defect. The main text cited Tables
 1, 2, 3, 4b, 4d, 6a, 8, 9 and 10: the gaps are the panels that ship in the
 supplement, and a reader has no way to know that. So the sequence is split.
 The manuscript numbers its own tables 1 to 9 in the order the prose first
-cites them, the supplement numbers its own S1 to S12, and neither can renumber
+cites them, the supplement numbers its own S1 to S17, and neither can renumber
 the other.
 
 That makes the map arbitrary rather than derivable, which is why it is written
@@ -32,14 +32,12 @@ from __future__ import annotations
 #: numbers have to run in.
 MAIN_LABELS = {
     "T4d": "1",     # every declared acquisition-context feature (Methods 2.2)
-    "T8": "2",      # the pre-declared rule 2 reproduction (Results 3.1)
-    "T1": "3",      # the nested input ladder (Results 3.2)
-    "T3": "4",      # recovery ratio against the waveform arm (Results 3.3)
-    "T6a": "5",     # the horizon ladder, per-horizon (Results 3.4)
-    "T4b": "6",     # waveform gain retained under matching (Results 3.5)
-    "T9": "7",      # calibration (Results 3.7)
-    "T10": "8",     # net benefit at the registered threshold (Results 3.8)
-    "T2": "9",      # every pre-declared target and what it measured (Results 3.9)
+    "T8": "2",      # the reproduction against both published versions
+    "T1": "3",      # the nested input ladder
+    "T6a": "4",     # the horizon ladder, per-horizon
+    "T4b": "5",     # waveform gain retained under matching
+    "T10": "6",     # net benefit at the registered threshold
+    "T2": "7",      # every pre-declared target and what it measured
 }
 
 #: Panel id to display label for the supplementary panels. They ship as one
@@ -53,13 +51,15 @@ SUPPLEMENT_LABELS = {
     "T6b": "S6",    # the horizon ladder, trend statistics
     "T7": "S7",     # the noise floor, per arm and label
     "T3b": "S8",    # the recovery ratio under every declared denominator
-    "T0": "S9",     # the cohort reconciled against the published counts
-    "T8b": "S10",   # the reproduction under the published first-record protocol
-    "T4f": "S11",   # the declared matching against the no-weekday sensitivity
-    "T1b": "S12",   # the exploratory triage-acuity comparator
-    "T11": "S13",   # what the two de-identified calendar features are worth
-    "T12": "S14",   # the recovery ratio under the shared selection
-    "T13": "S15",   # calibration intercept, slope and Brier
+    "T3": "S9",     # the full recovery-ratio grid, moved out of the main text
+    "T0": "S10",    # the cohort reconciled against the published counts
+    "T8b": "S11",   # the reproduction under the published first-record protocol
+    "T4f": "S12",   # the declared matching against the no-weekday sensitivity
+    "T1b": "S13",   # the exploratory triage-acuity comparator
+    "T11": "S14",   # what the two de-identified calendar features are worth
+    "T12": "S15",   # the recovery ratio under the shared selection
+    "T13": "S16",   # calibration intercept, slope and Brier
+    "T9": "S17",    # the full calibration grid, moved out of the main text
 }
 
 ID_TO_DISPLAY = {**MAIN_LABELS, **SUPPLEMENT_LABELS}

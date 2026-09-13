@@ -1148,13 +1148,8 @@ def panel_retained(p: Provenance, retained: pd.DataFrame) -> Panel:
         lead=[
             "`(R6 - R2)` within stratum over `(R6 - R2)` on the same rows without",
             "the pair restriction. The declared formula does not say which `R2` the",
-            "numerator uses, so both readings are reported and neither was chosen",
-            "after seeing them; they agree on the verdict.",
-            "The FIRST column is the reading quoted in the abstract and the",
-            "conclusion, which takes the within-stratum `R2` in the numerator.",
-            "It is named here rather than left to be inferred, because a table",
-            "that reports two readings of one quantity and quotes one of them",
-            "elsewhere owes a reader the mapping.",
+            "numerator takes, so both are given; the first is the reading quoted",
+            "in the abstract and the conclusion.",
         ],
         columns=["Label", "Retained, quoted reading [95% CI]", "Meets target",
                  "Retained, unstratified R2 [95% CI]", "Meets target",
@@ -1612,20 +1607,10 @@ def panel_reproduction(p: Provenance, gap: pd.DataFrame, macro: pd.DataFrame) ->
         number="8",
         title="The waveform reproduction, and the only crop-level numbers here",
         lead=[
-            "The published macro is computed over crop-level rows, four per record",
-            ", so the reproduction gap is computed against that protocol. Two",
-            "published versions of the audited benchmark exist and they report",
-            "different figures for this arm, so the gap is reported against both.",
-            "The version of record is the primary comparison; the preprint is",
-            "the figure this reproduction was judged against while it was the",
-            "only one available.",
-            "The record-level macro is the mean of the five per-seed macros and is",
-            "reported beside it; the benchmark publishes nothing at that unit, so it",
-            f"has no gap. Neither number may enter {ref('T1')}'s columns and",
-            "neither is comparable to any tabular arm. The record-level macro",
-            f"here is a mean of per-seed macros, while {ref('T1')}'s row 6 is one",
-            "AUROC on the seed-pooled score, so the two differ slightly by",
-            "construction.",
+            "Unweighted macro AUROC over the 15 deterioration targets, at crop",
+            "level, which is the unit the benchmark publishes. Gaps are against",
+            "both published versions. The record-level macro beside it is the",
+            "mean of the five per-seed macros and has no published counterpart.",
         ],
         columns=["Arm", "Unit", "Published version", "Local macro",
                  "Published [95% CI]", "Gap", "Inside"],
@@ -1638,12 +1623,7 @@ def panel_reproduction(p: Provenance, gap: pd.DataFrame, macro: pd.DataFrame) ->
             "as targets carrying over eight hundred. A pass is evidence the "
             "reproduction is not badly wrong, not that it is precisely right.",
             "`R7_waveform_demo_acq` is shown against the same published figures "
-            "only for scale. It reproduces nothing, so falling outside is "
-            "expected.",
-            "The local macro sits inside the published interval under both "
-            "versions and on opposite sides of the published point estimate: "
-            "below the version of record and above the preprint. No claim in "
-            "this paper may rest on the direction of that gap.",
+            "for scale only; it reproduces nothing.",
         ],
         tex_label="tab:reproduction",
     )
