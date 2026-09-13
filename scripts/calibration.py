@@ -217,3 +217,101 @@ def selftest(n: int = 6000, n_bins: int = 15, seed: int = 0) -> list[str]:
             )
 
     return problems
+
+
+#: Numerical floor for the logit. A pooled probability of exactly 0 or 1 would
+#: make the logit infinite and take the whole fit with it; the ensemble mean
+#: this project scores never reaches either, but a future arm might.
+_LOGIT_EPS = 1e-12
+
+
+def logit(p):
+    """Log odds, with the probability clipped away from 0 and 1."""
+    import numpy as np
+    q = np.clip(np.asarray(p, dtype=float), _LOGIT_EPS, 1.0 - _LOGIT_EPS)
+    return np.log(q / (1.0 - q))
+
+
+def _newton(y, design, offset, start, iterations=40):
+    """Newton steps for a logistic fit with a fixed offset. Small by design."""
+    import numpy as np
+
+    beta = np.array(start, dtype=float)
+    for _ in range(iterations):
+        # Clipped before the exponential. A predicted probability of 1e-12
+        # gives a logit near -27.6, and a slope iterate can carry that past
+        # where exp overflows; the clip changes no finite result and keeps the
+        # run from emitting a warning that looks like a defect.
+        eta = np.clip(design @ beta + offset, -700.0, 700.0)
+        mu = 1.0 / (1.0 + np.exp(-eta))
+        w = np.clip(mu * (1.0 - mu), 1e-10, None)
+        gradient = design.T @ (y - mu)
+        hessian = (design * w[:, None]).T @ design
+        try:
+            step = np.linalg.solve(hessian, gradient)
+        except np.linalg.LinAlgError:
+            break
+        beta = beta + step
+        if np.max(np.abs(step)) < 1e-10:
+            break
+    return beta
+
+
+#: Below this spread in the logit, the predicted probabilities carry no
+#: variation and a slope is not defined: the design matrix is singular and any
+#: number Newton stops on is an artefact of where it stopped. The prevalence arm
+#: is exactly that case, a constant predictor, and the first version of this
+#: returned -14.8 for it on one run and +2.56 on another.
+_MIN_LOGIT_SD = 1e-8
+
+
+def calibration_slope(y, p, start=None):
+    """The coefficient on the logit of the predicted probability.
+
+    1.0 means the predictions are spread correctly. Below 1.0 they are too
+    extreme, which is what an over-confident model looks like.
+
+    `start` warm-starts the Newton iteration. Inside a bootstrap the full-sample
+    fit is within a rounding error of every replicate's, so passing it turns
+    forty steps into three or four and is the difference between this being
+    bootstrappable at the declared resample count and not.
+    """
+    import numpy as np
+
+    y = np.asarray(y, dtype=float)
+    x = logit(p)
+    if float(np.std(x)) < _MIN_LOGIT_SD:
+        return float("nan")
+    design = np.column_stack([np.ones_like(x), x])
+    beta = _newton(y, design, np.zeros_like(x), start or [0.0, 1.0])
+    if not np.all(np.isfinite(beta)):
+        return float("nan")
+    return float(beta[1])
+
+
+def calibration_intercept(y, p, start=None):
+    """Calibration-in-the-large: the fit with the slope held at 1.0.
+
+    0.0 means the average predicted risk matches the observed rate. Below 0.0
+    the model over-predicts. The logit enters as a fixed OFFSET rather than as a
+    covariate, which is what keeps this from being a second slope in disguise.
+    """
+    import numpy as np
+
+    y = np.asarray(y, dtype=float)
+    x = logit(p)
+    beta = _newton(y, np.ones((len(x), 1)), x, start or [0.0])
+    return float(beta[0])
+
+
+def calibration_fit(y, p):
+    """Both, for callers that want the pair. Two fits, so do not use it in a loop."""
+    return calibration_intercept(y, p), calibration_slope(y, p)
+
+
+def brier(y, p):
+    """Mean squared error of the predicted probability. Lower is better."""
+    import numpy as np
+    y = np.asarray(y, dtype=float)
+    p = np.asarray(p, dtype=float)
+    return float(np.mean((p - y) ** 2))

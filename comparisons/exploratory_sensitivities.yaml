@@ -1,0 +1,94 @@
+# EXPLORATORY. This is not a pre-declaration and must never be read as one.
+#
+# The two pre-declared families, acq_context_audit and horizon_ladder, were both
+# committed before the runs they govern. This file was written on 2026-09-13,
+# after every result in the paper existed, because two external reviews raised
+# two objections that the declared arms cannot answer between them.
+#
+# The first is that the arm is described as nine features while two of the nine
+# carry no information: MIMIC-IV shifts every date by a random whole-day offset
+# per patient, so the recorded day of week and month say nothing about local
+# practice. The declared arm keeps them, because the feature set was fixed
+# before that was established and a pre-specified analysis does not drop a
+# feature after seeing results. What they are worth is a separate question and
+# this is where it is answered.
+#
+# The second is that the recovery ratio divides a per-target-tuned tabular arm
+# by a waveform arm selected once across all fifteen targets, so the tuning
+# inequality reaches the ratio and inflates it. Fitting a comparably tuned
+# waveform arm is out of reach here. Refitting the TABULAR side under the
+# waveform arm's own selection procedure is not, and it bounds how much of the
+# ratio the inequality is worth from the side that can be measured.
+#
+# Declared here rather than run untagged for the reasons exploratory_triage
+# gives: run_arm.py refuses a run whose comparison does not declare its arm and
+# label, and that guard should not be bypassed because a family is allowed to
+# grow; and check_provenance.py requires a run's commit to descend from its
+# comparison's first commit, so committing this before the runs puts the
+# ordering in the history.
+#
+# What follows from being exploratory, under acq_context_audit's own
+# exploratory_policy: these arms enter no multiplicity family, are corrected
+# against nothing, are reported in their own panels, and are described as
+# exploratory wherever they appear. Neither may be presented as testing a
+# registered prediction, because neither tests one.
+
+name: exploratory_sensitivities
+declared: 2026-09-13
+declared_by: A6
+status: exploratory
+pre_declared: false
+
+question: >
+  Two, both about the declared acquisition-context arm rather than about the
+  claim. What do the two calendar features contribute, given that
+  de-identification has emptied them? And how much of the recovery ratio is
+  owed to the tabular arms being tuned per target while the waveform arm was
+  selected once across fifteen targets?
+
+multiplicity: >
+  None. This family is corrected against nothing and pooled with nothing. The
+  audit family is fixed at 15 tests and the horizon ladder at 6, and neither
+  grows to admit these.
+
+arms:
+  - id: R10_acqctx_informative
+    inputs: [arrival_to_acquisition_minutes, acquisition_hour_of_day,
+             triage_acuity, ecg_no_within_stay, prior_ecg_exists,
+             days_since_prior_ecg, prior_ed_visit_count]
+    role: exploratory_comparator
+    notes: >
+      The pre-acquisition block without the two calendar features. Named
+      feature by feature rather than as a block, because an arm that takes a
+      subset of a block cannot be expressed as a block without redefining the
+      block the confirmatory arm reads.
+
+  - id: R3s_acqctx_shared
+    inputs: [acq_pre]
+    role: exploratory_comparator
+    notes: >
+      Row 3's features under row 6's selection procedure: one configuration for
+      all labels, chosen on a validation macro across all fifteen deterioration
+      targets rather than tuned per target. The comparison of interest is this
+      arm's recovery ratio against the declared one.
+
+  - id: R4s_demo_acq_shared
+    inputs: [demographics, acq_pre]
+    role: exploratory_comparator
+    notes: >
+      Row 4's features under the same shared selection, so the sensitivity
+      covers both arms whose recovery ratios the manuscript reports.
+
+# The three labels the manuscript reports. The ladder horizons are not included:
+# these arms exist to qualify what the paper already says, not to extend a trend
+# test they take no part in.
+labels:
+  - deterioration_icu_24h
+  - deterioration_mortality_28d
+  - deterioration_mortality_365d
+
+reporting: >
+  R10 is reported beside R3 at the same labels. The two shared-configuration
+  arms are reported as a recovery-ratio sensitivity beside the declared ratio,
+  in the panel that carries the declared denominators. Both are labelled
+  exploratory, and neither replaces a declared number.

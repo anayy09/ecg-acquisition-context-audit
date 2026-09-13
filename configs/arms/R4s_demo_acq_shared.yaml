@@ -1,0 +1,7 @@
+arm: R4s_demo_acq_shared
+features_used: [demographics, acq_pre]
+role: exploratory
+notes: >-
+  Row 4 under the same shared selection as R3s_acqctx_shared, so the
+  sensitivity covers both arms whose recovery ratios the manuscript reports.
+  Exploratory, outside every declared comparison and every Holm family.

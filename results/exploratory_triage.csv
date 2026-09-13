@@ -1,13 +1,22 @@
-estimate,ci_lo,ci_hi,p_value,n_boot,n_groups,n_finite_replicates,arm,label,unit,quantity,n_items,exploratory,comparison
-0.7583425163745796,0.7409893326815877,0.7755350783131761,0.0,10000,3626,10000,R9_triage,deterioration_icu_24h,record,auroc,6407,True,exploratory_triage
-0.7971999468932555,0.7806223460225721,0.8138348456761821,0.0,10000,3626,10000,R3_acqctx_pre,deterioration_icu_24h,record,auroc,6407,True,exploratory_triage
-0.6016879093644892,0.5751902161404702,0.6270676370057853,0.0,10000,3626,10000,R2_demo,deterioration_icu_24h,record,auroc,6407,True,exploratory_triage
-0.03885743051867585,0.031017672748806634,0.04669624333139082,0.0,10000,3626,10000,R3_acqctx_pre - R9_triage,deterioration_icu_24h,record,paired_difference,6407,True,exploratory_triage
-0.7120392772873644,0.6757230325233035,0.7480096972213275,0.0,10000,3636,10000,R9_triage,deterioration_mortality_28d,record,auroc,6428,True,exploratory_triage
-0.7586963387905765,0.7263843102091624,0.79034374590703,0.0,10000,3636,10000,R3_acqctx_pre,deterioration_mortality_28d,record,auroc,6428,True,exploratory_triage
-0.6962665720534094,0.6607877716107239,0.7306935309583146,0.0,10000,3636,10000,R2_demo,deterioration_mortality_28d,record,auroc,6428,True,exploratory_triage
-0.04665706150321214,0.026617651437412446,0.06748147796262419,0.0,10000,3636,10000,R3_acqctx_pre - R9_triage,deterioration_mortality_28d,record,paired_difference,6428,True,exploratory_triage
-0.6297913524125212,0.6095396829967432,0.6502200048514968,0.0,10000,3636,10000,R9_triage,deterioration_mortality_365d,record,auroc,6428,True,exploratory_triage
-0.7241058215184337,0.7029247799287801,0.7441125634113148,0.0,10000,3636,10000,R3_acqctx_pre,deterioration_mortality_365d,record,auroc,6428,True,exploratory_triage
-0.7457553903828724,0.7205256134194865,0.7695757116132945,0.0,10000,3636,10000,R2_demo,deterioration_mortality_365d,record,auroc,6428,True,exploratory_triage
-0.09431446910591257,0.07358769333893912,0.11456782532638449,0.0,10000,3636,10000,R3_acqctx_pre - R9_triage,deterioration_mortality_365d,record,paired_difference,6428,True,exploratory_triage
+estimate,ci_lo,ci_hi,p_value,n_boot,n_groups,n_finite_replicates,arm,label,unit,quantity,n_items,reference,numerator_auroc,denominator_auroc,exploratory,comparison
+0.7583425163745796,0.7409893326815877,0.7755350783131761,0.0,10000,3626,10000,R9_triage,deterioration_icu_24h,record,auroc,6407,,,,True,exploratory_triage
+0.7971999468932555,0.7806223460225721,0.8138348456761821,0.0,10000,3626,10000,R3_acqctx_pre,deterioration_icu_24h,record,auroc,6407,,,,True,exploratory_triage
+0.6016879093644892,0.5751902161404702,0.6270676370057853,0.0,10000,3626,10000,R2_demo,deterioration_icu_24h,record,auroc,6407,,,,True,exploratory_triage
+0.8173201009028147,0.799495588148914,0.8342443443318549,0.0,10000,3626,10000,R6_waveform,deterioration_icu_24h,record,auroc,6407,,,,True,exploratory_triage
+0.03885743051867585,0.031017672748806634,0.04669624333139082,0.0,10000,3626,10000,R3_acqctx_pre - R9_triage,deterioration_icu_24h,record,paired_difference,6407,,,,True,exploratory_triage
+0.8141385170355215,0.7546638781387863,0.875447419871797,0.0,10000,3626,10000,R9_triage,deterioration_icu_24h,record,recovery_ratio,6407,R6_waveform,0.7583425163745796,0.8173201009028147,True,exploratory_triage
+0.9365935093543871,0.8757675536653107,0.9995075881913935,0.0,10000,3626,10000,R3_acqctx_pre,deterioration_icu_24h,record,recovery_ratio,6407,R6_waveform,0.7971999468932555,0.8173201009028147,True,exploratory_triage
+0.7120392772873644,0.6757230325233035,0.7480096972213275,0.0,10000,3636,10000,R9_triage,deterioration_mortality_28d,record,auroc,6428,,,,True,exploratory_triage
+0.7586963387905765,0.7263843102091624,0.79034374590703,0.0,10000,3636,10000,R3_acqctx_pre,deterioration_mortality_28d,record,auroc,6428,,,,True,exploratory_triage
+0.6962665720534094,0.6607877716107239,0.7306935309583146,0.0,10000,3636,10000,R2_demo,deterioration_mortality_28d,record,auroc,6428,,,,True,exploratory_triage
+0.847317456445638,0.8221987097301903,0.8714269157356319,0.0,10000,3636,10000,R6_waveform,deterioration_mortality_28d,record,auroc,6428,,,,True,exploratory_triage
+0.04665706150321214,0.026617651437412446,0.06748147796262419,0.0,10000,3636,10000,R3_acqctx_pre - R9_triage,deterioration_mortality_28d,record,paired_difference,6428,,,,True,exploratory_triage
+0.6105056724108328,0.5043201838392055,0.7159814205571384,0.0,10000,3636,10000,R9_triage,deterioration_mortality_28d,record,recovery_ratio,6428,R6_waveform,0.7120392772873644,0.847317456445638,True,exploratory_triage
+0.7448411647315732,0.6514658658043114,0.8382008343359183,0.0,10000,3636,10000,R3_acqctx_pre,deterioration_mortality_28d,record,recovery_ratio,6428,R6_waveform,0.7586963387905765,0.847317456445638,True,exploratory_triage
+0.6297913524125212,0.6095396829967432,0.6502200048514968,0.0,10000,3636,10000,R9_triage,deterioration_mortality_365d,record,auroc,6428,,,,True,exploratory_triage
+0.7241058215184337,0.7029247799287801,0.7441125634113148,0.0,10000,3636,10000,R3_acqctx_pre,deterioration_mortality_365d,record,auroc,6428,,,,True,exploratory_triage
+0.7457553903828724,0.7205256134194865,0.7695757116132945,0.0,10000,3636,10000,R2_demo,deterioration_mortality_365d,record,auroc,6428,,,,True,exploratory_triage
+0.8294210012612419,0.8109116866316213,0.8473626044749081,0.0,10000,3636,10000,R6_waveform,deterioration_mortality_365d,record,auroc,6428,,,,True,exploratory_triage
+0.09431446910591257,0.07358769333893912,0.11456782532638449,0.0,10000,3636,10000,R3_acqctx_pre - R9_triage,deterioration_mortality_365d,record,paired_difference,6428,,,,True,exploratory_triage
+0.39399841514534245,0.3330509139906335,0.45743705292664977,0.0,10000,3636,10000,R9_triage,deterioration_mortality_365d,record,recovery_ratio,6428,R6_waveform,0.6297913524125212,0.8294210012612419,True,exploratory_triage
+0.6803021685332998,0.6149324821071007,0.7476139961098882,0.0,10000,3636,10000,R3_acqctx_pre,deterioration_mortality_365d,record,recovery_ratio,6428,R6_waveform,0.7241058215184337,0.8294210012612419,True,exploratory_triage

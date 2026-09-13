@@ -37,6 +37,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from bootstrap import ClusterIndex, clustered_statistic_ci  # noqa: E402
 from calibration import (  # noqa: E402
+    brier,
+    calibration_fit,
+    calibration_intercept,
+    calibration_slope,
     ece,
     equal_mass_bins,
     equal_width_bins,
@@ -118,6 +122,7 @@ def main() -> int:
     CALIBRATION.mkdir(parents=True, exist_ok=True)
 
     ece_rows: list[dict] = []
+    fit_rows: list[dict] = []
     curve_rows: list[dict] = []
     bin_rows: list[dict] = []
 
@@ -131,6 +136,44 @@ def main() -> int:
             p = pooled["y_score"].to_numpy(dtype=float)
             groups = pooled["subject_id"].to_numpy()
             cluster = ClusterIndex(groups)
+
+            # Intercept, slope and Brier. Unlike ECE these need no bins,
+            # so they are computed once per cell rather than per scheme, and
+            # each interval is taken on the statistic itself over the same
+            # patient-clustered resamples.
+            intercept, slope = calibration_fit(y, p)
+            # Each replicate warm-starts from the full-sample fit, which it is
+            # within a rounding error of. That is what makes two logistic fits
+            # per replicate affordable at the declared resample count; the
+            # answer is unchanged and calibration.py asserts so.
+            for name, value, fn in (
+                ("calibration_intercept", intercept,
+                 lambda rows, y=y, p=p, s=[intercept]:
+                     calibration_intercept(y[rows["cell"]], p[rows["cell"]], s)),
+                ("calibration_slope", slope,
+                 lambda rows, y=y, p=p, s=[0.0, slope]:
+                     calibration_slope(y[rows["cell"]], p[rows["cell"]], s)),
+                ("brier", brier(y, p),
+                 lambda rows, y=y, p=p: brier(y[rows["cell"]], p[rows["cell"]])),
+            ):
+                interval = clustered_statistic_ci(
+                    {"cell": cluster}, cluster.n_groups, fn,
+                    n_boot=args.n_boot, seed=args.seed,
+                )
+                fit_rows.append({
+                    "arm": arm,
+                    "label": label,
+                    "unit": "record",
+                    "quantity": name,
+                    "estimate": value,
+                    "ci_lo": interval["ci_lo"],
+                    "ci_hi": interval["ci_hi"],
+                    "n_boot": interval["n_boot"],
+                    "n_items": int(len(pooled)),
+                    "n_groups": int(cluster.n_groups),
+                })
+            print(f"  {arm:<22} {label:<32} intercept {intercept:+.4f} "
+                  f"slope {slope:.4f} brier {brier(y, p):.4f}")
 
             for scheme in schemes:
                 point = ece(y, p, n_bins, scheme)
@@ -223,6 +266,8 @@ def main() -> int:
                 })
 
     pd.DataFrame(ece_rows).to_csv(CALIBRATION / "ece.csv", index=False)
+    pd.DataFrame(fit_rows).to_csv(CALIBRATION / "calibration_fit.csv",
+                                  index=False)
     pd.DataFrame(curve_rows).to_csv(CALIBRATION / "reliability.csv", index=False)
     pd.DataFrame(bin_rows).to_csv(CALIBRATION / "bin_occupancy.csv", index=False)
 

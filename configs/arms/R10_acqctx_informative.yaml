@@ -1,0 +1,22 @@
+arm: R10_acqctx_informative
+features_used:
+  - arrival_to_acquisition_minutes
+  - acquisition_hour_of_day
+  - triage_acuity
+  - ecg_no_within_stay
+  - prior_ecg_exists
+  - days_since_prior_ecg
+  - prior_ed_visit_count
+role: exploratory
+notes: >-
+  The pre-acquisition block with the two calendar features removed. MIMIC-IV
+  shifts every date by a random whole-day offset per patient, so the recorded
+  day of week and month carry no information about local practice: weekday
+  counts across the cohort are indistinguishable from uniform and monthly counts
+  from what month lengths alone would give. The declared nine-feature arm keeps
+  them because the feature set was fixed before that was checked, and a
+  pre-specified analysis does not drop a feature after seeing results. This arm
+  says what the two are worth, which is expected to be nothing, so that the
+  nine-feature framing is not carrying two variables the data cannot support.
+  Exploratory: added after every declared result existed, outside every declared
+  comparison and every Holm family.

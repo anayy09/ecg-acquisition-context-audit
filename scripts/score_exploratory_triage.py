@@ -45,13 +45,19 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from bootstrap import clustered_statistic_ci  # noqa: E402
 from contract import load_base_config  # noqa: E402
 from paths import REPO_ROOT, derived_root  # noqa: E402
-from score_arms import Cell, build_universe, join_arms, ledger_index, pooled_arm  # noqa: E402
+from score_arms import (Cell, build_universe, join_arms, ledger_index,  # noqa: E402
+                      pooled_arm, recovery_ratio)
 
 RESULTS = REPO_ROOT / "results"
 
 ARM = "R9_triage"
 REFERENCE = "R3_acqctx_pre"
 FLOOR = "R2_demo"
+#: The recovery ratio's denominator, so the acuity arm can be read on the
+#: same scale as the headline. Joining it here restricts every quantity in
+#: this file to records all four arms scored, which is what makes the ratio
+#: comparable to the declared one rather than merely similar to it.
+DENOMINATOR = "R6_waveform"
 
 LABELS = [
     "deterioration_icu_24h",
@@ -75,18 +81,18 @@ def main(argv: list[str] | None = None) -> int:
     pooled: dict = {}
     rows: list[dict] = []
     for label in LABELS:
-        for arm in (ARM, REFERENCE, FLOOR):
+        for arm in (ARM, REFERENCE, FLOOR, DENOMINATOR):
             pooled[(arm, label)] = pooled_arm(arm, label, seeds, index, derived)
 
-        joined = join_arms(pooled, [ARM, REFERENCE, FLOOR], label)
+        joined = join_arms(pooled, [ARM, REFERENCE, FLOOR, DENOMINATOR], label)
         if joined is None:
             print(f"  {label}: not all arms have predictions; skipped",
                   file=sys.stderr)
             continue
-        cell = Cell(joined, [ARM, REFERENCE, FLOOR])
+        cell = Cell(joined, [ARM, REFERENCE, FLOOR, DENOMINATOR])
         indices, n_groups = build_universe({"c": cell})
 
-        for arm in (ARM, REFERENCE, FLOOR):
+        for arm in (ARM, REFERENCE, FLOOR, DENOMINATOR):
             def statistic(gathered, cell=cell, arm=arm):
                 return cell.auc(arm, gathered["c"])
 
@@ -107,11 +113,29 @@ def main(argv: list[str] | None = None) -> int:
                       quantity="paired_difference", n_items=cell.n_items)
         rows.append(result)
 
-        print(f"  {label}: {ARM} "
-              f"{rows[-4]['estimate']:.4f}, {REFERENCE} {rows[-3]['estimate']:.4f}, "
-              f"{FLOOR} {rows[-2]['estimate']:.4f}, difference "
-              f"{rows[-1]['estimate']:+.4f} "
-              f"[{rows[-1]['ci_lo']:+.4f}, {rows[-1]['ci_hi']:+.4f}]")
+        # The recovery ratio for both arms on one cell, so the acuity share
+        # of the headline is a comparison of two ratios measured the same
+        # way rather than of one measured here and one measured elsewhere.
+        for arm in (ARM, REFERENCE):
+            def ratio(gathered, cell=cell, arm=arm):
+                rowsel = gathered["c"]
+                return recovery_ratio(cell.auc(arm, rowsel),
+                                      cell.auc(DENOMINATOR, rowsel))
+
+            result = clustered_statistic_ci(indices, n_groups, ratio,
+                                            n_boot=args.n_boot, seed=args.seed)
+            result.update(
+                arm=arm, reference=DENOMINATOR, label=label, unit="record",
+                quantity="recovery_ratio", n_items=cell.n_items,
+                numerator_auroc=cell.auc(arm, np.arange(cell.n_items)),
+                denominator_auroc=cell.auc(DENOMINATOR,
+                                           np.arange(cell.n_items)))
+            rows.append(result)
+            print(f"  recovery {arm:<16} {label:<32} "
+                  f"{result['estimate']:.4f} "
+                  f"[{result['ci_lo']:.4f}, {result['ci_hi']:.4f}]")
+
+        print(f"  {label}: done")
 
     frame = pd.DataFrame(rows)
     frame["exploratory"] = True

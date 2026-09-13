@@ -57,6 +57,9 @@ SUPPLEMENT_LABELS = {
     "T8b": "S10",   # the reproduction under the published first-record protocol
     "T4f": "S11",   # the declared matching against the no-weekday sensitivity
     "T1b": "S12",   # the exploratory triage-acuity comparator
+    "T11": "S13",   # what the two de-identified calendar features are worth
+    "T12": "S14",   # the recovery ratio under the shared selection
+    "T13": "S15",   # calibration intercept, slope and Brier
 }
 
 ID_TO_DISPLAY = {**MAIN_LABELS, **SUPPLEMENT_LABELS}

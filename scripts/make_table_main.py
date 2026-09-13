@@ -77,6 +77,24 @@ ARM_ROW = {
 LADDER_ARMS = [a for a in ARM_ROW if a != "R8_waveform_matched"]
 
 
+#: The comparison files record which stage of the plan registered each contrast,
+#: as "this stage" or "this stage". That is this project's own vocabulary and means nothing to a
+#: reader, so the tables print what the value actually distinguishes: whether
+#: the contrast was measured on all evaluable pairs or on pairs restricted to a
+#: shared coarsened acquisition-context stratum.
+PAIR_SET = {"P3": "All pairs", "P4": "Matched pairs"}
+
+
+def pair_set(phase: str) -> str:
+    """How a contrast's pair set is printed. An unknown value is a bug, loudly."""
+    try:
+        return PAIR_SET[str(phase)]
+    except KeyError:
+        raise KeyError(
+            f"{phase!r} is not a known registration stage. Add it to PAIR_SET "
+            "deliberately; printing it raw would put this project's internal "
+            "vocabulary into a submitted table") from None
+
 def label_display(label: str) -> str:
     """A human column header derived from the label id, never chosen by hand.
 
@@ -218,13 +236,20 @@ def panel_triage(p: Provenance, triage: pd.DataFrame) -> Panel:
         "R3_acqctx_pre": "`R3_acqctx_pre`, all nine features",
         "R3_acqctx_pre - R9_triage": "what the other eight features add",
     }
+    auroc = triage[triage["quantity"] != "recovery_ratio"]
+    ratios = triage[triage["quantity"] == "recovery_ratio"]
     for label in dict.fromkeys(triage["label"]):
         for arm in order:
-            picked = triage[(triage["arm"] == arm) & (triage["label"] == label)]
+            picked = auroc[(auroc["arm"] == arm) & (auroc["label"] == label)]
             if picked.empty:
                 continue
             rk = f"{arm}|{label}"
-            k = key(arm=arm, label=label)
+            # The quantity has to be in the selector now that this file holds
+            # two rows per (arm, label): the arm's own AUROC and its recovery
+            # ratio. Without it the selector matches both and the cell checker
+            # cannot tell which number it is verifying.
+            k = key(arm=arm, label=label,
+                    quantity=str(picked.iloc[0]["quantity"]))
             spec = "+.4f" if " - " in arm else ".4f"
             est = p.num("T1b", rk, "estimate", picked.iloc[0]["estimate"], spec,
                         src, k, "estimate", "record")
@@ -232,23 +257,46 @@ def panel_triage(p: Provenance, triage: pd.DataFrame) -> Panel:
                        src, k, "ci_lo", "record")
             hi = p.num("T1b", rk, "estimate", picked.iloc[0]["ci_hi"], spec,
                        src, k, "ci_hi", "record")
-            rows.append([label_display(label), names[arm], f"{est} [{lo}, {hi}]"])
+
+            # The recovery ratio, for the two arms it is defined for. A
+            # difference has no ratio and the demographics floor is not on this
+            # scale, so those cells are empty rather than filled with something
+            # that would read as a measurement.
+            got = ratios[(ratios["arm"] == arm) & (ratios["label"] == label)]
+            if got.empty:
+                recovery = "-"
+            else:
+                rkey = key(arm=arm, label=label, quantity="recovery_ratio")
+                rest = p.num("T1b", rk, "recovery", got.iloc[0]["estimate"],
+                             ".4f", src, rkey, "estimate", "record")
+                rlo = p.num("T1b", rk, "recovery", got.iloc[0]["ci_lo"],
+                            ".4f", src, rkey, "ci_lo", "record")
+                rhi = p.num("T1b", rk, "recovery", got.iloc[0]["ci_hi"],
+                            ".4f", src, rkey, "ci_hi", "record")
+                recovery = f"{rest} [{rlo}, {rhi}]"
+
+            rows.append([label_display(label), names[arm],
+                         f"{est} [{lo}, {hi}]", recovery])
 
     return Panel(
         number="1b",
         title="The acquisition-context block against triage acuity alone",
         lead=[
-            "EXPLORATORY, and not registered. Both reviews asked how much the",
-            "acquisition-context block adds beyond the clinical acuity a triage",
-            "nurse already records, and no arm in the paper isolated that",
-            "feature. This one does: a single ordinal column, fitted the same",
-            "way as every other tabular arm.",
+            "EXPLORATORY, and not registered. Triage acuity is a clinician's",
+            "severity judgement recorded before the ECG, and it is one of the",
+            "nine pre-acquisition features, so how much of the block it carries",
+            "on its own is a question the nested ladder does not answer. This",
+            "arm answers it: a single ordinal column, fitted the same way as",
+            "every other tabular arm.",
             "The last row of each label is the paired difference between the",
             "nine-feature arm and the one-feature arm, on the same records and",
-            "the same resampled patients, which is the quantity the question is",
-            "actually about.",
+            "the same resampled patients. The recovery column puts both arms on",
+            "the scale the headline is quoted on, dividing above-chance",
+            "discrimination by the waveform arm's, and its denominators are the",
+            "same cells Table 4 divides by.",
         ],
-        columns=["Label", "Arm", "AUROC or difference [95% CI]"],
+        columns=["Label", "Arm", "AUROC or difference [95% CI]",
+                 "Recovery of waveform arm [95% CI]"],
         rows=rows,
         code_cols=set(),
         notes=[
@@ -256,6 +304,14 @@ def panel_triage(p: Provenance, triage: pd.DataFrame) -> Panel:
             "24-hour ICU admission and the other eight features still add to "
             "it, at every label, with every interval excluding zero. The block "
             "is neither reducible to acuity nor independent of it.",
+            "Read on the recovery scale, acuity alone accounts for most of what "
+            "the block recovers at 24 hours and for considerably less of it as "
+            "the horizon lengthens. At the registered endpoint, one-year "
+            "mortality, the nine features recover about two thirds more than "
+            "acuity alone does. So the single feature explains most of the "
+            "exploratory short-horizon figure and well under two thirds of the "
+            "registered one, and neither of those is a result this paper claims "
+            "as met: the registered target was missed under every reading.",
             "At one year the ordering between acuity and demographics reverses: "
             "acuity alone falls below age and sex, having been well above them "
             "at 24 hours. That is consistent with the intuition the "
@@ -270,6 +326,221 @@ def panel_triage(p: Provenance, triage: pd.DataFrame) -> Panel:
         tex_label="tab:triage",
     )
 
+
+
+def panel_calendar_features(p: Provenance, sens: pd.DataFrame) -> Panel:
+    """Table S13. What the two de-identified calendar features are worth.
+
+    EXPLORATORY. The declared arm keeps day of week and month because the
+    feature set was fixed before it was established that MIMIC-IV's date
+    shifting empties them. This says what they contribute, so that the
+    nine-feature framing is not quietly carrying two variables the data cannot
+    support.
+    """
+    src = "results/exploratory_sensitivities.csv"
+    frame = sens[sens["question"] == "calendar_features"]
+    rows: list[list[str]] = []
+    for label in dict.fromkeys(frame["label"]):
+        for arm in ("R3_acqctx_pre", "R10_acqctx_informative",
+                    "R3_acqctx_pre - R10_acqctx_informative"):
+            got = frame[(frame["arm"] == arm)
+                        & (frame["label"] == label)
+                        & (frame["quantity"].isin(["auroc", "paired_difference"]))]
+            if got.empty:
+                continue
+            rk = f"{arm}|{label}"
+            k = key(arm=arm, label=label,
+                    quantity=str(got.iloc[0]["quantity"]),
+                    question="calendar_features")
+            spec = "+.4f" if " - " in arm else ".4f"
+            est = p.num("T11", rk, "estimate", got.iloc[0]["estimate"], spec,
+                        src, k, "estimate", "record")
+            lo = p.num("T11", rk, "estimate", got.iloc[0]["ci_lo"], spec,
+                       src, k, "ci_lo", "record")
+            hi = p.num("T11", rk, "estimate", got.iloc[0]["ci_hi"], spec,
+                       src, k, "ci_hi", "record")
+            name = {
+                "R3_acqctx_pre": "`R3_acqctx_pre`, all nine features",
+                "R10_acqctx_informative": "`R10`, the seven informative features",
+                "R3_acqctx_pre - R10_acqctx_informative":
+                    "what day of week and month add",
+            }[arm]
+            rows.append([label_display(label), name, f"{est} [{lo}, {hi}]"])
+
+    return Panel(
+        number="11",
+        title="The acquisition-context arm without its two emptied features",
+        lead=[
+            "EXPLORATORY, and not registered. MIMIC-IV shifts every date by a",
+            "random whole-day offset per patient, so the recorded day of week",
+            "and month carry nothing about local practice (Methods, Acquisition",
+            "context). The declared arm keeps them because the feature set was",
+            "fixed before that was established, and a pre-specified analysis",
+            "does not drop a feature after seeing results.",
+            "This arm is the same features without those two, fitted the same",
+            "way. The third row of each label is the paired difference on the",
+            "same records and the same resampled patients.",
+        ],
+        columns=["Label", "Arm", "AUROC or difference [95% CI]"],
+        rows=rows,
+        code_cols=set(),
+        notes=[
+            "The two features are worth nothing measurable at any label: every "
+            "paired difference is smaller than the seed-to-seed spread of the "
+            "arm itself and every interval contains zero. The declared arm is "
+            "reported as nine features because nine were declared, and it "
+            "reads as seven.",
+        ],
+        tex_label="tab:calendar",
+    )
+
+
+def panel_shared_config(p: Provenance, sens: pd.DataFrame) -> Panel:
+    """Table S14. The recovery ratio when the tabular arms are selected the
+    way the waveform arm was.
+
+    EXPLORATORY. This is the measurable half of the tuning asymmetry: the
+    waveform arm cannot be retuned here, but the tabular arms can be selected
+    the way it was, from four candidates on a validation macro across all
+    fifteen targets rather than per target over fifty trials.
+    """
+    src = "results/exploratory_sensitivities.csv"
+    frame = sens[(sens["question"] == "shared_configuration")
+                 & (sens["quantity"] == "recovery_ratio")]
+    rows: list[list[str]] = []
+    pairs = [("R3_acqctx_pre", "R3s_acqctx_shared"),
+             ("R4_demo_acq", "R4s_demo_acq_shared")]
+    for declared, shared in pairs:
+        for label in dict.fromkeys(frame["label"]):
+            cells = []
+            for arm in (declared, shared):
+                got = frame[(frame["arm"] == arm) & (frame["label"] == label)]
+                if got.empty:
+                    cells.append("-")
+                    continue
+                rk = f"{arm}|{label}"
+                k = key(arm=arm, label=label, quantity="recovery_ratio",
+                        question="shared_configuration")
+                est = p.num("T12", rk, "recovery", got.iloc[0]["estimate"],
+                            ".4f", src, k, "estimate", "record")
+                lo = p.num("T12", rk, "recovery", got.iloc[0]["ci_lo"],
+                           ".4f", src, k, "ci_lo", "record")
+                hi = p.num("T12", rk, "recovery", got.iloc[0]["ci_hi"],
+                           ".4f", src, k, "ci_hi", "record")
+                cells.append(f"{est} [{lo}, {hi}]")
+            rows.append([f"`{declared}`", label_display(label)] + cells)
+
+    return Panel(
+        number="12",
+        title="The recovery ratio under the waveform arm's own selection procedure",
+        lead=[
+            "EXPLORATORY, and not registered. Every recovery ratio in this",
+            "paper divides a tabular arm tuned per target over fifty trials by",
+            "a waveform arm selected once, from four candidate configurations,",
+            "on a validation macro across all fifteen deterioration targets.",
+            "That inequality reaches the ratio and inflates it (Limitations).",
+            "The waveform arm cannot be retuned within this work. The tabular",
+            "arms can be selected the way it was, and are here: four",
+            "candidates, one configuration for every label, chosen on the same",
+            "fifteen-target validation macro. Same features, same code path,",
+            "same five seeds; only the selection changes.",
+        ],
+        columns=["Arm", "Label", "Declared, tuned per target [95% CI]",
+                 "Selected on the 15-target macro [95% CI]"],
+        rows=rows,
+        code_cols={0},
+        notes=[
+            "Matching the waveform arm's selection procedure moves every "
+            "recovery ratio by under a hundredth, slightly upward, which is "
+            "within what the seeds alone move these arms and leaves the "
+            "registered target missed as before. The tuning inequality is "
+            "therefore worth almost nothing on the side of it that can be "
+            "measured here. It does not follow that the whole "
+            "inequality is worth little: what cannot be measured here is what "
+            "a per-target waveform arm would reach, and that is the side the "
+            "Limitations says is open.",
+        ],
+        tex_label="tab:sharedconfig",
+    )
+
+
+def panel_calibration_fit(p: Provenance, fit: pd.DataFrame) -> Panel:
+    """Table S15. Calibration intercept, slope and Brier score.
+
+    ECE summarises a binned curve and says nothing about the DIRECTION of
+    miscalibration, or about whether the error is in the level of the
+    probabilities or in their spread. These three separate those: the intercept
+    is calibration-in-the-large, the slope is dispersion, and the Brier score is
+    a proper score that ECE is not.
+    """
+    src = "results/calibration/calibration_fit.csv"
+    order = ["calibration_intercept", "calibration_slope", "brier"]
+    rows: list[list[str]] = []
+    for label in dict.fromkeys(fit["label"]):
+        for arm in dict.fromkeys(fit["arm"]):
+            cells = []
+            for quantity in order:
+                got = fit[(fit["arm"] == arm) & (fit["label"] == label)
+                          & (fit["quantity"] == quantity)]
+                if got.empty or pd.isna(got.iloc[0]["estimate"]):
+                    # The prevalence arm is a constant predictor, so its
+                    # probabilities have no spread and a slope is not defined
+                    # for it. Printed as undefined rather than as a number.
+                    cells.append("undefined" if quantity == "calibration_slope"
+                                 else "-")
+                    continue
+                rk = f"{arm}|{label}"
+                k = key(arm=arm, label=label, quantity=quantity)
+                spec = "+.4f" if quantity != "brier" else ".4f"
+                est = p.num("T13", rk, quantity, got.iloc[0]["estimate"], spec,
+                            src, k, "estimate", "record")
+                lo = p.num("T13", rk, quantity, got.iloc[0]["ci_lo"], spec,
+                           src, k, "ci_lo", "record")
+                hi = p.num("T13", rk, quantity, got.iloc[0]["ci_hi"], spec,
+                           src, k, "ci_hi", "record")
+                cells.append(f"{est} [{lo}, {hi}]")
+            rows.append([label_display(label), f"`{arm}`"] + cells)
+
+    return Panel(
+        number="13",
+        title="Calibration intercept, slope and Brier score",
+        lead=[
+            "Three quantities the expected calibration error cannot give.",
+            "The INTERCEPT is calibration-in-the-large, fitted with the slope",
+            "held at one: zero means the average predicted risk matches the",
+            "observed rate, and a negative value means the arm over-predicts.",
+            "The SLOPE is the coefficient on the logit of the predicted",
+            "probability: one means the probabilities are spread correctly,",
+            "above one means they are too narrow and below one too extreme.",
+            "The BRIER score is mean squared error on the probability scale,",
+            "lower being better, and unlike the expected calibration error it",
+            "is a proper score.",
+            "All three are patient-clustered over the same 10,000 resamples as",
+            "every other interval here, and each interval is taken on the",
+            "quantity itself.",
+        ],
+        columns=["Label", "Arm", "Intercept [95% CI]", "Slope [95% CI]",
+                 "Brier [95% CI]"],
+        rows=rows,
+        code_cols={1},
+        notes=[
+            "The two waveform arms are the only ones whose intervals exclude "
+            "both nulls. Their intercepts sit far below zero, so they "
+            "over-predict, and their slopes far above one, so the "
+            "probabilities they do produce are packed too tightly. Every "
+            "tabular arm's intercept interval contains zero and every tabular "
+            "slope interval contains one.",
+            "A slope above one is what averaging produces, and the scored "
+            "probability here is a mean over five seeds and, for the waveform "
+            "arms, over four crops before that. That mechanism is already "
+            "named in the limitations; this is the measurement of it.",
+            "The prevalence arm predicts one constant, so its probabilities "
+            "have no spread and a calibration slope does not exist for it. It "
+            "is reported as undefined rather than as whatever a singular fit "
+            "stops on.",
+        ],
+        tex_label="tab:calfit",
+    )
 
 def panel_matching_sensitivity(p: Provenance, declared: pd.DataFrame,
                                sensitivity: pd.DataFrame) -> Panel:
@@ -877,10 +1148,15 @@ def panel_retained(p: Provenance, retained: pd.DataFrame) -> Panel:
         lead=[
             "`(R6 - R2)` within stratum over `(R6 - R2)` on the same rows without",
             "the pair restriction. The declared formula does not say which `R2` the",
-            "numerator uses; both readings are reported and neither was chosen",
-            "and they agree on the verdict.",
+            "numerator uses, so both readings are reported and neither was chosen",
+            "after seeing them; they agree on the verdict.",
+            "The FIRST column is the reading quoted in the abstract and the",
+            "conclusion, which takes the within-stratum `R2` in the numerator.",
+            "It is named here rather than left to be inferred, because a table",
+            "that reports two readings of one quantity and quotes one of them",
+            "elsewhere owes a reader the mapping.",
         ],
-        columns=["Label", "Retained [95% CI]", "Meets target",
+        columns=["Label", "Retained, quoted reading [95% CI]", "Meets target",
                  "Retained, unstratified R2 [95% CI]", "Meets target",
                  "Declared target"],
         rows=rows,
@@ -1105,7 +1381,7 @@ def panel_family(p: Provenance, family: pd.DataFrame) -> Panel:
         m = p.num("T5", rk, "m", row["holm_family_size"], ".0f", src, k,
                   "holm_family_size", "record")
         rows.append([row["contrast"], label_display(row["label"]), raw, holm,
-                     row["phase"], m])
+                     pair_set(row["phase"]), m])
 
     return Panel(
         number="5",
@@ -1117,7 +1393,7 @@ def panel_family(p: Provenance, family: pd.DataFrame) -> Panel:
             "p-value, never raise one, so the earlier correction is superseded",
             "here rather than contradicted.",
         ],
-        columns=["Contrast", "Label", "Raw p", "Holm p, final", "Phase", "Family size m"],
+        columns=["Contrast", "Label", "Raw p", "Holm p, final", "Pairs", "Family size m"],
         rows=rows,
         code_cols={0},
         notes=[
@@ -1380,8 +1656,8 @@ def panel_contrasts(p: Provenance, p3: pd.DataFrame, p4: pd.DataFrame,
 
     Table 6 carries the corrected p-values; a p-value without an effect size is
     forbidden by the project's design notes A6, and the manuscript needs the differences
-    themselves. Both phases' contrasts are shown together because they are one
-    family, with each row's Holm value taken from the COMPLETED correction rather than from the one that was true when its phase closed.
+    themselves. Both pair sets are shown together because they are one
+    family, with each row's Holm value taken from the COMPLETED correction rather than from the one that was true when the family was still filling up.
     """
     rows: list[list[str]] = []
     for _, entry in family.iterrows():
@@ -1415,7 +1691,7 @@ def panel_contrasts(p: Provenance, p3: pd.DataFrame, p4: pd.DataFrame,
         else:
             floor, clears = "-", "-"
         rows.append([contrast, label_display(label), f"{diff} [{lo}, {hi}]", holm,
-                     floor, clears, phase])
+                     floor, clears, pair_set(phase)])
 
     return Panel(
         number="5b",
@@ -1424,14 +1700,14 @@ def panel_contrasts(p: Provenance, p3: pd.DataFrame, p4: pd.DataFrame,
             "Paired patient-clustered bootstrap on the difference itself: both arms",
             "are scored on the same resampled patients in each replicate, and two",
             "marginal intervals are never compared. No p-value appears without its",
-            "Each row's Holm value is from the completed family of 15",
-            ", not from the correction that was true when its phase closed.",
+            "effect size. Each row's Holm value is from the completed family of 15",
+            ", not from the correction that was true while the family was still filling up.",
             "The noise floor is the seed-to-seed spread of that contrast's own arms",
             "at that label, and a difference not clearly larger than it is reported",
             "as no difference.",
         ],
         columns=["Contrast", "Label", "Difference [95% CI]", "Holm p", "Noise floor",
-                 "Clears floor", "Phase"],
+                 "Clears floor", "Pairs"],
         rows=rows,
         code_cols={0},
         notes=[
@@ -1792,6 +2068,12 @@ def build() -> tuple[str, str, pd.DataFrame]:
         panel_first_ecg(p, pd.read_csv(RESULTS / "first_ecg_sensitivity.csv"),
                         macro),
         panel_triage(p, pd.read_csv(RESULTS / "exploratory_triage.csv")),
+        panel_calendar_features(
+            p, pd.read_csv(RESULTS / "exploratory_sensitivities.csv")),
+        panel_shared_config(
+            p, pd.read_csv(RESULTS / "exploratory_sensitivities.csv")),
+        panel_calibration_fit(
+            p, pd.read_csv(RESULTS / "calibration" / "calibration_fit.csv")),
         panel_matching_sensitivity(
             p, effective,
             pd.read_csv(RESULTS / "p4_sensitivity_no_weekday_effective.csv")),

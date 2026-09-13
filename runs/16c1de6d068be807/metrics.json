@@ -1,0 +1,17 @@
+{
+  "auprc": 0.2922130314592693,
+  "auroc": 0.7247669435800255,
+  "best_iteration": 94,
+  "brier": 0.11422471521144695,
+  "dropped_sentinel_rows": 357,
+  "fit_seconds": 2.4,
+  "n_features": 9,
+  "n_test_groups": 3636,
+  "n_test_items": 6428,
+  "n_test_positives": 916,
+  "n_train_items": 116105,
+  "prevalence_test": 0.14250155569383946,
+  "source_dirty": 0,
+  "tuning_trials": 50,
+  "val_auroc_at_tuning": 0.8100673486328395
+}

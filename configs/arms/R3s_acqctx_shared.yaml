@@ -1,0 +1,13 @@
+arm: R3s_acqctx_shared
+features_used: [acq_pre]
+role: exploratory
+notes: >-
+  Row 3's features under row 6's selection procedure. One configuration for
+  every label, chosen on a validation macro across all fifteen deterioration
+  targets, rather than a per-target search. It exists because the recovery
+  ratio divides a per-target-tuned tabular arm by a waveform arm selected once
+  across fifteen targets, and that inequality reaches the ratio. Fitting a
+  comparably tuned waveform arm is out of reach; refitting the tabular side the
+  way the waveform side was selected bounds the inequality from the side that
+  can be measured. Exploratory, outside every declared comparison and every
+  Holm family.

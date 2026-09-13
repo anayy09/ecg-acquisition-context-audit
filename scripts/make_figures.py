@@ -195,7 +195,12 @@ def fig_reliability(reliability: pd.DataFrame) -> tuple[plt.Figure, int]:
         ax.set_xlabel("Mean predicted probability")
         ax.set_title(scheme.replace("_", " ") + " bins", fontsize=7, pad=3)
     axes[0].set_ylabel("Observed rate")
-    axes[1].legend(loc="upper left", frameon=False)
+    # One legend for both panels, below them. It used to sit inside the right
+    # panel, which made the two panels look like they plotted different arms
+    # and put the key furthest from the panel a reader meets first.
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="lower center", ncol=len(labels),
+               frameon=False, bbox_to_anchor=(0.5, -0.02))
     return fig, plotted
 
 

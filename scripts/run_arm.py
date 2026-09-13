@@ -40,6 +40,10 @@ ARM_BLOCKS = {
     "R1_prevalence": [],
     "R2_demo": ["demographics"],
     "R3_acqctx_pre": ["acq_pre"],
+    # Row 3 and row 4 again, under the waveform arm's selection procedure
+    # rather than their own. Same features; see SHARED_CONFIG_ARMS.
+    "R3s_acqctx_shared": ["acq_pre"],
+    "R4s_demo_acq_shared": ["demographics", "acq_pre"],
     "R3b_acqctx_window": ["acq_pre", "acq_window"],
     "R4_demo_acq": ["demographics", "acq_pre"],
     # Row 5's block is not in the contract as a name list. It is the benchmark's
@@ -47,8 +51,9 @@ ARM_BLOCKS = {
     # so its names come from the emitted table rather than from a
     # declaration we wrote. `tabular` is resolved by `load_tabular_block`.
     "R5_tabular": ["tabular"],
-    # Takes no whole block; its features are named in ARM_FEATURES.
+    # Take no whole block; their features are named in ARM_FEATURES.
     "R9_triage": [],
+    "R10_acqctx_informative": [],
 }
 
 #: Arms that name their features directly instead of taking whole blocks.
@@ -61,8 +66,22 @@ ARM_BLOCKS = {
 #: `acq_pre` in the source schema, a feature belongs to one block, and moving it
 #: would take it out of the confirmatory arm. It is EXPLORATORY: added after the
 #: results existed, outside every declared comparison and every Holm family.
+#: R10 is the pre-acquisition block with the two calendar features removed. It
+#: is named feature by feature for the same reason R9 is: `acq_pre` is one block
+#: in the schema and an arm that takes a SUBSET of a block cannot be expressed
+#: as a block without redefining the block the confirmatory arm uses. Also
+#: EXPLORATORY, and also outside every declared comparison.
 ARM_FEATURES = {
     "R9_triage": ["triage_acuity"],
+    "R10_acqctx_informative": [
+        "arrival_to_acquisition_minutes",
+        "acquisition_hour_of_day",
+        "triage_acuity",
+        "ecg_no_within_stay",
+        "prior_ecg_exists",
+        "days_since_prior_ecg",
+        "prior_ed_visit_count",
+    ],
 }
 
 #: Blocks whose names come from the contract. `tabular` is deliberately absent.
@@ -287,6 +306,110 @@ def tune(matrix: dict, train, valid, budget: int, cache: Path) -> dict:
     return best
 
 
+#: Arms selected the way the waveform arm was: ONE configuration for every
+#: label, chosen on a validation macro across all the deterioration targets,
+#: rather than a per-target search. The value is the arm whose features they
+#: borrow, which is also what makes the pairing checkable: a shared-config arm
+#: must read exactly the blocks its source arm reads.
+SHARED_CONFIG_ARMS = {
+    "R3s_acqctx_shared": "R3_acqctx_pre",
+    "R4s_demo_acq_shared": "R4_demo_acq",
+}
+
+for _shared, _source in SHARED_CONFIG_ARMS.items():
+    if ARM_BLOCKS[_shared] != ARM_BLOCKS[_source]:
+        raise RuntimeError(
+            f"{_shared} is meant to be {_source} under a different selection "
+            "procedure and reads different blocks, so any difference between "
+            "them would confound the thing it exists to measure")
+
+
+def macro_labels(derived) -> list[str]:
+    """The deterioration targets the shared configuration is selected on.
+
+    Read off the built cohort rather than listed here, so this is the same set
+    the waveform arm's own selection macro ran over instead of a second list
+    that can drift away from it. The waveform arm is multi-label over all 15 of
+    them in one run; a shared tabular configuration has to be chosen on the same
+    set for the comparison to mean anything.
+    """
+    import pandas as pd
+
+    frame = pd.read_parquet(derived / "cohort_mdsed.parquet")
+    labels = sorted(c for c in frame.columns
+                    if str(c).startswith("deterioration_"))
+    if len(labels) != 15:
+        raise RuntimeError(
+            f"the cohort carries {len(labels)} deterioration targets and the "
+            "waveform arm was selected on 15; a shared configuration chosen on "
+            "a different set is not the comparison this arm exists to make")
+    return labels
+
+
+def tune_shared(arm: str, derived, contract, budget: int, cache: Path) -> dict:
+    """One configuration for all labels, scored on a validation macro.
+
+    The waveform arm was selected from four candidate configurations on a
+    validation macro across every deterioration target, and this mirrors that:
+    the same random search this project already uses, but each candidate is
+    scored once as the mean validation AUROC over all the targets rather than
+    separately per target. The winner is then fitted at every reported label.
+
+    Cached per ARM, not per (arm, label), because one configuration for all
+    labels is the whole point. A cache key that carried the label would quietly
+    restore per-target tuning.
+    """
+    import json
+
+    import numpy as np
+    from sklearn.metrics import roc_auc_score
+
+    if cache.is_file():
+        return json.loads(cache.read_text(encoding="utf-8"))
+
+    labels = macro_labels(derived)
+    matrices = {}
+    for label in labels:
+        try:
+            matrices[label] = load_matrix(derived, arm, label, contract)
+        except Exception as exc:  # a label with no usable rows is skipped, loudly
+            print(f"  {label}: not loadable for {arm} ({exc})", file=sys.stderr)
+    if not matrices:
+        raise RuntimeError(f"no label matrices loaded for {arm}")
+
+    rng = np.random.default_rng(0)
+    best = {"params": {}, "val_macro": -1.0, "trials": 0,
+            "n_labels": len(matrices), "labels": sorted(matrices)}
+
+    for trial in range(budget):
+        params = {k: rng.choice(v).item() for k, v in SEARCH_SPACE.items()}
+        params["bagging_freq"] = 1
+        scores = []
+        for label, matrix in matrices.items():
+            frame = matrix["frame"]
+            train = frame["split"] == "train"
+            valid = frame["split"] == "val"
+            model = _fit(params, matrix, train, valid, seed=0)
+            if model is None:
+                continue
+            y = frame.loc[valid, label]
+            if y.nunique() < 2:
+                continue
+            scores.append(roc_auc_score(
+                y, model.predict_proba(frame.loc[valid, matrix["features"]])[:, 1]))
+        if not scores:
+            continue
+        macro = float(np.mean(scores))
+        if macro > best["val_macro"]:
+            best.update(params=params, val_macro=macro,
+                        n_scored=len(scores), trial=trial)
+
+    best["trials"] = budget
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    cache.write_text(json.dumps(best, indent=2), encoding="utf-8")
+    return best
+
+
 COMPARISONS_DIR = REPO_ROOT / "comparisons"
 
 
@@ -400,8 +523,22 @@ def main() -> int:
     test = frame["split"] == "test"
 
     budget = int(base["model"]["tabular"]["tuning_budget_trials"])
-    cache = derived / "tuning" / f"{args.arm}__{args.label}.json"
-    best = tune(matrix, train, valid, budget, cache)
+    if args.arm in SHARED_CONFIG_ARMS:
+        # One configuration for every label, selected on a validation macro
+        # across all the deterioration targets, which is how the waveform arm
+        # was selected. The BUDGET matches too: the waveform arm chose from four
+        # candidate configurations, so these choose from four. Giving them the
+        # fifty-trial tabular budget would have handed the shared-configuration
+        # arm more search than the arm it is imitating, which is the opposite of
+        # the comparison this sensitivity exists to make. The cache is keyed by
+        # arm alone, because one configuration for all labels is the point.
+        shared_budget = len(base["model"]["waveform"]["tuning_candidates"])
+        cache = derived / "tuning" / f"{args.arm}__shared.json"
+        best = tune_shared(args.arm, derived, contract, shared_budget, cache)
+        best.setdefault("val_auroc", best.get("val_macro", float("nan")))
+    else:
+        cache = derived / "tuning" / f"{args.arm}__{args.label}.json"
+        best = tune(matrix, train, valid, budget, cache)
 
     model = _fit(best["params"], matrix, train, valid, seed=args.seed)
     if model is None:

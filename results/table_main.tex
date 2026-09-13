@@ -164,29 +164,116 @@ record & first ECG of each stay & 6,080 & 0.8536 & 0.0111 \\
 \begin{table}[t]
 \centering
 \small
-\caption{The acquisition-context block against triage acuity alone. EXPLORATORY, and not registered. Both reviews asked how much the acquisition-context block adds beyond the clinical acuity a triage nurse already records, and no arm in the paper isolated that feature. This one does: a single ordinal column, fitted the same way as every other tabular arm. The last row of each label is the paired difference between the nine-feature arm and the one-feature arm, on the same records and the same resampled patients, which is the quantity the question is actually about.}
+\caption{The acquisition-context block against triage acuity alone. EXPLORATORY, and not registered. Triage acuity is a clinician's severity judgement recorded before the ECG, and it is one of the nine pre-acquisition features, so how much of the block it carries on its own is a question the nested ladder does not answer. This arm answers it: a single ordinal column, fitted the same way as every other tabular arm. The last row of each label is the paired difference between the nine-feature arm and the one-feature arm, on the same records and the same resampled patients. The recovery column puts both arms on the scale the headline is quoted on, dividing above-chance discrimination by the waveform arm's, and its denominators are the same cells Table 4 divides by.}
 \label{tab:triage}
+\begin{tabular}{llll}
+\toprule
+Label & Arm & AUROC or difference [95\% CI] & Recovery of waveform arm [95\% CI] \\
+\midrule
+ICU admission, 24h & `R9\_triage`, triage acuity alone & 0.7583 [0.7410, 0.7755] & 0.8141 [0.7547, 0.8754] \\
+ICU admission, 24h & `R2\_demo`, age and sex & 0.6017 [0.5752, 0.6271] & - \\
+ICU admission, 24h & `R3\_acqctx\_pre`, all nine features & 0.7972 [0.7806, 0.8138] & 0.9366 [0.8758, 0.9995] \\
+ICU admission, 24h & what the other eight features add & +0.0389 [+0.0310, +0.0467] & - \\
+Mortality, 28d & `R9\_triage`, triage acuity alone & 0.7120 [0.6757, 0.7480] & 0.6105 [0.5043, 0.7160] \\
+Mortality, 28d & `R2\_demo`, age and sex & 0.6963 [0.6608, 0.7307] & - \\
+Mortality, 28d & `R3\_acqctx\_pre`, all nine features & 0.7587 [0.7264, 0.7903] & 0.7448 [0.6515, 0.8382] \\
+Mortality, 28d & what the other eight features add & +0.0467 [+0.0266, +0.0675] & - \\
+Mortality, 365d & `R9\_triage`, triage acuity alone & 0.6298 [0.6095, 0.6502] & 0.3940 [0.3331, 0.4574] \\
+Mortality, 365d & `R2\_demo`, age and sex & 0.7458 [0.7205, 0.7696] & - \\
+Mortality, 365d & `R3\_acqctx\_pre`, all nine features & 0.7241 [0.7029, 0.7441] & 0.6803 [0.6149, 0.7476] \\
+Mortality, 365d & what the other eight features add & +0.0943 [+0.0736, +0.1146] & - \\
+\bottomrule
+\end{tabular}
+\par\footnotesize Acuity alone carries most of the block's discrimination at 24-hour ICU admission and the other eight features still add to it, at every label, with every interval excluding zero. The block is neither reducible to acuity nor independent of it.
+\par\footnotesize Read on the recovery scale, acuity alone accounts for most of what the block recovers at 24 hours and for considerably less of it as the horizon lengthens. At the registered endpoint, one-year mortality, the nine features recover about two thirds more than acuity alone does. So the single feature explains most of the exploratory short-horizon figure and well under two thirds of the registered one, and neither of those is a result this paper claims as met: the registered target was missed under every reading.
+\par\footnotesize At one year the ordering between acuity and demographics reverses: acuity alone falls below age and sex, having been well above them at 24 hours. That is consistent with the intuition the horizon-ladder family was built on, and it is not evidence for that family's registered trend, which the paper reports as not supported. An exploratory arm cannot rescue a registered test.
+\par\footnotesize This arm fits one ordinal feature, so every seed produces the same model and its seed-to-seed spread is exactly zero. The noise floor this paper judges differences against therefore does not exist for it, and the interval carries the uncertainty instead.
+\end{table}
+
+% PANEL T11
+\begin{table}[t]
+\centering
+\small
+\caption{The acquisition-context arm without its two emptied features. EXPLORATORY, and not registered. MIMIC-IV shifts every date by a random whole-day offset per patient, so the recorded day of week and month carry nothing about local practice (Methods, Acquisition context). The declared arm keeps them because the feature set was fixed before that was established, and a pre-specified analysis does not drop a feature after seeing results. This arm is the same features without those two, fitted the same way. The third row of each label is the paired difference on the same records and the same resampled patients.}
+\label{tab:calendar}
 \begin{tabular}{lll}
 \toprule
 Label & Arm & AUROC or difference [95\% CI] \\
 \midrule
-ICU admission, 24h & `R9\_triage`, triage acuity alone & 0.7583 [0.7410, 0.7755] \\
-ICU admission, 24h & `R2\_demo`, age and sex & 0.6017 [0.5752, 0.6271] \\
 ICU admission, 24h & `R3\_acqctx\_pre`, all nine features & 0.7972 [0.7806, 0.8138] \\
-ICU admission, 24h & what the other eight features add & +0.0389 [+0.0310, +0.0467] \\
-Mortality, 28d & `R9\_triage`, triage acuity alone & 0.7120 [0.6757, 0.7480] \\
-Mortality, 28d & `R2\_demo`, age and sex & 0.6963 [0.6608, 0.7307] \\
+ICU admission, 24h & `R10`, the seven informative features & 0.7979 [0.7810, 0.8147] \\
+ICU admission, 24h & what day of week and month add & -0.0007 [-0.0028, +0.0013] \\
 Mortality, 28d & `R3\_acqctx\_pre`, all nine features & 0.7587 [0.7264, 0.7903] \\
-Mortality, 28d & what the other eight features add & +0.0467 [+0.0266, +0.0675] \\
-Mortality, 365d & `R9\_triage`, triage acuity alone & 0.6298 [0.6095, 0.6502] \\
-Mortality, 365d & `R2\_demo`, age and sex & 0.7458 [0.7205, 0.7696] \\
+Mortality, 28d & `R10`, the seven informative features & 0.7530 [0.7181, 0.7868] \\
+Mortality, 28d & what day of week and month add & +0.0056 [-0.0037, +0.0156] \\
 Mortality, 365d & `R3\_acqctx\_pre`, all nine features & 0.7241 [0.7029, 0.7441] \\
-Mortality, 365d & what the other eight features add & +0.0943 [+0.0736, +0.1146] \\
+Mortality, 365d & `R10`, the seven informative features & 0.7259 [0.7046, 0.7463] \\
+Mortality, 365d & what day of week and month add & -0.0018 [-0.0042, +0.0006] \\
 \bottomrule
 \end{tabular}
-\par\footnotesize Acuity alone carries most of the block's discrimination at 24-hour ICU admission and the other eight features still add to it, at every label, with every interval excluding zero. The block is neither reducible to acuity nor independent of it.
-\par\footnotesize At one year the ordering between acuity and demographics reverses: acuity alone falls below age and sex, having been well above them at 24 hours. That is consistent with the intuition the horizon-ladder family was built on, and it is not evidence for that family's registered trend, which the paper reports as not supported. An exploratory arm cannot rescue a registered test.
-\par\footnotesize This arm fits one ordinal feature, so every seed produces the same model and its seed-to-seed spread is exactly zero. The noise floor this paper judges differences against therefore does not exist for it, and the interval carries the uncertainty instead.
+\par\footnotesize The two features are worth nothing measurable at any label: every paired difference is smaller than the seed-to-seed spread of the arm itself and every interval contains zero. The declared arm is reported as nine features because nine were declared, and it reads as seven.
+\end{table}
+
+% PANEL T12
+\begin{table}[t]
+\centering
+\small
+\caption{The recovery ratio under the waveform arm's own selection procedure. EXPLORATORY, and not registered. Every recovery ratio in this paper divides a tabular arm tuned per target over fifty trials by a waveform arm selected once, from four candidate configurations, on a validation macro across all fifteen deterioration targets. That inequality reaches the ratio and inflates it (Limitations). The waveform arm cannot be retuned within this work. The tabular arms can be selected the way it was, and are here: four candidates, one configuration for every label, chosen on the same fifteen-target validation macro. Same features, same code path, same five seeds; only the selection changes.}
+\label{tab:sharedconfig}
+\begin{tabular}{llll}
+\toprule
+Arm & Label & Declared, tuned per target [95\% CI] & Selected on the 15-target macro [95\% CI] \\
+\midrule
+\texttt{`R3\_acqctx\_pre`} & ICU admission, 24h & 0.9366 [0.8758, 0.9995] & 0.9435 [0.8827, 1.0069] \\
+\texttt{`R3\_acqctx\_pre`} & Mortality, 28d & 0.7448 [0.6515, 0.8382] & 0.7566 [0.6640, 0.8498] \\
+\texttt{`R3\_acqctx\_pre`} & Mortality, 365d & 0.6803 [0.6149, 0.7476] & 0.6838 [0.6176, 0.7514] \\
+\texttt{`R4\_demo\_acq`} & ICU admission, 24h & 0.9749 [0.9155, 1.0376] & 0.9782 [0.9190, 1.0407] \\
+\texttt{`R4\_demo\_acq`} & Mortality, 28d & 0.8931 [0.8095, 0.9769] & 0.8890 [0.8069, 0.9713] \\
+\texttt{`R4\_demo\_acq`} & Mortality, 365d & 0.9206 [0.8568, 0.9849] & 0.9220 [0.8553, 0.9879] \\
+\bottomrule
+\end{tabular}
+\par\footnotesize Matching the waveform arm's selection procedure moves every recovery ratio by under a hundredth, slightly upward, which is within what the seeds alone move these arms and leaves the registered target missed as before. The tuning inequality is therefore worth almost nothing on the side of it that can be measured here. It does not follow that the whole inequality is worth little: what cannot be measured here is what a per-target waveform arm would reach, and that is the side the Limitations says is open.
+\end{table}
+
+% PANEL T13
+\begin{table}[t]
+\centering
+\small
+\caption{Calibration intercept, slope and Brier score. Three quantities the expected calibration error cannot give. The INTERCEPT is calibration-in-the-large, fitted with the slope held at one: zero means the average predicted risk matches the observed rate, and a negative value means the arm over-predicts. The SLOPE is the coefficient on the logit of the predicted probability: one means the probabilities are spread correctly, above one means they are too narrow and below one too extreme. The BRIER score is mean squared error on the probability scale, lower being better, and unlike the expected calibration error it is a proper score. All three are patient-clustered over the same 10,000 resamples as every other interval here, and each interval is taken on the quantity itself.}
+\label{tab:calfit}
+\begin{tabular}{lllll}
+\toprule
+Label & Arm & Intercept [95\% CI] & Slope [95\% CI] & Brier [95\% CI] \\
+\midrule
+ICU admission, 24h & \texttt{`R1\_prevalence`} & +0.0389 [-0.0577, +0.1297] & undefined & 0.1101 [0.1024, 0.1179] \\
+ICU admission, 24h & \texttt{`R2\_demo`} & +0.0387 [-0.0600, +0.1309] & +1.4807 [+1.0946, +1.8774] & 0.1087 [0.1011, 0.1164] \\
+ICU admission, 24h & \texttt{`R3\_acqctx\_pre`} & +0.0366 [-0.0622, +0.1299] & +1.0158 [+0.9389, +1.0997] & 0.0926 [0.0862, 0.0993] \\
+ICU admission, 24h & \texttt{`R3b\_acqctx\_window`} & +0.0451 [-0.0506, +0.1348] & +1.1785 [+1.0857, +1.2757] & 0.0928 [0.0864, 0.0995] \\
+ICU admission, 24h & \texttt{`R4\_demo\_acq`} & +0.0456 [-0.0548, +0.1410] & +0.9685 [+0.8944, +1.0496] & 0.0908 [0.0845, 0.0974] \\
+ICU admission, 24h & \texttt{`R5\_tabular`} & +0.0895 [-0.0256, +0.1998] & +1.0157 [+0.9556, +1.0837] & 0.0618 [0.0564, 0.0675] \\
+ICU admission, 24h & \texttt{`R6\_waveform`} & -0.8818 [-0.9737, -0.7963] & +2.4717 [+2.2687, +2.6854] & 0.1080 [0.1037, 0.1123] \\
+ICU admission, 24h & \texttt{`R7\_waveform\_demo\_acq`} & -0.8566 [-0.9452, -0.7739] & +2.4438 [+2.2695, +2.6315] & 0.0997 [0.0955, 0.1041] \\
+Mortality, 28d & \texttt{`R1\_prevalence`} & +0.0549 [-0.0960, +0.1966] & undefined & 0.0404 [0.0352, 0.0460] \\
+Mortality, 28d & \texttt{`R2\_demo`} & +0.0580 [-0.0927, +0.1997] & +3.1054 [-11584403769.0038, +9545260148.9317] & 0.0400 [0.0348, 0.0455] \\
+Mortality, 28d & \texttt{`R3\_acqctx\_pre`} & +0.0472 [-0.1005, +0.1872] & +2.2124 [-6965940858.8064, +4523473872.0751] & 0.0391 [0.0341, 0.0445] \\
+Mortality, 28d & \texttt{`R3b\_acqctx\_window`} & +0.0469 [-0.1043, +0.1877] & +1.2857 [+1.0987, +1.4908] & 0.0385 [0.0337, 0.0438] \\
+Mortality, 28d & \texttt{`R4\_demo\_acq`} & +0.0579 [-0.0939, +0.2005] & +1.1707 [+1.0270, +1.3277] & 0.0370 [0.0324, 0.0421] \\
+Mortality, 28d & \texttt{`R5\_tabular`} & +0.0871 [-0.0650, +0.2314] & +1.1437 [+1.0374, +1.2634] & 0.0304 [0.0266, 0.0345] \\
+Mortality, 28d & \texttt{`R6\_waveform`} & -1.4894 [-1.6352, -1.3523] & +2.1664 [+1.8981, +2.4733] & 0.0508 [0.0475, 0.0542] \\
+Mortality, 28d & \texttt{`R7\_waveform\_demo\_acq`} & -1.4656 [-1.6105, -1.3308] & +2.4242 [+2.1503, +2.7404] & 0.0486 [0.0453, 0.0519] \\
+Mortality, 365d & \texttt{`R1\_prevalence`} & +0.0375 [-0.0769, +0.1479] & undefined & 0.1222 [0.1125, 0.1324] \\
+Mortality, 365d & \texttt{`R2\_demo`} & +0.0429 [-0.0697, +0.1510] & +2.2383 [-4805452391.6097, +7536143232.2595] & 0.1137 [0.1047, 0.1230] \\
+Mortality, 365d & \texttt{`R3\_acqctx\_pre`} & +0.0496 [-0.0640, +0.1587] & +1.3577 [+1.2126, +1.5073] & 0.1131 [0.1045, 0.1217] \\
+Mortality, 365d & \texttt{`R3b\_acqctx\_window`} & +0.0527 [-0.0623, +0.1635] & +1.1526 [+1.0245, +1.2855] & 0.1123 [0.1039, 0.1208] \\
+Mortality, 365d & \texttt{`R4\_demo\_acq`} & +0.0526 [-0.0583, +0.1590] & +2.4656 [-3843467509.8892, +4190496559.6163] & 0.1093 [0.1008, 0.1180] \\
+Mortality, 365d & \texttt{`R5\_tabular`} & +0.0879 [-0.0297, +0.2008] & +1.1199 [+1.0347, +1.2119] & 0.0909 [0.0836, 0.0985] \\
+Mortality, 365d & \texttt{`R6\_waveform`} & -0.7739 [-0.8838, -0.6698] & +2.2934 [+2.0707, +2.5339] & 0.1132 [0.1080, 0.1185] \\
+Mortality, 365d & \texttt{`R7\_waveform\_demo\_acq`} & -0.8070 [-0.9133, -0.7024] & +2.6155 [+2.3845, +2.8701] & 0.1115 [0.1066, 0.1164] \\
+\bottomrule
+\end{tabular}
+\par\footnotesize The two waveform arms are the only ones whose intervals exclude both nulls. Their intercepts sit far below zero, so they over-predict, and their slopes far above one, so the probabilities they do produce are packed too tightly. Every tabular arm's intercept interval contains zero and every tabular slope interval contains one.
+\par\footnotesize A slope above one is what averaging produces, and the scored probability here is a mean over five seeds and, for the waveform arms, over four crops before that. That mechanism is already named in the limitations; this is the measurement of it.
+\par\footnotesize The prevalence arm predicts one constant, so its probabilities have no spread and a calibration slope does not exist for it. It is reported as undefined rather than as whatever a singular fit stops on.
 \end{table}
 
 % PANEL T4f
@@ -239,11 +326,11 @@ Arm & Label & Within stratum [95\% CI] & Plain, same rows & Effective patients &
 \begin{table}[t]
 \centering
 \small
-\caption{Waveform gain retained: the declared secondary quantity. (R6 - R2) within stratum over (R6 - R2) on the same rows without the pair restriction. The declared formula does not say which R2 the numerator uses; both readings are reported and neither was chosen and they agree on the verdict.}
+\caption{Waveform gain retained: the declared secondary quantity. (R6 - R2) within stratum over (R6 - R2) on the same rows without the pair restriction. The declared formula does not say which R2 the numerator uses, so both readings are reported and neither was chosen after seeing them; they agree on the verdict. The FIRST column is the reading quoted in the abstract and the conclusion, which takes the within-stratum R2 in the numerator. It is named here rather than left to be inferred, because a table that reports two readings of one quantity and quotes one of them elsewhere owes a reader the mapping.}
 \label{tab:retained}
 \begin{tabular}{llllll}
 \toprule
-Label & Retained [95\% CI] & Meets target & Retained, unstratified R2 [95\% CI] & Meets target & Declared target \\
+Label & Retained, quoted reading [95\% CI] & Meets target & Retained, unstratified R2 [95\% CI] & Meets target & Declared target \\
 \midrule
 ICU admission, 24h & 0.7846 [0.6308, 0.9259] & no & 0.6765 [0.5491, 0.7830] & no & at most 0.50 \\
 Mortality, 28d & 0.8643 [0.5584, 1.1720] & no & 0.5518 [0.1822, 0.8262] & no & at most 0.50 \\
@@ -327,23 +414,23 @@ duplicated rows & 0.7384 & 0.7384 & duplicating every row leaves the statistic u
 \label{tab:family}
 \begin{tabular}{llllll}
 \toprule
-Contrast & Label & Raw p & Holm p, final & Phase & Family size m \\
+Contrast & Label & Raw p & Holm p, final & Pairs & Family size m \\
 \midrule
-\texttt{R3\_acqctx\_pre - R2\_demo} & ICU admission, 24h & <0.0002 & <0.0002 & P3 & 15 \\
-\texttt{R3\_acqctx\_pre - R6\_waveform} & Mortality, 28d & <0.0002 & <0.0002 & P3 & 15 \\
-\texttt{R3\_acqctx\_pre - R6\_waveform} & Mortality, 365d & <0.0002 & <0.0002 & P3 & 15 \\
-\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & ICU admission, 24h & <0.0002 & <0.0002 & P3 & 15 \\
-\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & Mortality, 28d & <0.0002 & <0.0002 & P3 & 15 \\
-\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & Mortality, 365d & <0.0002 & <0.0002 & P3 & 15 \\
-\texttt{R8\_waveform\_matched - R6\_waveform} & ICU admission, 24h & <0.0002 & <0.0002 & P4 & 15 \\
-\texttt{R8\_waveform\_matched - R6\_waveform} & Mortality, 28d & <0.0002 & <0.0002 & P4 & 15 \\
-\texttt{R8\_waveform\_matched - R6\_waveform} & Mortality, 365d & <0.0002 & <0.0002 & P4 & 15 \\
-\texttt{R3\_acqctx\_pre - R2\_demo} & Mortality, 28d & 0.0108 & 0.0648 & P3 & 15 \\
-\texttt{R4\_demo\_acq - R6\_waveform} & Mortality, 28d & 0.0128 & 0.0648 & P3 & 15 \\
-\texttt{R4\_demo\_acq - R6\_waveform} & Mortality, 365d & 0.0152 & 0.0648 & P3 & 15 \\
-\texttt{R3\_acqctx\_pre - R6\_waveform} & ICU admission, 24h & 0.0478 & 0.1434 & P3 & 15 \\
-\texttt{R3\_acqctx\_pre - R2\_demo} & Mortality, 365d & 0.177 & 0.354 & P3 & 15 \\
-\texttt{R4\_demo\_acq - R6\_waveform} & ICU admission, 24h & 0.4368 & 0.4368 & P3 & 15 \\
+\texttt{R3\_acqctx\_pre - R2\_demo} & ICU admission, 24h & <0.0002 & <0.0002 & All pairs & 15 \\
+\texttt{R3\_acqctx\_pre - R6\_waveform} & Mortality, 28d & <0.0002 & <0.0002 & All pairs & 15 \\
+\texttt{R3\_acqctx\_pre - R6\_waveform} & Mortality, 365d & <0.0002 & <0.0002 & All pairs & 15 \\
+\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & ICU admission, 24h & <0.0002 & <0.0002 & All pairs & 15 \\
+\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & Mortality, 28d & <0.0002 & <0.0002 & All pairs & 15 \\
+\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & Mortality, 365d & <0.0002 & <0.0002 & All pairs & 15 \\
+\texttt{R8\_waveform\_matched - R6\_waveform} & ICU admission, 24h & <0.0002 & <0.0002 & Matched pairs & 15 \\
+\texttt{R8\_waveform\_matched - R6\_waveform} & Mortality, 28d & <0.0002 & <0.0002 & Matched pairs & 15 \\
+\texttt{R8\_waveform\_matched - R6\_waveform} & Mortality, 365d & <0.0002 & <0.0002 & Matched pairs & 15 \\
+\texttt{R3\_acqctx\_pre - R2\_demo} & Mortality, 28d & 0.0108 & 0.0648 & All pairs & 15 \\
+\texttt{R4\_demo\_acq - R6\_waveform} & Mortality, 28d & 0.0128 & 0.0648 & All pairs & 15 \\
+\texttt{R4\_demo\_acq - R6\_waveform} & Mortality, 365d & 0.0152 & 0.0648 & All pairs & 15 \\
+\texttt{R3\_acqctx\_pre - R6\_waveform} & ICU admission, 24h & 0.0478 & 0.1434 & All pairs & 15 \\
+\texttt{R3\_acqctx\_pre - R2\_demo} & Mortality, 365d & 0.177 & 0.354 & All pairs & 15 \\
+\texttt{R4\_demo\_acq - R6\_waveform} & ICU admission, 24h & 0.4368 & 0.4368 & All pairs & 15 \\
 \bottomrule
 \end{tabular}
 \par\footnotesize This family is never pooled with the horizon ladder (Table 5), which carries its own Holm correction at its own declared size of 6.
@@ -353,27 +440,27 @@ Contrast & Label & Raw p & Holm p, final & Phase & Family size m \\
 \begin{table}[t]
 \centering
 \small
-\caption{Every declared contrast, as a paired difference. Paired patient-clustered bootstrap on the difference itself: both arms are scored on the same resampled patients in each replicate, and two marginal intervals are never compared. No p-value appears without its Each row's Holm value is from the completed family of 15 , not from the correction that was true when its phase closed. The noise floor is the seed-to-seed spread of that contrast's own arms at that label, and a difference not clearly larger than it is reported as no difference.}
+\caption{Every declared contrast, as a paired difference. Paired patient-clustered bootstrap on the difference itself: both arms are scored on the same resampled patients in each replicate, and two marginal intervals are never compared. No p-value appears without its effect size. Each row's Holm value is from the completed family of 15 , not from the correction that was true while the family was still filling up. The noise floor is the seed-to-seed spread of that contrast's own arms at that label, and a difference not clearly larger than it is reported as no difference.}
 \label{tab:contrasts}
 \begin{tabular}{lllllll}
 \toprule
-Contrast & Label & Difference [95\% CI] & Holm p & Noise floor & Clears floor & Phase \\
+Contrast & Label & Difference [95\% CI] & Holm p & Noise floor & Clears floor & Pairs \\
 \midrule
-\texttt{R3\_acqctx\_pre - R2\_demo} & ICU admission, 24h & +0.1955 [+0.1649, +0.2267] & <0.0002 & 0.0049 & yes & P3 \\
-\texttt{R3\_acqctx\_pre - R6\_waveform} & Mortality, 28d & -0.0886 [-0.1246, -0.0544] & <0.0002 & 0.0207 & yes & P3 \\
-\texttt{R3\_acqctx\_pre - R6\_waveform} & Mortality, 365d & -0.1053 [-0.1301, -0.0809] & <0.0002 & 0.0130 & yes & P3 \\
-\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & ICU admission, 24h & +0.0398 [+0.0298, +0.0498] & <0.0002 & 0.0091 & yes & P3 \\
-\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & Mortality, 28d & +0.0250 [+0.0128, +0.0374] & <0.0002 & 0.0190 & yes & P3 \\
-\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & Mortality, 365d & +0.0239 [+0.0155, +0.0324] & <0.0002 & 0.0130 & yes & P3 \\
-\texttt{R8\_waveform\_matched - R6\_waveform} & ICU admission, 24h & -0.0688 [-0.0912, -0.0478] & <0.0002 & - & - & P4 \\
-\texttt{R8\_waveform\_matched - R6\_waveform} & Mortality, 28d & -0.0680 [-0.1102, -0.0284] & <0.0002 & - & - & P4 \\
-\texttt{R8\_waveform\_matched - R6\_waveform} & Mortality, 365d & -0.0318 [-0.0488, -0.0157] & <0.0002 & - & - & P4 \\
-\texttt{R3\_acqctx\_pre - R2\_demo} & Mortality, 28d & +0.0624 [+0.0165, +0.1082] & 0.0648 & 0.0207 & yes & P3 \\
-\texttt{R4\_demo\_acq - R6\_waveform} & Mortality, 28d & -0.0371 [-0.0684, -0.0077] & 0.0648 & 0.0190 & yes & P3 \\
-\texttt{R4\_demo\_acq - R6\_waveform} & Mortality, 365d & -0.0261 [-0.0481, -0.0049] & 0.0648 & 0.0130 & yes & P3 \\
-\texttt{R3\_acqctx\_pre - R6\_waveform} & ICU admission, 24h & -0.0201 [-0.0406, -0.0002] & 0.1434 & 0.0091 & yes & P3 \\
-\texttt{R3\_acqctx\_pre - R2\_demo} & Mortality, 365d & -0.0216 [-0.0523, +0.0098] & 0.354 & 0.0043 & yes & P3 \\
-\texttt{R4\_demo\_acq - R6\_waveform} & ICU admission, 24h & -0.0080 [-0.0276, +0.0115] & 0.4368 & 0.0091 & no & P3 \\
+\texttt{R3\_acqctx\_pre - R2\_demo} & ICU admission, 24h & +0.1955 [+0.1649, +0.2267] & <0.0002 & 0.0049 & yes & All pairs \\
+\texttt{R3\_acqctx\_pre - R6\_waveform} & Mortality, 28d & -0.0886 [-0.1246, -0.0544] & <0.0002 & 0.0207 & yes & All pairs \\
+\texttt{R3\_acqctx\_pre - R6\_waveform} & Mortality, 365d & -0.1053 [-0.1301, -0.0809] & <0.0002 & 0.0130 & yes & All pairs \\
+\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & ICU admission, 24h & +0.0398 [+0.0298, +0.0498] & <0.0002 & 0.0091 & yes & All pairs \\
+\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & Mortality, 28d & +0.0250 [+0.0128, +0.0374] & <0.0002 & 0.0190 & yes & All pairs \\
+\texttt{R7\_waveform\_demo\_acq - R6\_waveform} & Mortality, 365d & +0.0239 [+0.0155, +0.0324] & <0.0002 & 0.0130 & yes & All pairs \\
+\texttt{R8\_waveform\_matched - R6\_waveform} & ICU admission, 24h & -0.0688 [-0.0912, -0.0478] & <0.0002 & - & - & Matched pairs \\
+\texttt{R8\_waveform\_matched - R6\_waveform} & Mortality, 28d & -0.0680 [-0.1102, -0.0284] & <0.0002 & - & - & Matched pairs \\
+\texttt{R8\_waveform\_matched - R6\_waveform} & Mortality, 365d & -0.0318 [-0.0488, -0.0157] & <0.0002 & - & - & Matched pairs \\
+\texttt{R3\_acqctx\_pre - R2\_demo} & Mortality, 28d & +0.0624 [+0.0165, +0.1082] & 0.0648 & 0.0207 & yes & All pairs \\
+\texttt{R4\_demo\_acq - R6\_waveform} & Mortality, 28d & -0.0371 [-0.0684, -0.0077] & 0.0648 & 0.0190 & yes & All pairs \\
+\texttt{R4\_demo\_acq - R6\_waveform} & Mortality, 365d & -0.0261 [-0.0481, -0.0049] & 0.0648 & 0.0130 & yes & All pairs \\
+\texttt{R3\_acqctx\_pre - R6\_waveform} & ICU admission, 24h & -0.0201 [-0.0406, -0.0002] & 0.1434 & 0.0091 & yes & All pairs \\
+\texttt{R3\_acqctx\_pre - R2\_demo} & Mortality, 365d & -0.0216 [-0.0523, +0.0098] & 0.354 & 0.0043 & yes & All pairs \\
+\texttt{R4\_demo\_acq - R6\_waveform} & ICU admission, 24h & -0.0080 [-0.0276, +0.0115] & 0.4368 & 0.0091 & no & All pairs \\
 \bottomrule
 \end{tabular}
 \par\footnotesize R4\_demo\_acq - R6\_waveform at 24-hour ICU admission does not clear its own noise floor. Demographics plus acquisition context is not distinguishable from the waveform arm there.
