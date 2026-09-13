@@ -1,0 +1,28 @@
+# Concept block 3. ECG deep learning for prognosis, and the baseline arms that
+# literature actually publishes. Answers sub-question 3 of the protocol.
+question: >-
+  What comparator arms do ECG deep-learning prognosis studies report, and does
+  any of them report what a non-waveform model achieves on the same cohort and
+  the same labels?
+framework: PICO
+
+blocks:
+  - name: Modality
+    terms: ["electrocardiogram", "electrocardiography", "ECG", "EKG",
+            "12-lead", "waveform"]
+    mesh: ["Electrocardiography"]
+
+  - name: Method
+    terms: ["deep learning", "machine learning", "artificial intelligence",
+            "convolutional neural network", "foundation model",
+            "self-supervised", "transformer"]
+    mesh: ["Deep Learning", "Artificial Intelligence"]
+
+  - name: Outcome
+    terms: ["mortality", "prognosis", "survival", "deterioration",
+            "risk prediction", "incident cardiovascular", "biological age"]
+    mesh: ["Mortality", "Prognosis", "Risk Assessment"]
+
+limits:
+  years: [2019, 2026]
+  languages: [English]

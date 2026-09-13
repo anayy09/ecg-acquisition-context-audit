@@ -85,6 +85,24 @@ which is enough to verify a regenerated one without redistributing it.
 | `comparisons/` | the pre-declared comparison files, committed before the runs they govern |
 | `results/` | the aggregate tables and figures every number in the paper comes from |
 | `runs/` | one directory per run: its manifest, resolved config, metrics and provenance |
+| `literature/` | the structured search behind the related-work section: the protocol, every query as issued, every screening decision with its reason, and the table of located studies |
+
+The paper's related-work section argues an absence, and an absence is only as
+strong as the search behind it. That search is in `literature/`, in four parts.
+`protocol.md` was written before any query ran. `search-record.md` separates the
+strategy specification from what was actually issued, because a rendered
+platform strategy nobody executed is the commonest unreproducible element of a
+published search section. `screening-decisions.md` carries every excluded record
+with a specific reason, and says which count does not exist for this review and
+why it is not estimated rather than giving an estimate. `located-studies.md` is
+the row-per-study table of every located study against the non-signal comparator
+arm it reported.
+
+One thing that record does not contain, stated here because it is the kind of
+gap a reader should not have to find: three of the four concept blocks were
+logged without a taken-forward column, and it reads as not recorded rather than
+as nothing taken. What each search contributed is in the screening decisions,
+which are complete.
 
 ## On two things a reader will notice
 

@@ -12,7 +12,7 @@
 \begin{table}[t]
 \centering
 \small
-\caption{The nested input ladder, record level. AUROC with a patient-clustered percentile bootstrap interval, 10,000 resamples, resampling unit subject\_id. One row per ECG throughout: rows 1 to 5 have no crops, so the published crop-level protocol appears nowhere in this panel. Scores are averaged across the five seeds and one AUROC is taken on the pooled score, because a paired bootstrap needs one score vector per arm; per-seed spreads are in Additional file 1, Table S7.}
+\caption{The nested input ladder, record level. AUROC with a patient-clustered percentile bootstrap interval, 10,000 resamples, resampling unit subject\_id. One row per ECG throughout: rows 1 to 5 have no crops, so the published crop-level protocol appears nowhere in this panel. Scores are averaged across the five seeds and one AUROC is taken on the pooled score, because a paired bootstrap needs one score vector per arm; per-seed spreads are in Supplementary, Table S7.}
 \label{tab:ladder}
 \begin{tabular}{lllll}
 \toprule
@@ -28,7 +28,7 @@ Row & Arm & ICU admission, 24h & Mortality, 28d & Mortality, 365d \\
 7 & \texttt{R7\_waveform\_demo\_acq} & 0.8571 [0.8424, 0.8713] & 0.8723 [0.8485, 0.8947] & 0.8533 [0.8365, 0.8693] \\
 \bottomrule
 \end{tabular}
-\par\footnotesize Row 8 is not a row here. It is a within-stratum concordance over restricted pairs, a different estimand from a record-level AUROC, and it has its own panel in Additional file 1, Table S1.
+\par\footnotesize Row 8 is not a row here. It is a within-stratum concordance over restricted pairs, a different estimand from a record-level AUROC, and it has its own panel in Supplementary, Table S1.
 \par\footnotesize Sample: ICU admission, 24h: 6,407 ECGs, 3,626 patients, prevalence 0.1260; Mortality, 28d: 6,428 ECGs, 3,636 patients, prevalence 0.0422; Mortality, 365d: 6,428 ECGs, 3,636 patients, prevalence 0.1425.
 \end{table}
 
@@ -42,7 +42,7 @@ Row & Arm & ICU admission, 24h & Mortality, 28d & Mortality, 365d \\
 \toprule
 Quantity & Endpoint & Pre-declared & Measured [95\% CI] & Outcome \\
 \midrule
-G1: R3\_acqctx\_pre beats R2\_demo & Mortality, 365d & positive, beyond the 0.0043 seed and noise spread & -0.0216 [-0.0523, +0.0098] & FAILED \\
+pre-declared rule 1: R3\_acqctx\_pre beats R2\_demo & Mortality, 365d & positive, beyond the 0.0043 seed and noise spread & -0.0216 [-0.0523, +0.0098] & FAILED \\
 Recovery ratio, R3\_acqctx\_pre against R6\_waveform & Mortality, 365d & at least 0.70 & 0.6803 [0.6149, 0.7476] & FAILED \\
 Waveform gain retained with acquisition context held fixed & Mortality, 365d & at most 0.50 & 0.9313 [0.6631, 1.1583] & FAILED \\
 Horizon-ladder trend, four never-scored horizons & mortality 1, 7, 90, 180 d & negative, interval excluding zero & -0.8000 [-1.0000, +0.2000] & NOT SUPPORTED \\
@@ -398,7 +398,7 @@ Mortality, 180d & 180 & +0.0030 [-0.0306, +0.0367] & 0.8656 & 1 & primary \\
 Mortality, 365d & 365 & -0.0216 [-0.0523, +0.0098] & 0.177 & not corrected in this family & generating \\
 \bottomrule
 \end{tabular}
-\par\footnotesize This family is corrected separately from the audit family (Additional file 1, Table S4) and the two are never pooled. No test carries an adjusted p in both.
+\par\footnotesize This family is corrected separately from the audit family (Supplementary, Table S4) and the two are never pooled. No test carries an adjusted p in both.
 \end{table}
 
 % PANEL T6b

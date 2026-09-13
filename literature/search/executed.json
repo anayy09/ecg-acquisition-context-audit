@@ -1,0 +1,1549 @@
+{
+  "date": "2026-09-06",
+  "preamble": "What actually ran. Part A is the strategy a reader would run to\nreproduce the search; this is the log of the searches issued on\n2026-09-06. The two differ, and printing both is the point.\n\nThe queries were issued against PubMed through its E-utilities, against\nCrossref, Europe PMC, DataCite, OpenReview and DBLP through their REST\nendpoints, and against publisher and repository pages through web search\nrestricted to those domains and through direct fetch. They are not the\nrendered platform strategies of Part A pasted into each platform's search\nbox: no institutional Scopus or Web of Science credential was available,\nand PubMed was driven through its API rather than its web form.\n\nThe log is grouped by concept block rather than ordered in time, because\nthe four blocks were searched independently of one another.\n\nThe returned column is as the interface reported it. Where a query\nreturned nothing that is recorded too, because a zero is the evidence\nbehind several of the absence statements in the related-work section.",
+  "deviations": "1. **Publisher platforms were reached by site-restricted web search**\n   rather than through their own search interfaces, for want of\n   credentials. This is not equivalent, and it is the reason IEEE Xplore\n   and the ACM Digital Library are under-covered relative to Part A's\n   rendered strategies for them.\n\n2. **Scopus and Web of Science were not searched at all.** Part A renders\n   strategies for both because a reader with access should run them.\n   Neither was reachable here.\n\n3. **Queries were shorter than the rendered block strategies.** The\n   rendered PubMed strategy for a three-block spec runs to several hundred\n   characters and returns a set too large to screen by hand at this\n   review's scale; the executed queries take two or three terms per block.\n   That trades sensitivity for precision, which is a rapid-review shortcut\n   and is declared as one in the protocol.\n\n4. **Backward citation chasing was informal.** It ran from the five\n   informative-presence papers the earlier review already carried, and the\n   records it produced are in the block logs rather than separated out.\n\n5. **The taken-forward column was not captured for three of the four\n   blocks.** Blocks b2, b3 and b4 were logged without it. The column is\n   reported as not recorded rather than reconstructed, and what those\n   searches contributed is in the screening decisions, which are\n   complete.\n\n6. **A second wave ran on 2026-09-13**, after two external reviews reported\n   that the first had under-covered the computing proceedings and had missed\n   at least one 2026 work. It queried OpenAlex and Semantic Scholar, which\n   index IEEE, ACM and the health machine-learning proceedings without a\n   subscription, and it re-checked arXiv directly. Scopus and Web of Science\n   were still not reachable. The wave is logged with the rest and its rows\n   carry the block id `rerun`.",
+  "searches": [
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "shortcut learning medical imaging deep learning spurious correlation",
+      "returned": "7",
+      "taken": "Souza 2024 (secret site classifier), Zhang 2023 (intrinsic acquisition shortcuts), Cooke 2026 (RoentMod), Dapamede 2025 (DICOM LUT), Ong Ly 2024 (a...",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "deep learning model detects hospital site scanner from medical images confounding",
+      "returned": "0",
+      "taken": "Nothing. PubMed's auto-translation AND-joins every term; abandoned long natural-language queries after this",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "\"shortcut learning\"[Title/Abstract] AND (medical OR clinical OR radiology OR pathology)",
+      "returned": "61 (30 retrieved)",
+      "taken": "Confirmed the field's size and that no hit was an acquisition-context-only prognostic arm",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "Badgeley deep learning hip fracture confounding patient healthcare variables",
+      "returned": "1",
+      "taken": "PMID 31304378, the metadata-only baseline",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "Zech variable generalization deep learning pneumonia chest radiographs",
+      "returned": "1",
+      "taken": "PMID 30399157",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "artificial intelligence recognition of patient race medical imaging Gichoya",
+      "returned": "1",
+      "taken": "PMID 35568690",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "DeGrave AI radiographic COVID-19 detection selects shortcuts over signal",
+      "returned": "1",
+      "taken": "PMID 32995822, medRxiv **preprint** only; triggered a hunt for the version of record",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "DeGrave Janizek Lee \"AI for radiographic COVID-19 detection selects shortcuts over signal\" Nature Machine Intelligence 2021 doi",
+      "returned": "10 links",
+      "taken": "Pointed to the Nature Machine Intelligence version of record; DOI then confirmed independently via Crossref",
+      "tool_as_recorded": "WebSearch"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "site-specific digital histology signatures deep learning model generalisation",
+      "returned": "0",
+      "taken": "Nothing (over-constrained translation)",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "Howard TCGA site specific signatures histology deep learning bias",
+      "returned": "1",
+      "taken": "PMID 34285218",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "common pitfalls recommendations machine learning detect prognosticate COVID-19 chest radiographs CT",
+      "returned": "0",
+      "taken": "Nothing; the Roberts 2021 review was not recoverable from PubMed and its DOI could not be confirmed, so it is quarantined",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "Crossref",
+      "interface": "REST API",
+      "query": "Shortcut learning in deep neural networks Geirhos",
+      "returned": "5",
+      "taken": "Corrected a DOI I had wrong from memory (`...-00257-6` is wrong; the real one is `...-00257-z`)",
+      "tool_as_recorded": "Crossref API `query.bibliographic`"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "Crossref",
+      "interface": "REST API",
+      "query": "Common pitfalls and recommendations for using machine learning to detect and prognosticate for COVID-19 chest radiographs CT scans",
+      "returned": "5",
+      "taken": "No match; Roberts 2021 quarantined",
+      "tool_as_recorded": "Crossref API `query.bibliographic`"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "\"metadata\" AND (\"only model\" OR \"alone\" OR \"baseline\") AND deep learning imaging prognosis outcome prediction confounder",
+      "returned": "0",
+      "taken": "Nothing",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "DICOM metadata header machine learning predict clinical outcome without image pixels",
+      "returned": "0",
+      "taken": "Nothing",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "\"DICOM metadata\"[Title/Abstract] AND (prediction OR prognostic OR outcome OR bias)",
+      "returned": "14",
+      "taken": "Screened all 14; every one is series labelling, dosimetry, magnification calibration, registry linkage, contrast-phase detection or repeat-scan aud...",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "\"process variables\"[Title/Abstract] AND (radiograph OR imaging) AND deep learning",
+      "returned": "4",
+      "taken": "Badgeley again; the other three unrelated",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "\"hospital process\"[Title/Abstract] AND (machine learning OR deep learning) AND prediction",
+      "returned": "**1**",
+      "taken": "**Badgeley 2019 is the only paper in PubMed matching this phrase.** Key absence-of-evidence datum",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "Winkler skin markings melanoma convolutional neural network diagnostic bias",
+      "returned": "0",
+      "taken": "Over-constrained",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "Winkler JK association skin markings melanoma image classification",
+      "returned": "1",
+      "taken": "PMID 31411641 (screened, excluded, see §3)",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "hidden stratification Oakden-Rayner clinically meaningful failures machine learning",
+      "returned": "2",
+      "taken": "PMID 33196064, 34876430 (both screened, excluded, see §3)",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "hidden variables deep learning digital pathology batch effects prediction model study",
+      "returned": "1",
+      "taken": "PMID 33528370, Schmitt 2021, the timestamp/scanner learnability paper",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "\"medical algorithmic audit\" Liu Lancet Digital Health",
+      "returned": "1",
+      "taken": "PMID 35396183",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "\"acquisition context\"[Title/Abstract] AND (deep learning OR machine learning OR artificial intelligence)",
+      "returned": "**4**",
+      "taken": "All four irrelevant (a 5T fMRI dataset descriptor, an echo segmentation net, a fear-extinction fMRI study, one unretrieved). **The paper's central...",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "\"informative presence\"[Title/Abstract] OR \"informative observation\"[Title/Abstract]",
+      "returned": "59",
+      "taken": "Confirmed this literature exists but it is EHR-measurement-process work already covered by the paper's reserved keys (`agniel2018`, `sisk2021`, `ha...",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "scanner site identity predicts survival deep learning confounded prognostic model imaging center effect",
+      "returned": "0",
+      "taken": "Nothing",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "\"metadata-only\" baseline model prognosis medical imaging \"no image\" outcome prediction acquisition variables audit",
+      "returned": "8 links",
+      "taken": "**Surfaced Nagai 2026 (metadata-only Cox PH prognostic baseline) and Hinterwimmer 2024.** The single most productive non-PubMed query",
+      "tool_as_recorded": "WebSearch"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "large scale deep learning models diagnosis visual outcome prediction retinitis pigmentosa",
+      "returned": "1",
+      "taken": "PMID 41507439, Nagai 2026",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "impact of metadata in multimodal classification of bone tumours",
+      "returned": "1",
+      "taken": "PMID 39427131 (screened, excluded, see §3)",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "\"time of day\"[Title/Abstract] AND shortcut AND (deep learning OR neural network)",
+      "returned": "**0**",
+      "taken": "No paper in PubMed treats time of day as a deep-learning shortcut. Direct support for the paper's framing being new",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "\"order priority\"[Title/Abstract] OR \"examination timestamp\"[Title/Abstract] OR \"study timestamp\"[Title/Abstract]",
+      "returned": "42",
+      "taken": "Scanned titles; none is an imaging-acquisition-metadata outcome model (\"order priority\" here is overwhelmingly non-radiological usage)",
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "Europe PMC",
+      "interface": "REST API, full text by PMC id",
+      "query": "Full-text retrieval: PMC6550136 (Badgeley), PMC8292530 (Howard), PMC12887015 (Nagai)",
+      "returned": "3 full texts",
+      "taken": "Every number quoted below from these three papers was read in the retrieved full text, not inferred",
+      "tool_as_recorded": "Bash / curl + regex"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "Crossref",
+      "interface": "REST API",
+      "query": "DOI verification: 13 DOIs against `api.crossref.org/works/{doi}",
+      "returned": "13/13 resolved",
+      "taken": "Title + first author + venue + year + volume + pages matched for all 13",
+      "tool_as_recorded": "Bash / curl"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "doi.org",
+      "interface": "resolver",
+      "query": "DOI resolution spot-check: 4 DOIs against `https://doi.org/",
+      "returned": "HTTP 200/202",
+      "taken": "Live resolution confirmed",
+      "tool_as_recorded": "Bash / curl"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "arxiv.org/abs/2004.07780",
+      "returned": "1",
+      "taken": "Geirhos abstract text (Crossref carries no abstract for this record)",
+      "tool_as_recorded": "WebFetch"
+    },
+    {
+      "block": "b1",
+      "n": null,
+      "database": "Europe PMC",
+      "interface": "REST API",
+      "query": "Europe PMC REST, `TITLE:\"AI for radiographic COVID-19 detection selects shortcuts over signal\"",
+      "returned": "1",
+      "taken": "Europe PMC indexes **only** the preprint; recorded as a limitation on the DeGrave entry",
+      "tool_as_recorded": "Bash / curl"
+    },
+    {
+      "block": "b2",
+      "n": 1,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`informative presence OR informed presence electronic health records prediction` (date_from=2022)",
+      "returned": "145,690",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 2,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`missing not at random informative missingness clinical prediction model electronic health record` (date_from=2021)",
+      "returned": "212,630",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 3,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`measurement frequency timing of laboratory tests as predictor mortality care process features`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 4,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Goldstein Bradley informed presence bias electronic health record epidemiology`",
+      "returned": "0",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 5,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`\"informative presence\"[Title/Abstract] OR \"informed presence\"[Title/Abstract] OR \"informative observation\"[Title/Abstract]`",
+      "returned": "69",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 6,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`\"informative missingness\"[Title/Abstract] AND (\"prediction\"[Title/Abstract] OR \"prognostic\"[Title/Abstract])`",
+      "returned": "13",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 7,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`\"missingness\"[Title] AND (\"machine learning\"[Title/Abstract] OR \"prediction model\"[Title/Abstract])`",
+      "returned": "17",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 8,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Goldstein BA[Author] AND (\"electronic health record\"[Title/Abstract])`",
+      "returned": "36",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 9,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Sisk R[Author] AND (\"informative presence\"[Title/Abstract] OR \"informative observation\"[Title/Abstract])`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 10,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"health care process\"[Title/Abstract] OR \"care process\"[Title/Abstract] OR \"healthcare utilization\"[Title/Abstract] OR \"utilization intensity\"[Title/Abstract]) AND (\"features\"[Title/Abstract]) AND (\"prediction model\"[Title/Abstract] OR \"risk prediction\"[Title/Abstract]) AND (\"electronic health record\"[Title/Abstract])`",
+      "returned": "4",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 11,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"shortcut learning\"[Title/Abstract] OR \"shortcut\"[Title/Abstract]) AND (\"deep learning\"[Title/Abstract]) AND (\"medical imaging\"[Title/Abstract] OR \"clinical\"[Title/Abstract] OR \"chest radiograph\"[Title/Abstract] OR \"electrocardiogram\"[Title/Abstract])`",
+      "returned": "35",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 12,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"label leakage\"[Title/Abstract] OR \"target leakage\"[Title/Abstract] OR \"data leakage\"[Title/Abstract]) AND (\"clinical prediction\"[Title/Abstract] OR \"machine learning\"[Title/Abstract] OR \"prognostic model\"[Title/Abstract])`",
+      "returned": "304",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 13,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"treatment paradox\"[Title/Abstract] OR \"treatment-related\"[Title/Abstract] OR \"treatment use\"[Title/Abstract]) AND (\"prognostic model\"[Title/Abstract] OR \"clinical prediction model\"[Title/Abstract])`",
+      "returned": "52",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 14,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`\"early warning score\"[Title] AND (\"emergency department\"[Title/Abstract]) AND (\"deep learning\"[Title/Abstract] OR \"machine learning\"[Title/Abstract]) AND (\"external validation\"[Title/Abstract] OR \"baseline\"[Title/Abstract])`",
+      "returned": "2",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 15,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"test ordering\"[Title/Abstract] OR \"ordering behavior\"[Title/Abstract] OR \"ordering behaviour\"[Title/Abstract] OR \"clinician decision to order\"[Title/Abstract]) AND (\"mortality\"[Title/Abstract] OR \"prognosis\"[Title/Abstract] OR \"outcome\"[Title/Abstract])`",
+      "returned": "198",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 16,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"missing indicator\"[Title/Abstract] OR \"missingness indicator\"[Title/Abstract] OR \"missing indicators\"[Title/Abstract]) AND (\"clinical prediction model\"[Title/Abstract] OR \"prediction model\"[Title/Abstract] OR \"deployment\"[Title/Abstract])`",
+      "returned": "5",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 17,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Sperrin M[Author] AND (\"missing data\"[Title/Abstract] OR \"missingness\"[Title/Abstract] OR \"informative\"[Title/Abstract])`",
+      "returned": "11",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 18,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`van Geloven N[Author] AND (\"prediction\"[Title/Abstract]) AND (\"treatment\"[Title/Abstract] OR \"causal\"[Title/Abstract])`",
+      "returned": "13",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 19,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"chest drain\"[Title/Abstract] OR \"chest tube\"[Title/Abstract] OR \"skin marking\"[Title/Abstract] OR \"treatment marker\"[Title/Abstract]) AND (\"deep learning\"[Title/Abstract] OR \"convolutional neural network\"[Title/Abstract]) AND (\"shortcut\"[Title/Abstract] OR \"confound\"[Title/Abstract] OR \"spurious\"[Title/Abstract] OR \"bias\"[Title/Abstract])`",
+      "returned": "0",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 20,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`\"electrocardiogram\"[Title/Abstract] AND \"deep learning\"[Title/Abstract] AND (\"confounding\"[Title/Abstract] OR \"shortcut\"[Title/Abstract] OR \"acquisition\"[Title/Abstract] OR \"metadata\"[Title/Abstract] OR \"demographics baseline\"[Title/Abstract])`",
+      "returned": "55",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 21,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"time of day\"[Title/Abstract] OR \"arrival time\"[Title/Abstract] OR \"off-hours\"[Title/Abstract] OR \"after hours\"[Title/Abstract]) AND \"emergency department\"[Title/Abstract] AND (\"mortality\"[Title/Abstract]) AND (\"machine learning\"[Title/Abstract] OR \"prediction model\"[Title/Abstract])`",
+      "returned": "0",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 22,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"measurement frequency\"[Title/Abstract] OR \"monitoring frequency\"[Title/Abstract] OR \"sampling frequency\"[Title/Abstract] OR \"vital sign frequency\"[Title/Abstract]) AND (\"predictive\"[Title/Abstract] OR \"prediction\"[Title/Abstract]) AND (\"deterioration\"[Title/Abstract] OR \"mortality\"[Title/Abstract] OR \"outcome\"[Title/Abstract])`",
+      "returned": "26",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 23,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Rusanov A[Author] AND (\"Hidden in plain sight\"[Title] OR \"bias towards sick patients\"[Title/Abstract])`",
+      "returned": "0",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 24,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`\"Hidden in plain sight\"[Title] AND \"electronic health record\"[Title/Abstract]`",
+      "returned": "0",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 25,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"number of encounters\"[Title/Abstract] OR \"encounter frequency\"[Title/Abstract] OR \"visit frequency\"[Title/Abstract] OR \"data density\"[Title/Abstract]) AND (\"risk prediction\"[Title/Abstract] OR \"prediction model\"[Title/Abstract] OR \"discrimination\"[Title/Abstract]) AND (\"electronic health record\"[Title/Abstract] OR \"EHR\"[Title/Abstract])`",
+      "returned": "3",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 26,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`\"electrocardiogram\"[Title/Abstract] AND (\"metadata\"[Title/Abstract] OR \"patient context\"[Title/Abstract] OR \"contextual\"[Title/Abstract]) AND (\"deep learning\"[Title/Abstract] OR \"multimodal\"[Title/Abstract]) AND (\"MIMIC\"[Title/Abstract] OR \"emergency\"[Title/Abstract])`",
+      "returned": "2",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 27,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Beaulieu-Jones B[Author] AND (\"risk stratification\"[Title/Abstract] OR \"clinicians\"[Title/Abstract])`",
+      "returned": "13",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 28,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"clinician behavior\"[Title/Abstract] OR \"clinician behaviour\"[Title/Abstract] OR \"clinician actions\"[Title/Abstract] OR \"clinical judgment\"[Title/Abstract]) AND (\"machine learning\"[Title/Abstract] OR \"deep learning\"[Title/Abstract]) AND (\"risk stratification\"[Title/Abstract] OR \"prediction model\"[Title/Abstract] OR \"prognostic\"[Title/Abstract])`",
+      "returned": "63",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 29,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"systematic review\"[Publication Type] OR \"systematic review\"[Title]) AND (\"machine learning\"[Title/Abstract] OR \"artificial intelligence\"[Title/Abstract]) AND (\"emergency department\"[Title/Abstract]) AND (\"deterioration\"[Title/Abstract] OR \"early warning\"[Title/Abstract] OR \"triage\"[Title/Abstract]) AND (\"reporting\"[Title/Abstract] OR \"PROBAST\"[Title/Abstract] OR \"risk of bias\"[Title/Abstract] OR \"TRIPOD\"[Title/Abstract])`",
+      "returned": "14",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 30,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`(\"electrocardiogram\"[Title/Abstract] OR \"ECG\"[Title/Abstract]) AND (\"emergency department\"[Title/Abstract]) AND (\"ordering\"[Title/Abstract] OR \"decision to obtain\"[Title/Abstract] OR \"utilization\"[Title/Abstract] OR \"triage ECG\"[Title/Abstract]) AND (\"variation\"[Title/Abstract] OR \"predictor\"[Title/Abstract] OR \"outcome\"[Title/Abstract])`",
+      "returned": "22",
+      "taken": null,
+      "tool_as_recorded": "PM"
+    },
+    {
+      "block": "b2",
+      "n": 31,
+      "database": "PubMed",
+      "interface": "E-utilities, related-articles link",
+      "query": "`find_related_articles(pmids=[\"33164082\"], link_type=\"pubmed_pubmed\", max_results=30)` (Sisk 2021 as seed)",
+      "returned": "~100 links returned",
+      "taken": null,
+      "tool_as_recorded": "PM-rel"
+    },
+    {
+      "block": "b2",
+      "n": 32,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "`\"informative presence\" OR \"acquisition context\" electrocardiogram deep learning prognostic metadata-only baseline`",
+      "returned": "9 links",
+      "taken": null,
+      "tool_as_recorded": "WS"
+    },
+    {
+      "block": "b2",
+      "n": 33,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "`api.crossref.org/works?filter=doi:...` (two batched filter calls covering 11 DOIs) plus three single-work calls: `10.1093/aje/kww112`, `10.1001/jamahealthforum.2026.0491`, `10.1016/j.iccn.2025.104058`",
+      "returned": "14 records",
+      "taken": null,
+      "tool_as_recorded": "WF"
+    },
+    {
+      "block": "b2",
+      "n": 34,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "`pubmed.ncbi.nlm.nih.gov/27852603/`",
+      "returned": "blocked",
+      "taken": null,
+      "tool_as_recorded": "WF"
+    },
+    {
+      "block": "b3",
+      "n": 1,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`deep learning electrocardiogram prediction all-cause mortality` (date_from 2019)",
+      "returned": "38",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 2,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`artificial intelligence electrocardiogram age biological age risk marker` (date_from 2019)",
+      "returned": "4",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 3,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`systematic review artificial intelligence electrocardiogram prognosis methodological quality` (date_from 2020)",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 4,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`emergency department electrocardiogram deep learning triage outcome prediction` (date_from 2019)",
+      "returned": "2",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 5,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`deep neural network ECG age estimation predicts mortality` (date_from 2019)",
+      "returned": "11",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 6,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`PTB-XL electrocardiography dataset benchmark deep learning`",
+      "returned": "9",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 7,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`ECG foundation model self-supervised representation learning electrocardiogram` (date_from 2022)",
+      "returned": "13",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 8,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`artificial intelligence ECG prediction models PROBAST risk of bias systematic review` (date_from 2020)",
+      "returned": "7",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 9,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`artificial intelligence electrocardiogram mortality prediction compared with age and sex only model` (date_from 2019)",
+      "returned": "2",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 10,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`MIMIC-IV-ECG deep learning`",
+      "returned": "6",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 11,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`deep learning electrocardiogram emergency department mortality risk stratification cohort` (date_from 2019)",
+      "returned": "6",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 12,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`CODE study 12-lead ECG dataset Brazil deep neural network automatic diagnosis`",
+      "returned": "2",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 13,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Enhancing clinical decision support with physiological waveforms multimodal benchmark emergency care`",
+      "returned": "2",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 14,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`electrocardiogram deep learning model demographics only baseline comparison confounding age sex incremental value` (date_from 2020)",
+      "returned": "**0**",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 15,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`reporting quality TRIPOD adherence artificial intelligence electrocardiography prediction models scoping review` (date_from 2021)",
+      "returned": "**0**",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 16,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`artificial intelligence ECG prospective randomized trial deterioration emergency department implementation` (date_from 2021)",
+      "returned": "**0**",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 17,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`patient contrastive learning representations electrocardiogram modeling`",
+      "returned": "14",
+      "taken": null,
+      "tool_as_recorded": "PubMed search_articles"
+    },
+    {
+      "block": "b3",
+      "n": 18,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "`\"MDS-ED\" MIMIC-IV emergency department benchmark Alcaraz Strodthoff published journal`",
+      "returned": "~10 links",
+      "taken": null,
+      "tool_as_recorded": "WebSearch"
+    },
+    {
+      "block": "b3",
+      "n": 19,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "`Al-Masud Strodthoff \"Pretraining Strategies and Scaling for ECG Foundation Models\" journal published`",
+      "returned": "~7 links",
+      "taken": null,
+      "tool_as_recorded": "WebSearch"
+    },
+    {
+      "block": "b3",
+      "n": 20,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "`\"Benchmarking ECG foundational models\" \"reality check across clinical tasks\" published journal 2026`",
+      "returned": "~8 links",
+      "taken": null,
+      "tool_as_recorded": "WebSearch"
+    },
+    {
+      "block": "b3",
+      "n": 21,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "`https://arxiv.org/abs/2407.17856`",
+      "returned": "1 page",
+      "taken": null,
+      "tool_as_recorded": "WebFetch"
+    },
+    {
+      "block": "b3",
+      "n": 22,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "`https://arxiv.org/abs/2605.12241`",
+      "returned": "1 page",
+      "taken": null,
+      "tool_as_recorded": "WebFetch"
+    },
+    {
+      "block": "b3",
+      "n": 23,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "`https://arxiv.org/abs/2509.25095`",
+      "returned": "1 page",
+      "taken": null,
+      "tool_as_recorded": "WebFetch"
+    },
+    {
+      "block": "b3",
+      "n": 24,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "`https://pmc.ncbi.nlm.nih.gov/articles/PMC13409230/`",
+      "returned": "1 page",
+      "taken": null,
+      "tool_as_recorded": "WebFetch"
+    },
+    {
+      "block": "b3",
+      "n": 25,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "`https://pmc.ncbi.nlm.nih.gov/articles/PMC13195318/` (x2, second pass verbatim)",
+      "returned": "1 page",
+      "taken": null,
+      "tool_as_recorded": "WebFetch"
+    },
+    {
+      "block": "b3",
+      "n": 26,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "`https://pmc.ncbi.nlm.nih.gov/articles/PMC12406858/`",
+      "returned": "1 page",
+      "taken": null,
+      "tool_as_recorded": "WebFetch"
+    },
+    {
+      "block": "b3",
+      "n": 27,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "`https://www.thelancet.com/journals/landig/article/PIIS2589-7500(24)00172-9/fulltext`",
+      "returned": "HTTP 403",
+      "taken": null,
+      "tool_as_recorded": "WebFetch"
+    },
+    {
+      "block": "b3",
+      "n": 28,
+      "database": "Crossref",
+      "interface": "REST API",
+      "query": "Crossref `/works/{doi}` for 15 DOIs",
+      "returned": "15/15 resolved",
+      "taken": null,
+      "tool_as_recorded": "Bash + api.crossref.org"
+    },
+    {
+      "block": "b3",
+      "n": 29,
+      "database": "Europe PMC",
+      "interface": "REST API",
+      "query": "Europe PMC `search?query=DOI:\"10.1016/S2589-7500(24)00172-9\"`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "Bash + ebi.ac.uk REST"
+    },
+    {
+      "block": "b3",
+      "n": 30,
+      "database": "DataCite",
+      "interface": "REST API",
+      "query": "DataCite `/dois/{doi}` for 4 arXiv/PLOS DOIs",
+      "returned": "3 arXiv records",
+      "taken": null,
+      "tool_as_recorded": "Bash + api.datacite.org"
+    },
+    {
+      "block": "b3",
+      "n": 31,
+      "database": "OpenReview",
+      "interface": "REST API",
+      "query": "OpenReview `api2/notes?forum=xXRqWpt3Xr` and `?id=`",
+      "returned": "HTTP 403",
+      "taken": null,
+      "tool_as_recorded": "Bash + curl"
+    },
+    {
+      "block": "b3",
+      "n": 32,
+      "database": "DBLP",
+      "interface": "REST API",
+      "query": "DBLP `search/publ/api?q=Reality Check ECG foundation`",
+      "returned": "HTTP 503",
+      "taken": null,
+      "tool_as_recorded": "Bash + curl"
+    },
+    {
+      "block": "b4",
+      "n": 1,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`TRIPOD+AI reporting guideline prediction model artificial intelligence`",
+      "returned": "12",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 2,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`PROBAST+AI risk of bias assessment prediction model artificial intelligence`",
+      "returned": "77",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 3,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`calibration Achilles heel predictive analytics clinical prediction model`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 4,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`systematic review no performance benefit machine learning over logistic regression clinical prediction models`",
+      "returned": "7",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 5,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`PROBAST-AI[Title] OR \"PROBAST+AI\"[Title]`",
+      "returned": "6",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 6,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Collins GS[Author] AND TRIPOD[Title] AND artificial intelligence`",
+      "returned": "8",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 7,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`decision curve analysis step-by-step guide interpreting net benefit`",
+      "returned": "2",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 8,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Andaur Navarro[Author] AND prediction models machine learning risk of bias reporting`",
+      "returned": "4",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 9,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`minimum information about clinical artificial intelligence modeling MI-CLAIM checklist`",
+      "returned": "7",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 10,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`machine learning medical imaging methodological failures recommendations future`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 11,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`assessing performance prediction models framework traditional novel measures Steyerberg`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 12,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`artificial intelligence versus clinicians systematic review design reporting standards claims deep learning`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 13,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`almost all articles cancer prognostic markers report statistically significant results`",
+      "returned": "828",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 14,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`reporting interpreting decision curve analysis guide investigators`",
+      "returned": "13",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 15,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Kyzas PA[Author] AND prognostic`",
+      "returned": "12",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 16,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`do no harm roadmap responsible machine learning health care`",
+      "returned": "2",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 17,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`net benefit approaches evaluation of prediction models molecular markers diagnostic tests`",
+      "returned": "10",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 18,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`calibration hierarchy for risk models was defined utopia empirical data`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 19,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Evaluation of clinical prediction models part 1 from development to external validation`",
+      "returned": "125",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 20,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`preregistration registered reports machine learning research reproducibility`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 21,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`leakage reproducibility crisis machine-learning-based science`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 22,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Collins GS[Author] AND BMJ[Journal] AND prediction models external validation 2024`",
+      "returned": "3",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 23,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`REMARK reporting recommendations for tumour marker prognostic studies`",
+      "returned": "64",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 24,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`MI-CLAIM`",
+      "returned": "21",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 25,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`CLAIM checklist artificial intelligence medical imaging update`",
+      "returned": "4",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 26,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`McShane LM[Author] AND REMARK[Title]`",
+      "returned": "11",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 27,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`MI-CLAIM generative artificial intelligence updated checklist reporting`",
+      "returned": "0",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 28,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Wynants[Author] AND prediction models diagnosis prognosis covid-19 systematic review critical appraisal`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 29,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`CHARMS checklist critical appraisal data extraction systematic reviews prediction modelling studies`",
+      "returned": "139",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 30,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Klement W[Author] AND El Emam K[Author] AND reporting machine learning modeling studies development validation`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 31,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`Moons KGM[Author] AND CHARMS[Title]`",
+      "returned": "1",
+      "taken": null,
+      "tool_as_recorded": "PubMed"
+    },
+    {
+      "block": "b4",
+      "n": 32,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "`\"weak baselines\" machine learning progress illusory tuned baselines meta-research journal article`",
+      "returned": "9 links",
+      "taken": null,
+      "tool_as_recorded": "WebSearch"
+    },
+    {
+      "block": "b4",
+      "n": 33,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "`\"A Troubling Analysis of Reproducibility and Progress in Recommender Systems Research\" ACM Transactions on Information Systems Ferrari Dacrema DOI`",
+      "returned": "9 links",
+      "taken": null,
+      "tool_as_recorded": "WebSearch"
+    },
+    {
+      "block": "b4",
+      "n": 34,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "`clinical machine learning must report simple baseline demographics-only model reporting recommendation 2025 journal`",
+      "returned": "8 links",
+      "taken": null,
+      "tool_as_recorded": "WebSearch"
+    },
+    {
+      "block": "b4",
+      "n": 35,
+      "database": "Crossref",
+      "interface": "REST API",
+      "query": "`GET https://api.crossref.org/works/{DOI}`",
+      "returned": "30 DOIs resolved; title, first author, container, volume/issue/page/article-number, issue date, and work type checked against the PubMed record for...",
+      "taken": null,
+      "tool_as_recorded": "Bash/curl"
+    },
+    {
+      "block": "b4",
+      "n": 36,
+      "database": "Europe PMC",
+      "interface": "REST API, full text by PMC id",
+      "query": "`GET https://www.ebi.ac.uk/europepmc/webservices/rest/{PMCID}/fullTextXML`",
+      "returned": "PMC11019967 (TRIPOD+AI), PMC11931409 (PROBAST+AI), PMC10502599 (CREMLS), PMC4196729 (CHARMS); PMC8320533 (Stevens) returned 0 bytes",
+      "taken": null,
+      "tool_as_recorded": "Bash/curl"
+    },
+    {
+      "block": "b4",
+      "n": 37,
+      "database": "PLOS",
+      "interface": "publisher manuscript XML",
+      "query": "`GET https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.1001216&type=manuscript`",
+      "returned": "REMARK checklist Table 1 extracted verbatim from the publisher's own manuscript XML",
+      "taken": null,
+      "tool_as_recorded": "Bash/curl"
+    },
+    {
+      "block": "b4",
+      "n": 38,
+      "database": "PubMed",
+      "interface": "E-utilities",
+      "query": "`get_full_text_article([\"PMC7538196\"])`",
+      "returned": "MI-CLAIM raw full text (all baseline quotations below are from this raw text, not a summary)",
+      "taken": null,
+      "tool_as_recorded": "PubMed MCP"
+    },
+    {
+      "block": "b4",
+      "n": 39,
+      "database": "Publisher or repository page",
+      "interface": "direct fetch",
+      "query": "`WebFetch` on PMC11019967 and PMC7538196",
+      "returned": "Checklist item wording; each load-bearing quote was then re-verified against raw XML or raw full text (see §4 for one WebFetch that failed this check)",
+      "taken": null,
+      "tool_as_recorded": "WebFetch"
+    },
+    {
+      "block": "rerun",
+      "n": 1,
+      "database": "OpenAlex",
+      "interface": "REST API",
+      "query": "electrocardiogram acquisition context metadata baseline deep learning",
+      "returned": "25",
+      "taken": "Nothing. Every hit was a review, a survey or a signal-only classifier",
+      "tool_as_recorded": "OpenAlex (REST API)"
+    },
+    {
+      "block": "rerun",
+      "n": 2,
+      "database": "OpenAlex",
+      "interface": "REST API",
+      "query": "metadata only baseline medical imaging prognosis shortcut audit",
+      "returned": "25",
+      "taken": "Nothing anticipating the claim. Two audit-shaped hits were read and neither fits a non-signal arm",
+      "tool_as_recorded": "OpenAlex (REST API)"
+    },
+    {
+      "block": "rerun",
+      "n": 3,
+      "database": "OpenAlex",
+      "interface": "REST API",
+      "query": "non-signal baseline clinical machine learning benchmark reporting",
+      "returned": "25",
+      "taken": "Nothing. The query does not isolate the concept in a general index",
+      "tool_as_recorded": "OpenAlex (REST API)"
+    },
+    {
+      "block": "rerun",
+      "n": 4,
+      "database": "OpenAlex",
+      "interface": "REST API",
+      "query": "ECG deep learning demographics baseline incremental value prognosis",
+      "returned": "25",
+      "taken": "Nothing reporting a context-only arm",
+      "tool_as_recorded": "OpenAlex (REST API)"
+    },
+    {
+      "block": "rerun",
+      "n": 5,
+      "database": "OpenAlex",
+      "interface": "REST API",
+      "query": "source of gain multimodal clinical prediction recoverable structured variables",
+      "returned": "25",
+      "taken": "Nothing matching the work the second external review names",
+      "tool_as_recorded": "OpenAlex (REST API)"
+    },
+    {
+      "block": "rerun",
+      "n": 6,
+      "database": "Semantic Scholar",
+      "interface": "Graph API, 2025 to 2026",
+      "query": "electrocardiogram deep learning shortcut benchmark evaluation baseline",
+      "returned": "15",
+      "taken": "Two read in full: BenchECG (arXiv:2509.10151) and SHOVIR (arXiv:2606.30201), both excluded with reasons",
+      "tool_as_recorded": "Semantic Scholar (Graph API, 2025 to 2026)"
+    },
+    {
+      "block": "rerun",
+      "n": 7,
+      "database": "arXiv",
+      "interface": "abstract page",
+      "query": "arXiv:2605.19132, the work named by the second external review",
+      "returned": "1",
+      "taken": "CLIC. Verified and included",
+      "tool_as_recorded": "arXiv (abstract page)"
+    },
+    {
+      "block": "rerun",
+      "n": 8,
+      "database": "arXiv",
+      "interface": "abstract page",
+      "query": "arXiv:2602.17531, surfaced by web search on ECG evaluation practice",
+      "returned": "1",
+      "taken": "Position: Evaluation of ECG Representations Must Be Fixed. Verified and included",
+      "tool_as_recorded": "arXiv (abstract page)"
+    },
+    {
+      "block": "rerun",
+      "n": 9,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "ECG deep learning metadata-only baseline acquisition context prognosis 2026 machine learning for health proceedings",
+      "returned": "8 links",
+      "taken": "Surfaced arXiv:2602.17531; nothing else new",
+      "tool_as_recorded": "Web search (search engine, publisher domains)"
+    },
+    {
+      "block": "rerun",
+      "n": 10,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "Machine Learning for Healthcare OR MLHC OR ML4H 2026 shortcut metadata-only baseline clinical prediction audit non-signal arm",
+      "returned": "10 links",
+      "taken": "Conference pages only. ML4H 2026 sits after this date, so its proceedings do not yet exist",
+      "tool_as_recorded": "Web search (search engine, publisher domains)"
+    },
+    {
+      "block": "rerun",
+      "n": 11,
+      "database": "Web search",
+      "interface": "search engine, publisher domains",
+      "query": "Source-of-Gain auditing multimodal ECG chest radiograph structured variables recoverable 2026",
+      "returned": "9 links",
+      "taken": "Nothing under that title. The work is quarantined as unresolvable",
+      "tool_as_recorded": "Web search (search engine, publisher domains)"
+    },
+    {
+      "block": "rerun",
+      "n": 12,
+      "database": "SSRN",
+      "interface": "abstract page",
+      "query": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7084561",
+      "returned": "HTTP 403",
+      "taken": "Blocked to an automated request; the record could not be read",
+      "tool_as_recorded": "SSRN (abstract page)"
+    },
+    {
+      "block": "rerun",
+      "n": 13,
+      "database": "DBLP",
+      "interface": "REST API",
+      "query": "search/publ/api on ECG metadata and acquisition context",
+      "returned": "HTTP 429",
+      "taken": "Rate limited from this address; OpenAlex and Semantic Scholar cover the same proceedings",
+      "tool_as_recorded": "DBLP (REST API)"
+    }
+  ],
+  "schema": "One row per issued search. `database` is the corpus, `interface` is how it was reached, `returned` is what the interface reported, and `taken` is what was carried into screening. `taken` is null for blocks b2, b3 and b4: those three logs were written without that column and it was never captured. `tool_as_recorded` preserves the this stage string the first two fields are derived from.",
+  "rerun_date": "2026-09-13"
+}

@@ -1,0 +1,33 @@
+# Concept block 1. Acquisition-linked shortcuts in medical deep learning,
+# outside ECG. Answers sub-question 2 of the protocol: does the shortcut
+# literature anywhere run a metadata-only control arm?
+#
+# One block per concept. Blocks are AND-ed, terms within a block OR-ed.
+question: >-
+  In medical deep learning, has an acquisition-linked shortcut ever been
+  quantified against a metadata-only control arm rather than by perturbing the
+  signal?
+framework: PICO
+
+blocks:
+  - name: Phenomenon
+    terms: ["shortcut learning", "spurious correlation", "confounding feature",
+            "hidden stratification", "clever hans", "acquisition bias",
+            "site effect", "scanner effect", "batch effect",
+            "dataset bias"]
+    mesh: ["Bias"]
+
+  - name: Method
+    terms: ["deep learning", "machine learning", "artificial intelligence",
+            "convolutional neural network", "neural network"]
+    mesh: ["Deep Learning", "Artificial Intelligence"]
+
+  - name: Setting
+    terms: ["medical imaging", "radiography", "computed tomography",
+            "histopathology", "digital pathology", "electronic health record",
+            "clinical prediction", "prognosis"]
+    mesh: ["Diagnostic Imaging", "Prognosis"]
+
+limits:
+  years: [2018, 2026]
+  languages: [English]

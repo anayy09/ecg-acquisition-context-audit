@@ -1,0 +1,30 @@
+# Concept block 2. Informative presence and the measurement process as a
+# predictor, past the five tabular papers the review already carries.
+# Answers sub-question 1 of the protocol.
+question: >-
+  Has the informative-presence phenomenon been carried outside tabular
+  electronic health records, and has the act of measuring ever been modelled as
+  a predictor in its own right?
+framework: PICO
+
+blocks:
+  - name: Phenomenon
+    terms: ["informative presence", "informed presence", "informative observation",
+            "informative visit", "missing not at random", "missingness indicator",
+            "measurement process", "care process", "test ordering",
+            "utilization intensity"]
+    mesh: ["Data Accuracy", "Bias"]
+
+  - name: Outcome
+    terms: ["risk prediction", "prognostic model", "clinical prediction model",
+            "deterioration", "mortality prediction", "early warning score"]
+    mesh: ["Prognosis", "Risk Assessment"]
+
+  - name: Setting
+    terms: ["electronic health record", "routinely collected data",
+            "emergency department", "intensive care", "administrative data"]
+    mesh: ["Electronic Health Records", "Emergency Service, Hospital"]
+
+limits:
+  years: [2016, 2026]
+  languages: [English]

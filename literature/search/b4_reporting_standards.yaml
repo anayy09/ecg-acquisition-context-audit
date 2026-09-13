@@ -1,0 +1,30 @@
+# Concept block 4. Reporting standards and baseline discipline for clinical
+# prediction models. Answers sub-question 4 of the protocol, which this stage added:
+# is there guidance that names which comparator arms a prognostic study owes
+# its reader?
+question: >-
+  Does reporting or appraisal guidance for clinical prediction models specify a
+  minimum comparator arm, and what does the meta-research say about baseline
+  reporting in medical machine learning?
+framework: PICO
+
+blocks:
+  - name: Object
+    terms: ["clinical prediction model", "prognostic model", "prediction model",
+            "risk score", "medical machine learning"]
+    mesh: ["Prognosis", "Risk Assessment", "Models, Statistical"]
+
+  - name: Concern
+    terms: ["reporting guideline", "risk of bias", "TRIPOD", "PROBAST",
+            "baseline", "comparator", "calibration", "net benefit",
+            "decision curve", "external validation", "methodological quality"]
+    mesh: ["Research Design", "Calibration"]
+
+  - name: Design
+    terms: ["systematic review", "meta-research", "methodological review",
+            "reporting quality", "reproducibility"]
+    mesh: ["Systematic Reviews as Topic"]
+
+limits:
+  years: [2015, 2026]
+  languages: [English]
