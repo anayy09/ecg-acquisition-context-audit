@@ -42,7 +42,7 @@ Row & Arm & ICU admission, 24h & Mortality, 28d & Mortality, 365d \\
 \toprule
 Quantity & Endpoint & Pre-declared & Measured [95\% CI] & Outcome \\
 \midrule
-pre-declared rule 1: R3\_acqctx\_pre beats R2\_demo & Mortality, 365d & positive, beyond the 0.0043 seed and noise spread & -0.0216 [-0.0523, +0.0098] & FAILED \\
+G1: R3\_acqctx\_pre beats R2\_demo & Mortality, 365d & positive, beyond the 0.0043 seed and noise spread & -0.0216 [-0.0523, +0.0098] & FAILED \\
 Recovery ratio, R3\_acqctx\_pre against R6\_waveform & Mortality, 365d & at least 0.70 & 0.6803 [0.6149, 0.7476] & FAILED \\
 Waveform gain retained with acquisition context held fixed & Mortality, 365d & at most 0.50 & 0.9313 [0.6631, 1.1583] & FAILED \\
 Horizon-ladder trend, four never-scored horizons & mortality 1, 7, 90, 180 d & negative, interval excluding zero & -0.8000 [-1.0000, +0.2000] & NOT SUPPORTED \\

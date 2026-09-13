@@ -22,3 +22,8 @@ authors:
       Department of Computer Applications, Manipal University Jaipur, Jaipur, India
 license: MIT
 repository-code: https://github.com/anayy09/ecg-acquisition-context-audit
+doi: 10.5281/zenodo.22732984
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22732984
+    description: The concept DOI, resolving to the latest version.

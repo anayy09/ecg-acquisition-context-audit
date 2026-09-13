@@ -102,7 +102,7 @@ point at that a reader needs is stated where it is used.
 
 ## How to cite
 
-The archive: _minted on first release; see the repository release page_
+The archive: [10.5281/zenodo.22732984](https://doi.org/10.5281/zenodo.22732984)
 
 The paper: see `CITATION.cff`, and the manuscript once published.
 
