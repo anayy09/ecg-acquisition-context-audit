@@ -1,0 +1,43 @@
+{
+  "specification": "D-058",
+  "coarsening": {
+    "arrival_to_acquisition_minutes": [
+      "<=15",
+      "15-30",
+      "30-60",
+      ">60"
+    ],
+    "acquisition_hour_of_day": [
+      "00-06",
+      "06-12",
+      "12-18",
+      "18-24"
+    ],
+    "acquisition_day_of_week": [
+      "weekday",
+      "weekend"
+    ],
+    "triage_acuity": "as recorded, missing as its own level"
+  },
+  "n_strata": 143,
+  "n_records": 6439,
+  "n_patients": 3644,
+  "strata_path": "$ECG_DATA_ROOT/derived\\matched_strata.parquet",
+  "worst_abs_smd_after_coarsened": 0.0,
+  "worst_abs_smd_after_underlying": 0.38814000748159594,
+  "superset_propensity_diagnostic": {
+    "n_stays": 425011,
+    "n_patients": 205465,
+    "early_ecg_rate": 0.28512673789619564,
+    "auroc": 0.6763587158311001,
+    "n_holdout": 85209,
+    "covariates": [
+      "age",
+      "arrival_transport",
+      "arrival_hour",
+      "arrival_weekday",
+      "arrival_month"
+    ],
+    "note": "diagnostic only. Fitted on C_SUPERSET, never used to select or weight a row 8 evaluation row (D-058)."
+  }
+}

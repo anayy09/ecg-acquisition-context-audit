@@ -1,0 +1,4 @@
+arm: R1_prevalence
+features_used: []
+model: {tabular: {type: constant}}
+role: floor

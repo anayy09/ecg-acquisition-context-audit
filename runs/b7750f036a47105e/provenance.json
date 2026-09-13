@@ -1,0 +1,6 @@
+{
+  "source_dirty": false,
+  "source_dirty_paths": [],
+  "derives_from": "R6_waveform seed 4",
+  "note": "Row 8 trains nothing. It is row 6 under D-058's within-stratum statistic, so its predictions are row 6's and only the evaluation differs."
+}

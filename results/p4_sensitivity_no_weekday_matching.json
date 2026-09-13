@@ -1,0 +1,28 @@
+{
+  "specification": "D-058",
+  "coarsening": {
+    "arrival_to_acquisition_minutes": [
+      "<=15",
+      "15-30",
+      "30-60",
+      ">60"
+    ],
+    "acquisition_hour_of_day": [
+      "00-06",
+      "06-12",
+      "12-18",
+      "18-24"
+    ],
+    "acquisition_day_of_week": [
+      "weekday",
+      "weekend"
+    ],
+    "triage_acuity": "as recorded, missing as its own level"
+  },
+  "n_strata": 76,
+  "n_records": 6439,
+  "n_patients": 3644,
+  "strata_path": "$ECG_DATA_ROOT/derived\\matched_strata_no_weekday.parquet",
+  "worst_abs_smd_after_coarsened": 0.0,
+  "worst_abs_smd_after_underlying": 0.3778090747202451
+}

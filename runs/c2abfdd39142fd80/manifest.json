@@ -1,0 +1,41 @@
+{
+  "run_id": "c2abfdd39142fd80",
+  "created_utc": "2026-08-23T19:09:46Z",
+  "tags": {
+    "arm": "R3_acqctx_pre",
+    "label": "deterioration_mortality_365d",
+    "seed": "0",
+    "comparison": "acq_context_audit",
+    "group": "R3_acqctx_pre__deterioration_mortality_365d"
+  },
+  "code": {
+    "git_commit": "88228c74",
+    "git_dirty": true,
+    "git_remote": "https://github.com/anayy09/ECG-Acquisition-Context.git",
+    "entrypoint": "scripts/run_arm.py"
+  },
+  "config": {
+    "path": "configs/base.yaml",
+    "overlays": [
+      "configs/arms/R3_acqctx_pre.yaml",
+      "configs/generated/R3_acqctx_pre__deterioration_mortality_365d__seed0.yaml"
+    ],
+    "resolved_sha256": "3a1ce9705f91a9c3f3d30ff089963217c0c8bb91d4849e1383ca4e97c11d4ffb",
+    "resolved_path": "runs\\c2abfdd39142fd80\\config.resolved.yaml"
+  },
+  "data": {
+    "split_file": "$ECG_DATA_ROOT/derived\\split_published.parquet",
+    "split_sha256": "d134667d2e2e4e43f0cdd806aad5e988be8fc79cc2596916debba4151d202c55"
+  },
+  "model": {},
+  "prompt": {},
+  "env": {
+    "python": "3.14.5",
+    "slurm_job_id": null,
+    "slurm_array_job_id": null
+  },
+  "determinism": {
+    "seed": null,
+    "claimed_deterministic": false
+  }
+}

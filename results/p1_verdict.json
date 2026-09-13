@@ -1,0 +1,68 @@
+{
+  "verdict": {
+    "rule": "PLAN.md G1, evaluated per label; the gate passes on at least one",
+    "primary_label": "deterioration_mortality_365d",
+    "per_label": [
+      {
+        "label": "deterioration_icu_24h",
+        "is_primary": false,
+        "r3_auroc": 0.7971999468932555,
+        "r2_auroc": 0.6016879093644892,
+        "paired_difference": 0.19551203752876622,
+        "paired_ci": [
+          0.16485813972740418,
+          0.2266748795077694
+        ],
+        "p_holm": 0.0,
+        "seed_and_noise_spread": 0.00487519915029222,
+        "beats_demographics_beyond_noise": true
+      },
+      {
+        "label": "deterioration_mortality_28d",
+        "is_primary": false,
+        "r3_auroc": 0.7586963387905765,
+        "r2_auroc": 0.6962665720534094,
+        "paired_difference": 0.06242976673716716,
+        "paired_ci": [
+          0.016541558854621607,
+          0.10822110425726932
+        ],
+        "p_holm": 0.0216,
+        "seed_and_noise_spread": 0.02069465229328271,
+        "beats_demographics_beyond_noise": true
+      },
+      {
+        "label": "deterioration_mortality_365d",
+        "is_primary": true,
+        "r3_auroc": 0.7241058215184337,
+        "r2_auroc": 0.7457553903828724,
+        "paired_difference": -0.021649568864438695,
+        "paired_ci": [
+          -0.05233405862931693,
+          0.009792645485666971
+        ],
+        "p_holm": 0.177,
+        "seed_and_noise_spread": 0.00428640013689896,
+        "beats_demographics_beyond_noise": false
+      }
+    ],
+    "labels_passing": [
+      "deterioration_icu_24h",
+      "deterioration_mortality_28d"
+    ],
+    "direction_survives": true,
+    "branch": "CONTINUE (weaker form, branch 2): ACQ_PRE beats demographics by more than the seed and noise spread on 2 of 3 labels (deterioration_icu_24h, deterioration_mortality_28d)",
+    "primary_contrast_outcome": "NOT MET",
+    "primary_warning": "The PRE-DECLARED primary contrast at deterioration_mortality_365d did NOT clear the rule (difference -0.0216, CI [-0.0523, +0.0098]). The gate survives on other labels only. Promoting any of those to the headline would be a post-hoc endpoint switch and must be reported as exploratory, with the failed primary stated in the abstract.",
+    "full_strength_branch": "PENDING: requires a verified published MDS-ED waveform AUROC. None was verified in-session, so the within-0.03-of-waveform test cannot be evaluated and is not guessed. Resolves at G2 with the locally reproduced row 6."
+  },
+  "noise_floor": {
+    "arm": "R3_acqctx_pre",
+    "label": "deterioration_mortality_365d",
+    "seed_a": 0,
+    "seed_b": 101,
+    "auroc_a": 0.721501143198484,
+    "auroc_b": 0.7242185172802809,
+    "difference": 0.0027173740817968417
+  }
+}

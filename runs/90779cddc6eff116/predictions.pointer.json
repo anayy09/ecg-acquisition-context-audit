@@ -1,0 +1,6 @@
+{
+  "path": "$ECG_DATA_ROOT/derived\\predictions\\90779cddc6eff116.parquet",
+  "sha256": "c0139925642f8167d53e78dbbbc00d1142d4dc25a07a4f497abb063ed0aaf277",
+  "n_rows": 6407,
+  "note": "Row-level predictions are keyed by subject_id and are kept outside the repository under $ECG_DATA_ROOT. See D-017, D-035."
+}

@@ -1,0 +1,160 @@
+arm: R3_acqctx_pre
+comparison: horizon_ladder
+data:
+  benchmark: mimic-iv-ext-mds-ed
+  benchmark_version: 1.0.0
+  cohort: mdsed
+  group_key: subject_id
+  root: ${ECG_DATA_ROOT}
+  split: published
+  split_column: general_strat_fold
+  split_file: ${ECG_DATA_ROOT}/derived/split_published.parquet
+  split_hash: d134667d2e2e4e43f0cdd806aad5e988be8fc79cc2596916debba4151d202c55
+evaluation:
+  bootstrap:
+    n_resamples: 10000
+    type: percentile
+    unit: subject_id
+  calibration:
+    bins: 15
+    schemes:
+    - equal_width
+    - equal_mass
+  decision_curve:
+    threshold: TBD
+  metric_primary: auroc
+  metrics_secondary:
+  - auprc
+  - brier
+features:
+  acq_pre:
+  - arrival_to_acquisition_minutes
+  - acquisition_hour_of_day
+  - acquisition_day_of_week
+  - acquisition_month
+  - triage_acuity
+  - ecg_no_within_stay
+  - prior_ecg_exists
+  - days_since_prior_ecg
+  - prior_ed_visit_count
+  acq_window:
+  - n_ecgs_first_90min
+  - inter_ecg_interval_minutes
+  - care_unit_at_acquisition
+  - cardiologist_overread_exists
+  demographics:
+  - age
+  - sex
+  labs: from_benchmark
+  vitals: from_benchmark
+  waveform:
+    clip_amplitude_mv: 3.0
+    crop_samples: 250
+    lead_order:
+    - I
+    - II
+    - V1
+    - V2
+    - V3
+    - V4
+    - V5
+    - V6
+    - III
+    - aVR
+    - aVL
+    - aVF
+    leads: 12
+    normalize: false
+    resampler: resampy
+    sampling_rate_hz: 100
+    seconds: 10
+features_used:
+- acq_pre
+label_active: deterioration_mortality_1d
+label_missing_sentinel: -999
+labels:
+- deterioration_icu_24h
+- deterioration_mortality_28d
+- deterioration_mortality_365d
+model:
+  tabular:
+    implementation: lightgbm
+    tuning_budget_trials: 50
+    tuning_split: validation_only
+    type: gradient_boosting
+    version: 4.7.0
+  waveform:
+    backbone: s42
+    batch_size: 32
+    batchnorm: false
+    causal: false
+    dropout: 0.2
+    encoder: none
+    epochs: 40
+    eval_protocol_cross_arm: record_level_mean_sigmoid
+    eval_protocol_published: crop_level
+    head: pool
+    head_output_layer: true
+    implementation: clinical_ts.ts.s4.S4Predictor
+    layers: 4
+    loss: focal_bce_masked
+    loss_gamma: 2.0
+    loss_ignore_nans: true
+    loss_reduction: mean_within_target_then_sum_across_targets
+    lr: 0.001
+    lr_schedule: const
+    model_dim: 512
+    n_outputs: 15
+    optimizer: adamw
+    precision: 32
+    prenorm: false
+    state_dim: 8
+    tie_dropout: true
+    tuning_budget_configs: 4
+    tuning_budget_epochs_per_config: 12
+    tuning_budget_scope: per_arm
+    tuning_candidates:
+    - dropout: 0.2
+      id: c0
+      lr: 0.001
+    - dropout: 0.2
+      id: c1
+      lr: 0.0003
+    - dropout: 0.1
+      id: c2
+      lr: 0.001
+    - dropout: 0.2
+      id: c3
+      lr: 0.003
+    tuning_published_candidate: c0
+    tuning_seed: 0
+    tuning_select_on: val_macro_auroc
+    tuning_split: validation_only
+    tuning_tiebreak: prefer_published_within_noise_floor
+    tuning_tiebreak_threshold: 0.0027
+    type: s4
+    valtest_crops_per_record: 4
+    weight_decay: 0.001
+notes: The claim lives here. No waveform, no demographics, no acq_window.
+project: ecg-acquisition-context
+provenance:
+  fail_on_dirty_tree: false
+  record_env:
+  - python
+  - torch
+  - numpy
+  - sklearn
+  - lightgbm
+  - cuda
+  - gpu_model
+  record_git_commit: true
+role: confirmatory
+training:
+  noise_floor_seed: 101
+  seed: 1
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4

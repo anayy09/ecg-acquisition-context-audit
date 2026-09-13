@@ -1,0 +1,3 @@
+arm: R7_waveform_demo_acq
+features_used: [waveform, demographics, acq_pre]
+role: ceiling

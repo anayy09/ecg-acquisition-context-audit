@@ -1,0 +1,12 @@
+# Declarations the pipeline checks before it will compute.
+# Each was recorded before the analysis that depends on it ran.
+net_benefit_threshold:
+  status: closed
+  value: 0.10
+  label: deterioration_icu_24h
+  declared: 2026-09-02
+  rationale: >-
+    The operating threshold was fixed from the clinical framing and
+    recorded before any decision curve was computed. It is quoted at
+    24-hour ICU admission alone, the only reported label with an
+    action available at emergency-department disposition.

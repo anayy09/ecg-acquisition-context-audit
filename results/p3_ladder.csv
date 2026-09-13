@@ -1,0 +1,7 @@
+difference,ci_lo,ci_hi,p_value,n_boot,n_groups,contrast,label,horizon_days,family,unit,n_items,role,counts_as_confirmation,p_holm,holm_family_size
+0.09460570558369141,-0.03599932463743787,0.21675575694129678,0.1478,10000,3636,R3_acqctx_pre - R2_demo,deterioration_mortality_1d,1,horizon_ladder,record,6428,primary,True,0.708,6
+0.12242445342772224,0.043564682219236706,0.20039496938339654,0.0006,10000,3636,R3_acqctx_pre - R2_demo,deterioration_mortality_7d,7,horizon_ladder,record,6428,primary,True,0.0036,6
+0.01605927641298699,-0.022463080629651265,0.05394289381478102,0.4092,10000,3636,R3_acqctx_pre - R2_demo,deterioration_mortality_90d,90,horizon_ladder,record,6428,primary,True,1.0,6
+0.002952798300333903,-0.030590538107359823,0.03667368261419894,0.8656,10000,3636,R3_acqctx_pre - R2_demo,deterioration_mortality_180d,180,horizon_ladder,record,6428,primary,True,1.0,6
+0.06242976673716716,0.016541558854621607,0.10822110425726932,0.0108,10000,3636,R3_acqctx_pre - R2_demo,deterioration_mortality_28d,28,horizon_ladder,record,6428,generating,False,,6
+-0.021649568864438695,-0.05233405862931693,0.009792645485666971,0.177,10000,3636,R3_acqctx_pre - R2_demo,deterioration_mortality_365d,365,horizon_ladder,record,6428,generating,False,,6

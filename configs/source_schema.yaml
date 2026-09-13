@@ -1,0 +1,304 @@
+# Source-schema contract.
+#
+# Verified against the staged releases on 2026-08-23. Columns marked
+# `verified: true` were read from the actual files; anything still false has not
+# been seen. `scripts/loaders.py` validates every read against this file and
+# aborts on a mismatch, so a wrong assumption here is a loud failure rather than
+# a silently wrong feature. See AGENT.md A2 task 4 and DECISIONS.md D-024.
+#
+# Primary source is MDS-ED itself. It ships one row per ECG with acquisition
+# time, ED arrival time, the 90-minute window bound, triage acuity, the fold
+# assignment, and all 15 deterioration labels inline. Deriving the audited arms
+# from the audited artifact keeps the cohort and split aligned with the
+# benchmark by construction. MIMIC-IV-ED and MIMIC-IV-ECG are joined only for
+# the three ACQ_PRE features MDS-ED cannot express, and MIMIC-IV-ED supplies the
+# C_SUPERSET denominator.
+
+contract_version: 2
+verified_against_release: "mimic-iv-ext-mds-ed 1.0.0; mimic-iv-ed 2.2; mimic-iv-ecg 1.0; mimic-iv 3.1"
+verified_on: "2026-08-23"
+
+# Sentinel used by MDS-ED for a label that is not defined for a row. Rows are
+# dropped per label, never globally: dropping globally would silently change the
+# cohort between labels and make the arms incomparable.
+label_missing_sentinel: -999
+
+sources:
+
+  mds_ed:
+    dataset: mimic-iv-ext-mds-ed
+    required_version: "1.0.0"
+    verified: true
+    tables:
+      cohort:
+        file: mds_ed.csv
+        verified: true
+        note: >
+          129,057 rows, one per ECG; 71,098 patients; 121,195 ED stays. Every
+          row's acquisition falls within 90 minutes of arrival (observed max
+          exactly 90.0), which is the conditioning D-003 describes.
+        columns:
+          general_subject_id:         {dtype: int64,      role: patient_key,        verified: true}
+          general_ed_stay_id:         {dtype: float64,    role: stay_key,           verified: true}
+          general_ed_hadm_id:         {dtype: float64,    role: admission_key, nullable: true, verified: true}
+          general_study_id:           {dtype: int64,      role: ecg_key,            verified: true}
+          general_file_name:          {dtype: string,     role: waveform_pointer,   verified: true}
+          general_ecg_time:           {dtype: datetime64, role: acquisition_time,   verified: true}
+          general_intime:             {dtype: datetime64, role: ed_arrival_time,    verified: true}
+          general_outtime:            {dtype: datetime64, role: ed_depart_time,     verified: true}
+          general_90min:              {dtype: datetime64, role: window_close,       verified: true}
+          general_ecg_no_within_stay: {dtype: int64,      role: acq_pre_source,     verified: true}
+          general_strat_fold:         {dtype: int64,      role: split_assignment,   verified: true}
+          demographics_age:           {dtype: float64,    role: demographic,        verified: true}
+          demographics_gender:        {dtype: int64,      role: demographic,        verified: true}
+          vitals_acuity:              {dtype: float64,    role: acq_pre_source, nullable: true, verified: true}
+        label_columns:
+          # All 15 deterioration labels, with observed prevalence after dropping
+          # the -999 sentinel. Read from the release, not from the paper.
+          deterioration_icu_24h:                {n_valid: 128518, prevalence: 0.1220, verified: true}
+          deterioration_icu_stay:               {n_valid: 128518, prevalence: 0.1467, verified: true}
+          deterioration_mortality_1d:           {n_valid: 128700, prevalence: 0.0063, verified: true}
+          deterioration_mortality_7d:           {n_valid: 128700, prevalence: 0.0177, verified: true}
+          deterioration_mortality_28d:          {n_valid: 128700, prevalence: 0.0400, verified: true}
+          deterioration_mortality_90d:          {n_valid: 128700, prevalence: 0.0722, verified: true}
+          deterioration_mortality_180d:         {n_valid: 128700, prevalence: 0.0998, verified: true}
+          deterioration_mortality_365d:         {n_valid: 128700, prevalence: 0.1380, verified: true}
+          deterioration_mortality_stay:         {n_valid: 128700, prevalence: 0.0008, verified: true}
+          deterioration_severe_hypoxemia:       {n_valid: 87932,  prevalence: 0.0063, verified: true}
+          deterioration_ecmo:                   {n_valid: 129057, prevalence: 0.0013, verified: true}
+          deterioration_vasopressors:           {n_valid: 129057, prevalence: 0.0091, verified: true}
+          deterioration_inotropes:              {n_valid: 129057, prevalence: 0.0029, verified: true}
+          deterioration_mechanical_ventilation: {n_valid: 129057, prevalence: 0.0327, verified: true}
+          deterioration_cardiac_arrest:         {n_valid: 129057, prevalence: 0.0048, verified: true}
+        tabular_prefixes:
+          # Row 5, passed through unmodified. See D-028.
+          - vitals_
+          - labvalues_
+          - biometrics_
+
+  mimic_iv_ed:
+    dataset: mimic-iv-ed
+    required_version: "2.2"
+    verified: true
+    tables:
+      edstays:
+        file: edstays.csv.gz
+        verified: true
+        columns:
+          subject_id:        {dtype: int64,      role: patient_key,     verified: true}
+          stay_id:           {dtype: int64,      role: stay_key,        verified: true}
+          hadm_id:           {dtype: float64,    role: admission_key, nullable: true, verified: true}
+          intime:            {dtype: datetime64, role: ed_arrival_time, verified: true}
+          outtime:           {dtype: datetime64, role: ed_depart_time,  verified: true}
+          gender:            {dtype: string,     role: demographic,     verified: true}
+          arrival_transport: {dtype: string,     role: acq_pre_source,  verified: true}
+          disposition:       {dtype: string,     role: outcome_source,  verified: true}
+      triage:
+        file: triage.csv.gz
+        verified: true
+        columns:
+          subject_id: {dtype: int64,   role: patient_key,    verified: true}
+          stay_id:    {dtype: int64,   role: stay_key,       verified: true}
+          acuity:     {dtype: float64, role: acq_pre_source, nullable: true, verified: true}
+
+  mimic_iv_ecg:
+    dataset: mimic-iv-ecg
+    required_version: "1.0"
+    verified: true
+    tables:
+      record_list:
+        file: record_list.csv
+        verified: true
+        columns:
+          subject_id: {dtype: int64,      role: patient_key,      verified: true}
+          study_id:   {dtype: int64,      role: ecg_key,          verified: true}
+          ecg_time:   {dtype: datetime64, role: acquisition_time, verified: true}
+          path:       {dtype: string,     role: waveform_pointer, verified: true}
+      machine_measurements:
+        file: machine_measurements.csv
+        optional: true
+        verified: false
+        columns:
+          subject_id: {dtype: int64, role: patient_key, verified: true}
+          study_id:   {dtype: int64, role: ecg_key,     verified: true}
+        candidate_overread_columns:
+          # D-019 remains open until the probe reports. None of these is known to
+          # distinguish a human over-read from the machine statement.
+          - report_0
+          - report_1
+          - report_17
+        verified: false
+
+  mimic_iv_hosp:
+    dataset: mimic-iv
+    required_version: "3.1"
+    verified: true
+    tables:
+      patients:
+        file: patients.csv.gz
+        verified: true
+        columns:
+          subject_id:  {dtype: int64,      role: patient_key,    verified: true}
+          gender:      {dtype: string,     role: demographic,    verified: true}
+          anchor_age:  {dtype: int64,      role: demographic,    verified: true}
+          anchor_year: {dtype: int64,      role: demographic,    verified: true}
+          dod:         {dtype: datetime64, role: outcome_source, nullable: true, verified: true}
+      admissions:
+        file: admissions.csv.gz
+        verified: true
+        columns:
+          subject_id: {dtype: int64,      role: patient_key,    verified: true}
+          hadm_id:    {dtype: int64,      role: admission_key,  verified: true}
+          admittime:  {dtype: datetime64, role: outcome_source, verified: true}
+          dischtime:  {dtype: datetime64, role: outcome_source, verified: true}
+          deathtime:  {dtype: datetime64, role: outcome_source, nullable: true, verified: true}
+
+  mimic_iv_icu:
+    dataset: mimic-iv
+    required_version: "3.1"
+    verified: true
+    tables:
+      icustays:
+        file: icustays.csv.gz
+        verified: true
+        columns:
+          subject_id:     {dtype: int64,      role: patient_key,       verified: true}
+          hadm_id:        {dtype: int64,      role: admission_key,     verified: true}
+          stay_id:        {dtype: int64,      role: icu_stay_key,      verified: true}
+          intime:         {dtype: datetime64, role: outcome_source,    verified: true}
+          first_careunit: {dtype: string,     role: acq_window_source, verified: true}
+
+# ---------------------------------------------------------------------------
+# Split. MDS-ED ships `general_strat_fold` with 20 folds, verified
+# patient-disjoint: 0 of 71,098 patients appear in more than one fold.
+#
+# The assignment below is VERIFIED, D-039. The paper states the 18:1:1 ratio and
+# src/clinical_ts/template_model.py fixes the indices: with default empty
+# fold_ids, get_folds_ids assigns validation to max_fold_id - 1 and test to
+# max_fold_id, which for folds 0-19 is 18 and 19.
+# ---------------------------------------------------------------------------
+split:
+  column: general_strat_fold
+  n_folds: 20
+  verified_patient_disjoint: true
+  assignment:
+    train: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+    val: [18]
+    test: [19]
+  assignment_verified: true
+
+# ---------------------------------------------------------------------------
+# Feature derivations. Every feature named in configs/base.yaml under
+# features.demographics / features.acq_pre / features.acq_window MUST appear
+# exactly once here, and nothing else may appear.
+# ---------------------------------------------------------------------------
+
+derivations:
+
+  # ---- demographics -------------------------------------------------------
+  age:
+    block: demographics
+    source: [mds_ed.cohort.demographics_age]
+    transform: passthrough from the benchmark's own age column
+    available_at: ed_arrival_time
+    dtype: float64
+  sex:
+    block: demographics
+    source: [mds_ed.cohort.demographics_gender]
+    transform: passthrough, already integer-encoded 0/1 in the release
+    available_at: ed_arrival_time
+    dtype: int64
+
+  # ---- ACQ_PRE: fixed at or before the index acquisition ------------------
+  arrival_to_acquisition_minutes:
+    block: acq_pre
+    source: [mds_ed.cohort.general_ecg_time, mds_ed.cohort.general_intime]
+    transform: (general_ecg_time - general_intime) in minutes
+    available_at: index_time
+    dtype: float64
+  acquisition_hour_of_day:
+    block: acq_pre
+    source: [mds_ed.cohort.general_ecg_time]
+    transform: hour component, 0-23
+    available_at: index_time
+    dtype: int64
+  acquisition_day_of_week:
+    block: acq_pre
+    source: [mds_ed.cohort.general_ecg_time]
+    transform: ISO weekday, 1-7
+    available_at: index_time
+    dtype: int64
+  acquisition_month:
+    block: acq_pre
+    source: [mds_ed.cohort.general_ecg_time]
+    transform: calendar month, 1-12
+    available_at: index_time
+    dtype: int64
+  triage_acuity:
+    block: acq_pre
+    source: [mds_ed.cohort.vitals_acuity]
+    transform: ordinal 1-5, missing kept as an explicit NaN category. See D-023.
+    available_at: ed_arrival_time
+    dtype: float64
+  ecg_no_within_stay:
+    block: acq_pre
+    source: [mds_ed.cohort.general_ecg_no_within_stay]
+    transform: >
+      ordinal position of this ECG among the stay's ECGs, 0-6. Counts only
+      acquisitions that already happened, so it is fixed at the moment this one
+      is taken. Added at contract v2 after the release proved it available; see
+      D-030.
+    available_at: index_time
+    dtype: int64
+  prior_ecg_exists:
+    block: acq_pre
+    source: [mimic_iv_ecg.record_list.ecg_time]
+    transform: any ECG for this subject strictly before this acquisition
+    available_at: index_time
+    dtype: bool
+  days_since_prior_ecg:
+    block: acq_pre
+    source: [mimic_iv_ecg.record_list.ecg_time]
+    transform: index_time minus the latest prior ecg_time, in days; null if none
+    available_at: index_time
+    dtype: float64
+  prior_ed_visit_count:
+    block: acq_pre
+    source: [mimic_iv_ed.edstays.intime]
+    transform: count of this subject's ED stays with intime strictly before this arrival
+    available_at: ed_arrival_time
+    dtype: int64
+
+  # ---- ACQ_WINDOW: leakage-suspect. Never in a confirmatory arm. D-005/D-006
+  n_ecgs_first_90min:
+    block: acq_window
+    source: [mds_ed.cohort.general_ecg_no_within_stay]
+    transform: total ECGs recorded for this stay inside the 90-minute window
+    available_at: window_close
+    dtype: int64
+    leakage_risk: counts acquisitions that happen after the index one
+  inter_ecg_interval_minutes:
+    block: acq_window
+    source: [mds_ed.cohort.general_ecg_time]
+    transform: mean gap between consecutive ECGs of this stay inside the window
+    available_at: window_close
+    dtype: float64
+    leakage_risk: requires at least one post-index acquisition
+  care_unit_at_acquisition:
+    block: acq_window
+    source: [mimic_iv_icu.icustays.first_careunit, mimic_iv_icu.icustays.intime]
+    transform: ICU care unit already covering the acquisition, else Emergency Department
+    available_at: window_close
+    dtype: category
+    leakage_risk: >
+      For the ICU-admission label this can be the label itself. D-006 fixes it in
+      ACQ_WINDOW permanently; it must never migrate to ACQ_PRE.
+  cardiologist_overread_exists:
+    block: acq_window
+    source: [mimic_iv_ecg.machine_measurements]
+    transform: presence of a human over-read distinguishable from the machine statement
+    available_at: window_close
+    dtype: bool
+    availability: unverified        # D-019
+    droppable: true
+    leakage_risk: an over-read may be ordered because the patient is deteriorating

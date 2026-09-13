@@ -1,0 +1,6 @@
+arm: R6_waveform
+features_used: [waveform]
+role: audit_target
+notes: >
+  Must first reproduce the benchmark's published number on the published split.
+  Gate G2.

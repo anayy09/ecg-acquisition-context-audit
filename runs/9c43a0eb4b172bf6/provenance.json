@@ -1,0 +1,11 @@
+{
+  "source_dirty": false,
+  "source_dirty_paths": [],
+  "non_source_prefixes": [
+    "ledger/",
+    "runs/",
+    "results/",
+    "notes/"
+  ],
+  "note": "ledger.py's git_dirty flag also fires on the tracked append-only registry, so it cannot distinguish a code change from a run being registered. See D-038."
+}

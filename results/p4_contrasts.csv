@@ -1,0 +1,4 @@
+estimate,ci_lo,ci_hi,p_value,n_boot,n_groups,n_finite_replicates,contrast,arm_a,arm_b,label,family,unit,n_items,difference,involves_waveform_arm
+-0.06879094642698647,-0.09124358337761679,-0.047820824464893455,0.0,10000,3548,10000,R8_waveform_matched - R6_waveform,R8_waveform_matched,R6_waveform,deterioration_icu_24h,acq_context_audit,record,6231,-0.06879094642698647,True
+-0.06803075262731906,-0.11023075593902332,-0.028369597061832914,0.0,10000,3287,10000,R8_waveform_matched - R6_waveform,R8_waveform_matched,R6_waveform,deterioration_mortality_28d,acq_context_audit,record,5609,-0.06803075262731906,True
+-0.031792684404077565,-0.048752539901305354,-0.01568688645005728,0.0,10000,3582,10000,R8_waveform_matched - R6_waveform,R8_waveform_matched,R6_waveform,deterioration_mortality_365d,acq_context_audit,record,6322,-0.031792684404077565,True

@@ -1,0 +1,21 @@
+{
+  "path": "$ECG_DATA_ROOT/derived\\predictions\\2afeb975805d2e76.npz",
+  "sha256": "fb41d61b76ba1d02ea933a54a0f5e08c3bfcaf872211a027a75d6fb8a31efffa",
+  "n_rows": 6439,
+  "n_crop_rows": 25756,
+  "format": "npz",
+  "arrays": [
+    "crop_scores",
+    "crop_y",
+    "crop_mask",
+    "crop_local",
+    "crop_index",
+    "record_scores",
+    "record_y",
+    "record_mask",
+    "subject_id",
+    "study_id",
+    "targets"
+  ],
+  "note": "Row-level predictions are keyed by subject_id and are kept outside the repository under $ECG_DATA_ROOT. Both the crop-level scores the published protocol uses and the record-level scores every cross-arm contrast uses are stored, so either analysis rebuilds from one artifact. See D-017, D-035, D-050."
+}

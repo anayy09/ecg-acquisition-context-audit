@@ -1,0 +1,27 @@
+section,quantity,local,published,gap,note
+Cohort,ECG records,129057,129095,-38,the whole released cohort
+Cohort,Patients,71098,71098,0,matches exactly
+Cohort,Emergency department stays,121195,121195,0,matches exactly
+Label positives,deterioration_icu_24h,15677,15688,-11,"counted over the whole cohort, as the release reports them"
+Label exclusions,deterioration_icu_24h,539,,,"records where the outcome is not observable for this label; the tabular arms drop them, which is why the analysed sample differs by label"
+Label positives,deterioration_icu_stay,18860,18872,-12,"counted over the whole cohort, as the release reports them"
+Label exclusions,deterioration_icu_stay,539,,,"records where the outcome is not observable for this label; the tabular arms drop them, which is why the analysed sample differs by label"
+Label positives,deterioration_mortality_28d,5150,5153,-3,"counted over the whole cohort, as the release reports them"
+Label exclusions,deterioration_mortality_28d,357,,,"records where the outcome is not observable for this label; the tabular arms drop them, which is why the analysed sample differs by label"
+Label positives,deterioration_mortality_365d,17756,17761,-5,"counted over the whole cohort, as the release reports them"
+Label exclusions,deterioration_mortality_365d,357,,,"records where the outcome is not observable for this label; the tabular arms drop them, which is why the analysed sample differs by label"
+Split,Training folds 0 to 17,116433,,,"the published 20-fold split, unmodified"
+Split,Validation fold 18,6185,,,"the published 20-fold split, unmodified"
+Split,Test fold 19,6439,,,"the published 20-fold split, unmodified"
+Test fold,ECG records,6439,,,
+Test fold,Patients,3644,,,
+Test fold,Stays,6077,,,
+First ECG per stay,Records numbered 0 within their stay,6080,,,"zero-based: 0 is the FIRST ECG of the stay, not the second"
+First ECG per stay,Distinct stays among them,6076,,,"fewer than the records above, because some stays tie"
+First ECG per stay,Stays carrying two records numbered 0,4,,,"acquisition times tie and the ordering does not break ties, so the first ECG of these stays is ambiguous"
+First ECG per stay,Records after the first of their stay,359,,,excluded by the benchmark's stated validation and test protocol and retained by ours
+Sequence within stay,Records numbered 0,6080,,,first of the stay
+Sequence within stay,Records numbered 1,318,,,the 2th
+Sequence within stay,Records numbered 2,33,,,the 3th
+Sequence within stay,Records numbered 3,6,,,the 4th
+Sequence within stay,Records numbered 4,2,,,the 5th

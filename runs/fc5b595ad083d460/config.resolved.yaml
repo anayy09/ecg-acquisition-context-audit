@@ -1,0 +1,94 @@
+arm: R3_acqctx_pre
+comparison: acq_context_audit
+data:
+  benchmark: mimic-iv-ext-mds-ed
+  benchmark_version: 1.0.0
+  cohort: mdsed
+  group_key: subject_id
+  root: ${ECG_DATA_ROOT}
+  split: published
+  split_column: general_strat_fold
+  split_file: ${ECG_DATA_ROOT}/derived/split_published.parquet
+  split_hash: TBD
+evaluation:
+  bootstrap:
+    n_resamples: 10000
+    type: percentile
+    unit: subject_id
+  calibration:
+    bins: 15
+    schemes:
+    - equal_width
+    - equal_mass
+  decision_curve:
+    threshold: TBD
+  metric_primary: auroc
+  metrics_secondary:
+  - auprc
+  - brier
+features:
+  acq_pre:
+  - arrival_to_acquisition_minutes
+  - acquisition_hour_of_day
+  - acquisition_day_of_week
+  - acquisition_month
+  - triage_acuity
+  - ecg_no_within_stay
+  - prior_ecg_exists
+  - days_since_prior_ecg
+  - prior_ed_visit_count
+  acq_window:
+  - n_ecgs_first_90min
+  - inter_ecg_interval_minutes
+  - care_unit_at_acquisition
+  - cardiologist_overread_exists
+  demographics:
+  - age
+  - sex
+  labs: from_benchmark
+  vitals: from_benchmark
+  waveform:
+    leads: 12
+    sampling_rate_hz: 100
+    seconds: 10
+features_used:
+- acq_pre
+label_active: deterioration_mortality_365d
+label_missing_sentinel: -999
+labels:
+- deterioration_icu_24h
+- deterioration_mortality_28d
+- deterioration_mortality_365d
+model:
+  tabular:
+    implementation: lightgbm
+    tuning_budget_trials: 50
+    tuning_split: validation_only
+    type: gradient_boosting
+    version: 4.7.0
+  waveform:
+    tuning_budget_gpu_hours: TBD
+    type: TBD
+notes: The claim lives here. No waveform, no demographics, no acq_window.
+project: ecg-acquisition-context
+provenance:
+  fail_on_dirty_tree: false
+  record_env:
+  - python
+  - torch
+  - numpy
+  - sklearn
+  - lightgbm
+  - cuda
+  - gpu_model
+  record_git_commit: true
+role: confirmatory
+training:
+  noise_floor_seed: 101
+  seed: 1
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4

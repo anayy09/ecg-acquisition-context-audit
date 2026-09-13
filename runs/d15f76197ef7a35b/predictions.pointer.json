@@ -1,0 +1,6 @@
+{
+  "path": "$ECG_DATA_ROOT/derived\\predictions\\d15f76197ef7a35b.parquet",
+  "sha256": "fd8a69544cec47c8640dfeda2d89a13b72bb69de1155bfd774a1f808818a889a",
+  "n_rows": 19263,
+  "note": "Row 6's record-level scores annotated with their D-058 stratum. Row-level, so outside the repository. D-017, D-035."
+}

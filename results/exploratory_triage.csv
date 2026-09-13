@@ -1,0 +1,13 @@
+estimate,ci_lo,ci_hi,p_value,n_boot,n_groups,n_finite_replicates,arm,label,unit,quantity,n_items,exploratory,comparison
+0.7583425163745796,0.7409893326815877,0.7755350783131761,0.0,10000,3626,10000,R9_triage,deterioration_icu_24h,record,auroc,6407,True,exploratory_triage
+0.7971999468932555,0.7806223460225721,0.8138348456761821,0.0,10000,3626,10000,R3_acqctx_pre,deterioration_icu_24h,record,auroc,6407,True,exploratory_triage
+0.6016879093644892,0.5751902161404702,0.6270676370057853,0.0,10000,3626,10000,R2_demo,deterioration_icu_24h,record,auroc,6407,True,exploratory_triage
+0.03885743051867585,0.031017672748806634,0.04669624333139082,0.0,10000,3626,10000,R3_acqctx_pre - R9_triage,deterioration_icu_24h,record,paired_difference,6407,True,exploratory_triage
+0.7120392772873644,0.6757230325233035,0.7480096972213275,0.0,10000,3636,10000,R9_triage,deterioration_mortality_28d,record,auroc,6428,True,exploratory_triage
+0.7586963387905765,0.7263843102091624,0.79034374590703,0.0,10000,3636,10000,R3_acqctx_pre,deterioration_mortality_28d,record,auroc,6428,True,exploratory_triage
+0.6962665720534094,0.6607877716107239,0.7306935309583146,0.0,10000,3636,10000,R2_demo,deterioration_mortality_28d,record,auroc,6428,True,exploratory_triage
+0.04665706150321214,0.026617651437412446,0.06748147796262419,0.0,10000,3636,10000,R3_acqctx_pre - R9_triage,deterioration_mortality_28d,record,paired_difference,6428,True,exploratory_triage
+0.6297913524125212,0.6095396829967432,0.6502200048514968,0.0,10000,3636,10000,R9_triage,deterioration_mortality_365d,record,auroc,6428,True,exploratory_triage
+0.7241058215184337,0.7029247799287801,0.7441125634113148,0.0,10000,3636,10000,R3_acqctx_pre,deterioration_mortality_365d,record,auroc,6428,True,exploratory_triage
+0.7457553903828724,0.7205256134194865,0.7695757116132945,0.0,10000,3636,10000,R2_demo,deterioration_mortality_365d,record,auroc,6428,True,exploratory_triage
+0.09431446910591257,0.07358769333893912,0.11456782532638449,0.0,10000,3636,10000,R3_acqctx_pre - R9_triage,deterioration_mortality_365d,record,paired_difference,6428,True,exploratory_triage

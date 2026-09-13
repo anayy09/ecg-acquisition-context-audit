@@ -1,0 +1,67 @@
+{
+  "arm": "R8_waveform_matched",
+  "specification": "D-058",
+  "quantity": "waveform_gain_retained",
+  "definition": "(R6 - R2) within stratum, over (R6 - R2) on the same rows without the pair restriction",
+  "threshold": 0.5,
+  "threshold_direction": "at most",
+  "per_label": [
+    {
+      "label": "deterioration_icu_24h",
+      "retained": 0.7845591522116939,
+      "ci": [
+        0.6307748731538337,
+        0.9258920658320682
+      ],
+      "gain_matched": 0.1668220141507436,
+      "gain_unmatched_same_rows": 0.21263153158110226,
+      "gain_unmatched_full_cohort": 0.21563219153832547,
+      "meets_target": false,
+      "retained_plain_baseline": 0.6764781501809005,
+      "retained_plain_baseline_ci": [
+        0.5490609600904435,
+        0.7829931770418737
+      ],
+      "meets_target_plain_baseline": false
+    },
+    {
+      "label": "deterioration_mortality_28d",
+      "retained": 0.8643262946951802,
+      "ci": [
+        0.5583860363764174,
+        1.1720172639702002
+      ],
+      "gain_matched": 0.13119482731918852,
+      "gain_unmatched_same_rows": 0.1517885411150851,
+      "gain_unmatched_full_cohort": 0.1510508843922287,
+      "meets_target": false,
+      "retained_plain_baseline": 0.5518057415431737,
+      "retained_plain_baseline_ci": [
+        0.18220131841177004,
+        0.8262147783670315
+      ],
+      "meets_target_plain_baseline": false
+    },
+    {
+      "label": "deterioration_mortality_365d",
+      "retained": 0.9312685143325508,
+      "ci": [
+        0.6631449879694848,
+        1.1583142395277883
+      ],
+      "gain_matched": 0.076862858510511,
+      "gain_unmatched_same_rows": 0.08253565682460484,
+      "gain_unmatched_full_cohort": 0.08366561087836943,
+      "meets_target": false,
+      "retained_plain_baseline": 0.6148006131260375,
+      "retained_plain_baseline_ci": [
+        0.30138295941309645,
+        0.8243525409363945
+      ],
+      "meets_target_plain_baseline": false
+    }
+  ],
+  "formula_ambiguity": "acq_context_audit writes the quantity as (R8 - R2) / (R6 - R2) without saying which R2 the numerator uses. Both readings are computed and reported: `retained` uses a within-stratum R2, keeping numerator and denominator each on one statistic; `retained_plain_baseline` uses the unstratified R2, which is the more literal reading. The verdict is the same under both, so nothing turns on the choice.",
+  "effective_sample_note": "The effective patient count, not the ECG count, bounds every row 8 claim, and it is per label because a rare label empties more strata than a common one. See results/p4_effective.csv.",
+  "matching_note": "Balance is exact within stratum on the coarsened variables by construction; the residual imbalance on the underlying continuous values is what coarsening leaves behind and is reported in results/p4_balance.csv rather than assumed away."
+}

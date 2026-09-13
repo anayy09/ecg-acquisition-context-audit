@@ -1,0 +1,89 @@
+# Pre-declared comparison. Committed 2026-08-23, before any run exists.
+# If ledger/runs.jsonl contains an entry older than this file's first commit,
+# the pre-declaration is void and every arm must be rerun.
+
+name: acq_context_audit
+declared: 2026-08-23
+declared_by: human
+status: open
+
+hypothesis: >
+  A model given only ECG acquisition context, with no waveform samples, recovers
+  at least 70 percent of the above-chance AUROC of the locally reproduced
+  raw-waveform arm on at least one ED deterioration label, and the waveform arm's
+  advantage over a demographics-only baseline shrinks as the outcome horizon
+  lengthens.
+
+primary_metric: auroc
+primary_quantity: recovery_ratio          # (AUROC_arm - 0.5) / (AUROC_R6 - 0.5)
+primary_arm: R3_acqctx_pre
+primary_reference_arm: R6_waveform
+primary_label: deterioration_mortality_365d    # placeholder filled per D-031
+success_threshold: 0.70
+
+secondary_quantity: waveform_gain_retained     # (R8 - R2) / (R6 - R2)
+secondary_threshold: 0.50                      # target: at most half retained
+
+arms:
+  - id: R1_prevalence
+    inputs: []
+    role: floor
+  - id: R2_demo
+    inputs: [demographics]
+    role: conventional_baseline
+  - id: R3_acqctx_pre
+    inputs: [acq_pre]
+    role: confirmatory
+  - id: R3b_acqctx_window
+    inputs: [acq_pre, acq_window]
+    role: leakage_suspect_upper_bound
+  - id: R4_demo_acq
+    inputs: [demographics, acq_pre]
+    role: confirmatory
+  - id: R5_tabular
+    inputs: [vitals, labs]
+    role: clinical_reference
+  - id: R6_waveform
+    inputs: [waveform]
+    role: audit_target
+  - id: R7_waveform_demo_acq
+    inputs: [waveform, demographics, acq_pre]
+    role: ceiling
+  - id: R8_waveform_matched
+    inputs: [waveform]
+    cohort: availability_matched
+    role: confirmatory
+
+labels:
+  # Placeholders filled from the release on 2026-08-23 per D-031, while
+  # ledger/runs.jsonl was still empty. MDS-ED has no in-hospital mortality
+  # label, so 28-day mortality is substituted.
+  - deterioration_icu_24h
+  - deterioration_mortality_28d
+  - deterioration_mortality_365d
+
+# Multiplicity family, fixed now. It does not grow after results are seen.
+family:
+  contrasts:
+    - [R3_acqctx_pre, R2_demo]
+    - [R3_acqctx_pre, R6_waveform]
+    - [R4_demo_acq, R6_waveform]
+    - [R7_waveform_demo_acq, R6_waveform]
+    - [R8_waveform_matched, R6_waveform]
+  crossed_with: labels
+  correction: holm
+  alpha: 0.05
+
+analysis: >
+  Patient-clustered percentile bootstrap, 10,000 resamples, resampling unit
+  subject_id, for every arm interval. Paired clustered bootstrap on the difference
+  for every contrast; marginal intervals are never compared. Bootstrap interval
+  computed on the recovery ratio directly. Holm correction across the family above.
+  Noise floor established by rerunning one arm unchanged under a new seed; any
+  between-arm difference not clearly larger than that is reported as no difference.
+  Five seeds per arm, reported as mean and spread.
+
+exploratory_policy: >
+  Any arm, contrast, label, or cohort not listed above is exploratory. Exploratory
+  results are reported in a separate table, are excluded from the multiplicity
+  family, and are described as exploratory in the manuscript.

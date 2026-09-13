@@ -1,0 +1,1000 @@
+table,row_key,column,text,value,format,source_file,source_key,source_column,aggregate,unit
+T1,R1_prevalence,deterioration_icu_24h,0.5000,0.5,.4f,results/p3_arms.csv,arm=R1_prevalence;label=deterioration_icu_24h,auroc,,record
+T1,R1_prevalence,deterioration_icu_24h,0.5000,0.5,.4f,results/p3_arms.csv,arm=R1_prevalence;label=deterioration_icu_24h,ci_lo,,record
+T1,R1_prevalence,deterioration_icu_24h,0.5000,0.5,.4f,results/p3_arms.csv,arm=R1_prevalence;label=deterioration_icu_24h,ci_hi,,record
+T1,R1_prevalence,deterioration_mortality_28d,0.5000,0.5,.4f,results/p3_arms.csv,arm=R1_prevalence;label=deterioration_mortality_28d,auroc,,record
+T1,R1_prevalence,deterioration_mortality_28d,0.5000,0.5,.4f,results/p3_arms.csv,arm=R1_prevalence;label=deterioration_mortality_28d,ci_lo,,record
+T1,R1_prevalence,deterioration_mortality_28d,0.5000,0.5,.4f,results/p3_arms.csv,arm=R1_prevalence;label=deterioration_mortality_28d,ci_hi,,record
+T1,R1_prevalence,deterioration_mortality_365d,0.5000,0.5,.4f,results/p3_arms.csv,arm=R1_prevalence;label=deterioration_mortality_365d,auroc,,record
+T1,R1_prevalence,deterioration_mortality_365d,0.5000,0.5,.4f,results/p3_arms.csv,arm=R1_prevalence;label=deterioration_mortality_365d,ci_lo,,record
+T1,R1_prevalence,deterioration_mortality_365d,0.5000,0.5,.4f,results/p3_arms.csv,arm=R1_prevalence;label=deterioration_mortality_365d,ci_hi,,record
+T1,R2_demo,deterioration_icu_24h,0.6017,0.6016879093644892,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_icu_24h,auroc,,record
+T1,R2_demo,deterioration_icu_24h,0.5752,0.5751902161404702,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_icu_24h,ci_lo,,record
+T1,R2_demo,deterioration_icu_24h,0.6271,0.6270676370057853,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_icu_24h,ci_hi,,record
+T1,R2_demo,deterioration_mortality_28d,0.6963,0.6962665720534094,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_28d,auroc,,record
+T1,R2_demo,deterioration_mortality_28d,0.6608,0.6607877716107239,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_28d,ci_lo,,record
+T1,R2_demo,deterioration_mortality_28d,0.7307,0.7306935309583146,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_28d,ci_hi,,record
+T1,R2_demo,deterioration_mortality_365d,0.7458,0.7457553903828724,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_365d,auroc,,record
+T1,R2_demo,deterioration_mortality_365d,0.7205,0.7205256134194865,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_365d,ci_lo,,record
+T1,R2_demo,deterioration_mortality_365d,0.7696,0.7695757116132945,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_365d,ci_hi,,record
+T1,R3_acqctx_pre,deterioration_icu_24h,0.7972,0.7971999468932555,.4f,results/p3_arms.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,auroc,,record
+T1,R3_acqctx_pre,deterioration_icu_24h,0.7806,0.7806223460225721,.4f,results/p3_arms.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,ci_lo,,record
+T1,R3_acqctx_pre,deterioration_icu_24h,0.8138,0.8138348456761821,.4f,results/p3_arms.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,ci_hi,,record
+T1,R3_acqctx_pre,deterioration_mortality_28d,0.7587,0.7586963387905765,.4f,results/p3_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,auroc,,record
+T1,R3_acqctx_pre,deterioration_mortality_28d,0.7264,0.7263843102091624,.4f,results/p3_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,ci_lo,,record
+T1,R3_acqctx_pre,deterioration_mortality_28d,0.7903,0.79034374590703,.4f,results/p3_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,ci_hi,,record
+T1,R3_acqctx_pre,deterioration_mortality_365d,0.7241,0.7241058215184337,.4f,results/p3_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,auroc,,record
+T1,R3_acqctx_pre,deterioration_mortality_365d,0.7029,0.7029247799287801,.4f,results/p3_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,ci_lo,,record
+T1,R3_acqctx_pre,deterioration_mortality_365d,0.7441,0.7441125634113148,.4f,results/p3_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,ci_hi,,record
+T1,R3b_acqctx_window,deterioration_icu_24h,0.8010,0.8009957514604354,.4f,results/p3_arms.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,auroc,,record
+T1,R3b_acqctx_window,deterioration_icu_24h,0.7845,0.7844929359659898,.4f,results/p3_arms.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,ci_lo,,record
+T1,R3b_acqctx_window,deterioration_icu_24h,0.8174,0.8173635611713485,.4f,results/p3_arms.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,ci_hi,,record
+T1,R3b_acqctx_window,deterioration_mortality_28d,0.7637,0.7636842114726166,.4f,results/p3_arms.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d,auroc,,record
+T1,R3b_acqctx_window,deterioration_mortality_28d,0.7303,0.7302641139507727,.4f,results/p3_arms.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d,ci_lo,,record
+T1,R3b_acqctx_window,deterioration_mortality_28d,0.7958,0.7958082184921851,.4f,results/p3_arms.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d,ci_hi,,record
+T1,R3b_acqctx_window,deterioration_mortality_365d,0.7272,0.7272350599882115,.4f,results/p3_arms.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d,auroc,,record
+T1,R3b_acqctx_window,deterioration_mortality_365d,0.7057,0.7057214159612204,.4f,results/p3_arms.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d,ci_lo,,record
+T1,R3b_acqctx_window,deterioration_mortality_365d,0.7474,0.747444679287476,.4f,results/p3_arms.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d,ci_hi,,record
+T1,R4_demo_acq,deterioration_icu_24h,0.8094,0.8093587360594795,.4f,results/p3_arms.csv,arm=R4_demo_acq;label=deterioration_icu_24h,auroc,,record
+T1,R4_demo_acq,deterioration_icu_24h,0.7928,0.7927995163813679,.4f,results/p3_arms.csv,arm=R4_demo_acq;label=deterioration_icu_24h,ci_lo,,record
+T1,R4_demo_acq,deterioration_icu_24h,0.8255,0.8254558772702772,.4f,results/p3_arms.csv,arm=R4_demo_acq;label=deterioration_icu_24h,ci_hi,,record
+T1,R4_demo_acq,deterioration_mortality_28d,0.8102,0.8101851491147687,.4f,results/p3_arms.csv,arm=R4_demo_acq;label=deterioration_mortality_28d,auroc,,record
+T1,R4_demo_acq,deterioration_mortality_28d,0.7818,0.7818403287210419,.4f,results/p3_arms.csv,arm=R4_demo_acq;label=deterioration_mortality_28d,ci_lo,,record
+T1,R4_demo_acq,deterioration_mortality_28d,0.8371,0.8370784712357014,.4f,results/p3_arms.csv,arm=R4_demo_acq;label=deterioration_mortality_28d,ci_hi,,record
+T1,R4_demo_acq,deterioration_mortality_365d,0.8033,0.8032795456994188,.4f,results/p3_arms.csv,arm=R4_demo_acq;label=deterioration_mortality_365d,auroc,,record
+T1,R4_demo_acq,deterioration_mortality_365d,0.7832,0.7831604098018676,.4f,results/p3_arms.csv,arm=R4_demo_acq;label=deterioration_mortality_365d,ci_lo,,record
+T1,R4_demo_acq,deterioration_mortality_365d,0.8221,0.8220566172014621,.4f,results/p3_arms.csv,arm=R4_demo_acq;label=deterioration_mortality_365d,ci_hi,,record
+T1,R5_tabular,deterioration_icu_24h,0.9164,0.9163855328376704,.4f,results/p3_arms.csv,arm=R5_tabular;label=deterioration_icu_24h,auroc,,record
+T1,R5_tabular,deterioration_icu_24h,0.9046,0.9046447741488828,.4f,results/p3_arms.csv,arm=R5_tabular;label=deterioration_icu_24h,ci_lo,,record
+T1,R5_tabular,deterioration_icu_24h,0.9278,0.9278321751205216,.4f,results/p3_arms.csv,arm=R5_tabular;label=deterioration_icu_24h,ci_hi,,record
+T1,R5_tabular,deterioration_mortality_28d,0.9102,0.9102110998371638,.4f,results/p3_arms.csv,arm=R5_tabular;label=deterioration_mortality_28d,auroc,,record
+T1,R5_tabular,deterioration_mortality_28d,0.8884,0.8883743835947363,.4f,results/p3_arms.csv,arm=R5_tabular;label=deterioration_mortality_28d,ci_lo,,record
+T1,R5_tabular,deterioration_mortality_28d,0.9294,0.929405966566392,.4f,results/p3_arms.csv,arm=R5_tabular;label=deterioration_mortality_28d,ci_hi,,record
+T1,R5_tabular,deterioration_mortality_365d,0.8533,0.8533416174951357,.4f,results/p3_arms.csv,arm=R5_tabular;label=deterioration_mortality_365d,auroc,,record
+T1,R5_tabular,deterioration_mortality_365d,0.8371,0.8371400402141621,.4f,results/p3_arms.csv,arm=R5_tabular;label=deterioration_mortality_365d,ci_lo,,record
+T1,R5_tabular,deterioration_mortality_365d,0.8689,0.8689124101877406,.4f,results/p3_arms.csv,arm=R5_tabular;label=deterioration_mortality_365d,ci_hi,,record
+T1,R6_waveform,deterioration_icu_24h,0.8173,0.8173201009028147,.4f,results/p3_arms.csv,arm=R6_waveform;label=deterioration_icu_24h,auroc,,record
+T1,R6_waveform,deterioration_icu_24h,0.7995,0.799495588148914,.4f,results/p3_arms.csv,arm=R6_waveform;label=deterioration_icu_24h,ci_lo,,record
+T1,R6_waveform,deterioration_icu_24h,0.8342,0.8342443443318549,.4f,results/p3_arms.csv,arm=R6_waveform;label=deterioration_icu_24h,ci_hi,,record
+T1,R6_waveform,deterioration_mortality_28d,0.8473,0.847317456445638,.4f,results/p3_arms.csv,arm=R6_waveform;label=deterioration_mortality_28d,auroc,,record
+T1,R6_waveform,deterioration_mortality_28d,0.8222,0.8221987097301903,.4f,results/p3_arms.csv,arm=R6_waveform;label=deterioration_mortality_28d,ci_lo,,record
+T1,R6_waveform,deterioration_mortality_28d,0.8714,0.8714269157356319,.4f,results/p3_arms.csv,arm=R6_waveform;label=deterioration_mortality_28d,ci_hi,,record
+T1,R6_waveform,deterioration_mortality_365d,0.8294,0.8294210012612419,.4f,results/p3_arms.csv,arm=R6_waveform;label=deterioration_mortality_365d,auroc,,record
+T1,R6_waveform,deterioration_mortality_365d,0.8109,0.8109116866316213,.4f,results/p3_arms.csv,arm=R6_waveform;label=deterioration_mortality_365d,ci_lo,,record
+T1,R6_waveform,deterioration_mortality_365d,0.8474,0.8473626044749081,.4f,results/p3_arms.csv,arm=R6_waveform;label=deterioration_mortality_365d,ci_hi,,record
+T1,R7_waveform_demo_acq,deterioration_icu_24h,0.8571,0.8570939546822447,.4f,results/p3_arms.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,auroc,,record
+T1,R7_waveform_demo_acq,deterioration_icu_24h,0.8424,0.8423950582536511,.4f,results/p3_arms.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,ci_lo,,record
+T1,R7_waveform_demo_acq,deterioration_icu_24h,0.8713,0.8713341074705403,.4f,results/p3_arms.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,ci_hi,,record
+T1,R7_waveform_demo_acq,deterioration_mortality_28d,0.8723,0.8723266410835295,.4f,results/p3_arms.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d,auroc,,record
+T1,R7_waveform_demo_acq,deterioration_mortality_28d,0.8485,0.8484509074081512,.4f,results/p3_arms.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d,ci_lo,,record
+T1,R7_waveform_demo_acq,deterioration_mortality_28d,0.8947,0.8947280857655693,.4f,results/p3_arms.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d,ci_hi,,record
+T1,R7_waveform_demo_acq,deterioration_mortality_365d,0.8533,0.8533051745774206,.4f,results/p3_arms.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d,auroc,,record
+T1,R7_waveform_demo_acq,deterioration_mortality_365d,0.8365,0.8364689843692841,.4f,results/p3_arms.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d,ci_lo,,record
+T1,R7_waveform_demo_acq,deterioration_mortality_365d,0.8693,0.8692772101044612,.4f,results/p3_arms.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d,ci_hi,,record
+T1,meta|deterioration_icu_24h,n_ecgs,6407,6407.0,.0f,results/p3_arms.csv,arm=R2_demo;label=deterioration_icu_24h,n_items,,record
+T1,meta|deterioration_icu_24h,n_patients,3626,3626.0,.0f,results/p3_arms.csv,arm=R2_demo;label=deterioration_icu_24h,n_groups,,record
+T1,meta|deterioration_icu_24h,prevalence,0.1260,0.1259559856407054,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_icu_24h,prevalence,,record
+T1,meta|deterioration_mortality_28d,n_ecgs,6428,6428.0,.0f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_28d,n_items,,record
+T1,meta|deterioration_mortality_28d,n_patients,3636,3636.0,.0f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_28d,n_groups,,record
+T1,meta|deterioration_mortality_28d,prevalence,0.0422,0.0421593030491599,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_28d,prevalence,,record
+T1,meta|deterioration_mortality_365d,n_ecgs,6428,6428.0,.0f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_365d,n_items,,record
+T1,meta|deterioration_mortality_365d,n_patients,3636,3636.0,.0f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_365d,n_groups,,record
+T1,meta|deterioration_mortality_365d,prevalence,0.1425,0.1425015556938394,.4f,results/p3_arms.csv,arm=R2_demo;label=deterioration_mortality_365d,prevalence,,record
+T2,G1_primary,measured,-0.0216,-0.021649568864438695,+.4f,results/p1_verdict.json,path=verdict.per_label;label=deterioration_mortality_365d,paired_difference,,record
+T2,G1_primary,measured,-0.0523,-0.05233405862931693,+.4f,results/p1_verdict.json,path=verdict.per_label;label=deterioration_mortality_365d,paired_ci.0,,record
+T2,G1_primary,measured,+0.0098,0.009792645485666971,+.4f,results/p1_verdict.json,path=verdict.per_label;label=deterioration_mortality_365d,paired_ci.1,,record
+T2,G1_primary,pre-declared,0.0043,0.00428640013689896,.4f,results/p1_verdict.json,path=verdict.per_label;label=deterioration_mortality_365d,seed_and_noise_spread,,record
+T2,G1_primary,outcome,FAILED,,verdict,results/p1_verdict.json,path=verdict.per_label;label=deterioration_mortality_365d,beats_demographics_beyond_noise,,not_applicable
+T2,recovery_primary,measured,0.6803,0.6803021685332998,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;is_primary=True,estimate,,record
+T2,recovery_primary,measured,0.6149,0.6149324821071007,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;is_primary=True,ci_lo,,record
+T2,recovery_primary,measured,0.7476,0.7476139961098882,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;is_primary=True,ci_hi,,record
+T2,recovery_primary,pre-declared,0.70,0.7,.2f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;is_primary=True,target,,record
+T2,recovery_primary,outcome,FAILED,,verdict,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;is_primary=True,meets_target,,not_applicable
+T2,retained_primary,measured,0.9313,0.9312685143325508,.4f,results/p4_retained.csv,label=deterioration_mortality_365d,estimate,,within_stratum
+T2,retained_primary,measured,0.6631,0.6631449879694848,.4f,results/p4_retained.csv,label=deterioration_mortality_365d,ci_lo,,within_stratum
+T2,retained_primary,measured,1.1583,1.1583142395277883,.4f,results/p4_retained.csv,label=deterioration_mortality_365d,ci_hi,,within_stratum
+T2,retained_primary,pre-declared,0.50,0.5,.2f,results/p4_retained.csv,label=deterioration_mortality_365d,threshold,,within_stratum
+T2,retained_primary,outcome,FAILED,,verdict,results/p4_retained.csv,label=deterioration_mortality_365d,meets_target,,not_applicable
+T2,ladder_trend,measured,-0.8000,-0.7999999999999998,+.4f,results/p3_trends.csv,name=acq_advantage_trend,estimate,,record
+T2,ladder_trend,measured,-1.0000,-0.9999999999999998,+.4f,results/p3_trends.csv,name=acq_advantage_trend,ci_lo,,record
+T2,ladder_trend,measured,+0.2000,0.1999999999999999,+.4f,results/p3_trends.csv,name=acq_advantage_trend,ci_hi,,record
+T2,ladder_trend,outcome,NOT SUPPORTED,,verdict,results/p3_trends.csv,name=acq_advantage_trend,supported,,not_applicable
+T3,R3_acqctx_pre|deterioration_icu_24h,ratio,0.9366,0.9365935093543872,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;quantity=recovery_ratio,estimate,,record
+T3,R3_acqctx_pre|deterioration_icu_24h,ratio,0.8758,0.8757675536653107,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;quantity=recovery_ratio,ci_lo,,record
+T3,R3_acqctx_pre|deterioration_icu_24h,ratio,0.9995,0.9995075881913936,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;quantity=recovery_ratio,ci_hi,,record
+T3,R3_acqctx_pre|deterioration_icu_24h,numerator,0.7972,0.7971999468932555,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;quantity=recovery_ratio,numerator_auroc,,record
+T3,R3_acqctx_pre|deterioration_icu_24h,denominator,0.8173,0.8173201009028147,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;quantity=recovery_ratio,denominator_auroc,,record
+T3,R3_acqctx_pre|deterioration_icu_24h,meets,yes,,verdict,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R3_acqctx_pre|deterioration_icu_24h,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R3_acqctx_pre|deterioration_mortality_28d,ratio,0.7448,0.7448411647315732,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;quantity=recovery_ratio,estimate,,record
+T3,R3_acqctx_pre|deterioration_mortality_28d,ratio,0.6515,0.6514658658043114,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;quantity=recovery_ratio,ci_lo,,record
+T3,R3_acqctx_pre|deterioration_mortality_28d,ratio,0.8382,0.8382008343359183,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;quantity=recovery_ratio,ci_hi,,record
+T3,R3_acqctx_pre|deterioration_mortality_28d,numerator,0.7587,0.7586963387905765,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;quantity=recovery_ratio,numerator_auroc,,record
+T3,R3_acqctx_pre|deterioration_mortality_28d,denominator,0.8473,0.847317456445638,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;quantity=recovery_ratio,denominator_auroc,,record
+T3,R3_acqctx_pre|deterioration_mortality_28d,meets,yes,,verdict,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R3_acqctx_pre|deterioration_mortality_28d,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R3_acqctx_pre|deterioration_mortality_365d,ratio,0.6803,0.6803021685332998,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;quantity=recovery_ratio,estimate,,record
+T3,R3_acqctx_pre|deterioration_mortality_365d,ratio,0.6149,0.6149324821071007,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;quantity=recovery_ratio,ci_lo,,record
+T3,R3_acqctx_pre|deterioration_mortality_365d,ratio,0.7476,0.7476139961098882,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;quantity=recovery_ratio,ci_hi,,record
+T3,R3_acqctx_pre|deterioration_mortality_365d,numerator,0.7241,0.7241058215184337,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;quantity=recovery_ratio,numerator_auroc,,record
+T3,R3_acqctx_pre|deterioration_mortality_365d,denominator,0.8294,0.8294210012612419,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;quantity=recovery_ratio,denominator_auroc,,record
+T3,R3_acqctx_pre|deterioration_mortality_365d,meets,no,,verdict,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R3_acqctx_pre|deterioration_mortality_365d,primary,pre-declared primary,,verdict,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R4_demo_acq|deterioration_icu_24h,ratio,0.9749,0.9749106192116914,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,estimate,,record
+T3,R4_demo_acq|deterioration_icu_24h,ratio,0.9155,0.9154754446133734,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,ci_lo,,record
+T3,R4_demo_acq|deterioration_icu_24h,ratio,1.0376,1.037608594951538,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,ci_hi,,record
+T3,R4_demo_acq|deterioration_icu_24h,numerator,0.8094,0.8093587360594795,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,numerator_auroc,,record
+T3,R4_demo_acq|deterioration_icu_24h,denominator,0.8173,0.8173201009028147,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,denominator_auroc,,record
+T3,R4_demo_acq|deterioration_icu_24h,meets,yes,,verdict,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R4_demo_acq|deterioration_icu_24h,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R4_demo_acq|deterioration_mortality_28d,ratio,0.8931,0.8930882780529596,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,estimate,,record
+T3,R4_demo_acq|deterioration_mortality_28d,ratio,0.8095,0.8095217460019601,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,ci_lo,,record
+T3,R4_demo_acq|deterioration_mortality_28d,ratio,0.9769,0.9768514704429524,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,ci_hi,,record
+T3,R4_demo_acq|deterioration_mortality_28d,numerator,0.8102,0.8101851491147687,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,numerator_auroc,,record
+T3,R4_demo_acq|deterioration_mortality_28d,denominator,0.8473,0.847317456445638,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,denominator_auroc,,record
+T3,R4_demo_acq|deterioration_mortality_28d,meets,yes,,verdict,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R4_demo_acq|deterioration_mortality_28d,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R4_demo_acq|deterioration_mortality_365d,ratio,0.9206,0.920644235000998,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,estimate,,record
+T3,R4_demo_acq|deterioration_mortality_365d,ratio,0.8568,0.8567543809917325,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,ci_lo,,record
+T3,R4_demo_acq|deterioration_mortality_365d,ratio,0.9849,0.9848751877758072,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,ci_hi,,record
+T3,R4_demo_acq|deterioration_mortality_365d,numerator,0.8033,0.8032795456994188,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,numerator_auroc,,record
+T3,R4_demo_acq|deterioration_mortality_365d,denominator,0.8294,0.8294210012612419,.4f,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,denominator_auroc,,record
+T3,R4_demo_acq|deterioration_mortality_365d,meets,yes,,verdict,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R4_demo_acq|deterioration_mortality_365d,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R5_tabular|deterioration_icu_24h,ratio,1.3122,1.3121940011143398,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_icu_24h;quantity=recovery_ratio,estimate,,record
+T3,R5_tabular|deterioration_icu_24h,ratio,1.2497,1.249700136858829,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_icu_24h;quantity=recovery_ratio,ci_lo,,record
+T3,R5_tabular|deterioration_icu_24h,ratio,1.3833,1.3832625552493465,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_icu_24h;quantity=recovery_ratio,ci_hi,,record
+T3,R5_tabular|deterioration_icu_24h,numerator,0.9164,0.9163855328376704,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_icu_24h;quantity=recovery_ratio,numerator_auroc,,record
+T3,R5_tabular|deterioration_icu_24h,denominator,0.8173,0.8173201009028147,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_icu_24h;quantity=recovery_ratio,denominator_auroc,,record
+T3,R5_tabular|deterioration_icu_24h,meets,yes,,verdict,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_icu_24h;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R5_tabular|deterioration_icu_24h,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_icu_24h;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R5_tabular|deterioration_mortality_28d,ratio,1.1811,1.1810840262253557,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_28d;quantity=recovery_ratio,estimate,,record
+T3,R5_tabular|deterioration_mortality_28d,ratio,1.1132,1.1131966813468404,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_28d;quantity=recovery_ratio,ci_lo,,record
+T3,R5_tabular|deterioration_mortality_28d,ratio,1.2564,1.256390460886179,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_28d;quantity=recovery_ratio,ci_hi,,record
+T3,R5_tabular|deterioration_mortality_28d,numerator,0.9102,0.9102110998371638,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_28d;quantity=recovery_ratio,numerator_auroc,,record
+T3,R5_tabular|deterioration_mortality_28d,denominator,0.8473,0.847317456445638,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_28d;quantity=recovery_ratio,denominator_auroc,,record
+T3,R5_tabular|deterioration_mortality_28d,meets,yes,,verdict,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_28d;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R5_tabular|deterioration_mortality_28d,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_28d;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R5_tabular|deterioration_mortality_365d,ratio,1.0726,1.0726141203575663,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_365d;quantity=recovery_ratio,estimate,,record
+T3,R5_tabular|deterioration_mortality_365d,ratio,1.0204,1.0203714425545312,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_365d;quantity=recovery_ratio,ci_lo,,record
+T3,R5_tabular|deterioration_mortality_365d,ratio,1.1294,1.129365939229939,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_365d;quantity=recovery_ratio,ci_hi,,record
+T3,R5_tabular|deterioration_mortality_365d,numerator,0.8533,0.8533416174951357,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_365d;quantity=recovery_ratio,numerator_auroc,,record
+T3,R5_tabular|deterioration_mortality_365d,denominator,0.8294,0.8294210012612419,.4f,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_365d;quantity=recovery_ratio,denominator_auroc,,record
+T3,R5_tabular|deterioration_mortality_365d,meets,yes,,verdict,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_365d;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R5_tabular|deterioration_mortality_365d,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R5_tabular;label=deterioration_mortality_365d;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R7_waveform_demo_acq|deterioration_icu_24h,ratio,1.1253,1.1253430011722183,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,estimate,,record
+T3,R7_waveform_demo_acq|deterioration_icu_24h,ratio,1.0913,1.0913030993719777,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,ci_lo,,record
+T3,R7_waveform_demo_acq|deterioration_icu_24h,ratio,1.1624,1.1624037998593857,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,ci_hi,,record
+T3,R7_waveform_demo_acq|deterioration_icu_24h,numerator,0.8571,0.8570939546822447,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,numerator_auroc,,record
+T3,R7_waveform_demo_acq|deterioration_icu_24h,denominator,0.8173,0.8173201009028147,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,denominator_auroc,,record
+T3,R7_waveform_demo_acq|deterioration_icu_24h,meets,yes,,verdict,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R7_waveform_demo_acq|deterioration_icu_24h,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R7_waveform_demo_acq|deterioration_mortality_28d,ratio,1.0720,1.0720067021503306,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,estimate,,record
+T3,R7_waveform_demo_acq|deterioration_mortality_28d,ratio,1.0357,1.0357065723546846,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,ci_lo,,record
+T3,R7_waveform_demo_acq|deterioration_mortality_28d,ratio,1.1119,1.1118534040797503,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,ci_hi,,record
+T3,R7_waveform_demo_acq|deterioration_mortality_28d,numerator,0.8723,0.8723266410835295,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,numerator_auroc,,record
+T3,R7_waveform_demo_acq|deterioration_mortality_28d,denominator,0.8473,0.847317456445638,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,denominator_auroc,,record
+T3,R7_waveform_demo_acq|deterioration_mortality_28d,meets,yes,,verdict,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R7_waveform_demo_acq|deterioration_mortality_28d,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;quantity=recovery_ratio,is_primary,,not_applicable
+T3,R7_waveform_demo_acq|deterioration_mortality_365d,ratio,1.0725,1.0725034931735813,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,estimate,,record
+T3,R7_waveform_demo_acq|deterioration_mortality_365d,ratio,1.0457,1.0456824645704432,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,ci_lo,,record
+T3,R7_waveform_demo_acq|deterioration_mortality_365d,ratio,1.1010,1.1010244789298869,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,ci_hi,,record
+T3,R7_waveform_demo_acq|deterioration_mortality_365d,numerator,0.8533,0.8533051745774206,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,numerator_auroc,,record
+T3,R7_waveform_demo_acq|deterioration_mortality_365d,denominator,0.8294,0.8294210012612419,.4f,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,denominator_auroc,,record
+T3,R7_waveform_demo_acq|deterioration_mortality_365d,meets,yes,,verdict,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,meets_target,,not_applicable
+T3,R7_waveform_demo_acq|deterioration_mortality_365d,primary,exploratory,,verdict,results/p3_recovery.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;quantity=recovery_ratio,is_primary,,not_applicable
+T3b,R3_acqctx_pre|deterioration_mortality_365d|per-label record-level R6_waveform (D-055),ratio,0.6803,0.6803021685332998,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=per-label record-level R6_waveform (D-055),estimate,,record
+T3b,R3_acqctx_pre|deterioration_mortality_365d|per-label record-level R6_waveform (D-055),ratio,0.6149,0.6149324821071007,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=per-label record-level R6_waveform (D-055),ci_lo,,record
+T3b,R3_acqctx_pre|deterioration_mortality_365d|per-label record-level R6_waveform (D-055),ratio,0.7476,0.7476139961098882,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=per-label record-level R6_waveform (D-055),ci_hi,,record
+T3b,R3_acqctx_pre|deterioration_mortality_365d|per-label record-level R6_waveform (D-055),denominator,0.8294,0.8294210012612419,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=per-label record-level R6_waveform (D-055),denominator_auroc,,record
+T3b,R3_acqctx_pre|deterioration_mortality_365d|per-label record-level R6_waveform (D-055),meets,no,,verdict,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=per-label record-level R6_waveform (D-055),meets_target,,not_applicable
+T3b,"R3_acqctx_pre|deterioration_mortality_365d|published macro, version of record",ratio,0.6286,0.6286278303462376,.4f,results/p3_recovery.csv,"arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=published macro, version of record",estimate,,record
+T3b,"R3_acqctx_pre|deterioration_mortality_365d|published macro, version of record",ratio,0.5692,0.5692139689446848,.4f,results/p3_recovery.csv,"arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=published macro, version of record",ci_lo,,record
+T3b,"R3_acqctx_pre|deterioration_mortality_365d|published macro, version of record",ratio,0.6847,0.6847477234538986,.4f,results/p3_recovery.csv,"arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=published macro, version of record",ci_hi,,record
+T3b,"R3_acqctx_pre|deterioration_mortality_365d|published macro, version of record",denominator,0.8565,0.8565,.4f,results/p3_recovery.csv,"arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=published macro, version of record",denominator_auroc,,record
+T3b,"R3_acqctx_pre|deterioration_mortality_365d|published macro, version of record",meets,no,,verdict,results/p3_recovery.csv,"arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=published macro, version of record",meets_target,,not_applicable
+T3b,"R3_acqctx_pre|deterioration_mortality_365d|published macro, preprint",ratio,0.6835,0.6834578271376448,.4f,results/p3_recovery.csv,"arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=published macro, preprint",estimate,,record
+T3b,"R3_acqctx_pre|deterioration_mortality_365d|published macro, preprint",ratio,0.6189,0.6188617869130228,.4f,results/p3_recovery.csv,"arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=published macro, preprint",ci_lo,,record
+T3b,"R3_acqctx_pre|deterioration_mortality_365d|published macro, preprint",ratio,0.7445,0.7444725935081271,.4f,results/p3_recovery.csv,"arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=published macro, preprint",ci_hi,,record
+T3b,"R3_acqctx_pre|deterioration_mortality_365d|published macro, preprint",denominator,0.8279,0.8279,.4f,results/p3_recovery.csv,"arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=published macro, preprint",denominator_auroc,,record
+T3b,"R3_acqctx_pre|deterioration_mortality_365d|published macro, preprint",meets,no,,verdict,results/p3_recovery.csv,"arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=published macro, preprint",meets_target,,not_applicable
+T3b,R3_acqctx_pre|deterioration_mortality_365d|our own 15-target record-level macro,ratio,0.6322,0.6321509221430741,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=our own 15-target record-level macro,estimate,,record
+T3b,R3_acqctx_pre|deterioration_mortality_365d|our own 15-target record-level macro,ratio,0.5724,0.5724040807530171,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=our own 15-target record-level macro,ci_lo,,record
+T3b,R3_acqctx_pre|deterioration_mortality_365d|our own 15-target record-level macro,ratio,0.6886,0.6885853344710153,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=our own 15-target record-level macro,ci_hi,,record
+T3b,R3_acqctx_pre|deterioration_mortality_365d|our own 15-target record-level macro,denominator,0.8545,0.8545131608108484,.4f,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=our own 15-target record-level macro,denominator_auroc,,record
+T3b,R3_acqctx_pre|deterioration_mortality_365d|our own 15-target record-level macro,meets,no,,verdict,results/p3_recovery.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;denominator_source=our own 15-target record-level macro,meets_target,,not_applicable
+T0,Cohort|ECG records,local,"129,057",129057.0,",.0f",results/cohort_reconciliation.csv,section=Cohort;quantity=ECG records,local,,count
+T0,Cohort|ECG records,published,"129,095",129095.0,",.0f",results/cohort_reconciliation.csv,section=Cohort;quantity=ECG records,published,,count
+T0,Cohort|ECG records,gap,-38,-38.0,"+,.0f",results/cohort_reconciliation.csv,section=Cohort;quantity=ECG records,gap,,count
+T0,Cohort|Patients,local,"71,098",71098.0,",.0f",results/cohort_reconciliation.csv,section=Cohort;quantity=Patients,local,,count
+T0,Cohort|Patients,published,"71,098",71098.0,",.0f",results/cohort_reconciliation.csv,section=Cohort;quantity=Patients,published,,count
+T0,Cohort|Patients,gap,+0,0.0,"+,.0f",results/cohort_reconciliation.csv,section=Cohort;quantity=Patients,gap,,count
+T0,Cohort|Emergency department stays,local,"121,195",121195.0,",.0f",results/cohort_reconciliation.csv,section=Cohort;quantity=Emergency department stays,local,,count
+T0,Cohort|Emergency department stays,published,"121,195",121195.0,",.0f",results/cohort_reconciliation.csv,section=Cohort;quantity=Emergency department stays,published,,count
+T0,Cohort|Emergency department stays,gap,+0,0.0,"+,.0f",results/cohort_reconciliation.csv,section=Cohort;quantity=Emergency department stays,gap,,count
+T0,Label positives|deterioration_icu_24h,local,"15,677",15677.0,",.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_icu_24h,local,,count
+T0,Label positives|deterioration_icu_24h,published,"15,688",15688.0,",.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_icu_24h,published,,count
+T0,Label positives|deterioration_icu_24h,gap,-11,-11.0,"+,.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_icu_24h,gap,,count
+T0,Label exclusions|deterioration_icu_24h,local,539,539.0,",.0f",results/cohort_reconciliation.csv,section=Label exclusions;quantity=deterioration_icu_24h,local,,count
+T0,Label positives|deterioration_icu_stay,local,"18,860",18860.0,",.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_icu_stay,local,,count
+T0,Label positives|deterioration_icu_stay,published,"18,872",18872.0,",.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_icu_stay,published,,count
+T0,Label positives|deterioration_icu_stay,gap,-12,-12.0,"+,.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_icu_stay,gap,,count
+T0,Label exclusions|deterioration_icu_stay,local,539,539.0,",.0f",results/cohort_reconciliation.csv,section=Label exclusions;quantity=deterioration_icu_stay,local,,count
+T0,Label positives|deterioration_mortality_28d,local,"5,150",5150.0,",.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_mortality_28d,local,,count
+T0,Label positives|deterioration_mortality_28d,published,"5,153",5153.0,",.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_mortality_28d,published,,count
+T0,Label positives|deterioration_mortality_28d,gap,-3,-3.0,"+,.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_mortality_28d,gap,,count
+T0,Label exclusions|deterioration_mortality_28d,local,357,357.0,",.0f",results/cohort_reconciliation.csv,section=Label exclusions;quantity=deterioration_mortality_28d,local,,count
+T0,Label positives|deterioration_mortality_365d,local,"17,756",17756.0,",.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_mortality_365d,local,,count
+T0,Label positives|deterioration_mortality_365d,published,"17,761",17761.0,",.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_mortality_365d,published,,count
+T0,Label positives|deterioration_mortality_365d,gap,-5,-5.0,"+,.0f",results/cohort_reconciliation.csv,section=Label positives;quantity=deterioration_mortality_365d,gap,,count
+T0,Label exclusions|deterioration_mortality_365d,local,357,357.0,",.0f",results/cohort_reconciliation.csv,section=Label exclusions;quantity=deterioration_mortality_365d,local,,count
+T0,Split|Training folds 0 to 17,local,"116,433",116433.0,",.0f",results/cohort_reconciliation.csv,section=Split;quantity=Training folds 0 to 17,local,,count
+T0,Split|Validation fold 18,local,"6,185",6185.0,",.0f",results/cohort_reconciliation.csv,section=Split;quantity=Validation fold 18,local,,count
+T0,Split|Test fold 19,local,"6,439",6439.0,",.0f",results/cohort_reconciliation.csv,section=Split;quantity=Test fold 19,local,,count
+T0,Test fold|ECG records,local,"6,439",6439.0,",.0f",results/cohort_reconciliation.csv,section=Test fold;quantity=ECG records,local,,count
+T0,Test fold|Patients,local,"3,644",3644.0,",.0f",results/cohort_reconciliation.csv,section=Test fold;quantity=Patients,local,,count
+T0,Test fold|Stays,local,"6,077",6077.0,",.0f",results/cohort_reconciliation.csv,section=Test fold;quantity=Stays,local,,count
+T0,First ECG per stay|Records numbered 0 within their stay,local,"6,080",6080.0,",.0f",results/cohort_reconciliation.csv,section=First ECG per stay;quantity=Records numbered 0 within their stay,local,,count
+T0,First ECG per stay|Distinct stays among them,local,"6,076",6076.0,",.0f",results/cohort_reconciliation.csv,section=First ECG per stay;quantity=Distinct stays among them,local,,count
+T0,First ECG per stay|Stays carrying two records numbered 0,local,4,4.0,",.0f",results/cohort_reconciliation.csv,section=First ECG per stay;quantity=Stays carrying two records numbered 0,local,,count
+T0,First ECG per stay|Records after the first of their stay,local,359,359.0,",.0f",results/cohort_reconciliation.csv,section=First ECG per stay;quantity=Records after the first of their stay,local,,count
+T0,Sequence within stay|Records numbered 0,local,"6,080",6080.0,",.0f",results/cohort_reconciliation.csv,section=Sequence within stay;quantity=Records numbered 0,local,,count
+T0,Sequence within stay|Records numbered 1,local,318,318.0,",.0f",results/cohort_reconciliation.csv,section=Sequence within stay;quantity=Records numbered 1,local,,count
+T0,Sequence within stay|Records numbered 2,local,33,33.0,",.0f",results/cohort_reconciliation.csv,section=Sequence within stay;quantity=Records numbered 2,local,,count
+T0,Sequence within stay|Records numbered 3,local,6,6.0,",.0f",results/cohort_reconciliation.csv,section=Sequence within stay;quantity=Records numbered 3,local,,count
+T0,Sequence within stay|Records numbered 4,local,2,2.0,",.0f",results/cohort_reconciliation.csv,section=Sequence within stay;quantity=Records numbered 4,local,,count
+T8b,crop|all_records,macro,0.8474,0.8474354094186148,.4f,results/p2_macro.csv,arm=R6_waveform;unit=crop,macro,mean,crop
+T8b,crop|all_records,spread,0.0087,0.00871593949078775,.4f,results/p2_macro.csv,arm=R6_waveform;unit=crop,macro,range,crop
+T8b,crop|first_ecg,macro,0.8465,0.8465180810185471,.4f,results/first_ecg_sensitivity.csv,arm=R6_waveform;unit=crop;restriction=first_ecg_per_stay,macro,mean,crop
+T8b,crop|first_ecg,spread,0.0097,0.009726153232450963,.4f,results/first_ecg_sensitivity.csv,arm=R6_waveform;unit=crop;restriction=first_ecg_per_stay,macro,range,crop
+T8b,record|all_records,macro,0.8545,0.8545131608108484,.4f,results/p2_macro.csv,arm=R6_waveform;unit=record,macro,mean,record
+T8b,record|all_records,spread,0.0102,0.010219510126381004,.4f,results/p2_macro.csv,arm=R6_waveform;unit=record,macro,range,record
+T8b,record|first_ecg,macro,0.8536,0.853613457931373,.4f,results/first_ecg_sensitivity.csv,arm=R6_waveform;unit=record;restriction=first_ecg_per_stay,macro,mean,record
+T8b,record|first_ecg,spread,0.0111,0.011076882339355443,.4f,results/first_ecg_sensitivity.csv,arm=R6_waveform;unit=record;restriction=first_ecg_per_stay,macro,range,record
+T1b,R9_triage|deterioration_icu_24h,estimate,0.7583,0.7583425163745796,.4f,results/exploratory_triage.csv,arm=R9_triage;label=deterioration_icu_24h,estimate,,record
+T1b,R9_triage|deterioration_icu_24h,estimate,0.7410,0.7409893326815877,.4f,results/exploratory_triage.csv,arm=R9_triage;label=deterioration_icu_24h,ci_lo,,record
+T1b,R9_triage|deterioration_icu_24h,estimate,0.7755,0.7755350783131761,.4f,results/exploratory_triage.csv,arm=R9_triage;label=deterioration_icu_24h,ci_hi,,record
+T1b,R2_demo|deterioration_icu_24h,estimate,0.6017,0.6016879093644892,.4f,results/exploratory_triage.csv,arm=R2_demo;label=deterioration_icu_24h,estimate,,record
+T1b,R2_demo|deterioration_icu_24h,estimate,0.5752,0.5751902161404702,.4f,results/exploratory_triage.csv,arm=R2_demo;label=deterioration_icu_24h,ci_lo,,record
+T1b,R2_demo|deterioration_icu_24h,estimate,0.6271,0.6270676370057853,.4f,results/exploratory_triage.csv,arm=R2_demo;label=deterioration_icu_24h,ci_hi,,record
+T1b,R3_acqctx_pre|deterioration_icu_24h,estimate,0.7972,0.7971999468932555,.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,estimate,,record
+T1b,R3_acqctx_pre|deterioration_icu_24h,estimate,0.7806,0.7806223460225721,.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,ci_lo,,record
+T1b,R3_acqctx_pre|deterioration_icu_24h,estimate,0.8138,0.8138348456761821,.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,ci_hi,,record
+T1b,R3_acqctx_pre - R9_triage|deterioration_icu_24h,estimate,+0.0389,0.0388574305186758,+.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre - R9_triage;label=deterioration_icu_24h,estimate,,record
+T1b,R3_acqctx_pre - R9_triage|deterioration_icu_24h,estimate,+0.0310,0.0310176727488066,+.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre - R9_triage;label=deterioration_icu_24h,ci_lo,,record
+T1b,R3_acqctx_pre - R9_triage|deterioration_icu_24h,estimate,+0.0467,0.0466962433313908,+.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre - R9_triage;label=deterioration_icu_24h,ci_hi,,record
+T1b,R9_triage|deterioration_mortality_28d,estimate,0.7120,0.7120392772873644,.4f,results/exploratory_triage.csv,arm=R9_triage;label=deterioration_mortality_28d,estimate,,record
+T1b,R9_triage|deterioration_mortality_28d,estimate,0.6757,0.6757230325233035,.4f,results/exploratory_triage.csv,arm=R9_triage;label=deterioration_mortality_28d,ci_lo,,record
+T1b,R9_triage|deterioration_mortality_28d,estimate,0.7480,0.7480096972213275,.4f,results/exploratory_triage.csv,arm=R9_triage;label=deterioration_mortality_28d,ci_hi,,record
+T1b,R2_demo|deterioration_mortality_28d,estimate,0.6963,0.6962665720534094,.4f,results/exploratory_triage.csv,arm=R2_demo;label=deterioration_mortality_28d,estimate,,record
+T1b,R2_demo|deterioration_mortality_28d,estimate,0.6608,0.6607877716107239,.4f,results/exploratory_triage.csv,arm=R2_demo;label=deterioration_mortality_28d,ci_lo,,record
+T1b,R2_demo|deterioration_mortality_28d,estimate,0.7307,0.7306935309583146,.4f,results/exploratory_triage.csv,arm=R2_demo;label=deterioration_mortality_28d,ci_hi,,record
+T1b,R3_acqctx_pre|deterioration_mortality_28d,estimate,0.7587,0.7586963387905765,.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,estimate,,record
+T1b,R3_acqctx_pre|deterioration_mortality_28d,estimate,0.7264,0.7263843102091624,.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,ci_lo,,record
+T1b,R3_acqctx_pre|deterioration_mortality_28d,estimate,0.7903,0.79034374590703,.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,ci_hi,,record
+T1b,R3_acqctx_pre - R9_triage|deterioration_mortality_28d,estimate,+0.0467,0.0466570615032121,+.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre - R9_triage;label=deterioration_mortality_28d,estimate,,record
+T1b,R3_acqctx_pre - R9_triage|deterioration_mortality_28d,estimate,+0.0266,0.0266176514374124,+.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre - R9_triage;label=deterioration_mortality_28d,ci_lo,,record
+T1b,R3_acqctx_pre - R9_triage|deterioration_mortality_28d,estimate,+0.0675,0.0674814779626241,+.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre - R9_triage;label=deterioration_mortality_28d,ci_hi,,record
+T1b,R9_triage|deterioration_mortality_365d,estimate,0.6298,0.6297913524125212,.4f,results/exploratory_triage.csv,arm=R9_triage;label=deterioration_mortality_365d,estimate,,record
+T1b,R9_triage|deterioration_mortality_365d,estimate,0.6095,0.6095396829967432,.4f,results/exploratory_triage.csv,arm=R9_triage;label=deterioration_mortality_365d,ci_lo,,record
+T1b,R9_triage|deterioration_mortality_365d,estimate,0.6502,0.6502200048514968,.4f,results/exploratory_triage.csv,arm=R9_triage;label=deterioration_mortality_365d,ci_hi,,record
+T1b,R2_demo|deterioration_mortality_365d,estimate,0.7458,0.7457553903828724,.4f,results/exploratory_triage.csv,arm=R2_demo;label=deterioration_mortality_365d,estimate,,record
+T1b,R2_demo|deterioration_mortality_365d,estimate,0.7205,0.7205256134194865,.4f,results/exploratory_triage.csv,arm=R2_demo;label=deterioration_mortality_365d,ci_lo,,record
+T1b,R2_demo|deterioration_mortality_365d,estimate,0.7696,0.7695757116132945,.4f,results/exploratory_triage.csv,arm=R2_demo;label=deterioration_mortality_365d,ci_hi,,record
+T1b,R3_acqctx_pre|deterioration_mortality_365d,estimate,0.7241,0.7241058215184337,.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,estimate,,record
+T1b,R3_acqctx_pre|deterioration_mortality_365d,estimate,0.7029,0.7029247799287801,.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,ci_lo,,record
+T1b,R3_acqctx_pre|deterioration_mortality_365d,estimate,0.7441,0.7441125634113148,.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,ci_hi,,record
+T1b,R3_acqctx_pre - R9_triage|deterioration_mortality_365d,estimate,+0.0943,0.0943144691059125,+.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre - R9_triage;label=deterioration_mortality_365d,estimate,,record
+T1b,R3_acqctx_pre - R9_triage|deterioration_mortality_365d,estimate,+0.0736,0.0735876933389391,+.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre - R9_triage;label=deterioration_mortality_365d,ci_lo,,record
+T1b,R3_acqctx_pre - R9_triage|deterioration_mortality_365d,estimate,+0.1146,0.1145678253263844,+.4f,results/exploratory_triage.csv,arm=R3_acqctx_pre - R9_triage;label=deterioration_mortality_365d,ci_hi,,record
+T4f,deterioration_icu_24h,strata_declared,143,143.0,",.0f",results/p4_effective.csv,label=deterioration_icu_24h,n_strata_total,,within_stratum
+T4f,deterioration_icu_24h,strata_sensitivity,76,76.0,",.0f",results/p4_sensitivity_no_weekday_effective.csv,label=deterioration_icu_24h,n_strata_total,,within_stratum
+T4f,deterioration_icu_24h,retention_declared,0.0157,0.0156684811471056,.4f,results/p4_effective.csv,label=deterioration_icu_24h,pair_retention,,within_stratum
+T4f,deterioration_icu_24h,retention_sensitivity,0.0306,0.0305531952557974,.4f,results/p4_sensitivity_no_weekday_effective.csv,label=deterioration_icu_24h,pair_retention,,within_stratum
+T4f,deterioration_icu_24h,effective_declared,"3,548",3548.0,",.0f",results/p4_effective.csv,label=deterioration_icu_24h,n_patients_effective,,within_stratum
+T4f,deterioration_icu_24h,effective_sensitivity,"3,615",3615.0,",.0f",results/p4_sensitivity_no_weekday_effective.csv,label=deterioration_icu_24h,n_patients_effective,,within_stratum
+T4f,deterioration_mortality_28d,strata_declared,143,143.0,",.0f",results/p4_effective.csv,label=deterioration_mortality_28d,n_strata_total,,within_stratum
+T4f,deterioration_mortality_28d,strata_sensitivity,76,76.0,",.0f",results/p4_sensitivity_no_weekday_effective.csv,label=deterioration_mortality_28d,n_strata_total,,within_stratum
+T4f,deterioration_mortality_28d,retention_declared,0.0155,0.0154793362128846,.4f,results/p4_effective.csv,label=deterioration_mortality_28d,pair_retention,,within_stratum
+T4f,deterioration_mortality_28d,retention_sensitivity,0.0299,0.0298649064125853,.4f,results/p4_sensitivity_no_weekday_effective.csv,label=deterioration_mortality_28d,pair_retention,,within_stratum
+T4f,deterioration_mortality_28d,effective_declared,"3,287",3287.0,",.0f",results/p4_effective.csv,label=deterioration_mortality_28d,n_patients_effective,,within_stratum
+T4f,deterioration_mortality_28d,effective_sensitivity,"3,507",3507.0,",.0f",results/p4_sensitivity_no_weekday_effective.csv,label=deterioration_mortality_28d,n_patients_effective,,within_stratum
+T4f,deterioration_mortality_365d,strata_declared,143,143.0,",.0f",results/p4_effective.csv,label=deterioration_mortality_365d,n_strata_total,,within_stratum
+T4f,deterioration_mortality_365d,strata_sensitivity,76,76.0,",.0f",results/p4_sensitivity_no_weekday_effective.csv,label=deterioration_mortality_365d,n_strata_total,,within_stratum
+T4f,deterioration_mortality_365d,retention_declared,0.0199,0.0198605979173664,.4f,results/p4_effective.csv,label=deterioration_mortality_365d,pair_retention,,within_stratum
+T4f,deterioration_mortality_365d,retention_sensitivity,0.0388,0.0388117073665396,.4f,results/p4_sensitivity_no_weekday_effective.csv,label=deterioration_mortality_365d,pair_retention,,within_stratum
+T4f,deterioration_mortality_365d,effective_declared,"3,582",3582.0,",.0f",results/p4_effective.csv,label=deterioration_mortality_365d,n_patients_effective,,within_stratum
+T4f,deterioration_mortality_365d,effective_sensitivity,"3,615",3615.0,",.0f",results/p4_sensitivity_no_weekday_effective.csv,label=deterioration_mortality_365d,n_patients_effective,,within_stratum
+T4a,R2_demo|deterioration_icu_24h,within_stratum,0.5796,0.5796226468386787,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_icu_24h,auroc_within_stratum,,within_stratum
+T4a,R2_demo|deterioration_icu_24h,within_stratum,0.5460,0.5460099176806681,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_icu_24h,ci_lo,,within_stratum
+T4a,R2_demo|deterioration_icu_24h,within_stratum,0.6144,0.6144201634569394,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_icu_24h,ci_hi,,within_stratum
+T4a,R2_demo|deterioration_icu_24h,plain,0.6026,0.6026040758353065,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_icu_24h,auroc_plain_same_rows,,record_same_rows
+T4a,R2_demo|deterioration_icu_24h,n_patients,3548,3548.0,.0f,results/p4_effective.csv,label=deterioration_icu_24h,n_patients_effective,,within_stratum
+T4a,R2_demo|deterioration_icu_24h,pair_retention,0.0157,0.0156684811471056,.4f,results/p4_effective.csv,label=deterioration_icu_24h,pair_retention,,within_stratum
+T4a,R3_acqctx_pre|deterioration_icu_24h,within_stratum,0.6042,0.6041604880735499,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,auroc_within_stratum,,within_stratum
+T4a,R3_acqctx_pre|deterioration_icu_24h,within_stratum,0.5735,0.5734761122915459,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,ci_lo,,within_stratum
+T4a,R3_acqctx_pre|deterioration_icu_24h,within_stratum,0.6349,0.6348773572542858,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,ci_hi,,within_stratum
+T4a,R3_acqctx_pre|deterioration_icu_24h,plain,0.7888,0.78879709513733,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,auroc_plain_same_rows,,record_same_rows
+T4a,R3_acqctx_pre|deterioration_icu_24h,n_patients,3548,3548.0,.0f,results/p4_effective.csv,label=deterioration_icu_24h,n_patients_effective,,within_stratum
+T4a,R3_acqctx_pre|deterioration_icu_24h,pair_retention,0.0157,0.0156684811471056,.4f,results/p4_effective.csv,label=deterioration_icu_24h,pair_retention,,within_stratum
+T4a,R8_waveform_matched|deterioration_icu_24h,within_stratum,0.7464,0.7464446609894223,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_icu_24h,auroc_within_stratum,,within_stratum
+T4a,R8_waveform_matched|deterioration_icu_24h,within_stratum,0.7149,0.7149152558933255,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_icu_24h,ci_lo,,within_stratum
+T4a,R8_waveform_matched|deterioration_icu_24h,within_stratum,0.7758,0.7758099576316734,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_icu_24h,ci_hi,,within_stratum
+T4a,R8_waveform_matched|deterioration_icu_24h,plain,0.8152,0.8152356074164088,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_icu_24h,auroc_plain_same_rows,,record_same_rows
+T4a,R8_waveform_matched|deterioration_icu_24h,n_patients,3548,3548.0,.0f,results/p4_effective.csv,label=deterioration_icu_24h,n_patients_effective,,within_stratum
+T4a,R8_waveform_matched|deterioration_icu_24h,pair_retention,0.0157,0.0156684811471056,.4f,results/p4_effective.csv,label=deterioration_icu_24h,pair_retention,,within_stratum
+T4a,R2_demo|deterioration_mortality_28d,within_stratum,0.6464,0.6464108719219451,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_mortality_28d,auroc_within_stratum,,within_stratum
+T4a,R2_demo|deterioration_mortality_28d,within_stratum,0.5922,0.5921546559214239,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_mortality_28d,ci_lo,,within_stratum
+T4a,R2_demo|deterioration_mortality_28d,within_stratum,0.6985,0.6984877095425364,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_mortality_28d,ci_hi,,within_stratum
+T4a,R2_demo|deterioration_mortality_28d,plain,0.6938,0.6938479107533676,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_mortality_28d,auroc_plain_same_rows,,record_same_rows
+T4a,R2_demo|deterioration_mortality_28d,n_patients,3287,3287.0,.0f,results/p4_effective.csv,label=deterioration_mortality_28d,n_patients_effective,,within_stratum
+T4a,R2_demo|deterioration_mortality_28d,pair_retention,0.0155,0.0154793362128846,.4f,results/p4_effective.csv,label=deterioration_mortality_28d,pair_retention,,within_stratum
+T4a,R3_acqctx_pre|deterioration_mortality_28d,within_stratum,0.6158,0.6158239120334521,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,auroc_within_stratum,,within_stratum
+T4a,R3_acqctx_pre|deterioration_mortality_28d,within_stratum,0.5595,0.5594605554276874,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,ci_lo,,within_stratum
+T4a,R3_acqctx_pre|deterioration_mortality_28d,within_stratum,0.6702,0.6701511115145374,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,ci_hi,,within_stratum
+T4a,R3_acqctx_pre|deterioration_mortality_28d,plain,0.7554,0.7554230684682268,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,auroc_plain_same_rows,,record_same_rows
+T4a,R3_acqctx_pre|deterioration_mortality_28d,n_patients,3287,3287.0,.0f,results/p4_effective.csv,label=deterioration_mortality_28d,n_patients_effective,,within_stratum
+T4a,R3_acqctx_pre|deterioration_mortality_28d,pair_retention,0.0155,0.0154793362128846,.4f,results/p4_effective.csv,label=deterioration_mortality_28d,pair_retention,,within_stratum
+T4a,R8_waveform_matched|deterioration_mortality_28d,within_stratum,0.7776,0.7776056992411337,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_mortality_28d,auroc_within_stratum,,within_stratum
+T4a,R8_waveform_matched|deterioration_mortality_28d,within_stratum,0.7198,0.7198225773093995,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_mortality_28d,ci_lo,,within_stratum
+T4a,R8_waveform_matched|deterioration_mortality_28d,within_stratum,0.8324,0.8324306736496473,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_mortality_28d,ci_hi,,within_stratum
+T4a,R8_waveform_matched|deterioration_mortality_28d,plain,0.8456,0.8456364518684527,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_mortality_28d,auroc_plain_same_rows,,record_same_rows
+T4a,R8_waveform_matched|deterioration_mortality_28d,n_patients,3287,3287.0,.0f,results/p4_effective.csv,label=deterioration_mortality_28d,n_patients_effective,,within_stratum
+T4a,R8_waveform_matched|deterioration_mortality_28d,pair_retention,0.0155,0.0154793362128846,.4f,results/p4_effective.csv,label=deterioration_mortality_28d,pair_retention,,within_stratum
+T4a,R2_demo|deterioration_mortality_365d,within_stratum,0.7215,0.7214936774502373,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_mortality_365d,auroc_within_stratum,,within_stratum
+T4a,R2_demo|deterioration_mortality_365d,within_stratum,0.6903,0.690308722425077,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_mortality_365d,ci_lo,,within_stratum
+T4a,R2_demo|deterioration_mortality_365d,within_stratum,0.7537,0.7536797278863578,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_mortality_365d,ci_hi,,within_stratum
+T4a,R2_demo|deterioration_mortality_365d,plain,0.7476,0.747613563540221,.4f,results/p4_arms.csv,arm=R2_demo;label=deterioration_mortality_365d,auroc_plain_same_rows,,record_same_rows
+T4a,R2_demo|deterioration_mortality_365d,n_patients,3582,3582.0,.0f,results/p4_effective.csv,label=deterioration_mortality_365d,n_patients_effective,,within_stratum
+T4a,R2_demo|deterioration_mortality_365d,pair_retention,0.0199,0.0198605979173664,.4f,results/p4_effective.csv,label=deterioration_mortality_365d,pair_retention,,within_stratum
+T4a,R3_acqctx_pre|deterioration_mortality_365d,within_stratum,0.6792,0.6791904344010531,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,auroc_within_stratum,,within_stratum
+T4a,R3_acqctx_pre|deterioration_mortality_365d,within_stratum,0.6490,0.6489710684703511,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,ci_lo,,within_stratum
+T4a,R3_acqctx_pre|deterioration_mortality_365d,within_stratum,0.7083,0.7082660155159995,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,ci_hi,,within_stratum
+T4a,R3_acqctx_pre|deterioration_mortality_365d,plain,0.7236,0.7235688532182583,.4f,results/p4_arms.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,auroc_plain_same_rows,,record_same_rows
+T4a,R3_acqctx_pre|deterioration_mortality_365d,n_patients,3582,3582.0,.0f,results/p4_effective.csv,label=deterioration_mortality_365d,n_patients_effective,,within_stratum
+T4a,R3_acqctx_pre|deterioration_mortality_365d,pair_retention,0.0199,0.0198605979173664,.4f,results/p4_effective.csv,label=deterioration_mortality_365d,pair_retention,,within_stratum
+T4a,R8_waveform_matched|deterioration_mortality_365d,within_stratum,0.7984,0.7983565359607483,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_mortality_365d,auroc_within_stratum,,within_stratum
+T4a,R8_waveform_matched|deterioration_mortality_365d,within_stratum,0.7708,0.770780939531451,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_mortality_365d,ci_lo,,within_stratum
+T4a,R8_waveform_matched|deterioration_mortality_365d,within_stratum,0.8250,0.8249717642609483,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_mortality_365d,ci_hi,,within_stratum
+T4a,R8_waveform_matched|deterioration_mortality_365d,plain,0.8301,0.8301492203648259,.4f,results/p4_arms.csv,arm=R8_waveform_matched;label=deterioration_mortality_365d,auroc_plain_same_rows,,record_same_rows
+T4a,R8_waveform_matched|deterioration_mortality_365d,n_patients,3582,3582.0,.0f,results/p4_effective.csv,label=deterioration_mortality_365d,n_patients_effective,,within_stratum
+T4a,R8_waveform_matched|deterioration_mortality_365d,pair_retention,0.0199,0.0198605979173664,.4f,results/p4_effective.csv,label=deterioration_mortality_365d,pair_retention,,within_stratum
+T4b,deterioration_icu_24h,retained,0.7846,0.7845591522116939,.4f,results/p4_retained.csv,label=deterioration_icu_24h,estimate,,within_stratum
+T4b,deterioration_icu_24h,retained,0.6308,0.6307748731538337,.4f,results/p4_retained.csv,label=deterioration_icu_24h,ci_lo,,within_stratum
+T4b,deterioration_icu_24h,retained,0.9259,0.9258920658320682,.4f,results/p4_retained.csv,label=deterioration_icu_24h,ci_hi,,within_stratum
+T4b,deterioration_icu_24h,retained_alt,0.6765,0.6764781501809005,.4f,results/p4_retained.csv,label=deterioration_icu_24h,retained_plain_baseline,,within_stratum
+T4b,deterioration_icu_24h,retained_alt,0.5491,0.5490609600904435,.4f,results/p4_retained.csv,label=deterioration_icu_24h,retained_plain_baseline_lo,,within_stratum
+T4b,deterioration_icu_24h,retained_alt,0.7830,0.7829931770418737,.4f,results/p4_retained.csv,label=deterioration_icu_24h,retained_plain_baseline_hi,,within_stratum
+T4b,deterioration_icu_24h,target,0.50,0.5,.2f,results/p4_retained.csv,label=deterioration_icu_24h,threshold,,within_stratum
+T4b,deterioration_icu_24h,meets,no,,verdict,results/p4_retained.csv,label=deterioration_icu_24h,meets_target,,not_applicable
+T4b,deterioration_icu_24h,meets_alt,no,,verdict,results/p4_retained.csv,label=deterioration_icu_24h,meets_target_plain_baseline,,not_applicable
+T4b,deterioration_mortality_28d,retained,0.8643,0.8643262946951802,.4f,results/p4_retained.csv,label=deterioration_mortality_28d,estimate,,within_stratum
+T4b,deterioration_mortality_28d,retained,0.5584,0.5583860363764174,.4f,results/p4_retained.csv,label=deterioration_mortality_28d,ci_lo,,within_stratum
+T4b,deterioration_mortality_28d,retained,1.1720,1.1720172639702002,.4f,results/p4_retained.csv,label=deterioration_mortality_28d,ci_hi,,within_stratum
+T4b,deterioration_mortality_28d,retained_alt,0.5518,0.5518057415431737,.4f,results/p4_retained.csv,label=deterioration_mortality_28d,retained_plain_baseline,,within_stratum
+T4b,deterioration_mortality_28d,retained_alt,0.1822,0.18220131841177,.4f,results/p4_retained.csv,label=deterioration_mortality_28d,retained_plain_baseline_lo,,within_stratum
+T4b,deterioration_mortality_28d,retained_alt,0.8262,0.8262147783670315,.4f,results/p4_retained.csv,label=deterioration_mortality_28d,retained_plain_baseline_hi,,within_stratum
+T4b,deterioration_mortality_28d,target,0.50,0.5,.2f,results/p4_retained.csv,label=deterioration_mortality_28d,threshold,,within_stratum
+T4b,deterioration_mortality_28d,meets,no,,verdict,results/p4_retained.csv,label=deterioration_mortality_28d,meets_target,,not_applicable
+T4b,deterioration_mortality_28d,meets_alt,no,,verdict,results/p4_retained.csv,label=deterioration_mortality_28d,meets_target_plain_baseline,,not_applicable
+T4b,deterioration_mortality_365d,retained,0.9313,0.9312685143325508,.4f,results/p4_retained.csv,label=deterioration_mortality_365d,estimate,,within_stratum
+T4b,deterioration_mortality_365d,retained,0.6631,0.6631449879694848,.4f,results/p4_retained.csv,label=deterioration_mortality_365d,ci_lo,,within_stratum
+T4b,deterioration_mortality_365d,retained,1.1583,1.1583142395277883,.4f,results/p4_retained.csv,label=deterioration_mortality_365d,ci_hi,,within_stratum
+T4b,deterioration_mortality_365d,retained_alt,0.6148,0.6148006131260375,.4f,results/p4_retained.csv,label=deterioration_mortality_365d,retained_plain_baseline,,within_stratum
+T4b,deterioration_mortality_365d,retained_alt,0.3014,0.3013829594130964,.4f,results/p4_retained.csv,label=deterioration_mortality_365d,retained_plain_baseline_lo,,within_stratum
+T4b,deterioration_mortality_365d,retained_alt,0.8244,0.8243525409363945,.4f,results/p4_retained.csv,label=deterioration_mortality_365d,retained_plain_baseline_hi,,within_stratum
+T4b,deterioration_mortality_365d,target,0.50,0.5,.2f,results/p4_retained.csv,label=deterioration_mortality_365d,threshold,,within_stratum
+T4b,deterioration_mortality_365d,meets,no,,verdict,results/p4_retained.csv,label=deterioration_mortality_365d,meets_target,,not_applicable
+T4b,deterioration_mortality_365d,meets_alt,no,,verdict,results/p4_retained.csv,label=deterioration_mortality_365d,meets_target_plain_baseline,,not_applicable
+T4c,coarsened,worst_before,0.7889,0.7888528195043772,.4f,results/p4_balance.csv,scale=coarsened;held_fixed=yes,smd_before,absmax,within_stratum
+T4c,coarsened,worst_after,0.0000,0.0,.4f,results/p4_balance.csv,scale=coarsened;held_fixed=yes,smd_after,absmax,within_stratum
+T4c,underlying,worst_before,1.0013,1.0012829667229284,.4f,results/p4_balance.csv,scale=underlying;held_fixed=yes,smd_before,absmax,within_stratum
+T4c,underlying,worst_after,0.0993,0.099258709790499,.4f,results/p4_balance.csv,scale=underlying;held_fixed=yes,smd_after,absmax,within_stratum
+T4c,underlying_unmatched,worst_before,0.3711,0.3711314242762276,.4f,results/p4_balance.csv,scale=underlying;held_fixed=no,smd_before,absmax,within_stratum
+T4c,underlying_unmatched,worst_after,0.3881,0.3881400074815959,.4f,results/p4_balance.csv,scale=underlying;held_fixed=no,smd_after,absmax,within_stratum
+T4c,meta|propensity,propensity_auroc,0.6764,0.6763587158311001,.4f,results/p4_matching.json,path=superset_propensity_diagnostic,auroc,,record
+T4c,meta|propensity,early_ecg_rate,0.2851,0.28512673789619564,.4f,results/p4_matching.json,path=superset_propensity_diagnostic,early_ecg_rate,,record
+T4d,acq_pre|arrival_to_acquisition_minutes,n_levels,90,90.0,.0f,results/acq_block_profile.csv,feature=arrival_to_acquisition_minutes,n_levels,,feature
+T4d,acq_pre|arrival_to_acquisition_minutes,modal_share,0.0702,0.0702480299402589,.4f,results/acq_block_profile.csv,feature=arrival_to_acquisition_minutes,modal_share,,feature
+T4d,acq_pre|arrival_to_acquisition_minutes,undefined_share,0.0000,0.0,.4f,results/acq_block_profile.csv,feature=arrival_to_acquisition_minutes,undefined_share,,feature
+T4d,acq_pre|arrival_to_acquisition_minutes,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=arrival_to_acquisition_minutes,carries_information,,not_applicable
+T4d,acq_pre|acquisition_hour_of_day,n_levels,24,24.0,.0f,results/acq_block_profile.csv,feature=acquisition_hour_of_day,n_levels,,feature
+T4d,acq_pre|acquisition_hour_of_day,modal_share,0.0728,0.0727585485483158,.4f,results/acq_block_profile.csv,feature=acquisition_hour_of_day,modal_share,,feature
+T4d,acq_pre|acquisition_hour_of_day,undefined_share,0.0000,0.0,.4f,results/acq_block_profile.csv,feature=acquisition_hour_of_day,undefined_share,,feature
+T4d,acq_pre|acquisition_hour_of_day,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=acquisition_hour_of_day,carries_information,,not_applicable
+T4d,acq_pre|acquisition_day_of_week,n_levels,7,7.0,.0f,results/acq_block_profile.csv,feature=acquisition_day_of_week,n_levels,,feature
+T4d,acq_pre|acquisition_day_of_week,modal_share,0.1450,0.1449514555583966,.4f,results/acq_block_profile.csv,feature=acquisition_day_of_week,modal_share,,feature
+T4d,acq_pre|acquisition_day_of_week,undefined_share,0.0000,0.0,.4f,results/acq_block_profile.csv,feature=acquisition_day_of_week,undefined_share,,feature
+T4d,acq_pre|acquisition_day_of_week,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=acquisition_day_of_week,carries_information,,not_applicable
+T4d,acq_pre|acquisition_month,n_levels,12,12.0,.0f,results/acq_block_profile.csv,feature=acquisition_month,n_levels,,feature
+T4d,acq_pre|acquisition_month,modal_share,0.0861,0.0861479811246193,.4f,results/acq_block_profile.csv,feature=acquisition_month,modal_share,,feature
+T4d,acq_pre|acquisition_month,undefined_share,0.0000,0.0,.4f,results/acq_block_profile.csv,feature=acquisition_month,undefined_share,,feature
+T4d,acq_pre|acquisition_month,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=acquisition_month,carries_information,,not_applicable
+T4d,acq_pre|triage_acuity,n_levels,5,5.0,.0f,results/acq_block_profile.csv,feature=triage_acuity,n_levels,,feature
+T4d,acq_pre|triage_acuity,modal_share,0.5198,0.5198219711694844,.4f,results/acq_block_profile.csv,feature=triage_acuity,modal_share,,feature
+T4d,acq_pre|triage_acuity,undefined_share,0.0233,0.0233230278094175,.4f,results/acq_block_profile.csv,feature=triage_acuity,undefined_share,,feature
+T4d,acq_pre|triage_acuity,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=triage_acuity,carries_information,,not_applicable
+T4d,acq_pre|ecg_no_within_stay,n_levels,7,7.0,.0f,results/acq_block_profile.csv,feature=ecg_no_within_stay,n_levels,,feature
+T4d,acq_pre|ecg_no_within_stay,modal_share,0.9397,0.939662319750188,.4f,results/acq_block_profile.csv,feature=ecg_no_within_stay,modal_share,,feature
+T4d,acq_pre|ecg_no_within_stay,undefined_share,0.0000,0.0,.4f,results/acq_block_profile.csv,feature=ecg_no_within_stay,undefined_share,,feature
+T4d,acq_pre|ecg_no_within_stay,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=ecg_no_within_stay,carries_information,,not_applicable
+T4d,acq_pre|prior_ecg_exists,n_levels,2,2.0,.0f,results/acq_block_profile.csv,feature=prior_ecg_exists,n_levels,,feature
+T4d,acq_pre|prior_ecg_exists,modal_share,0.6789,0.6789015706238328,.4f,results/acq_block_profile.csv,feature=prior_ecg_exists,modal_share,,feature
+T4d,acq_pre|prior_ecg_exists,undefined_share,0.0000,0.0,.4f,results/acq_block_profile.csv,feature=prior_ecg_exists,undefined_share,,feature
+T4d,acq_pre|prior_ecg_exists,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=prior_ecg_exists,carries_information,,not_applicable
+T4d,acq_pre|days_since_prior_ecg,n_levels,70207,70207.0,.0f,results/acq_block_profile.csv,feature=days_since_prior_ecg,n_levels,,feature
+T4d,acq_pre|days_since_prior_ecg,modal_share,0.0064,0.0064142803337251,.4f,results/acq_block_profile.csv,feature=days_since_prior_ecg,modal_share,,feature
+T4d,acq_pre|days_since_prior_ecg,undefined_share,0.3211,0.3210984293761671,.4f,results/acq_block_profile.csv,feature=days_since_prior_ecg,undefined_share,,feature
+T4d,acq_pre|days_since_prior_ecg,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=days_since_prior_ecg,carries_information,,not_applicable
+T4d,acq_pre|prior_ed_visit_count,n_levels,154,154.0,.0f,results/acq_block_profile.csv,feature=prior_ed_visit_count,n_levels,,feature
+T4d,acq_pre|prior_ed_visit_count,modal_share,0.4468,0.4468335696630171,.4f,results/acq_block_profile.csv,feature=prior_ed_visit_count,modal_share,,feature
+T4d,acq_pre|prior_ed_visit_count,undefined_share,0.0000,0.0,.4f,results/acq_block_profile.csv,feature=prior_ed_visit_count,undefined_share,,feature
+T4d,acq_pre|prior_ed_visit_count,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=prior_ed_visit_count,carries_information,,not_applicable
+T4d,acq_window|n_ecgs_first_90min,n_levels,7,7.0,.0f,results/acq_block_profile.csv,feature=n_ecgs_first_90min,n_levels,,feature
+T4d,acq_window|n_ecgs_first_90min,modal_share,0.8867,0.8867167220685434,.4f,results/acq_block_profile.csv,feature=n_ecgs_first_90min,modal_share,,feature
+T4d,acq_window|n_ecgs_first_90min,undefined_share,0.0000,0.0,.4f,results/acq_block_profile.csv,feature=n_ecgs_first_90min,undefined_share,,feature
+T4d,acq_window|n_ecgs_first_90min,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=n_ecgs_first_90min,carries_information,,not_applicable
+T4d,acq_window|inter_ecg_interval_minutes,n_levels,189,189.0,.0f,results/acq_block_profile.csv,feature=inter_ecg_interval_minutes,n_levels,,feature
+T4d,acq_window|inter_ecg_interval_minutes,modal_share,0.0605,0.0605335157318741,.4f,results/acq_block_profile.csv,feature=inter_ecg_interval_minutes,modal_share,,feature
+T4d,acq_window|inter_ecg_interval_minutes,undefined_share,0.8867,0.8867167220685434,.4f,results/acq_block_profile.csv,feature=inter_ecg_interval_minutes,undefined_share,,feature
+T4d,acq_window|inter_ecg_interval_minutes,carries_information,yes,,verdict,results/acq_block_profile.csv,feature=inter_ecg_interval_minutes,carries_information,,not_applicable
+T4d,acq_window|care_unit_at_acquisition,n_levels,1,1.0,.0f,results/acq_block_profile.csv,feature=care_unit_at_acquisition,n_levels,,feature
+T4d,acq_window|care_unit_at_acquisition,modal_share,1.0000,1.0,.4f,results/acq_block_profile.csv,feature=care_unit_at_acquisition,modal_share,,feature
+T4d,acq_window|care_unit_at_acquisition,undefined_share,0.0000,0.0,.4f,results/acq_block_profile.csv,feature=care_unit_at_acquisition,undefined_share,,feature
+T4d,acq_window|care_unit_at_acquisition,carries_information,no,,verdict,results/acq_block_profile.csv,feature=care_unit_at_acquisition,carries_information,,not_applicable
+T4d,acq_window|cardiologist_overread_exists,carries_information,no,,verdict,results/acq_block_profile.csv,feature=cardiologist_overread_exists,carries_information,,not_applicable
+T4e,single_stratum,unstratified,0.7384,0.7383521938885633,.4f,results/p4_control.csv,control=single_stratum,unstratified,,synthetic
+T4e,single_stratum,within_stratum,0.7384,0.7383521938885634,.4f,results/p4_control.csv,control=single_stratum,within_stratum,,synthetic
+T4e,constant_within_stratum,unstratified,0.7406,0.7405591389784745,.4f,results/p4_control.csv,control=constant_within_stratum,unstratified,,synthetic
+T4e,constant_within_stratum,within_stratum,0.5000,0.5,.4f,results/p4_control.csv,control=constant_within_stratum,within_stratum,,synthetic
+T4e,duplicated_rows,unstratified,0.7384,0.7383521938885633,.4f,results/p4_control.csv,control=duplicated_rows,unstratified,,synthetic
+T4e,duplicated_rows,within_stratum,0.7384,0.7383521938885634,.4f,results/p4_control.csv,control=duplicated_rows,within_stratum,,synthetic
+T5,R3_acqctx_pre - R2_demo|deterioration_icu_24h,raw_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_icu_24h,p_value,,record
+T5,R3_acqctx_pre - R2_demo|deterioration_icu_24h,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_icu_24h,p_holm_final,,record
+T5,R3_acqctx_pre - R2_demo|deterioration_icu_24h,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_icu_24h,holm_family_size,,record
+T5,R3_acqctx_pre - R6_waveform|deterioration_mortality_28d,raw_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_28d,p_value,,record
+T5,R3_acqctx_pre - R6_waveform|deterioration_mortality_28d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_28d,p_holm_final,,record
+T5,R3_acqctx_pre - R6_waveform|deterioration_mortality_28d,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_28d,holm_family_size,,record
+T5,R3_acqctx_pre - R6_waveform|deterioration_mortality_365d,raw_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_365d,p_value,,record
+T5,R3_acqctx_pre - R6_waveform|deterioration_mortality_365d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_365d,p_holm_final,,record
+T5,R3_acqctx_pre - R6_waveform|deterioration_mortality_365d,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_365d,holm_family_size,,record
+T5,R7_waveform_demo_acq - R6_waveform|deterioration_icu_24h,raw_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_icu_24h,p_value,,record
+T5,R7_waveform_demo_acq - R6_waveform|deterioration_icu_24h,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_icu_24h,p_holm_final,,record
+T5,R7_waveform_demo_acq - R6_waveform|deterioration_icu_24h,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_icu_24h,holm_family_size,,record
+T5,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_28d,raw_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_28d,p_value,,record
+T5,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_28d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_28d,p_holm_final,,record
+T5,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_28d,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_28d,holm_family_size,,record
+T5,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_365d,raw_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_365d,p_value,,record
+T5,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_365d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_365d,p_holm_final,,record
+T5,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_365d,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_365d,holm_family_size,,record
+T5,R8_waveform_matched - R6_waveform|deterioration_icu_24h,raw_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_icu_24h,p_value,,record
+T5,R8_waveform_matched - R6_waveform|deterioration_icu_24h,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_icu_24h,p_holm_final,,record
+T5,R8_waveform_matched - R6_waveform|deterioration_icu_24h,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_icu_24h,holm_family_size,,record
+T5,R8_waveform_matched - R6_waveform|deterioration_mortality_28d,raw_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_28d,p_value,,record
+T5,R8_waveform_matched - R6_waveform|deterioration_mortality_28d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_28d,p_holm_final,,record
+T5,R8_waveform_matched - R6_waveform|deterioration_mortality_28d,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_28d,holm_family_size,,record
+T5,R8_waveform_matched - R6_waveform|deterioration_mortality_365d,raw_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_365d,p_value,,record
+T5,R8_waveform_matched - R6_waveform|deterioration_mortality_365d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_365d,p_holm_final,,record
+T5,R8_waveform_matched - R6_waveform|deterioration_mortality_365d,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_365d,holm_family_size,,record
+T5,R3_acqctx_pre - R2_demo|deterioration_mortality_28d,raw_p,0.0108,0.0108,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_28d,p_value,,record
+T5,R3_acqctx_pre - R2_demo|deterioration_mortality_28d,holm_p,0.0648,0.0648,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_28d,p_holm_final,,record
+T5,R3_acqctx_pre - R2_demo|deterioration_mortality_28d,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_28d,holm_family_size,,record
+T5,R4_demo_acq - R6_waveform|deterioration_mortality_28d,raw_p,0.0128,0.0128,pfloor,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_28d,p_value,,record
+T5,R4_demo_acq - R6_waveform|deterioration_mortality_28d,holm_p,0.0648,0.0648,pfloor,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_28d,p_holm_final,,record
+T5,R4_demo_acq - R6_waveform|deterioration_mortality_28d,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_28d,holm_family_size,,record
+T5,R4_demo_acq - R6_waveform|deterioration_mortality_365d,raw_p,0.0152,0.0152,pfloor,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_365d,p_value,,record
+T5,R4_demo_acq - R6_waveform|deterioration_mortality_365d,holm_p,0.0648,0.0648,pfloor,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_365d,p_holm_final,,record
+T5,R4_demo_acq - R6_waveform|deterioration_mortality_365d,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_365d,holm_family_size,,record
+T5,R3_acqctx_pre - R6_waveform|deterioration_icu_24h,raw_p,0.0478,0.0478,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_icu_24h,p_value,,record
+T5,R3_acqctx_pre - R6_waveform|deterioration_icu_24h,holm_p,0.1434,0.1434,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_icu_24h,p_holm_final,,record
+T5,R3_acqctx_pre - R6_waveform|deterioration_icu_24h,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_icu_24h,holm_family_size,,record
+T5,R3_acqctx_pre - R2_demo|deterioration_mortality_365d,raw_p,0.177,0.177,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_365d,p_value,,record
+T5,R3_acqctx_pre - R2_demo|deterioration_mortality_365d,holm_p,0.354,0.354,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_365d,p_holm_final,,record
+T5,R3_acqctx_pre - R2_demo|deterioration_mortality_365d,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_365d,holm_family_size,,record
+T5,R4_demo_acq - R6_waveform|deterioration_icu_24h,raw_p,0.4368,0.4368,pfloor,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_icu_24h,p_value,,record
+T5,R4_demo_acq - R6_waveform|deterioration_icu_24h,holm_p,0.4368,0.4368,pfloor,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_icu_24h,p_holm_final,,record
+T5,R4_demo_acq - R6_waveform|deterioration_icu_24h,m,15,15.0,.0f,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_icu_24h,holm_family_size,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_icu_24h,difference,+0.1955,0.1955120375287662,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_icu_24h,difference,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_icu_24h,difference,+0.1649,0.1648581397274041,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_icu_24h,ci_lo,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_icu_24h,difference,+0.2267,0.2266748795077694,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_icu_24h,ci_hi,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_icu_24h,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_icu_24h,p_holm_final,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_icu_24h,noise_floor,0.0049,0.0048751991502921,.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_icu_24h,noise_floor_used,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_icu_24h,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_icu_24h,clears_noise_floor,,not_applicable
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_28d,difference,-0.0886,-0.0886211176550615,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_28d,difference,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_28d,difference,-0.1246,-0.1245779591495485,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_28d,ci_lo,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_28d,difference,-0.0544,-0.0544473245142325,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_28d,ci_hi,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_28d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_28d,p_holm_final,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_28d,noise_floor,0.0207,0.0206946522932827,.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_28d,noise_floor_used,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_28d,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_28d,clears_noise_floor,,not_applicable
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_365d,difference,-0.1053,-0.1053151797428081,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_365d,difference,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_365d,difference,-0.1301,-0.1301409973866149,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_365d,ci_lo,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_365d,difference,-0.0809,-0.0809267403224258,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_365d,ci_hi,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_365d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_365d,p_holm_final,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_365d,noise_floor,0.0130,0.0129623893244433,.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_365d,noise_floor_used,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_mortality_365d,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_mortality_365d,clears_noise_floor,,not_applicable
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_icu_24h,difference,+0.0398,0.0397738537794299,+.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_icu_24h,difference,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_icu_24h,difference,+0.0298,0.0297640838573823,+.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_icu_24h,ci_lo,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_icu_24h,difference,+0.0498,0.0498298951915258,+.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_icu_24h,ci_hi,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_icu_24h,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_icu_24h,p_holm_final,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_icu_24h,noise_floor,0.0091,0.0090970747034874,.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_icu_24h,noise_floor_used,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_icu_24h,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_icu_24h,clears_noise_floor,,not_applicable
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_28d,difference,+0.0250,0.0250091846378914,+.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_28d,difference,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_28d,difference,+0.0128,0.0127513439706988,+.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_28d,ci_lo,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_28d,difference,+0.0374,0.0374487586439607,+.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_28d,ci_hi,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_28d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_28d,p_holm_final,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_28d,noise_floor,0.0190,0.0189751921881732,.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_28d,noise_floor_used,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_28d,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_28d,clears_noise_floor,,not_applicable
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_365d,difference,+0.0239,0.0238841733161787,+.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_365d,difference,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_365d,difference,+0.0155,0.015484301740956,+.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_365d,ci_lo,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_365d,difference,+0.0324,0.0323520953915278,+.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_365d,ci_hi,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_365d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_365d,p_holm_final,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_365d,noise_floor,0.0130,0.0129623893244433,.4f,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_365d,noise_floor_used,,record
+T5b,R7_waveform_demo_acq - R6_waveform|deterioration_mortality_365d,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R7_waveform_demo_acq - R6_waveform;label=deterioration_mortality_365d,clears_noise_floor,,not_applicable
+T5b,R8_waveform_matched - R6_waveform|deterioration_icu_24h,difference,-0.0688,-0.0687909464269864,+.4f,results/p4_contrasts.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_icu_24h,difference,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_icu_24h,difference,-0.0912,-0.0912435833776167,+.4f,results/p4_contrasts.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_icu_24h,ci_lo,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_icu_24h,difference,-0.0478,-0.0478208244648934,+.4f,results/p4_contrasts.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_icu_24h,ci_hi,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_icu_24h,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_icu_24h,p_holm_final,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_mortality_28d,difference,-0.0680,-0.068030752627319,+.4f,results/p4_contrasts.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_28d,difference,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_mortality_28d,difference,-0.1102,-0.1102307559390233,+.4f,results/p4_contrasts.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_28d,ci_lo,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_mortality_28d,difference,-0.0284,-0.0283695970618329,+.4f,results/p4_contrasts.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_28d,ci_hi,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_mortality_28d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_28d,p_holm_final,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_mortality_365d,difference,-0.0318,-0.0317926844040775,+.4f,results/p4_contrasts.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_365d,difference,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_mortality_365d,difference,-0.0488,-0.0487525399013053,+.4f,results/p4_contrasts.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_365d,ci_lo,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_mortality_365d,difference,-0.0157,-0.0156868864500572,+.4f,results/p4_contrasts.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_365d,ci_hi,,record
+T5b,R8_waveform_matched - R6_waveform|deterioration_mortality_365d,holm_p,<0.0002,0.0,pfloor,results/p4_family_final.csv,contrast=R8_waveform_matched - R6_waveform;label=deterioration_mortality_365d,p_holm_final,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_28d,difference,+0.0624,0.0624297667371671,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_28d,difference,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_28d,difference,+0.0165,0.0165415588546216,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_28d,ci_lo,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_28d,difference,+0.1082,0.1082211042572693,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_28d,ci_hi,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_28d,holm_p,0.0648,0.0648,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_28d,p_holm_final,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_28d,noise_floor,0.0207,0.0206946522932827,.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_28d,noise_floor_used,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_28d,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_28d,clears_noise_floor,,not_applicable
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_28d,difference,-0.0371,-0.0371323073308693,+.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_28d,difference,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_28d,difference,-0.0684,-0.068431438962638,+.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_28d,ci_lo,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_28d,difference,-0.0077,-0.007684836519676,+.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_28d,ci_hi,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_28d,holm_p,0.0648,0.0648,pfloor,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_28d,p_holm_final,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_28d,noise_floor,0.0190,0.0189751921881732,.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_28d,noise_floor_used,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_28d,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_28d,clears_noise_floor,,not_applicable
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_365d,difference,-0.0261,-0.026141455561823,+.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_365d,difference,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_365d,difference,-0.0481,-0.048142409368665,+.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_365d,ci_lo,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_365d,difference,-0.0049,-0.0048605174974173,+.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_365d,ci_hi,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_365d,holm_p,0.0648,0.0648,pfloor,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_365d,p_holm_final,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_365d,noise_floor,0.0130,0.0129623893244433,.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_365d,noise_floor_used,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_mortality_365d,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_mortality_365d,clears_noise_floor,,not_applicable
+T5b,R3_acqctx_pre - R6_waveform|deterioration_icu_24h,difference,-0.0201,-0.0201201540095592,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_icu_24h,difference,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_icu_24h,difference,-0.0406,-0.0406184648221638,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_icu_24h,ci_lo,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_icu_24h,difference,-0.0002,-0.0001533758813609,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_icu_24h,ci_hi,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_icu_24h,holm_p,0.1434,0.1434,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_icu_24h,p_holm_final,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_icu_24h,noise_floor,0.0091,0.0090970747034874,.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_icu_24h,noise_floor_used,,record
+T5b,R3_acqctx_pre - R6_waveform|deterioration_icu_24h,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R6_waveform;label=deterioration_icu_24h,clears_noise_floor,,not_applicable
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_365d,difference,-0.0216,-0.0216495688644386,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_365d,difference,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_365d,difference,-0.0523,-0.0523340586293169,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_365d,ci_lo,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_365d,difference,+0.0098,0.0097926454856669,+.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_365d,ci_hi,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_365d,holm_p,0.354,0.354,pfloor,results/p4_family_final.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_365d,p_holm_final,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_365d,noise_floor,0.0043,0.0042864001368986,.4f,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_365d,noise_floor_used,,record
+T5b,R3_acqctx_pre - R2_demo|deterioration_mortality_365d,clears_floor,yes,,verdict,results/p3_contrasts.csv,contrast=R3_acqctx_pre - R2_demo;label=deterioration_mortality_365d,clears_noise_floor,,not_applicable
+T5b,R4_demo_acq - R6_waveform|deterioration_icu_24h,difference,-0.0080,-0.0079613648433352,+.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_icu_24h,difference,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_icu_24h,difference,-0.0276,-0.0276386616253906,+.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_icu_24h,ci_lo,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_icu_24h,difference,+0.0115,0.011477801826884,+.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_icu_24h,ci_hi,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_icu_24h,holm_p,0.4368,0.4368,pfloor,results/p4_family_final.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_icu_24h,p_holm_final,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_icu_24h,noise_floor,0.0091,0.0090970747034874,.4f,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_icu_24h,noise_floor_used,,record
+T5b,R4_demo_acq - R6_waveform|deterioration_icu_24h,clears_floor,no,,verdict,results/p3_contrasts.csv,contrast=R4_demo_acq - R6_waveform;label=deterioration_icu_24h,clears_noise_floor,,not_applicable
+T6a,deterioration_mortality_1d,difference,+0.0946,0.0946057055836914,+.4f,results/p3_ladder.csv,label=deterioration_mortality_1d,difference,,record
+T6a,deterioration_mortality_1d,difference,-0.0360,-0.0359993246374378,+.4f,results/p3_ladder.csv,label=deterioration_mortality_1d,ci_lo,,record
+T6a,deterioration_mortality_1d,difference,+0.2168,0.2167557569412967,+.4f,results/p3_ladder.csv,label=deterioration_mortality_1d,ci_hi,,record
+T6a,deterioration_mortality_1d,raw_p,0.1478,0.1478,pfloor,results/p3_ladder.csv,label=deterioration_mortality_1d,p_value,,record
+T6a,deterioration_mortality_1d,horizon,1,1.0,.0f,results/p3_ladder.csv,label=deterioration_mortality_1d,horizon_days,,record
+T6a,deterioration_mortality_1d,holm_p,0.708,0.708,pfloor,results/p3_ladder.csv,label=deterioration_mortality_1d,p_holm,,record
+T6a,deterioration_mortality_7d,difference,+0.1224,0.1224244534277222,+.4f,results/p3_ladder.csv,label=deterioration_mortality_7d,difference,,record
+T6a,deterioration_mortality_7d,difference,+0.0436,0.0435646822192367,+.4f,results/p3_ladder.csv,label=deterioration_mortality_7d,ci_lo,,record
+T6a,deterioration_mortality_7d,difference,+0.2004,0.2003949693833965,+.4f,results/p3_ladder.csv,label=deterioration_mortality_7d,ci_hi,,record
+T6a,deterioration_mortality_7d,raw_p,0.0006,0.0006,pfloor,results/p3_ladder.csv,label=deterioration_mortality_7d,p_value,,record
+T6a,deterioration_mortality_7d,horizon,7,7.0,.0f,results/p3_ladder.csv,label=deterioration_mortality_7d,horizon_days,,record
+T6a,deterioration_mortality_7d,holm_p,0.0036,0.0036,pfloor,results/p3_ladder.csv,label=deterioration_mortality_7d,p_holm,,record
+T6a,deterioration_mortality_28d,difference,+0.0624,0.0624297667371671,+.4f,results/p3_ladder.csv,label=deterioration_mortality_28d,difference,,record
+T6a,deterioration_mortality_28d,difference,+0.0165,0.0165415588546216,+.4f,results/p3_ladder.csv,label=deterioration_mortality_28d,ci_lo,,record
+T6a,deterioration_mortality_28d,difference,+0.1082,0.1082211042572693,+.4f,results/p3_ladder.csv,label=deterioration_mortality_28d,ci_hi,,record
+T6a,deterioration_mortality_28d,raw_p,0.0108,0.0108,pfloor,results/p3_ladder.csv,label=deterioration_mortality_28d,p_value,,record
+T6a,deterioration_mortality_28d,horizon,28,28.0,.0f,results/p3_ladder.csv,label=deterioration_mortality_28d,horizon_days,,record
+T6a,deterioration_mortality_28d,holm_p,not corrected in this family,,verdict,results/p3_ladder.csv,label=deterioration_mortality_28d,counts_as_confirmation,,not_applicable
+T6a,deterioration_mortality_90d,difference,+0.0161,0.0160592764129869,+.4f,results/p3_ladder.csv,label=deterioration_mortality_90d,difference,,record
+T6a,deterioration_mortality_90d,difference,-0.0225,-0.0224630806296512,+.4f,results/p3_ladder.csv,label=deterioration_mortality_90d,ci_lo,,record
+T6a,deterioration_mortality_90d,difference,+0.0539,0.053942893814781,+.4f,results/p3_ladder.csv,label=deterioration_mortality_90d,ci_hi,,record
+T6a,deterioration_mortality_90d,raw_p,0.4092,0.4092,pfloor,results/p3_ladder.csv,label=deterioration_mortality_90d,p_value,,record
+T6a,deterioration_mortality_90d,horizon,90,90.0,.0f,results/p3_ladder.csv,label=deterioration_mortality_90d,horizon_days,,record
+T6a,deterioration_mortality_90d,holm_p,1,1.0,pfloor,results/p3_ladder.csv,label=deterioration_mortality_90d,p_holm,,record
+T6a,deterioration_mortality_180d,difference,+0.0030,0.0029527983003339,+.4f,results/p3_ladder.csv,label=deterioration_mortality_180d,difference,,record
+T6a,deterioration_mortality_180d,difference,-0.0306,-0.0305905381073598,+.4f,results/p3_ladder.csv,label=deterioration_mortality_180d,ci_lo,,record
+T6a,deterioration_mortality_180d,difference,+0.0367,0.0366736826141989,+.4f,results/p3_ladder.csv,label=deterioration_mortality_180d,ci_hi,,record
+T6a,deterioration_mortality_180d,raw_p,0.8656,0.8656,pfloor,results/p3_ladder.csv,label=deterioration_mortality_180d,p_value,,record
+T6a,deterioration_mortality_180d,horizon,180,180.0,.0f,results/p3_ladder.csv,label=deterioration_mortality_180d,horizon_days,,record
+T6a,deterioration_mortality_180d,holm_p,1,1.0,pfloor,results/p3_ladder.csv,label=deterioration_mortality_180d,p_holm,,record
+T6a,deterioration_mortality_365d,difference,-0.0216,-0.0216495688644386,+.4f,results/p3_ladder.csv,label=deterioration_mortality_365d,difference,,record
+T6a,deterioration_mortality_365d,difference,-0.0523,-0.0523340586293169,+.4f,results/p3_ladder.csv,label=deterioration_mortality_365d,ci_lo,,record
+T6a,deterioration_mortality_365d,difference,+0.0098,0.0097926454856669,+.4f,results/p3_ladder.csv,label=deterioration_mortality_365d,ci_hi,,record
+T6a,deterioration_mortality_365d,raw_p,0.177,0.177,pfloor,results/p3_ladder.csv,label=deterioration_mortality_365d,p_value,,record
+T6a,deterioration_mortality_365d,horizon,365,365.0,.0f,results/p3_ladder.csv,label=deterioration_mortality_365d,horizon_days,,record
+T6a,deterioration_mortality_365d,holm_p,not corrected in this family,,verdict,results/p3_ladder.csv,label=deterioration_mortality_365d,counts_as_confirmation,,not_applicable
+T6b,acq_advantage_trend,correlation,-0.8000,-0.7999999999999998,+.4f,results/p3_trends.csv,name=acq_advantage_trend,estimate,,record
+T6b,acq_advantage_trend,correlation,-1.0000,-0.9999999999999998,+.4f,results/p3_trends.csv,name=acq_advantage_trend,ci_lo,,record
+T6b,acq_advantage_trend,correlation,+0.2000,0.1999999999999999,+.4f,results/p3_trends.csv,name=acq_advantage_trend,ci_hi,,record
+T6b,acq_advantage_trend,raw_p,0.1416,0.1416,pfloor,results/p3_trends.csv,name=acq_advantage_trend,p_value,,record
+T6b,acq_advantage_trend,holm_p,0.708,0.708,pfloor,results/p3_trends.csv,name=acq_advantage_trend,p_holm,,record
+T6b,acq_advantage_trend,supported,NOT SUPPORTED,,verdict,results/p3_trends.csv,name=acq_advantage_trend,supported,,not_applicable
+T6b,recovery_ratio_trend,correlation,+0.2000,0.1999999999999999,+.4f,results/p3_trends.csv,name=recovery_ratio_trend,estimate,,record
+T6b,recovery_ratio_trend,correlation,-0.8000,-0.7999999999999998,+.4f,results/p3_trends.csv,name=recovery_ratio_trend,ci_lo,,record
+T6b,recovery_ratio_trend,correlation,+1.0000,0.9999999999999998,+.4f,results/p3_trends.csv,name=recovery_ratio_trend,ci_hi,,record
+T6b,recovery_ratio_trend,raw_p,0.5502,0.5502,pfloor,results/p3_trends.csv,name=recovery_ratio_trend,p_value,,record
+T6b,recovery_ratio_trend,holm_p,1,1.0,pfloor,results/p3_trends.csv,name=recovery_ratio_trend,p_holm,,record
+T6b,recovery_ratio_trend,supported,NOT SUPPORTED,,verdict,results/p3_trends.csv,name=recovery_ratio_trend,supported,,not_applicable
+T6b,acq_advantage_trend_all_six,correlation,-0.9429,-0.942857142857143,+.4f,results/p3_trends.csv,name=acq_advantage_trend_all_six,estimate,,record
+T6b,acq_advantage_trend_all_six,correlation,-1.0000,-1.0,+.4f,results/p3_trends.csv,name=acq_advantage_trend_all_six,ci_lo,,record
+T6b,acq_advantage_trend_all_six,correlation,-0.1429,-0.1428571428571428,+.4f,results/p3_trends.csv,name=acq_advantage_trend_all_six,ci_hi,,record
+T6b,acq_advantage_trend_all_six,raw_p,0.0026,0.0026,pfloor,results/p3_trends.csv,name=acq_advantage_trend_all_six,p_value,,record
+T6b,acq_advantage_trend_all_six,holm_p,not corrected in this family,,verdict,results/p3_trends.csv,name=acq_advantage_trend_all_six,p_holm,,not_applicable
+T6b,acq_advantage_trend_all_six,supported,NOT SUPPORTED,,verdict,results/p3_trends.csv,name=acq_advantage_trend_all_six,supported,,not_applicable
+T7,meta|d054_floor,crop_macro_spread,0.0087,0.0087159394907877,.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=version_of_record,seed_spread,,crop
+T7,R1_prevalence,deterioration_icu_24h,0.0000,0.0,.4f,results/p3_noise.csv,arm=R1_prevalence;label=deterioration_icu_24h,seed_spread,,record
+T7,R1_prevalence,deterioration_mortality_28d,0.0000,0.0,.4f,results/p3_noise.csv,arm=R1_prevalence;label=deterioration_mortality_28d,seed_spread,,record
+T7,R1_prevalence,deterioration_mortality_365d,0.0000,0.0,.4f,results/p3_noise.csv,arm=R1_prevalence;label=deterioration_mortality_365d,seed_spread,,record
+T7,R2_demo,deterioration_icu_24h,0.0049,0.0048751991502921,.4f,results/p3_noise.csv,arm=R2_demo;label=deterioration_icu_24h,seed_spread,,record
+T7,R2_demo,deterioration_mortality_28d,0.0024,0.0023532450689132,.4f,results/p3_noise.csv,arm=R2_demo;label=deterioration_mortality_28d,seed_spread,,record
+T7,R2_demo,deterioration_mortality_365d,0.0029,0.0028734448380983,.4f,results/p3_noise.csv,arm=R2_demo;label=deterioration_mortality_365d,seed_spread,,record
+T7,R3_acqctx_pre,deterioration_icu_24h,0.0043,0.0042519693751106,.4f,results/p3_noise.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,seed_spread,,record
+T7,R3_acqctx_pre,deterioration_mortality_28d,0.0207,0.0206946522932827,.4f,results/p3_noise.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,seed_spread,,record
+T7,R3_acqctx_pre,deterioration_mortality_365d,0.0043,0.0042864001368986,.4f,results/p3_noise.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,seed_spread,,record
+T7,R3b_acqctx_window,deterioration_icu_24h,0.0036,0.0035927819083023,.4f,results/p3_noise.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,seed_spread,,record
+T7,R3b_acqctx_window,deterioration_mortality_28d,0.0047,0.004672628340706,.4f,results/p3_noise.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d,seed_spread,,record
+T7,R3b_acqctx_window,deterioration_mortality_365d,0.0039,0.0038631473371317,.4f,results/p3_noise.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d,seed_spread,,record
+T7,R4_demo_acq,deterioration_icu_24h,0.0024,0.0023902460612498,.4f,results/p3_noise.csv,arm=R4_demo_acq;label=deterioration_icu_24h,seed_spread,,record
+T7,R4_demo_acq,deterioration_mortality_28d,0.0045,0.0044736528248829,.4f,results/p3_noise.csv,arm=R4_demo_acq;label=deterioration_mortality_28d,seed_spread,,record
+T7,R4_demo_acq,deterioration_mortality_365d,0.0072,0.0071920296170008,.4f,results/p3_noise.csv,arm=R4_demo_acq;label=deterioration_mortality_365d,seed_spread,,record
+T7,R5_tabular,deterioration_icu_24h,0.0016,0.0015763852009205,.4f,results/p3_noise.csv,arm=R5_tabular;label=deterioration_icu_24h,seed_spread,,record
+T7,R5_tabular,deterioration_mortality_28d,0.0064,0.0064352397624999,.4f,results/p3_noise.csv,arm=R5_tabular;label=deterioration_mortality_28d,seed_spread,,record
+T7,R5_tabular,deterioration_mortality_365d,0.0029,0.0029192955742453,.4f,results/p3_noise.csv,arm=R5_tabular;label=deterioration_mortality_365d,seed_spread,,record
+T7,R6_waveform,deterioration_icu_24h,0.0091,0.0090970747034874,.4f,results/p3_noise.csv,arm=R6_waveform;label=deterioration_icu_24h,seed_spread,,record
+T7,R6_waveform,deterioration_mortality_28d,0.0190,0.0189751921881732,.4f,results/p3_noise.csv,arm=R6_waveform;label=deterioration_mortality_28d,seed_spread,,record
+T7,R6_waveform,deterioration_mortality_365d,0.0130,0.0129623893244433,.4f,results/p3_noise.csv,arm=R6_waveform;label=deterioration_mortality_365d,seed_spread,,record
+T7,R7_waveform_demo_acq,deterioration_icu_24h,0.0020,0.0020005753230659,.4f,results/p3_noise.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,seed_spread,,record
+T7,R7_waveform_demo_acq,deterioration_mortality_28d,0.0066,0.0065784781609388,.4f,results/p3_noise.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d,seed_spread,,record
+T7,R7_waveform_demo_acq,deterioration_mortality_365d,0.0042,0.0042124249751237,.4f,results/p3_noise.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d,seed_spread,,record
+T8,R6_waveform|crop|version_of_record,local,0.8474,0.8474354094186148,.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=version_of_record,local_macro_mean,,crop
+T8,R6_waveform|crop|version_of_record,published,0.8565,0.8565,.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=version_of_record,published_macro,,crop
+T8,R6_waveform|crop|version_of_record,published,0.8410,0.841,.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=version_of_record,published_lo,,crop
+T8,R6_waveform|crop|version_of_record,published,0.8707,0.8707,.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=version_of_record,published_hi,,crop
+T8,R6_waveform|crop|version_of_record,gap,-0.0091,-0.0090645905813852,+.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=version_of_record,gap,,crop
+T8,R6_waveform|crop|version_of_record,inside,yes,,verdict,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=version_of_record,inside_published_ci,,not_applicable
+T8,R6_waveform|crop|preprint_v2,local,0.8474,0.8474354094186148,.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=preprint_v2,local_macro_mean,,crop
+T8,R6_waveform|crop|preprint_v2,published,0.8279,0.8279,.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=preprint_v2,published_macro,,crop
+T8,R6_waveform|crop|preprint_v2,published,0.8047,0.8047,.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=preprint_v2,published_lo,,crop
+T8,R6_waveform|crop|preprint_v2,published,0.8511,0.8511,.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=preprint_v2,published_hi,,crop
+T8,R6_waveform|crop|preprint_v2,gap,+0.0195,0.0195354094186148,+.4f,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=preprint_v2,gap,,crop
+T8,R6_waveform|crop|preprint_v2,inside,yes,,verdict,results/p2_reproduction_gap.csv,arm=R6_waveform;unit=crop;anchor=preprint_v2,inside_published_ci,,not_applicable
+T8,R7_waveform_demo_acq|crop|version_of_record,local,0.8797,0.8797363238972707,.4f,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=version_of_record,local_macro_mean,,crop
+T8,R7_waveform_demo_acq|crop|version_of_record,published,0.8565,0.8565,.4f,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=version_of_record,published_macro,,crop
+T8,R7_waveform_demo_acq|crop|version_of_record,published,0.8410,0.841,.4f,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=version_of_record,published_lo,,crop
+T8,R7_waveform_demo_acq|crop|version_of_record,published,0.8707,0.8707,.4f,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=version_of_record,published_hi,,crop
+T8,R7_waveform_demo_acq|crop|version_of_record,gap,+0.0232,0.0232363238972707,+.4f,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=version_of_record,gap,,crop
+T8,R7_waveform_demo_acq|crop|version_of_record,inside,no,,verdict,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=version_of_record,inside_published_ci,,not_applicable
+T8,R7_waveform_demo_acq|crop|preprint_v2,local,0.8797,0.8797363238972707,.4f,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=preprint_v2,local_macro_mean,,crop
+T8,R7_waveform_demo_acq|crop|preprint_v2,published,0.8279,0.8279,.4f,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=preprint_v2,published_macro,,crop
+T8,R7_waveform_demo_acq|crop|preprint_v2,published,0.8047,0.8047,.4f,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=preprint_v2,published_lo,,crop
+T8,R7_waveform_demo_acq|crop|preprint_v2,published,0.8511,0.8511,.4f,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=preprint_v2,published_hi,,crop
+T8,R7_waveform_demo_acq|crop|preprint_v2,gap,+0.0518,0.0518363238972707,+.4f,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=preprint_v2,gap,,crop
+T8,R7_waveform_demo_acq|crop|preprint_v2,inside,no,,verdict,results/p2_reproduction_gap.csv,arm=R7_waveform_demo_acq;unit=crop;anchor=preprint_v2,inside_published_ci,,not_applicable
+T8,R6_waveform|record,local,0.8545,0.8545131608108484,.4f,results/p2_macro.csv,arm=R6_waveform;unit=record,macro,mean,record
+T8,R7_waveform_demo_acq|record,local,0.8834,0.8833530171849338,.4f,results/p2_macro.csv,arm=R7_waveform_demo_acq;unit=record,macro,mean,record
+T9,R1_prevalence|deterioration_icu_24h,ece_equal_width,0.0042,0.0042172301963082,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_icu_24h;scheme=equal_width,ece,,record
+T9,R1_prevalence|deterioration_icu_24h,ece_equal_width,0.0002,0.0002234195170922,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_icu_24h;scheme=equal_width,ci_lo,,record
+T9,R1_prevalence|deterioration_icu_24h,ece_equal_width,0.0146,0.0145615768137097,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_icu_24h;scheme=equal_width,ci_hi,,record
+T9,R1_prevalence|deterioration_icu_24h,ece_equal_mass,0.0042,0.0042172301963082,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_icu_24h;scheme=equal_mass,ece,,record
+T9,R1_prevalence|deterioration_icu_24h,ece_equal_mass,0.0002,0.0002234195170922,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_icu_24h;scheme=equal_mass,ci_lo,,record
+T9,R1_prevalence|deterioration_icu_24h,ece_equal_mass,0.0146,0.0145615768137097,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_icu_24h;scheme=equal_mass,ci_hi,,record
+T9,R1_prevalence|deterioration_icu_24h,null_hi,0.0098,0.0098398320858996,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_icu_24h,null_hi,max,record
+T9,R1_prevalence|deterioration_icu_24h,mean_predicted,0.1217,0.1217387554443917,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_icu_24h;scheme=equal_width,mean_predicted,,record
+T9,R1_prevalence|deterioration_icu_24h,observed_rate,0.1260,0.1259559856407054,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_icu_24h;scheme=equal_width,observed_rate,,record
+T9,R1_prevalence|deterioration_icu_24h,calibrated,yes,,verdict,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_icu_24h,inside_null_band,,not_applicable
+T9,R1_prevalence|deterioration_mortality_28d,ece_equal_width,0.0022,0.002161025627864,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_28d;scheme=equal_width,ece,,record
+T9,R1_prevalence|deterioration_mortality_28d,ece_equal_width,0.0001,0.0001132080498846,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_28d;scheme=equal_width,ci_lo,,record
+T9,R1_prevalence|deterioration_mortality_28d,ece_equal_width,0.0083,0.0082700726776121,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_28d;scheme=equal_width,ci_hi,,record
+T9,R1_prevalence|deterioration_mortality_28d,ece_equal_mass,0.0022,0.002161025627864,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_28d;scheme=equal_mass,ece,,record
+T9,R1_prevalence|deterioration_mortality_28d,ece_equal_mass,0.0001,0.0001132080498846,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_28d;scheme=equal_mass,ci_lo,,record
+T9,R1_prevalence|deterioration_mortality_28d,ece_equal_mass,0.0083,0.0082700726776121,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_28d;scheme=equal_mass,ci_hi,,record
+T9,R1_prevalence|deterioration_mortality_28d,null_hi,0.0055,0.0054649161326828,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_28d,null_hi,max,record
+T9,R1_prevalence|deterioration_mortality_28d,mean_predicted,0.0400,0.0399982774212996,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_28d;scheme=equal_width,mean_predicted,,record
+T9,R1_prevalence|deterioration_mortality_28d,observed_rate,0.0422,0.0421593030491599,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_28d;scheme=equal_width,observed_rate,,record
+T9,R1_prevalence|deterioration_mortality_28d,calibrated,yes,,verdict,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_28d,inside_null_band,,not_applicable
+T9,R1_prevalence|deterioration_mortality_365d,ece_equal_width,0.0045,0.0045230017986384,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_365d;scheme=equal_width,ece,,record
+T9,R1_prevalence|deterioration_mortality_365d,ece_equal_width,0.0003,0.0002688361712338,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_365d;scheme=equal_width,ci_lo,,record
+T9,R1_prevalence|deterioration_mortality_365d,ece_equal_width,0.0186,0.0185648736457462,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_365d;scheme=equal_width,ci_hi,,record
+T9,R1_prevalence|deterioration_mortality_365d,ece_equal_mass,0.0045,0.0045230017986384,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_365d;scheme=equal_mass,ece,,record
+T9,R1_prevalence|deterioration_mortality_365d,ece_equal_mass,0.0003,0.0002688361712338,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_365d;scheme=equal_mass,ci_lo,,record
+T9,R1_prevalence|deterioration_mortality_365d,ece_equal_mass,0.0186,0.0185648736457462,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_365d;scheme=equal_mass,ci_hi,,record
+T9,R1_prevalence|deterioration_mortality_365d,null_hi,0.0093,0.0093456527009408,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_365d,null_hi,max,record
+T9,R1_prevalence|deterioration_mortality_365d,mean_predicted,0.1380,0.1379785538951811,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_365d;scheme=equal_width,mean_predicted,,record
+T9,R1_prevalence|deterioration_mortality_365d,observed_rate,0.1425,0.1425015556938394,.4f,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_365d;scheme=equal_width,observed_rate,,record
+T9,R1_prevalence|deterioration_mortality_365d,calibrated,yes,,verdict,results/calibration/ece.csv,arm=R1_prevalence;label=deterioration_mortality_365d,inside_null_band,,not_applicable
+T9,R2_demo|deterioration_icu_24h,ece_equal_width,0.0082,0.0082421965445164,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_icu_24h;scheme=equal_width,ece,,record
+T9,R2_demo|deterioration_icu_24h,ece_equal_width,0.0024,0.0024335292695427,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_icu_24h;scheme=equal_width,ci_lo,,record
+T9,R2_demo|deterioration_icu_24h,ece_equal_width,0.0187,0.018741896405274,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_icu_24h;scheme=equal_width,ci_hi,,record
+T9,R2_demo|deterioration_icu_24h,ece_equal_mass,0.0156,0.0155742597236922,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_icu_24h;scheme=equal_mass,ece,,record
+T9,R2_demo|deterioration_icu_24h,ece_equal_mass,0.0147,0.0146805112561303,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_icu_24h;scheme=equal_mass,ci_lo,,record
+T9,R2_demo|deterioration_icu_24h,ece_equal_mass,0.0295,0.0295111466638583,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_icu_24h;scheme=equal_mass,ci_hi,,record
+T9,R2_demo|deterioration_icu_24h,null_hi,0.0179,0.0179041740166474,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_icu_24h,null_hi,max,record
+T9,R2_demo|deterioration_icu_24h,mean_predicted,0.1218,0.1217814195450097,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_icu_24h;scheme=equal_width,mean_predicted,,record
+T9,R2_demo|deterioration_icu_24h,observed_rate,0.1260,0.1259559856407054,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_icu_24h;scheme=equal_width,observed_rate,,record
+T9,R2_demo|deterioration_icu_24h,calibrated,yes,,verdict,results/calibration/ece.csv,arm=R2_demo;label=deterioration_icu_24h,inside_null_band,,not_applicable
+T9,R2_demo|deterioration_mortality_28d,ece_equal_width,0.0023,0.0022768424279148,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_28d;scheme=equal_width,ece,,record
+T9,R2_demo|deterioration_mortality_28d,ece_equal_width,0.0006,0.0005703208792909,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_28d;scheme=equal_width,ci_lo,,record
+T9,R2_demo|deterioration_mortality_28d,ece_equal_width,0.0084,0.0084209990477802,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_28d;scheme=equal_width,ci_hi,,record
+T9,R2_demo|deterioration_mortality_28d,ece_equal_mass,0.0168,0.0168453877993187,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_28d;scheme=equal_mass,ece,,record
+T9,R2_demo|deterioration_mortality_28d,ece_equal_mass,0.0151,0.015129369208432,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_28d;scheme=equal_mass,ci_lo,,record
+T9,R2_demo|deterioration_mortality_28d,ece_equal_mass,0.0252,0.0251782273150876,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_28d;scheme=equal_mass,ci_hi,,record
+T9,R2_demo|deterioration_mortality_28d,null_hi,0.0109,0.010945149876039,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_28d,null_hi,max,record
+T9,R2_demo|deterioration_mortality_28d,mean_predicted,0.0399,0.0398824606212452,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_28d;scheme=equal_width,mean_predicted,,record
+T9,R2_demo|deterioration_mortality_28d,observed_rate,0.0422,0.0421593030491599,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_28d;scheme=equal_width,observed_rate,,record
+T9,R2_demo|deterioration_mortality_28d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_28d,inside_null_band,,not_applicable
+T9,R2_demo|deterioration_mortality_365d,ece_equal_width,0.0466,0.0465765819247465,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_365d;scheme=equal_width,ece,,record
+T9,R2_demo|deterioration_mortality_365d,ece_equal_width,0.0336,0.0335881276247332,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_365d;scheme=equal_width,ci_lo,,record
+T9,R2_demo|deterioration_mortality_365d,ece_equal_width,0.0595,0.0595231377613043,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_365d;scheme=equal_width,ci_hi,,record
+T9,R2_demo|deterioration_mortality_365d,ece_equal_mass,0.0495,0.0495187585156621,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_365d;scheme=equal_mass,ece,,record
+T9,R2_demo|deterioration_mortality_365d,ece_equal_mass,0.0420,0.0420291767826104,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_365d;scheme=equal_mass,ci_lo,,record
+T9,R2_demo|deterioration_mortality_365d,ece_equal_mass,0.0654,0.0654297210496771,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_365d;scheme=equal_mass,ci_hi,,record
+T9,R2_demo|deterioration_mortality_365d,null_hi,0.0181,0.0181330568847234,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_365d,null_hi,max,record
+T9,R2_demo|deterioration_mortality_365d,mean_predicted,0.1374,0.1374466533295867,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_365d;scheme=equal_width,mean_predicted,,record
+T9,R2_demo|deterioration_mortality_365d,observed_rate,0.1425,0.1425015556938394,.4f,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_365d;scheme=equal_width,observed_rate,,record
+T9,R2_demo|deterioration_mortality_365d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R2_demo;label=deterioration_mortality_365d,inside_null_band,,not_applicable
+T9,R3_acqctx_pre|deterioration_icu_24h,ece_equal_width,0.0070,0.0069739404750615,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;scheme=equal_width,ece,,record
+T9,R3_acqctx_pre|deterioration_icu_24h,ece_equal_width,0.0067,0.0067322614847109,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;scheme=equal_width,ci_lo,,record
+T9,R3_acqctx_pre|deterioration_icu_24h,ece_equal_width,0.0181,0.018077555293482,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;scheme=equal_width,ci_hi,,record
+T9,R3_acqctx_pre|deterioration_icu_24h,ece_equal_mass,0.0085,0.008472690165054,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;scheme=equal_mass,ece,,record
+T9,R3_acqctx_pre|deterioration_icu_24h,ece_equal_mass,0.0090,0.009010824883354,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;scheme=equal_mass,ci_lo,,record
+T9,R3_acqctx_pre|deterioration_icu_24h,ece_equal_mass,0.0205,0.0204759165332034,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;scheme=equal_mass,ci_hi,,record
+T9,R3_acqctx_pre|deterioration_icu_24h,null_hi,0.0152,0.0151789057499607,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,null_hi,max,record
+T9,R3_acqctx_pre|deterioration_icu_24h,mean_predicted,0.1226,0.1226015696675955,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;scheme=equal_width,mean_predicted,,record
+T9,R3_acqctx_pre|deterioration_icu_24h,observed_rate,0.1260,0.1259559856407054,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h;scheme=equal_width,observed_rate,,record
+T9,R3_acqctx_pre|deterioration_icu_24h,calibrated,yes,,verdict,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,inside_null_band,,not_applicable
+T9,R3_acqctx_pre|deterioration_mortality_28d,ece_equal_width,0.0112,0.0111694535322821,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;scheme=equal_width,ece,,record
+T9,R3_acqctx_pre|deterioration_mortality_28d,ece_equal_width,0.0064,0.0064260546758291,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;scheme=equal_width,ci_lo,,record
+T9,R3_acqctx_pre|deterioration_mortality_28d,ece_equal_width,0.0165,0.0164766369846914,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;scheme=equal_width,ci_hi,,record
+T9,R3_acqctx_pre|deterioration_mortality_28d,ece_equal_mass,0.0196,0.0196149816024368,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;scheme=equal_mass,ece,,record
+T9,R3_acqctx_pre|deterioration_mortality_28d,ece_equal_mass,0.0161,0.0161392708995032,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;scheme=equal_mass,ci_lo,,record
+T9,R3_acqctx_pre|deterioration_mortality_28d,ece_equal_mass,0.0255,0.0255321102675661,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;scheme=equal_mass,ci_hi,,record
+T9,R3_acqctx_pre|deterioration_mortality_28d,null_hi,0.0104,0.0104493040043284,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,null_hi,max,record
+T9,R3_acqctx_pre|deterioration_mortality_28d,mean_predicted,0.0403,0.0403083745484329,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;scheme=equal_width,mean_predicted,,record
+T9,R3_acqctx_pre|deterioration_mortality_28d,observed_rate,0.0422,0.0421593030491599,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d;scheme=equal_width,observed_rate,,record
+T9,R3_acqctx_pre|deterioration_mortality_28d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_28d,inside_null_band,,not_applicable
+T9,R3_acqctx_pre|deterioration_mortality_365d,ece_equal_width,0.0194,0.0193836563396067,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;scheme=equal_width,ece,,record
+T9,R3_acqctx_pre|deterioration_mortality_365d,ece_equal_width,0.0114,0.0113846553574184,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;scheme=equal_width,ci_lo,,record
+T9,R3_acqctx_pre|deterioration_mortality_365d,ece_equal_width,0.0309,0.0309331838754702,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;scheme=equal_width,ci_hi,,record
+T9,R3_acqctx_pre|deterioration_mortality_365d,ece_equal_mass,0.0202,0.0202381286702927,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;scheme=equal_mass,ece,,record
+T9,R3_acqctx_pre|deterioration_mortality_365d,ece_equal_mass,0.0167,0.0166542867851325,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;scheme=equal_mass,ci_lo,,record
+T9,R3_acqctx_pre|deterioration_mortality_365d,ece_equal_mass,0.0351,0.0350833342827959,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;scheme=equal_mass,ci_hi,,record
+T9,R3_acqctx_pre|deterioration_mortality_365d,null_hi,0.0182,0.0182223466668694,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,null_hi,max,record
+T9,R3_acqctx_pre|deterioration_mortality_365d,mean_predicted,0.1368,0.1368153860021029,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;scheme=equal_width,mean_predicted,,record
+T9,R3_acqctx_pre|deterioration_mortality_365d,observed_rate,0.1425,0.1425015556938394,.4f,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d;scheme=equal_width,observed_rate,,record
+T9,R3_acqctx_pre|deterioration_mortality_365d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R3_acqctx_pre;label=deterioration_mortality_365d,inside_null_band,,not_applicable
+T9,R3b_acqctx_window|deterioration_icu_24h,ece_equal_width,0.0170,0.0169960375698579,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h;scheme=equal_width,ece,,record
+T9,R3b_acqctx_window|deterioration_icu_24h,ece_equal_width,0.0135,0.013450031413384,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h;scheme=equal_width,ci_lo,,record
+T9,R3b_acqctx_window|deterioration_icu_24h,ece_equal_width,0.0269,0.0269218587220786,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h;scheme=equal_width,ci_hi,,record
+T9,R3b_acqctx_window|deterioration_icu_24h,ece_equal_mass,0.0175,0.0175269992553981,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h;scheme=equal_mass,ece,,record
+T9,R3b_acqctx_window|deterioration_icu_24h,ece_equal_mass,0.0142,0.0142439273725643,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h;scheme=equal_mass,ci_lo,,record
+T9,R3b_acqctx_window|deterioration_icu_24h,ece_equal_mass,0.0276,0.0275685087705699,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h;scheme=equal_mass,ci_hi,,record
+T9,R3b_acqctx_window|deterioration_icu_24h,null_hi,0.0161,0.0161440866410301,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,null_hi,max,record
+T9,R3b_acqctx_window|deterioration_icu_24h,mean_predicted,0.1217,0.1216704167128499,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h;scheme=equal_width,mean_predicted,,record
+T9,R3b_acqctx_window|deterioration_icu_24h,observed_rate,0.1260,0.1259559856407054,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h;scheme=equal_width,observed_rate,,record
+T9,R3b_acqctx_window|deterioration_icu_24h,calibrated,no,,verdict,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,inside_null_band,,not_applicable
+T9,R3b_acqctx_window|deterioration_mortality_28d,ece_equal_width,0.0101,0.010073518827158,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d;scheme=equal_width,ece,,record
+T9,R3b_acqctx_window|deterioration_mortality_28d,ece_equal_width,0.0054,0.0053913614336182,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d;scheme=equal_width,ci_lo,,record
+T9,R3b_acqctx_window|deterioration_mortality_28d,ece_equal_width,0.0157,0.0156914568375838,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d;scheme=equal_width,ci_hi,,record
+T9,R3b_acqctx_window|deterioration_mortality_28d,ece_equal_mass,0.0102,0.0101769589603761,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d;scheme=equal_mass,ece,,record
+T9,R3b_acqctx_window|deterioration_mortality_28d,ece_equal_mass,0.0082,0.008204280296529,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d;scheme=equal_mass,ci_lo,,record
+T9,R3b_acqctx_window|deterioration_mortality_28d,ece_equal_mass,0.0171,0.0171085703591786,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d;scheme=equal_mass,ci_hi,,record
+T9,R3b_acqctx_window|deterioration_mortality_28d,null_hi,0.0101,0.010119136393728,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d,null_hi,max,record
+T9,R3b_acqctx_window|deterioration_mortality_28d,mean_predicted,0.0404,0.0403606181167481,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d;scheme=equal_width,mean_predicted,,record
+T9,R3b_acqctx_window|deterioration_mortality_28d,observed_rate,0.0422,0.0421593030491599,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d;scheme=equal_width,observed_rate,,record
+T9,R3b_acqctx_window|deterioration_mortality_28d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_28d,inside_null_band,,not_applicable
+T9,R3b_acqctx_window|deterioration_mortality_365d,ece_equal_width,0.0105,0.0105190264415671,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d;scheme=equal_width,ece,,record
+T9,R3b_acqctx_window|deterioration_mortality_365d,ece_equal_width,0.0071,0.0070622172771206,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d;scheme=equal_width,ci_lo,,record
+T9,R3b_acqctx_window|deterioration_mortality_365d,ece_equal_width,0.0237,0.0237346610685575,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d;scheme=equal_width,ci_hi,,record
+T9,R3b_acqctx_window|deterioration_mortality_365d,ece_equal_mass,0.0170,0.0169516977845411,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d;scheme=equal_mass,ece,,record
+T9,R3b_acqctx_window|deterioration_mortality_365d,ece_equal_mass,0.0141,0.0140732203232381,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d;scheme=equal_mass,ci_lo,,record
+T9,R3b_acqctx_window|deterioration_mortality_365d,ece_equal_mass,0.0298,0.0298314378407362,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d;scheme=equal_mass,ci_hi,,record
+T9,R3b_acqctx_window|deterioration_mortality_365d,null_hi,0.0175,0.0174574691076755,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d,null_hi,max,record
+T9,R3b_acqctx_window|deterioration_mortality_365d,mean_predicted,0.1366,0.1365840271786703,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d;scheme=equal_width,mean_predicted,,record
+T9,R3b_acqctx_window|deterioration_mortality_365d,observed_rate,0.1425,0.1425015556938394,.4f,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d;scheme=equal_width,observed_rate,,record
+T9,R3b_acqctx_window|deterioration_mortality_365d,calibrated,yes,,verdict,results/calibration/ece.csv,arm=R3b_acqctx_window;label=deterioration_mortality_365d,inside_null_band,,not_applicable
+T9,R4_demo_acq|deterioration_icu_24h,ece_equal_width,0.0087,0.008717817143991,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_icu_24h;scheme=equal_width,ece,,record
+T9,R4_demo_acq|deterioration_icu_24h,ece_equal_width,0.0078,0.0077976828972141,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_icu_24h;scheme=equal_width,ci_lo,,record
+T9,R4_demo_acq|deterioration_icu_24h,ece_equal_width,0.0198,0.0198323098499939,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_icu_24h;scheme=equal_width,ci_hi,,record
+T9,R4_demo_acq|deterioration_icu_24h,ece_equal_mass,0.0094,0.0094092990192921,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_icu_24h;scheme=equal_mass,ece,,record
+T9,R4_demo_acq|deterioration_icu_24h,ece_equal_mass,0.0086,0.0086020541681974,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_icu_24h;scheme=equal_mass,ci_lo,,record
+T9,R4_demo_acq|deterioration_icu_24h,ece_equal_mass,0.0204,0.0203951621099317,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_icu_24h;scheme=equal_mass,ci_hi,,record
+T9,R4_demo_acq|deterioration_icu_24h,null_hi,0.0145,0.0144839193689852,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_icu_24h,null_hi,max,record
+T9,R4_demo_acq|deterioration_icu_24h,mean_predicted,0.1219,0.1219346310086542,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_icu_24h;scheme=equal_width,mean_predicted,,record
+T9,R4_demo_acq|deterioration_icu_24h,observed_rate,0.1260,0.1259559856407054,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_icu_24h;scheme=equal_width,observed_rate,,record
+T9,R4_demo_acq|deterioration_icu_24h,calibrated,yes,,verdict,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_icu_24h,inside_null_band,,not_applicable
+T9,R4_demo_acq|deterioration_mortality_28d,ece_equal_width,0.0050,0.0050342651661977,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;scheme=equal_width,ece,,record
+T9,R4_demo_acq|deterioration_mortality_28d,ece_equal_width,0.0030,0.0030420883740414,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;scheme=equal_width,ci_lo,,record
+T9,R4_demo_acq|deterioration_mortality_28d,ece_equal_width,0.0108,0.0108325113618097,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;scheme=equal_width,ci_hi,,record
+T9,R4_demo_acq|deterioration_mortality_28d,ece_equal_mass,0.0093,0.0093198291956792,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;scheme=equal_mass,ece,,record
+T9,R4_demo_acq|deterioration_mortality_28d,ece_equal_mass,0.0066,0.0065770422219283,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;scheme=equal_mass,ci_lo,,record
+T9,R4_demo_acq|deterioration_mortality_28d,ece_equal_mass,0.0152,0.0151700425173123,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;scheme=equal_mass,ci_hi,,record
+T9,R4_demo_acq|deterioration_mortality_28d,null_hi,0.0098,0.0097606435774569,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_28d,null_hi,max,record
+T9,R4_demo_acq|deterioration_mortality_28d,mean_predicted,0.0400,0.0400157517005318,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;scheme=equal_width,mean_predicted,,record
+T9,R4_demo_acq|deterioration_mortality_28d,observed_rate,0.0422,0.0421593030491599,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_28d;scheme=equal_width,observed_rate,,record
+T9,R4_demo_acq|deterioration_mortality_28d,calibrated,yes,,verdict,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_28d,inside_null_band,,not_applicable
+T9,R4_demo_acq|deterioration_mortality_365d,ece_equal_width,0.0629,0.0628556656671656,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;scheme=equal_width,ece,,record
+T9,R4_demo_acq|deterioration_mortality_365d,ece_equal_width,0.0519,0.0519070565481597,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;scheme=equal_width,ci_lo,,record
+T9,R4_demo_acq|deterioration_mortality_365d,ece_equal_width,0.0744,0.0743681603651355,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;scheme=equal_width,ci_hi,,record
+T9,R4_demo_acq|deterioration_mortality_365d,ece_equal_mass,0.0643,0.0642588480742716,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;scheme=equal_mass,ece,,record
+T9,R4_demo_acq|deterioration_mortality_365d,ece_equal_mass,0.0534,0.0533605822600985,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;scheme=equal_mass,ci_lo,,record
+T9,R4_demo_acq|deterioration_mortality_365d,ece_equal_mass,0.0754,0.0753574487855714,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;scheme=equal_mass,ci_hi,,record
+T9,R4_demo_acq|deterioration_mortality_365d,null_hi,0.0188,0.018823464272234,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_365d,null_hi,max,record
+T9,R4_demo_acq|deterioration_mortality_365d,mean_predicted,0.1364,0.1363822300632089,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;scheme=equal_width,mean_predicted,,record
+T9,R4_demo_acq|deterioration_mortality_365d,observed_rate,0.1425,0.1425015556938394,.4f,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_365d;scheme=equal_width,observed_rate,,record
+T9,R4_demo_acq|deterioration_mortality_365d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R4_demo_acq;label=deterioration_mortality_365d,inside_null_band,,not_applicable
+T9,R5_tabular|deterioration_icu_24h,ece_equal_width,0.0103,0.0102989742448911,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_icu_24h;scheme=equal_width,ece,,record
+T9,R5_tabular|deterioration_icu_24h,ece_equal_width,0.0099,0.0099381590399047,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_icu_24h;scheme=equal_width,ci_lo,,record
+T9,R5_tabular|deterioration_icu_24h,ece_equal_width,0.0204,0.0204312960817294,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_icu_24h;scheme=equal_width,ci_hi,,record
+T9,R5_tabular|deterioration_icu_24h,ece_equal_mass,0.0117,0.011706798557585,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_icu_24h;scheme=equal_mass,ece,,record
+T9,R5_tabular|deterioration_icu_24h,ece_equal_mass,0.0093,0.0093462745476415,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_icu_24h;scheme=equal_mass,ci_lo,,record
+T9,R5_tabular|deterioration_icu_24h,ece_equal_mass,0.0204,0.0203705927109985,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_icu_24h;scheme=equal_mass,ci_hi,,record
+T9,R5_tabular|deterioration_icu_24h,null_hi,0.0127,0.0126911840704089,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_icu_24h,null_hi,max,record
+T9,R5_tabular|deterioration_icu_24h,mean_predicted,0.1206,0.1205590429310439,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_icu_24h;scheme=equal_width,mean_predicted,,record
+T9,R5_tabular|deterioration_icu_24h,observed_rate,0.1260,0.1259559856407054,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_icu_24h;scheme=equal_width,observed_rate,,record
+T9,R5_tabular|deterioration_icu_24h,calibrated,yes,,verdict,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_icu_24h,inside_null_band,,not_applicable
+T9,R5_tabular|deterioration_mortality_28d,ece_equal_width,0.0073,0.007285096102252,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_28d;scheme=equal_width,ece,,record
+T9,R5_tabular|deterioration_mortality_28d,ece_equal_width,0.0057,0.0056766018244767,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_28d;scheme=equal_width,ci_lo,,record
+T9,R5_tabular|deterioration_mortality_28d,ece_equal_width,0.0132,0.0132097222170567,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_28d;scheme=equal_width,ci_hi,,record
+T9,R5_tabular|deterioration_mortality_28d,ece_equal_mass,0.0077,0.0077329961735155,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_28d;scheme=equal_mass,ece,,record
+T9,R5_tabular|deterioration_mortality_28d,ece_equal_mass,0.0066,0.0065871221288653,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_28d;scheme=equal_mass,ci_lo,,record
+T9,R5_tabular|deterioration_mortality_28d,ece_equal_mass,0.0143,0.0143451952451345,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_28d;scheme=equal_mass,ci_hi,,record
+T9,R5_tabular|deterioration_mortality_28d,null_hi,0.0085,0.0085020326620526,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_28d,null_hi,max,record
+T9,R5_tabular|deterioration_mortality_28d,mean_predicted,0.0395,0.0394599099087983,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_28d;scheme=equal_width,mean_predicted,,record
+T9,R5_tabular|deterioration_mortality_28d,observed_rate,0.0422,0.0421593030491599,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_28d;scheme=equal_width,observed_rate,,record
+T9,R5_tabular|deterioration_mortality_28d,calibrated,yes,,verdict,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_28d,inside_null_band,,not_applicable
+T9,R5_tabular|deterioration_mortality_365d,ece_equal_width,0.0190,0.0190338807909615,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_365d;scheme=equal_width,ece,,record
+T9,R5_tabular|deterioration_mortality_365d,ece_equal_width,0.0138,0.0138197393220571,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_365d;scheme=equal_width,ci_lo,,record
+T9,R5_tabular|deterioration_mortality_365d,ece_equal_width,0.0291,0.0291439714569647,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_365d;scheme=equal_width,ci_hi,,record
+T9,R5_tabular|deterioration_mortality_365d,ece_equal_mass,0.0187,0.0187362526968861,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_365d;scheme=equal_mass,ece,,record
+T9,R5_tabular|deterioration_mortality_365d,ece_equal_mass,0.0135,0.0135190817159568,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_365d;scheme=equal_mass,ci_lo,,record
+T9,R5_tabular|deterioration_mortality_365d,ece_equal_mass,0.0290,0.0290371748948584,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_365d;scheme=equal_mass,ci_hi,,record
+T9,R5_tabular|deterioration_mortality_365d,null_hi,0.0147,0.0147343952074083,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_365d,null_hi,max,record
+T9,R5_tabular|deterioration_mortality_365d,mean_predicted,0.1344,0.1343560123578984,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_365d;scheme=equal_width,mean_predicted,,record
+T9,R5_tabular|deterioration_mortality_365d,observed_rate,0.1425,0.1425015556938394,.4f,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_365d;scheme=equal_width,observed_rate,,record
+T9,R5_tabular|deterioration_mortality_365d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R5_tabular;label=deterioration_mortality_365d,inside_null_band,,not_applicable
+T9,R6_waveform|deterioration_icu_24h,ece_equal_width,0.1323,0.1323320702524205,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_icu_24h;scheme=equal_width,ece,,record
+T9,R6_waveform|deterioration_icu_24h,ece_equal_width,0.1243,0.1242993499458934,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_icu_24h;scheme=equal_width,ci_lo,,record
+T9,R6_waveform|deterioration_icu_24h,ece_equal_width,0.1413,0.1413058626935638,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_icu_24h;scheme=equal_width,ci_hi,,record
+T9,R6_waveform|deterioration_icu_24h,ece_equal_mass,0.1347,0.1347412508749145,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_icu_24h;scheme=equal_mass,ece,,record
+T9,R6_waveform|deterioration_icu_24h,ece_equal_mass,0.1259,0.1258611963530444,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_icu_24h;scheme=equal_mass,ci_lo,,record
+T9,R6_waveform|deterioration_icu_24h,ece_equal_mass,0.1428,0.1427627165738457,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_icu_24h;scheme=equal_mass,ci_hi,,record
+T9,R6_waveform|deterioration_icu_24h,null_hi,0.0224,0.0224205866062512,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_icu_24h,null_hi,max,record
+T9,R6_waveform|deterioration_icu_24h,mean_predicted,0.2502,0.2502276159748516,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_icu_24h;scheme=equal_width,mean_predicted,,record
+T9,R6_waveform|deterioration_icu_24h,observed_rate,0.1260,0.1259559856407054,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_icu_24h;scheme=equal_width,observed_rate,,record
+T9,R6_waveform|deterioration_icu_24h,calibrated,no,,verdict,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_icu_24h,inside_null_band,,not_applicable
+T9,R6_waveform|deterioration_mortality_28d,ece_equal_width,0.1121,0.112073383110469,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_28d;scheme=equal_width,ece,,record
+T9,R6_waveform|deterioration_mortality_28d,ece_equal_width,0.1067,0.1066898021633552,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_28d;scheme=equal_width,ci_lo,,record
+T9,R6_waveform|deterioration_mortality_28d,ece_equal_width,0.1182,0.1182468589853774,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_28d;scheme=equal_width,ci_hi,,record
+T9,R6_waveform|deterioration_mortality_28d,ece_equal_mass,0.1120,0.1120048795163375,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_28d;scheme=equal_mass,ece,,record
+T9,R6_waveform|deterioration_mortality_28d,ece_equal_mass,0.1059,0.1058596468240578,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_28d;scheme=equal_mass,ci_lo,,record
+T9,R6_waveform|deterioration_mortality_28d,ece_equal_mass,0.1178,0.1178037427485299,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_28d;scheme=equal_mass,ci_hi,,record
+T9,R6_waveform|deterioration_mortality_28d,null_hi,0.0184,0.0183954132993023,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_28d,null_hi,max,record
+T9,R6_waveform|deterioration_mortality_28d,mean_predicted,0.1542,0.1541641825654975,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_28d;scheme=equal_width,mean_predicted,,record
+T9,R6_waveform|deterioration_mortality_28d,observed_rate,0.0422,0.0421593030491599,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_28d;scheme=equal_width,observed_rate,,record
+T9,R6_waveform|deterioration_mortality_28d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_28d,inside_null_band,,not_applicable
+T9,R6_waveform|deterioration_mortality_365d,ece_equal_width,0.1200,0.1199979760955878,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_365d;scheme=equal_width,ece,,record
+T9,R6_waveform|deterioration_mortality_365d,ece_equal_width,0.1103,0.1102558088291579,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_365d;scheme=equal_width,ci_lo,,record
+T9,R6_waveform|deterioration_mortality_365d,ece_equal_width,0.1309,0.1308669902765325,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_365d;scheme=equal_width,ci_hi,,record
+T9,R6_waveform|deterioration_mortality_365d,ece_equal_mass,0.1202,0.1201695509289704,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_365d;scheme=equal_mass,ece,,record
+T9,R6_waveform|deterioration_mortality_365d,ece_equal_mass,0.1099,0.1098595225839837,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_365d;scheme=equal_mass,ci_lo,,record
+T9,R6_waveform|deterioration_mortality_365d,ece_equal_mass,0.1306,0.130582518049268,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_365d;scheme=equal_mass,ci_hi,,record
+T9,R6_waveform|deterioration_mortality_365d,null_hi,0.0222,0.0221667399701582,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_365d,null_hi,max,record
+T9,R6_waveform|deterioration_mortality_365d,mean_predicted,0.2551,0.2550685512860536,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_365d;scheme=equal_width,mean_predicted,,record
+T9,R6_waveform|deterioration_mortality_365d,observed_rate,0.1425,0.1425015556938394,.4f,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_365d;scheme=equal_width,observed_rate,,record
+T9,R6_waveform|deterioration_mortality_365d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R6_waveform;label=deterioration_mortality_365d,inside_null_band,,not_applicable
+T9,R7_waveform_demo_acq|deterioration_icu_24h,ece_equal_width,0.1303,0.1302969651518555,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;scheme=equal_width,ece,,record
+T9,R7_waveform_demo_acq|deterioration_icu_24h,ece_equal_width,0.1234,0.1233537986934605,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;scheme=equal_width,ci_lo,,record
+T9,R7_waveform_demo_acq|deterioration_icu_24h,ece_equal_width,0.1385,0.1385119730189256,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;scheme=equal_width,ci_hi,,record
+T9,R7_waveform_demo_acq|deterioration_icu_24h,ece_equal_mass,0.1301,0.1300671802762449,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;scheme=equal_mass,ece,,record
+T9,R7_waveform_demo_acq|deterioration_icu_24h,ece_equal_mass,0.1219,0.1218857476300991,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;scheme=equal_mass,ci_lo,,record
+T9,R7_waveform_demo_acq|deterioration_icu_24h,ece_equal_mass,0.1381,0.1380975066890832,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;scheme=equal_mass,ci_hi,,record
+T9,R7_waveform_demo_acq|deterioration_icu_24h,null_hi,0.0209,0.0208916491251691,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,null_hi,max,record
+T9,R7_waveform_demo_acq|deterioration_icu_24h,mean_predicted,0.2426,0.2426355942456388,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;scheme=equal_width,mean_predicted,,record
+T9,R7_waveform_demo_acq|deterioration_icu_24h,observed_rate,0.1260,0.1259559856407054,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h;scheme=equal_width,observed_rate,,record
+T9,R7_waveform_demo_acq|deterioration_icu_24h,calibrated,no,,verdict,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,inside_null_band,,not_applicable
+T9,R7_waveform_demo_acq|deterioration_mortality_28d,ece_equal_width,0.1102,0.1102344866959098,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;scheme=equal_width,ece,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_28d,ece_equal_width,0.1047,0.1046794279002298,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;scheme=equal_width,ci_lo,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_28d,ece_equal_width,0.1158,0.1158292673163019,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;scheme=equal_width,ci_hi,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_28d,ece_equal_mass,0.1093,0.1092868331552025,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;scheme=equal_mass,ece,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_28d,ece_equal_mass,0.1034,0.1034160694686903,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;scheme=equal_mass,ci_lo,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_28d,ece_equal_mass,0.1148,0.1148216977912818,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;scheme=equal_mass,ci_hi,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_28d,null_hi,0.0179,0.017874196647106,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d,null_hi,max,record
+T9,R7_waveform_demo_acq|deterioration_mortality_28d,mean_predicted,0.1514,0.1514461362043624,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;scheme=equal_width,mean_predicted,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_28d,observed_rate,0.0422,0.0421593030491599,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d;scheme=equal_width,observed_rate,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_28d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_28d,inside_null_band,,not_applicable
+T9,R7_waveform_demo_acq|deterioration_mortality_365d,ece_equal_width,0.1291,0.1290627472308957,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;scheme=equal_width,ece,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_365d,ece_equal_width,0.1194,0.1194479114019197,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;scheme=equal_width,ci_lo,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_365d,ece_equal_width,0.1397,0.1396525572356744,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;scheme=equal_width,ci_hi,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_365d,ece_equal_mass,0.1296,0.1295817767868575,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;scheme=equal_mass,ece,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_365d,ece_equal_mass,0.1194,0.1194484996381465,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;scheme=equal_mass,ci_lo,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_365d,ece_equal_mass,0.1400,0.1400039927316491,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;scheme=equal_mass,ci_hi,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_365d,null_hi,0.0226,0.0225944131438915,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d,null_hi,max,record
+T9,R7_waveform_demo_acq|deterioration_mortality_365d,mean_predicted,0.2611,0.2611475494023187,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;scheme=equal_width,mean_predicted,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_365d,observed_rate,0.1425,0.1425015556938394,.4f,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d;scheme=equal_width,observed_rate,,record
+T9,R7_waveform_demo_acq|deterioration_mortality_365d,calibrated,no,,verdict,results/calibration/ece.csv,arm=R7_waveform_demo_acq;label=deterioration_mortality_365d,inside_null_band,,not_applicable
+T10,R5_tabular,net_benefit,0.0897,0.089728248616964,.4f,results/decision_curve/nb_at_threshold.csv,arm=R5_tabular;label=deterioration_icu_24h,net_benefit,,record
+T10,R5_tabular,net_benefit,0.0802,0.0802372250839713,.4f,results/decision_curve/nb_at_threshold.csv,arm=R5_tabular;label=deterioration_icu_24h,ci_lo,,record
+T10,R5_tabular,net_benefit,0.0993,0.0993369575909375,.4f,results/decision_curve/nb_at_threshold.csv,arm=R5_tabular;label=deterioration_icu_24h,ci_hi,,record
+T10,R5_tabular,vs_treat_all,+0.0609,0.0608882645717357,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R5_tabular;label=deterioration_icu_24h,vs_treat_all,,record
+T10,R5_tabular,vs_treat_all,+0.0560,0.0560039145580182,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R5_tabular;label=deterioration_icu_24h,vs_treat_all_lo,,record
+T10,R5_tabular,vs_treat_all,+0.0654,0.0654452356244434,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R5_tabular;label=deterioration_icu_24h,vs_treat_all_hi,,record
+T10,R5_tabular,beats_treat_all,yes,,verdict,results/decision_curve/nb_at_threshold.csv,arm=R5_tabular;label=deterioration_icu_24h,beats_treat_all,,not_applicable
+T10,R5_tabular,flagged_fraction,0.2397,0.2397377867956922,.4f,results/decision_curve/nb_at_threshold.csv,arm=R5_tabular;label=deterioration_icu_24h,flagged_fraction,,record
+T10,R5_tabular,mean_predicted,0.1206,0.1205590429310439,.4f,results/decision_curve/nb_at_threshold.csv,arm=R5_tabular;label=deterioration_icu_24h,mean_predicted,,record
+T10,R4_demo_acq,net_benefit,0.0671,0.0671140939597315,.4f,results/decision_curve/nb_at_threshold.csv,arm=R4_demo_acq;label=deterioration_icu_24h,net_benefit,,record
+T10,R4_demo_acq,net_benefit,0.0580,0.0580115493843868,.4f,results/decision_curve/nb_at_threshold.csv,arm=R4_demo_acq;label=deterioration_icu_24h,ci_lo,,record
+T10,R4_demo_acq,net_benefit,0.0766,0.0766296111832741,.4f,results/decision_curve/nb_at_threshold.csv,arm=R4_demo_acq;label=deterioration_icu_24h,ci_hi,,record
+T10,R4_demo_acq,vs_treat_all,+0.0383,0.0382741099145032,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R4_demo_acq;label=deterioration_icu_24h,vs_treat_all,,record
+T10,R4_demo_acq,vs_treat_all,+0.0334,0.0333661247162056,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R4_demo_acq;label=deterioration_icu_24h,vs_treat_all_lo,,record
+T10,R4_demo_acq,vs_treat_all,+0.0430,0.0429740135056168,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R4_demo_acq;label=deterioration_icu_24h,vs_treat_all_hi,,record
+T10,R4_demo_acq,beats_treat_all,yes,,verdict,results/decision_curve/nb_at_threshold.csv,arm=R4_demo_acq;label=deterioration_icu_24h,beats_treat_all,,not_applicable
+T10,R4_demo_acq,flagged_fraction,0.3902,0.3901982206961136,.4f,results/decision_curve/nb_at_threshold.csv,arm=R4_demo_acq;label=deterioration_icu_24h,flagged_fraction,,record
+T10,R4_demo_acq,mean_predicted,0.1219,0.1219346310086542,.4f,results/decision_curve/nb_at_threshold.csv,arm=R4_demo_acq;label=deterioration_icu_24h,mean_predicted,,record
+T10,R3b_acqctx_window,net_benefit,0.0662,0.066229644659487,.4f,results/decision_curve/nb_at_threshold.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,net_benefit,,record
+T10,R3b_acqctx_window,net_benefit,0.0570,0.0570457107524779,.4f,results/decision_curve/nb_at_threshold.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,ci_lo,,record
+T10,R3b_acqctx_window,net_benefit,0.0759,0.0758569111053049,.4f,results/decision_curve/nb_at_threshold.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,ci_hi,,record
+T10,R3b_acqctx_window,vs_treat_all,+0.0374,0.0373896606142587,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,vs_treat_all,,record
+T10,R3b_acqctx_window,vs_treat_all,+0.0327,0.0327205238777137,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,vs_treat_all_lo,,record
+T10,R3b_acqctx_window,vs_treat_all,+0.0420,0.0420298279866046,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,vs_treat_all_hi,,record
+T10,R3b_acqctx_window,beats_treat_all,yes,,verdict,results/decision_curve/nb_at_threshold.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,beats_treat_all,,not_applicable
+T10,R3b_acqctx_window,flagged_fraction,0.4122,0.4122054003433744,.4f,results/decision_curve/nb_at_threshold.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,flagged_fraction,,record
+T10,R3b_acqctx_window,mean_predicted,0.1217,0.1216704167128499,.4f,results/decision_curve/nb_at_threshold.csv,arm=R3b_acqctx_window;label=deterioration_icu_24h,mean_predicted,,record
+T10,R3_acqctx_pre,net_benefit,0.0653,0.0653451953592424,.4f,results/decision_curve/nb_at_threshold.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,net_benefit,,record
+T10,R3_acqctx_pre,net_benefit,0.0564,0.0563677461545543,.4f,results/decision_curve/nb_at_threshold.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,ci_lo,,record
+T10,R3_acqctx_pre,net_benefit,0.0748,0.0747544994086004,.4f,results/decision_curve/nb_at_threshold.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,ci_hi,,record
+T10,R3_acqctx_pre,vs_treat_all,+0.0365,0.0365052113140141,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,vs_treat_all,,record
+T10,R3_acqctx_pre,vs_treat_all,+0.0317,0.0317128134312779,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,vs_treat_all_lo,,record
+T10,R3_acqctx_pre,vs_treat_all,+0.0411,0.0411235419682827,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,vs_treat_all_hi,,record
+T10,R3_acqctx_pre,beats_treat_all,yes,,verdict,results/decision_curve/nb_at_threshold.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,beats_treat_all,,not_applicable
+T10,R3_acqctx_pre,flagged_fraction,0.4077,0.4076791009832995,.4f,results/decision_curve/nb_at_threshold.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,flagged_fraction,,record
+T10,R3_acqctx_pre,mean_predicted,0.1226,0.1226015696675955,.4f,results/decision_curve/nb_at_threshold.csv,arm=R3_acqctx_pre;label=deterioration_icu_24h,mean_predicted,,record
+T10,R7_waveform_demo_acq,net_benefit,0.0367,0.0366959748885767,.4f,results/decision_curve/nb_at_threshold.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,net_benefit,,record
+T10,R7_waveform_demo_acq,net_benefit,0.0254,0.0254475966384883,.4f,results/decision_curve/nb_at_threshold.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,ci_lo,,record
+T10,R7_waveform_demo_acq,net_benefit,0.0482,0.0481662494021969,.4f,results/decision_curve/nb_at_threshold.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,ci_hi,,record
+T10,R7_waveform_demo_acq,vs_treat_all,+0.0079,0.0078559908433483,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,vs_treat_all,,record
+T10,R7_waveform_demo_acq,vs_treat_all,+0.0069,0.0069033793452815,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,vs_treat_all_lo,,record
+T10,R7_waveform_demo_acq,vs_treat_all,+0.0088,0.0088282150787991,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,vs_treat_all_hi,,record
+T10,R7_waveform_demo_acq,beats_treat_all,yes,,verdict,results/decision_curve/nb_at_threshold.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,beats_treat_all,,not_applicable
+T10,R7_waveform_demo_acq,flagged_fraction,0.9277,0.9277352895270796,.4f,results/decision_curve/nb_at_threshold.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,flagged_fraction,,record
+T10,R7_waveform_demo_acq,mean_predicted,0.2426,0.2426355942456388,.4f,results/decision_curve/nb_at_threshold.csv,arm=R7_waveform_demo_acq;label=deterioration_icu_24h,mean_predicted,,record
+T10,R2_demo,net_benefit,0.0351,0.0350831555763661,.4f,results/decision_curve/nb_at_threshold.csv,arm=R2_demo;label=deterioration_icu_24h,net_benefit,,record
+T10,R2_demo,net_benefit,0.0243,0.0243473516996334,.4f,results/decision_curve/nb_at_threshold.csv,arm=R2_demo;label=deterioration_icu_24h,ci_lo,,record
+T10,R2_demo,net_benefit,0.0461,0.0460688840453056,.4f,results/decision_curve/nb_at_threshold.csv,arm=R2_demo;label=deterioration_icu_24h,ci_hi,,record
+T10,R2_demo,vs_treat_all,+0.0062,0.0062431715311378,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R2_demo;label=deterioration_icu_24h,vs_treat_all,,record
+T10,R2_demo,vs_treat_all,+0.0022,0.0022266724178821,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R2_demo;label=deterioration_icu_24h,vs_treat_all_lo,,record
+T10,R2_demo,vs_treat_all,+0.0101,0.0100575636534146,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R2_demo;label=deterioration_icu_24h,vs_treat_all_hi,,record
+T10,R2_demo,beats_treat_all,yes,,verdict,results/decision_curve/nb_at_threshold.csv,arm=R2_demo;label=deterioration_icu_24h,beats_treat_all,,not_applicable
+T10,R2_demo,flagged_fraction,0.7987,0.7986577181208053,.4f,results/decision_curve/nb_at_threshold.csv,arm=R2_demo;label=deterioration_icu_24h,flagged_fraction,,record
+T10,R2_demo,mean_predicted,0.1218,0.1217814195450097,.4f,results/decision_curve/nb_at_threshold.csv,arm=R2_demo;label=deterioration_icu_24h,mean_predicted,,record
+T10,R6_waveform,net_benefit,0.0334,0.0333836255484452,.4f,results/decision_curve/nb_at_threshold.csv,arm=R6_waveform;label=deterioration_icu_24h,net_benefit,,record
+T10,R6_waveform,net_benefit,0.0220,0.0220088630142827,.4f,results/decision_curve/nb_at_threshold.csv,arm=R6_waveform;label=deterioration_icu_24h,ci_lo,,record
+T10,R6_waveform,net_benefit,0.0449,0.0448963000794867,.4f,results/decision_curve/nb_at_threshold.csv,arm=R6_waveform;label=deterioration_icu_24h,ci_hi,,record
+T10,R6_waveform,vs_treat_all,+0.0045,0.0045436415032169,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R6_waveform;label=deterioration_icu_24h,vs_treat_all,,record
+T10,R6_waveform,vs_treat_all,+0.0038,0.0038156990266337,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R6_waveform;label=deterioration_icu_24h,vs_treat_all_lo,,record
+T10,R6_waveform,vs_treat_all,+0.0053,0.0052833118239422,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R6_waveform;label=deterioration_icu_24h,vs_treat_all_hi,,record
+T10,R6_waveform,beats_treat_all,yes,,verdict,results/decision_curve/nb_at_threshold.csv,arm=R6_waveform;label=deterioration_icu_24h,beats_treat_all,,not_applicable
+T10,R6_waveform,flagged_fraction,0.9575,0.9575464335882627,.4f,results/decision_curve/nb_at_threshold.csv,arm=R6_waveform;label=deterioration_icu_24h,flagged_fraction,,record
+T10,R6_waveform,mean_predicted,0.2502,0.2502276159748516,.4f,results/decision_curve/nb_at_threshold.csv,arm=R6_waveform;label=deterioration_icu_24h,mean_predicted,,record
+T10,R1_prevalence,net_benefit,0.0288,0.0288399840452283,.4f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,net_benefit,,record
+T10,R1_prevalence,net_benefit,0.0174,0.0174486621245496,.4f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,ci_lo,,record
+T10,R1_prevalence,net_benefit,0.0403,0.0403326005739267,.4f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,ci_hi,,record
+T10,R1_prevalence,vs_treat_all,+0.0000,0.0,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,vs_treat_all,,record
+T10,R1_prevalence,vs_treat_all,-0.0000,-1.3877787807814457e-17,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,vs_treat_all_lo,,record
+T10,R1_prevalence,vs_treat_all,+0.0000,1.3877787807814457e-17,+.4f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,vs_treat_all_hi,,record
+T10,R1_prevalence,beats_treat_all,no,,verdict,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,beats_treat_all,,not_applicable
+T10,R1_prevalence,flagged_fraction,1.0000,1.0,.4f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,flagged_fraction,,record
+T10,R1_prevalence,mean_predicted,0.1217,0.1217387554443917,.4f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,mean_predicted,,record
+T10,meta|threshold,threshold,0.10,0.1,.2f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,threshold,,record
+T10,meta|treat_all,treat_all,0.0288,0.0288399840452283,.4f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,net_benefit_treat_all,,record
+T10,meta|prevalence,prevalence,0.1260,0.1259559856407054,.4f,results/decision_curve/nb_at_threshold.csv,arm=R1_prevalence;label=deterioration_icu_24h,prevalence,,record

@@ -1,0 +1,597 @@
+{
+  "generated": "2026-09-07",
+  "figures": {
+    "fig1_workflow": {
+      "claims": [
+        {
+          "text": "1.5",
+          "value": 1.5,
+          "kind": "constant",
+          "source": "scripts/checks/check_p6_numbers.py::KNOWN_DECIMALS",
+          "why": "hours of data the benchmark assembles"
+        },
+        {
+          "text": "90",
+          "value": 90,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "minutes, and a mortality horizon"
+        },
+        {
+          "text": "129,057",
+          "value": 129057,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "ECGs in the reproduced cohort"
+        },
+        {
+          "text": "71,098",
+          "value": 71098,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "patients in the reproduced cohort"
+        },
+        {
+          "text": "121,195",
+          "value": 121195,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "stays in the reproduced cohort"
+        },
+        {
+          "text": "20",
+          "value": 20,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "folds in the published split"
+        },
+        {
+          "text": "0",
+          "value": 0,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "a fold index and the reference value of a difference"
+        },
+        {
+          "text": "17",
+          "value": 17,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "highest training fold index; folds 0 to 17 are the eighteen training folds"
+        },
+        {
+          "text": "18",
+          "value": 18,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "validation fold, and the number of training folds"
+        },
+        {
+          "text": "19",
+          "value": 19,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "test fold"
+        },
+        {
+          "text": "6,439",
+          "value": 6439,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "ECGs in the test fold"
+        },
+        {
+          "text": "3,644",
+          "value": 3644,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "patients in the test fold"
+        },
+        {
+          "text": "25,756",
+          "value": 25756,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "crop-level rows in the test fold"
+        },
+        {
+          "text": "425,011",
+          "value": 425011,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "adult ED stays in the superset"
+        },
+        {
+          "text": "205,465",
+          "value": 205465,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "patients in the superset"
+        },
+        {
+          "text": "85,209",
+          "value": 85209,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "held-out superset stays"
+        },
+        {
+          "text": "9",
+          "value": 9,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "1",
+          "value": "1",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "0",
+          "value": 0,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::arms[R1_prevalence].inputs",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "2",
+          "value": "2",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "1",
+          "value": 1,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::arms[R2_demo].inputs",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "3",
+          "value": "3",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "1",
+          "value": 1,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::arms[R3_acqctx_pre].inputs",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "3b",
+          "value": "3b",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "2",
+          "value": 2,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::arms[R3b_acqctx_window].inputs",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "4",
+          "value": "4",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "2",
+          "value": 2,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::arms[R4_demo_acq].inputs",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "5",
+          "value": "5",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "2",
+          "value": 2,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::arms[R5_tabular].inputs",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "6",
+          "value": "6",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "1",
+          "value": 1,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::arms[R6_waveform].inputs",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "7",
+          "value": "7",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "3",
+          "value": 3,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::arms[R7_waveform_demo_acq].inputs",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "8",
+          "value": "8",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "1",
+          "value": 1,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::arms[R8_waveform_matched].inputs",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "1",
+          "value": "1",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "5",
+          "value": "5",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "50",
+          "value": 50,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "tuning trials"
+        },
+        {
+          "text": "6",
+          "value": "6",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "7",
+          "value": "7",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "5",
+          "value": 5,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "structural"
+        },
+        {
+          "text": "10,000",
+          "value": 10000,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "bootstrap resamples"
+        },
+        {
+          "text": "5",
+          "value": 5,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::family.contrasts",
+          "why": "declared before any run existed"
+        },
+        {
+          "text": "3",
+          "value": 3,
+          "kind": "declared",
+          "source": "comparisons/acq_context_audit.yaml::labels",
+          "why": "declared before any run existed"
+        }
+      ],
+      "labels": [
+        "a  Cohort",
+        "Reproduced without modification. The benchmark assembles the first 1.5 hours after arrival and requires an ECG within about 90 minutes, so",
+        "the cohort conditions on ECG presence.",
+        "MIMIC-IV-Ext-MDS-ED",
+        "v1.0.0, credentialed",
+        "PhysioNet release",
+        "Reproduced cohort",
+        "129,057 ECGs, 71,098 patients",
+        "121,195 ED stays",
+        "Published split",
+        "20 folds, patient-stratified",
+        "train 0-17, val 18, test 19",
+        "Test fold",
+        "6,439 ECGs, 3,644 patients",
+        "25,756 crops",
+        "MIMIC-IV-ED, a separate denominator rather than a pool this cohort was drawn from",
+        "425,011 adult ED stays, 205,465 patients, 85,209 held out for the acquisition-propensity diagnostic alone",
+        "b  Nine pre-declared arms, nested input sets",
+        "No signal",
+        "Row 1",
+        "base rate",
+        "floor",
+        "Row 2",
+        "age, sex",
+        "conventional",
+        "Row 3",
+        "acquisition context",
+        "confirmatory",
+        "Row 3b",
+        "+ index window",
+        "leakage bound",
+        "Row 4",
+        "demo. + context",
+        "confirmatory",
+        "Benchmark",
+        "Row 5",
+        "vitals and labs",
+        "clinical reference",
+        "Waveform",
+        "Row 6",
+        "waveform, all leads",
+        "audit target",
+        "Row 7",
+        "waveform + both",
+        "ceiling",
+        "Context fixed",
+        "Row 8",
+        "row 6, strata fixed",
+        "confirmatory",
+        "Rows 1 to 5 are gradient-boosted trees at an identical 50-trial budget. Rows 6 and 7 use the benchmark's own published architecture. Every",
+        "arm is trained at 5 seeds.",
+        "c  Evaluation protocol",
+        "Record-level score",
+        "four crops averaged",
+        "one row per ECG",
+        "Patient-clustered bootstrap",
+        "10,000 resamples",
+        "the unit is the patient",
+        "Paired contrasts",
+        "5 x 3 family",
+        "Holm corrected",
+        "Noise floor",
+        "one arm rerun unchanged",
+        "under a new seed"
+      ]
+    },
+    "fig2_architecture": {
+      "claims": [
+        {
+          "text": "9",
+          "value": 9,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "structural"
+        },
+        {
+          "text": "129,057",
+          "value": 129057,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "ECGs in the reproduced cohort"
+        },
+        {
+          "text": "1",
+          "value": "1",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "2",
+          "value": "2",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "3",
+          "value": "3",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "3b",
+          "value": "3b",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "4",
+          "value": "4",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "5",
+          "value": "5",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "6",
+          "value": "6",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "7",
+          "value": "7",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "8",
+          "value": "8",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "4",
+          "value": 4,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "structural"
+        },
+        {
+          "text": "512",
+          "value": 512,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "model dimension"
+        },
+        {
+          "text": "2.5",
+          "value": 2.5,
+          "kind": "constant",
+          "source": "scripts/checks/check_p6_numbers.py::KNOWN_DECIMALS",
+          "why": "crop length in seconds, from the published configuration"
+        },
+        {
+          "text": "100",
+          "value": 100,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "sampling rate in Hz"
+        },
+        {
+          "text": "15",
+          "value": 15,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "declared family size, bins, and deterioration targets"
+        },
+        {
+          "text": "5",
+          "value": "5",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "463",
+          "value": 463,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "passthrough tabular columns"
+        },
+        {
+          "text": "8",
+          "value": "8",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "6",
+          "value": "6",
+          "kind": "row_label",
+          "source": "comparisons/acq_context_audit.yaml::arms",
+          "why": "the row identifier of a declared arm"
+        },
+        {
+          "text": "143",
+          "value": 143,
+          "kind": "integer",
+          "source": "scripts/checks/check_p6_numbers.py::known_integers",
+          "why": "non-empty strata"
+        }
+      ],
+      "labels": [
+        "a  What is knowable, and when",
+        "the index acquisition",
+        "Fixed at or before it",
+        "Resolves only after it",
+        "time",
+        "Arrival to acquisition",
+        "minutes elapsed",
+        "Hour of day",
+        "as an integer",
+        "Day of week",
+        "ISO weekday",
+        "Month",
+        "calendar month",
+        "Triage acuity",
+        "as recorded, missing kept",
+        "ECG number in stay",
+        "ordinal position",
+        "Prior ECG exists",
+        "indicator",
+        "Days since prior ECG",
+        "null if none",
+        "Prior ED visits",
+        "count before arrival",
+        "ECGs in first 90 min",
+        "resolves after the index",
+        "Inter-ECG interval",
+        "undefined on most records",
+        "Care unit at acquisition",
+        "one level on the whole cohort",
+        "Cardiologist over-read",
+        "declared, probed, not built",
+        "9 pre-acquisition features. Every one carries an availability timestamp and a unit test",
+        "that fails if that timestamp postdates the index time; the test passes on all 129,057",
+        "records and fails on each of the nine when it is deliberately poisoned.",
+        "b  Input blocks by arm, and the estimator each uses",
+        "A filled cell is a block the arm sees.",
+        "Row 1",
+        "Row 2",
+        "Row 3",
+        "Row 3b",
+        "Row 4",
+        "Row 5",
+        "Row 6",
+        "Row 7",
+        "Row 8",
+        "Age, sex",
+        "Acquisition context",
+        "Index window",
+        "Vitals, labs",
+        "Waveform",
+        "Estimator",
+        "gradient-boosted trees",
+        "the benchmark's published state-space model",
+        "The waveform arms read the benchmark's committed configuration rather than its prose: 4 layers at model dimension 512, 2.5-second crops at",
+        "100 Hz, focal binary cross-entropy summed over all 15 targets. Row 5 passes through 463 columns unchanged.",
+        "Row 8 trains nothing. It is row 6 under a within-stratum statistic on 143 non-empty coarsened strata, so no compared pair differs in",
+        "acquisition context."
+      ]
+    }
+  },
+  "totals": {
+    "claims": 65,
+    "labels": 121
+  }
+}

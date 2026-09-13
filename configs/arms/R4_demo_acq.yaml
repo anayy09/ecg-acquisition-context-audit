@@ -1,0 +1,3 @@
+arm: R4_demo_acq
+features_used: [demographics, acq_pre]
+role: confirmatory

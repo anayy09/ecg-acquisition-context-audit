@@ -1,0 +1,47 @@
+{
+  "gate": "G2",
+  "rule": "D-041: the local macro over all 15 deterioration targets falls inside the published ECG-waveforms-only interval",
+  "supersedes": "PLAN.md's original 'within 0.02 AUROC' text, and D-011",
+  "arm": "R6_waveform",
+  "unit": "crop",
+  "unit_note": "crop level, because that is what the published macro computes over; see D-050",
+  "local_macro": 0.8474354094186148,
+  "local_macro_seed_spread": 0.0087159394907877,
+  "n_seeds": 5,
+  "anchor": "version_of_record",
+  "published_macro": 0.8565,
+  "published_ci": [
+    0.841,
+    0.8707
+  ],
+  "other_anchors": [
+    {
+      "anchor": "preprint_v2",
+      "published_macro": 0.8279,
+      "published_ci": [
+        0.8047,
+        0.8511
+      ],
+      "gap": 0.0195354094186148,
+      "inside_published_ci": true
+    }
+  ],
+  "gap": -0.0090645905813852,
+  "inside_published_ci": true,
+  "result": "PASS",
+  "branch": "Proceed. The local reproduction lands inside the published interval, so the comparison rows 3 and 6 rest on is fair.",
+  "caveat": "G2 as D-041 defines it is an easy gate to pass. The published interval spans 0.0297 AUROC because 6 of the 15 targets carry fewer than 50 distinct positive ECGs in the test fold, two of them only nine, and the unweighted macro gives each the same weight as targets carrying over 800. The tabular variant's published interval, over the same 15 targets, spans 0.0033. A pass here is evidence that the reproduction is not badly wrong; it is not evidence that it is precisely right.",
+  "sparsity_counted_at": "record level; a crop-level count would be 4x larger for the same events and would overstate how well informed the sparse targets are",
+  "sparse_targets": {
+    "deterioration_ecmo": 9,
+    "deterioration_mortality_stay": 9,
+    "deterioration_inotropes": 14,
+    "deterioration_severe_hypoxemia": 27,
+    "deterioration_cardiac_arrest": 35,
+    "deterioration_mortality_1d": 49
+  },
+  "g1_full_strength_branch": {
+    "rule": "PLAN.md G1: continue at full strength if R3_acqctx_pre comes within 0.03 AUROC of the waveform arm on at least one label",
+    "status": "resolvable now that a local row 6 exists; evaluated in P3 against the record-level macro, since rows 3 and 6 must be compared on the same unit (D-050)"
+  }
+}

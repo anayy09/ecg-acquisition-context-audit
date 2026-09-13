@@ -1,0 +1,268 @@
+{
+  "source_dirty": false,
+  "source_dirty_paths": [],
+  "preprocess_hash": "1fdca791bde1d9de27432aa81d515b5d91f23c629fe891b3b7e239f31cb0e3c2",
+  "content_hash": "98a8f584d6aecc92110126dc00319ebf499da1b7f9633a5d52830f8a42c6d67b",
+  "memmap_complete": true,
+  "gpu_model": "NVIDIA GeForce GTX 1650",
+  "torch": "2.1.2+cu121",
+  "static_columns": [
+    "age",
+    "sex",
+    "arrival_to_acquisition_minutes",
+    "acquisition_hour_of_day",
+    "acquisition_day_of_week",
+    "acquisition_month",
+    "triage_acuity",
+    "ecg_no_within_stay",
+    "prior_ecg_exists",
+    "days_since_prior_ecg",
+    "prior_ed_visit_count",
+    "triage_acuity__missing",
+    "days_since_prior_ecg__missing"
+  ],
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.5519525140777791,
+      "val_macro": 0.8503946602487044,
+      "epoch_seconds": 521.3
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.5148067880246822,
+      "val_macro": 0.8627188493925516,
+      "epoch_seconds": 521.2
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5067297966639462,
+      "val_macro": 0.8651028599002508,
+      "epoch_seconds": 521.6
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5019877506714334,
+      "val_macro": 0.863792077132354,
+      "epoch_seconds": 520.8
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.498105862681831,
+      "val_macro": 0.8690787709904519,
+      "epoch_seconds": 521.9
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.4951434063367642,
+      "val_macro": 0.8696046644927002,
+      "epoch_seconds": 527.9
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.49223978512396555,
+      "val_macro": 0.8703447648289863,
+      "epoch_seconds": 530.2
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.48822526634558444,
+      "val_macro": 0.867011508715683,
+      "epoch_seconds": 530.2
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.48606794029597106,
+      "val_macro": 0.8721864583221568,
+      "epoch_seconds": 528.3
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.48390908088042667,
+      "val_macro": 0.8731073211163121,
+      "epoch_seconds": 530.3
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.48148190498548604,
+      "val_macro": 0.8736114536950895,
+      "epoch_seconds": 528.7
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.4795734469859965,
+      "val_macro": 0.8718680161190473,
+      "epoch_seconds": 527.9
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.4773228423432945,
+      "val_macro": 0.8748055775256546,
+      "epoch_seconds": 527.5
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.47426854086285863,
+      "val_macro": 0.8672516852821237,
+      "epoch_seconds": 526.6
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.4734418329530183,
+      "val_macro": 0.8709683579211092,
+      "epoch_seconds": 526.0
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.4706622025212537,
+      "val_macro": 0.8724854571541585,
+      "epoch_seconds": 525.5
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.4685146512320881,
+      "val_macro": 0.8665343422691808,
+      "epoch_seconds": 525.4
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.4661523794064845,
+      "val_macro": 0.8632360638890096,
+      "epoch_seconds": 525.0
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.463878095434586,
+      "val_macro": 0.8713089147371659,
+      "epoch_seconds": 524.2
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.46247893853374616,
+      "val_macro": 0.8640523698287509,
+      "epoch_seconds": 523.5
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.46118667387403806,
+      "val_macro": 0.8658960793820621,
+      "epoch_seconds": 523.8
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.458394552061734,
+      "val_macro": 0.8630304888210373,
+      "epoch_seconds": 523.1
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.4569363350698207,
+      "val_macro": 0.8563601151456693,
+      "epoch_seconds": 605.0
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.4544663050670845,
+      "val_macro": 0.8638731692567833,
+      "epoch_seconds": 578.2
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.4538752483626289,
+      "val_macro": 0.8640727317480973,
+      "epoch_seconds": 560.1
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.4524094749238996,
+      "val_macro": 0.8631567634851848,
+      "epoch_seconds": 553.4
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.4501310252912361,
+      "val_macro": 0.8555456128343716,
+      "epoch_seconds": 556.7
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.44843089018722393,
+      "val_macro": 0.8578476550396478,
+      "epoch_seconds": 553.8
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.4464950541663412,
+      "val_macro": 0.8638456718656418,
+      "epoch_seconds": 559.2
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.44479345305259493,
+      "val_macro": 0.8621584418762755,
+      "epoch_seconds": 561.6
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.4438525540659506,
+      "val_macro": 0.8603629908731207,
+      "epoch_seconds": 549.7
+    },
+    {
+      "epoch": 31,
+      "train_loss": 0.4416255701858449,
+      "val_macro": 0.8631542912184287,
+      "epoch_seconds": 545.8
+    },
+    {
+      "epoch": 32,
+      "train_loss": 0.44051183905533364,
+      "val_macro": 0.8637700302791554,
+      "epoch_seconds": 551.9
+    },
+    {
+      "epoch": 33,
+      "train_loss": 0.4399684087387904,
+      "val_macro": 0.8590239676907194,
+      "epoch_seconds": 548.8
+    },
+    {
+      "epoch": 34,
+      "train_loss": 0.43838499153330285,
+      "val_macro": 0.8649232192286991,
+      "epoch_seconds": 542.5
+    },
+    {
+      "epoch": 35,
+      "train_loss": 0.43843748474733685,
+      "val_macro": 0.8594351365999043,
+      "epoch_seconds": 535.3
+    },
+    {
+      "epoch": 36,
+      "train_loss": 0.4349192347368325,
+      "val_macro": 0.8592776430237736,
+      "epoch_seconds": 532.9
+    },
+    {
+      "epoch": 37,
+      "train_loss": 0.4332577547682416,
+      "val_macro": 0.8563456417487099,
+      "epoch_seconds": 530.9
+    },
+    {
+      "epoch": 38,
+      "train_loss": 0.4321614610408485,
+      "val_macro": 0.8562987496490676,
+      "epoch_seconds": 530.1
+    },
+    {
+      "epoch": 39,
+      "train_loss": 0.43133357411706535,
+      "val_macro": 0.8541521226175992,
+      "epoch_seconds": 531.4
+    }
+  ],
+  "stopped_early": "",
+  "note": "See D-038 for why source_dirty is recorded rather than the ledger's own git_dirty flag."
+}

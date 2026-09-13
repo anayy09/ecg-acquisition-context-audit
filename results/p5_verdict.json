@@ -1,0 +1,670 @@
+{
+  "phase": "P5",
+  "threshold": 0.1,
+  "threshold_declared_by": "D-065, closing D-018",
+  "threshold_quoted_at": [
+    "deterioration_icu_24h"
+  ],
+  "threshold_rationale": "9 unnecessary escalations accepted per averted missed ICU-level deterioration. Sits just below the 0.126 prevalence, which leaves treat-all a positive net benefit and a real competitor.",
+  "unit": "record",
+  "recalibration": "none",
+  "calibration_reference": "the simulated null band, not zero. At 15 bins over roughly 6,400 records a perfectly calibrated score still shows an ECE of order 0.01, so the reference is what a calibrated score of this size and shape would produce, computed per cell.",
+  "interval_note": "ECE is a mean of ABSOLUTE per-bin gaps and is therefore positively biased under resampling: a clustered resample duplicates patients, which adds noise that can only push each bin's gap up. The percentile interval can consequently exclude its own point estimate from below. The declared protocol is a percentile interval (D-010) and it is not silently swapped for a bias-corrected one; the null band, not the interval, is what answers whether an arm is calibrated.",
+  "calibration": [
+    {
+      "arm": "R1_prevalence",
+      "label": "deterioration_icu_24h",
+      "inside_null_band": {
+        "equal_mass": true,
+        "equal_width": true
+      },
+      "usable_probabilities": true,
+      "ece": {
+        "equal_width": 0.0042172301963082,
+        "equal_mass": 0.0042172301963082
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0,
+        "equal_mass": 0.0
+      },
+      "mean_predicted": 0.1217387554443917,
+      "observed_rate": 0.1259559856407054
+    },
+    {
+      "arm": "R1_prevalence",
+      "label": "deterioration_mortality_28d",
+      "inside_null_band": {
+        "equal_mass": true,
+        "equal_width": true
+      },
+      "usable_probabilities": true,
+      "ece": {
+        "equal_width": 0.002161025627864,
+        "equal_mass": 0.002161025627864
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0,
+        "equal_mass": 0.0
+      },
+      "mean_predicted": 0.0399982774212996,
+      "observed_rate": 0.0421593030491599
+    },
+    {
+      "arm": "R1_prevalence",
+      "label": "deterioration_mortality_365d",
+      "inside_null_band": {
+        "equal_mass": true,
+        "equal_width": true
+      },
+      "usable_probabilities": true,
+      "ece": {
+        "equal_width": 0.0045230017986384,
+        "equal_mass": 0.0045230017986384
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0,
+        "equal_mass": 0.0
+      },
+      "mean_predicted": 0.1379785538951811,
+      "observed_rate": 0.1425015556938394
+    },
+    {
+      "arm": "R2_demo",
+      "label": "deterioration_icu_24h",
+      "inside_null_band": {
+        "equal_mass": true,
+        "equal_width": true
+      },
+      "usable_probabilities": true,
+      "ece": {
+        "equal_width": 0.0082421965445164,
+        "equal_mass": 0.0155742597236922
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0097226407138345,
+        "equal_mass": 0.0207817944999242
+      },
+      "mean_predicted": 0.1217814195450097,
+      "observed_rate": 0.1259559856407054
+    },
+    {
+      "arm": "R2_demo",
+      "label": "deterioration_mortality_28d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": true
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.0022768424279148,
+        "equal_mass": 0.0168453877993187
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.000147747546066,
+        "equal_mass": 0.0155822008470192
+      },
+      "mean_predicted": 0.0398824606212452,
+      "observed_rate": 0.0421593030491599
+    },
+    {
+      "arm": "R2_demo",
+      "label": "deterioration_mortality_365d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.0465765819247465,
+        "equal_mass": 0.0495187585156621
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0182226107244106,
+        "equal_mass": 0.0538200995457095
+      },
+      "mean_predicted": 0.1374466533295867,
+      "observed_rate": 0.1425015556938394
+    },
+    {
+      "arm": "R3_acqctx_pre",
+      "label": "deterioration_icu_24h",
+      "inside_null_band": {
+        "equal_mass": true,
+        "equal_width": true
+      },
+      "usable_probabilities": true,
+      "ece": {
+        "equal_width": 0.0069739404750615,
+        "equal_mass": 0.008472690165054
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0052378878240855,
+        "equal_mass": 0.0058586850373743
+      },
+      "mean_predicted": 0.1226015696675955,
+      "observed_rate": 0.1259559856407054
+    },
+    {
+      "arm": "R3_acqctx_pre",
+      "label": "deterioration_mortality_28d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.0111694535322821,
+        "equal_mass": 0.0196149816024368
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0097380357306411,
+        "equal_mass": 0.0155553236963253
+      },
+      "mean_predicted": 0.0403083745484329,
+      "observed_rate": 0.0421593030491599
+    },
+    {
+      "arm": "R3_acqctx_pre",
+      "label": "deterioration_mortality_365d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.0193836563396067,
+        "equal_mass": 0.0202381286702927
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0122505527402813,
+        "equal_mass": 0.017483895046679
+      },
+      "mean_predicted": 0.1368153860021029,
+      "observed_rate": 0.1425015556938394
+    },
+    {
+      "arm": "R3b_acqctx_window",
+      "label": "deterioration_icu_24h",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.0169960375698579,
+        "equal_mass": 0.0175269992553981
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0594743457414284,
+        "equal_mass": 0.0704203378861471
+      },
+      "mean_predicted": 0.1216704167128499,
+      "observed_rate": 0.1259559856407054
+    },
+    {
+      "arm": "R3b_acqctx_window",
+      "label": "deterioration_mortality_28d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.010073518827158,
+        "equal_mass": 0.0101769589603761
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0067972329641534,
+        "equal_mass": 0.0062720569139234
+      },
+      "mean_predicted": 0.0403606181167481,
+      "observed_rate": 0.0421593030491599
+    },
+    {
+      "arm": "R3b_acqctx_window",
+      "label": "deterioration_mortality_365d",
+      "inside_null_band": {
+        "equal_mass": true,
+        "equal_width": true
+      },
+      "usable_probabilities": true,
+      "ece": {
+        "equal_width": 0.0105190264415671,
+        "equal_mass": 0.0169516977845411
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0066318648299689,
+        "equal_mass": 0.0087431411851832
+      },
+      "mean_predicted": 0.1365840271786703,
+      "observed_rate": 0.1425015556938394
+    },
+    {
+      "arm": "R4_demo_acq",
+      "label": "deterioration_icu_24h",
+      "inside_null_band": {
+        "equal_mass": true,
+        "equal_width": true
+      },
+      "usable_probabilities": true,
+      "ece": {
+        "equal_width": 0.008717817143991,
+        "equal_mass": 0.0094092990192921
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0007430643480019,
+        "equal_mass": 0.0052342577118191
+      },
+      "mean_predicted": 0.1219346310086542,
+      "observed_rate": 0.1259559856407054
+    },
+    {
+      "arm": "R4_demo_acq",
+      "label": "deterioration_mortality_28d",
+      "inside_null_band": {
+        "equal_mass": true,
+        "equal_width": true
+      },
+      "usable_probabilities": true,
+      "ece": {
+        "equal_width": 0.0050342651661977,
+        "equal_mass": 0.0093198291956792
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0023770624866692,
+        "equal_mass": 0.0035277884002867
+      },
+      "mean_predicted": 0.0400157517005318,
+      "observed_rate": 0.0421593030491599
+    },
+    {
+      "arm": "R4_demo_acq",
+      "label": "deterioration_mortality_365d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.0628556656671656,
+        "equal_mass": 0.0642588480742716
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0585603867545908,
+        "equal_mass": 0.0646806506429264
+      },
+      "mean_predicted": 0.1363822300632089,
+      "observed_rate": 0.1425015556938394
+    },
+    {
+      "arm": "R5_tabular",
+      "label": "deterioration_icu_24h",
+      "inside_null_band": {
+        "equal_mass": true,
+        "equal_width": true
+      },
+      "usable_probabilities": true,
+      "ece": {
+        "equal_width": 0.0102989742448911,
+        "equal_mass": 0.011706798557585
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.003396090611936,
+        "equal_mass": 0.0027208558179744
+      },
+      "mean_predicted": 0.1205590429310439,
+      "observed_rate": 0.1259559856407054
+    },
+    {
+      "arm": "R5_tabular",
+      "label": "deterioration_mortality_28d",
+      "inside_null_band": {
+        "equal_mass": true,
+        "equal_width": true
+      },
+      "usable_probabilities": true,
+      "ece": {
+        "equal_width": 0.007285096102252,
+        "equal_mass": 0.0077329961735155
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.002039941643033,
+        "equal_mass": 0.000685332386549
+      },
+      "mean_predicted": 0.0394599099087983,
+      "observed_rate": 0.0421593030491599
+    },
+    {
+      "arm": "R5_tabular",
+      "label": "deterioration_mortality_365d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.0190338807909615,
+        "equal_mass": 0.0187362526968861
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0058204531560361,
+        "equal_mass": 0.0028614544011878
+      },
+      "mean_predicted": 0.1343560123578984,
+      "observed_rate": 0.1425015556938394
+    },
+    {
+      "arm": "R6_waveform",
+      "label": "deterioration_icu_24h",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.1323320702524205,
+        "equal_mass": 0.1347412508749145
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0175630137980198,
+        "equal_mass": 0.017579597825237
+      },
+      "mean_predicted": 0.2502276159748516,
+      "observed_rate": 0.1259559856407054
+    },
+    {
+      "arm": "R6_waveform",
+      "label": "deterioration_mortality_28d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.112073383110469,
+        "equal_mass": 0.1120048795163375
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0310504026062263,
+        "equal_mass": 0.0317085157563274
+      },
+      "mean_predicted": 0.1541641825654975,
+      "observed_rate": 0.0421593030491599
+    },
+    {
+      "arm": "R6_waveform",
+      "label": "deterioration_mortality_365d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.1199979760955878,
+        "equal_mass": 0.1201695509289704
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0182015299437742,
+        "equal_mass": 0.0169739373823408
+      },
+      "mean_predicted": 0.2550685512860536,
+      "observed_rate": 0.1425015556938394
+    },
+    {
+      "arm": "R7_waveform_demo_acq",
+      "label": "deterioration_icu_24h",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.1302969651518555,
+        "equal_mass": 0.1300671802762449
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0295294140340111,
+        "equal_mass": 0.0271151714263574
+      },
+      "mean_predicted": 0.2426355942456388,
+      "observed_rate": 0.1259559856407054
+    },
+    {
+      "arm": "R7_waveform_demo_acq",
+      "label": "deterioration_mortality_28d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.1102344866959098,
+        "equal_mass": 0.1092868331552025
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0227718805129551,
+        "equal_mass": 0.0221729228771729
+      },
+      "mean_predicted": 0.1514461362043624,
+      "observed_rate": 0.0421593030491599
+    },
+    {
+      "arm": "R7_waveform_demo_acq",
+      "label": "deterioration_mortality_365d",
+      "inside_null_band": {
+        "equal_mass": false,
+        "equal_width": false
+      },
+      "usable_probabilities": false,
+      "ece": {
+        "equal_width": 0.1290627472308957,
+        "equal_mass": 0.1295817767868575
+      },
+      "seed_ece_spread": {
+        "equal_width": 0.0306922496402521,
+        "equal_mass": 0.0299535262709635
+      },
+      "mean_predicted": 0.2611475494023187,
+      "observed_rate": 0.1425015556938394
+    }
+  ],
+  "net_benefit": [
+    {
+      "arm": "R1_prevalence",
+      "label": "deterioration_icu_24h",
+      "net_benefit": 0.0288399840452283,
+      "ci": [
+        0.0174486621245496,
+        0.0403326005739267
+      ],
+      "net_benefit_treat_all": 0.0288399840452283,
+      "vs_treat_all": 0.0,
+      "vs_treat_all_ci": [
+        -1.3877787807814457e-17,
+        1.3877787807814457e-17
+      ],
+      "beats_treat_all": false,
+      "beats_treat_none": true,
+      "flagged_fraction": 1.0,
+      "mean_predicted": 0.1217387554443917,
+      "prevalence": 0.1259559856407054,
+      "seed_nb_spread": 0.0,
+      "usable_probabilities": true,
+      "n_groups": 3626
+    },
+    {
+      "arm": "R2_demo",
+      "label": "deterioration_icu_24h",
+      "net_benefit": 0.0350831555763661,
+      "ci": [
+        0.0243473516996334,
+        0.0460688840453056
+      ],
+      "net_benefit_treat_all": 0.0288399840452283,
+      "vs_treat_all": 0.0062431715311378,
+      "vs_treat_all_ci": [
+        0.0022266724178821,
+        0.0100575636534146
+      ],
+      "beats_treat_all": true,
+      "beats_treat_none": true,
+      "flagged_fraction": 0.7986577181208053,
+      "mean_predicted": 0.1217814195450097,
+      "prevalence": 0.1259559856407054,
+      "seed_nb_spread": 0.0068848308273936,
+      "usable_probabilities": true,
+      "n_groups": 3626
+    },
+    {
+      "arm": "R3_acqctx_pre",
+      "label": "deterioration_icu_24h",
+      "net_benefit": 0.0653451953592424,
+      "ci": [
+        0.0563677461545543,
+        0.0747544994086004
+      ],
+      "net_benefit_treat_all": 0.0288399840452283,
+      "vs_treat_all": 0.0365052113140141,
+      "vs_treat_all_ci": [
+        0.0317128134312779,
+        0.0411235419682827
+      ],
+      "beats_treat_all": true,
+      "beats_treat_none": true,
+      "flagged_fraction": 0.4076791009832995,
+      "mean_predicted": 0.1226015696675955,
+      "prevalence": 0.1259559856407054,
+      "seed_nb_spread": 0.0019770043181936,
+      "usable_probabilities": true,
+      "n_groups": 3626
+    },
+    {
+      "arm": "R3b_acqctx_window",
+      "label": "deterioration_icu_24h",
+      "net_benefit": 0.066229644659487,
+      "ci": [
+        0.0570457107524779,
+        0.0758569111053049
+      ],
+      "net_benefit_treat_all": 0.0288399840452283,
+      "vs_treat_all": 0.0373896606142587,
+      "vs_treat_all_ci": [
+        0.0327205238777137,
+        0.0420298279866046
+      ],
+      "beats_treat_all": true,
+      "beats_treat_none": true,
+      "flagged_fraction": 0.4122054003433744,
+      "mean_predicted": 0.1216704167128499,
+      "prevalence": 0.1259559856407054,
+      "seed_nb_spread": 0.0208105717704594,
+      "usable_probabilities": false,
+      "n_groups": 3626
+    },
+    {
+      "arm": "R4_demo_acq",
+      "label": "deterioration_icu_24h",
+      "net_benefit": 0.0671140939597315,
+      "ci": [
+        0.0580115493843868,
+        0.0766296111832741
+      ],
+      "net_benefit_treat_all": 0.0288399840452283,
+      "vs_treat_all": 0.0382741099145032,
+      "vs_treat_all_ci": [
+        0.0333661247162056,
+        0.0429740135056168
+      ],
+      "beats_treat_all": true,
+      "beats_treat_none": true,
+      "flagged_fraction": 0.3901982206961136,
+      "mean_predicted": 0.1219346310086542,
+      "prevalence": 0.1259559856407054,
+      "seed_nb_spread": 0.002826769332154,
+      "usable_probabilities": true,
+      "n_groups": 3626
+    },
+    {
+      "arm": "R5_tabular",
+      "label": "deterioration_icu_24h",
+      "net_benefit": 0.089728248616964,
+      "ci": [
+        0.0802372250839713,
+        0.0993369575909375
+      ],
+      "net_benefit_treat_all": 0.0288399840452283,
+      "vs_treat_all": 0.0608882645717357,
+      "vs_treat_all_ci": [
+        0.0560039145580182,
+        0.0654452356244434
+      ],
+      "beats_treat_all": true,
+      "beats_treat_none": true,
+      "flagged_fraction": 0.2397377867956922,
+      "mean_predicted": 0.1205590429310439,
+      "prevalence": 0.1259559856407054,
+      "seed_nb_spread": 0.0017168721710629,
+      "usable_probabilities": true,
+      "n_groups": 3626
+    },
+    {
+      "arm": "R6_waveform",
+      "label": "deterioration_icu_24h",
+      "net_benefit": 0.0333836255484452,
+      "ci": [
+        0.0220088630142827,
+        0.0448963000794867
+      ],
+      "net_benefit_treat_all": 0.0288399840452283,
+      "vs_treat_all": 0.0045436415032169,
+      "vs_treat_all_ci": [
+        0.0038156990266337,
+        0.0052833118239422
+      ],
+      "beats_treat_all": true,
+      "beats_treat_none": true,
+      "flagged_fraction": 0.9575464335882627,
+      "mean_predicted": 0.2502276159748516,
+      "prevalence": 0.1259559856407054,
+      "seed_nb_spread": 0.0040407193520975,
+      "usable_probabilities": false,
+      "n_groups": 3626
+    },
+    {
+      "arm": "R7_waveform_demo_acq",
+      "label": "deterioration_icu_24h",
+      "net_benefit": 0.0366959748885767,
+      "ci": [
+        0.0254475966384883,
+        0.0481662494021969
+      ],
+      "net_benefit_treat_all": 0.0288399840452283,
+      "vs_treat_all": 0.0078559908433483,
+      "vs_treat_all_ci": [
+        0.0069033793452815,
+        0.0088282150787991
+      ],
+      "beats_treat_all": true,
+      "beats_treat_none": true,
+      "flagged_fraction": 0.9277352895270796,
+      "mean_predicted": 0.2426355942456388,
+      "prevalence": 0.1259559856407054,
+      "seed_nb_spread": 0.0084803079964622,
+      "usable_probabilities": false,
+      "n_groups": 3626
+    }
+  ],
+  "ranked_by_net_benefit": [
+    "R5_tabular",
+    "R4_demo_acq",
+    "R3b_acqctx_window",
+    "R3_acqctx_pre",
+    "R7_waveform_demo_acq",
+    "R2_demo",
+    "R6_waveform",
+    "R1_prevalence"
+  ],
+  "best_arm_at_threshold": "R5_tabular",
+  "caveat": "Net benefit reads the PROBABILITY SCALE; AUROC reads only the ranking. An arm that ranks well can still lose at a fixed threshold because its probabilities are inflated, and that is a finding about the probability scale rather than about discrimination. R6_waveform and R7_waveform_demo_acq were fitted under focal BCE at gamma 2 (D-049) and their reported score is a mean over four crops (D-050) and then over five seeds (D-055). D-065 stated this before any of these numbers existed, and recalibration was declared out of scope in the same entry because only test-fold predictions are stored and refitting on them is circular. No net-benefit result may be read as evidence about discrimination, and no claim in the abstract rests on one.",
+  "what_this_does_not_decide": "Nothing here changes any pre-declared outcome. All three quantitative targets failed at the endpoints they named (D-036, D-062, D-063) and the horizon-ladder trend is unsupported (D-062). Calibration and net benefit are strengtheners 9 and 10 in PLAN.md section 4, cut first if the schedule slips, and the confirmatory set depends on neither."
+}

@@ -1,0 +1,3 @@
+arm: R5_tabular
+features_used: [vitals, labs]
+role: clinical_reference

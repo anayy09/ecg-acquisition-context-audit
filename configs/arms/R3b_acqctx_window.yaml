@@ -1,0 +1,6 @@
+arm: R3b_acqctx_window
+features_used: [acq_pre, acq_window]
+role: leakage_suspect_upper_bound
+notes: >
+  Reported separately. A gain over R3 is a leakage measurement, not a finding
+  about triage behaviour. See DECISIONS.md D-006.

@@ -1,0 +1,4 @@
+arm: R3_acqctx_pre
+features_used: [acq_pre]
+role: confirmatory
+notes: The claim lives here. No waveform, no demographics, no acq_window.

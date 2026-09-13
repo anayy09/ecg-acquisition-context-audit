@@ -1,0 +1,26 @@
+{
+  "generated": "2026-09-13",
+  "verify_exit_code": 0,
+  "findings_total": 248,
+  "by_class": {
+    "dirty_tree": 158,
+    "orphan_registration": 89,
+    "ladder_reference_arm": 1
+  },
+  "uncovered": 0,
+  "uncovered_examples": [],
+  "strict": {
+    "exit_code": 1,
+    "findings_total": 248,
+    "by_class": {
+      "dirty_tree": 158,
+      "orphan_registration": 89,
+      "ladder_reference_arm": 1
+    },
+    "uncovered": 0,
+    "uncovered_examples": [],
+    "identical_findings_to_plain_verify": true
+  },
+  "live_runs": 162,
+  "runs_source_dirty": 0
+}

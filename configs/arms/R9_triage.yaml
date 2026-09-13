@@ -1,0 +1,10 @@
+arm: R9_triage
+features_used: [triage_acuity]
+role: exploratory
+notes: >-
+  Added after the results existed, at both reviews' suggestion, to show what
+  the acquisition-context block adds beyond the acuity a triage nurse
+  already records. Outside every declared comparison and every Holm family.
+  It names one feature rather than a block because `triage_acuity` is
+  declared inside `acq_pre` and a feature belongs to one block; see
+  ARM_FEATURES in scripts/run_arm.py.

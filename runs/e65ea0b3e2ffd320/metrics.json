@@ -1,0 +1,21 @@
+{
+  "auroc": 0.789750289201803,
+  "auroc_stratified__deterioration_icu_24h": 0.7372932819274386,
+  "auroc_stratified__deterioration_mortality_28d": 0.7675391048474524,
+  "auroc_stratified__deterioration_mortality_365d": 0.789750289201803,
+  "fit_seconds": 0.69,
+  "n_pairs__deterioration_icu_24h": 70809,
+  "n_pairs__deterioration_mortality_28d": 25828,
+  "n_pairs__deterioration_mortality_365d": 100276,
+  "n_patients_effective__deterioration_icu_24h": 3548,
+  "n_patients_effective__deterioration_mortality_28d": 3287,
+  "n_patients_effective__deterioration_mortality_365d": 3582,
+  "n_strata_informative__deterioration_icu_24h": 114,
+  "n_strata_informative__deterioration_mortality_28d": 88,
+  "n_strata_informative__deterioration_mortality_365d": 111,
+  "n_test_groups": 3644,
+  "n_test_items": 19263,
+  "n_test_positives": 1994,
+  "source_dirty": 0,
+  "source_run_id_is_r6_seed": 2
+}

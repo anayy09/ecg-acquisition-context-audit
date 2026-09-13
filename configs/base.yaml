@@ -1,0 +1,155 @@
+# Base config. Everything a run needs. No hidden defaults.
+# Overlays in configs/arms/ are merged onto this file; the merged result is
+# hashed to produce run_id.
+
+project: ecg-acquisition-context
+comparison: acq_context_audit
+
+data:
+  root: ${ECG_DATA_ROOT}
+  benchmark: mimic-iv-ext-mds-ed
+  benchmark_version: "1.0.0"
+  split: published            # the MDS-ED published split, unmodified
+  split_column: general_strat_fold   # 20 folds, verified patient-disjoint
+  split_file: ${ECG_DATA_ROOT}/derived/split_published.parquet
+  split_hash: d134667d2e2e4e43f0cdd806aad5e988be8fc79cc2596916debba4151d202c55   # sha256 of split_file; pinned in the manifest
+  cohort: mdsed               # mdsed | superset | availability_matched
+  group_key: subject_id
+
+labels:
+  # Closed by D-007 on 2026-08-23, read from the MDS-ED release.
+  # MDS-ED has no in-hospital-mortality label; see D-031.
+  - deterioration_icu_24h            # ICU admission within 24 h, prevalence 0.1220
+  - deterioration_mortality_28d      # mid horizon,               prevalence 0.0400
+  - deterioration_mortality_365d     # longest horizon,           prevalence 0.1380
+label_missing_sentinel: -999         # dropped per label, never globally
+
+features:
+  demographics: [age, sex]
+  acq_pre:
+    - arrival_to_acquisition_minutes
+    - acquisition_hour_of_day
+    - acquisition_day_of_week
+    - acquisition_month
+    - triage_acuity
+    - ecg_no_within_stay
+    - prior_ecg_exists
+    - days_since_prior_ecg
+    - prior_ed_visit_count
+  acq_window:
+    # leakage-suspect. Never used in a confirmatory arm. See D-005, D-006, D-019.
+    - n_ecgs_first_90min
+    - inter_ecg_interval_minutes
+    - care_unit_at_acquisition
+    - cardiologist_overread_exists   # availability unverified, see D-019
+  vitals: from_benchmark
+  labs: from_benchmark
+  waveform:
+    # Read from the MDS-ED release config, not chosen by us. See D-045.
+    sampling_rate_hz: 100
+    leads: 12
+    seconds: 10                 # length of the stored record
+    crop_samples: 250           # what the model actually sees: 2.5 s at 100 Hz
+    normalize: false
+    clip_amplitude_mv: 3.0
+    resampler: resampy          # matches ecg_utils.prepare_mimicecg
+    # MDS-ED channel_stoi_default order. Mapped by sig_name, never by position:
+    # the staged .hea files carry I, II, III, aVR, aVF, aVL, V1..V6.
+    lead_order: [I, II, V1, V2, V3, V4, V5, V6, III, aVR, aVL, aVF]
+
+model:
+  tabular:
+    type: gradient_boosting
+    implementation: lightgbm
+    version: "4.7.0"
+    tuning_budget_trials: 50
+    tuning_split: validation_only
+  waveform:
+    # The benchmark's published architecture, read from its committed config
+    # rather than from the paper's prose. Closed by D-045; do not edit without
+    # a new decision entry, because G2 measures a reproduction gap against it.
+    type: s4
+    implementation: clinical_ts.ts.s4.S4Predictor   # vendored, hash-pinned
+    backbone: s42
+    model_dim: 512
+    state_dim: 8
+    layers: 4
+    dropout: 0.2
+    tie_dropout: true
+    prenorm: false
+    batchnorm: false            # -> LayerNorm
+    causal: false               # -> bidirectional
+    encoder: none               # raw 12 channels enter S4 directly
+    head: pool
+    head_output_layer: true
+    n_outputs: 15               # all 15 deterioration targets, one model
+    loss: focal_bce_masked      # `bcef`, NOT plain BCE. See D-049.
+    loss_gamma: 2.0             # BCEFLossConfig default
+    loss_reduction: mean_within_target_then_sum_across_targets
+    loss_ignore_nans: true      # the -999 sentinel is masked out
+    # Published evaluation is CROP level: 4 non-overlapping 2.5 s crops
+    # per record, each scored as its own row. We report both. See D-050.
+    eval_protocol_published: crop_level
+    eval_protocol_cross_arm: record_level_mean_sigmoid
+    valtest_crops_per_record: 4
+    optimizer: adamw
+    lr: 0.001
+    weight_decay: 0.001
+    lr_schedule: const
+    batch_size: 32
+    epochs: 40
+    precision: 32
+    # Declared in work units, not wall clock. GPU-hours are measured and
+    # recorded per run as tuning_gpu_hours_observed. See D-046.
+    tuning_budget_configs: 4
+    tuning_budget_epochs_per_config: 12   # was 40; reduced by D-052 after timing
+    tuning_budget_scope: per_arm          # 4 configs for R6 AND 4 for R7
+    tuning_split: validation_only
+    tuning_select_on: val_macro_auroc
+    # A margin below the noise floor does not displace the published config.
+    # Declared by D-053 before any 40-epoch run and before any test number.
+    tuning_tiebreak: prefer_published_within_noise_floor
+    tuning_tiebreak_threshold: 0.0027   # P1's measured floor, an interim proxy
+    tuning_published_candidate: c0
+    tuning_seed: 0
+    # Fixed by D-052 before any candidate ran. c0 is the published config.
+    tuning_candidates:
+      - {id: c0, lr: 0.001,  dropout: 0.2}
+      - {id: c1, lr: 0.0003, dropout: 0.2}
+      - {id: c2, lr: 0.001,  dropout: 0.1}
+      - {id: c3, lr: 0.003,  dropout: 0.2}
+
+training:
+  seeds: [0, 1, 2, 3, 4]
+  noise_floor_seed: 101
+
+evaluation:
+  metric_primary: auroc
+  metrics_secondary: [auprc, brier]
+  bootstrap:
+    n_resamples: 10000
+    unit: subject_id
+    type: percentile
+  calibration:
+    bins: 15
+    schemes: [equal_width, equal_mass]
+  decision_curve:
+    # Closed by D-065 on 2026-09-02, before any curve was computed and before
+    # any arm's calibration was looked at. D-018 required this to be fixed from
+    # the clinical framing, not from how the resulting number reads.
+    threshold: 0.10           # escalate above 10% predicted risk
+    threshold_label: deterioration_icu_24h   # the only label with an ED-time action
+    threshold_rationale: >
+      9 unnecessary escalations accepted per averted missed ICU-level
+      deterioration. Sits just below the 0.126 prevalence, which leaves
+      treat-all a positive net benefit and a real competitor.
+    grid_lo: 0.01
+    grid_hi: 0.50
+    grid_step: 0.01
+    quote_point_at_labels: [deterioration_icu_24h]   # curves drawn for all three
+    recalibration: none       # test-fold-only predictions; refitting here is circular
+
+provenance:
+  record_git_commit: true
+  fail_on_dirty_tree: false   # recorded, never suppressed
+  record_env: [python, torch, numpy, sklearn, lightgbm, cuda, gpu_model]

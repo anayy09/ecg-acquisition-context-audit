@@ -1,0 +1,3 @@
+arm: R2_demo
+features_used: [demographics]
+role: conventional_baseline

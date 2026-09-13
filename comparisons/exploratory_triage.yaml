@@ -1,0 +1,63 @@
+# EXPLORATORY. This is not a pre-declaration and must never be read as one.
+#
+# The two pre-declared families, acq_context_audit and horizon_ladder, were both
+# committed before the runs they govern. This file was written on 2026-09-12,
+# after every result in the paper existed, because both external reviews asked
+# the same question: how much does the acquisition-context block add beyond the
+# clinical acuity a triage nurse already records? No arm in the paper isolates
+# that one feature, so the question could not be answered from what had been run.
+#
+# It is declared here rather than run untagged for two reasons. run_arm.py
+# refuses a run whose comparison does not declare its arm and label, which is the
+# guard that stops a family growing silently, and that guard should not be
+# bypassed just because this family is allowed to grow. And check_provenance.py
+# requires a run's commit to descend from its comparison's first commit, so
+# committing this before the runs puts the ordering in the history: declared
+# after the results, run after the declaration, and both facts checkable.
+#
+# What follows from being exploratory, under acq_context_audit's own
+# exploratory_policy: this arm enters no multiplicity family, is corrected
+# against nothing, is reported in its own panel, and is described as exploratory
+# wherever it appears. It may not be presented as testing a registered
+# prediction, because it tests none.
+
+name: exploratory_triage
+declared: 2026-09-12
+declared_by: A6
+status: exploratory
+opened_by: D-093
+pre_declared: false
+
+question: >
+  How much of the acquisition-context arm's discrimination is carried by triage
+  acuity alone? Triage acuity is one of the nine features in the confirmatory
+  arm and is also one of the 463 columns of the benchmark's own tabular arm, so
+  it is the natural floor for both.
+
+multiplicity: >
+  None. This family is corrected against nothing and pooled with nothing. The
+  audit family is fixed at 15 tests and the horizon ladder at 6, and neither
+  grows to admit this.
+
+arms:
+  - id: R9_triage
+    inputs: [triage_acuity]
+    role: exploratory_comparator
+    notes: >
+      One feature, named directly rather than taken as a block, because
+      triage_acuity is declared inside acq_pre in the source schema and a
+      feature belongs to one block. See ARM_FEATURES in scripts/run_arm.py.
+
+# The three labels the manuscript reports. The ladder horizons are not included:
+# this arm exists to floor the acquisition-context arm at the labels the paper
+# discusses, not to extend a trend test it takes no part in.
+labels:
+  - deterioration_icu_24h
+  - deterioration_mortality_28d
+  - deterioration_mortality_365d
+
+reporting: >
+  Reported beside R3_acqctx_pre and R2_demo at the same labels, in a
+  supplementary panel, labelled exploratory. The comparison of interest is
+  R3 against R9: what the other eight pre-acquisition features add once acuity
+  is already in hand.

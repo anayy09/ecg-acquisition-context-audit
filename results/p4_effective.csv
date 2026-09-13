@@ -1,0 +1,4 @@
+label,n_strata_total,n_strata_informative,n_records_defined,n_records_informative,n_patients_defined,n_patients_effective,n_within_stratum_pairs,n_all_pairs,pair_retention
+deterioration_icu_24h,143,114,6407,6231,3626,3548,70809,4519200,0.015668481147105683
+deterioration_mortality_28d,143,88,6428,5609,3636,3287,25828,1668547,0.015479336212884623
+deterioration_mortality_365d,143,111,6428,6322,3636,3582,100276,5048992,0.019860597917366475

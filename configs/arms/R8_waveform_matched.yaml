@@ -1,0 +1,5 @@
+arm: R8_waveform_matched
+features_used: [waveform]
+data: {cohort: availability_matched}
+role: confirmatory
+notes: Matching specification closes with DECISIONS.md D-004 before the first run.

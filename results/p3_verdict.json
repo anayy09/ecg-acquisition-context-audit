@@ -1,0 +1,118 @@
+{
+  "gate": "G3",
+  "rule": "PLAN.md G3: rows 1 to 7 across three horizons at five seeds, all registered and verifiable; the recovery ratio computed with a paired patient-clustered interval; the noise floor measured",
+  "nature": "G3 is a completeness gate. It asks whether the minimum evidence set exists, not whether the claim succeeded. The two outcomes are reported separately below and must not be read as one.",
+  "unit": "record",
+  "unit_note": "every P3 contrast is one row per ECG; rows 1 to 5 have no crops, so a crop-level waveform score never enters (D-050, D-055)",
+  "criteria": [
+    {
+      "name": "rows 1 to 7, three horizons, 5 seeds, registered and verifiable",
+      "met": true,
+      "observed": "24 of 24 (arm, label) cells present",
+      "missing": [],
+      "seeds_short": []
+    },
+    {
+      "name": "recovery ratio computed with a paired patient-clustered interval",
+      "met": true,
+      "observed": "12 ratio row(s), interval taken on the ratio itself, denominator = per-label record-level R6_waveform (D-055)"
+    },
+    {
+      "name": "noise floor measured",
+      "met": true,
+      "observed": "40 per-(arm, label) record-level spreads, range 0.0000 to 0.0378"
+    }
+  ],
+  "result": "PASS",
+  "primary_quantity": "recovery_ratio",
+  "primary_arm": "R3_acqctx_pre",
+  "primary_reference_arm": "R6_waveform",
+  "primary_label": "deterioration_mortality_365d",
+  "primary": {
+    "label": "deterioration_mortality_365d",
+    "recovery_ratio": 0.6803021685332998,
+    "ci": [
+      0.6149324821071007,
+      0.7476139961098882
+    ],
+    "numerator_auroc": 0.7241058215184337,
+    "denominator_auroc": 0.8294210012612419,
+    "target": 0.7,
+    "meets_target": false,
+    "interval_excludes_target": false
+  },
+  "primary_outcome": "NOT MET",
+  "other_labels_exploratory": [
+    {
+      "label": "deterioration_icu_24h",
+      "recovery_ratio": 0.9365935093543872,
+      "ci": [
+        0.8757675536653107,
+        0.9995075881913936
+      ],
+      "numerator_auroc": 0.7971999468932555,
+      "denominator_auroc": 0.8173201009028147,
+      "target": 0.7,
+      "meets_target": true,
+      "interval_excludes_target": true
+    },
+    {
+      "label": "deterioration_mortality_28d",
+      "recovery_ratio": 0.7448411647315732,
+      "ci": [
+        0.6514658658043114,
+        0.8382008343359183
+      ],
+      "numerator_auroc": 0.7586963387905765,
+      "denominator_auroc": 0.847317456445638,
+      "target": 0.7,
+      "meets_target": true,
+      "interval_excludes_target": false
+    }
+  ],
+  "exploratory_note": "The pre-declared primary is the recovery ratio at deterioration_mortality_365d. The other labels are reported beside it and are EXPLORATORY per the comparison file's exploratory_policy: promoting one of them to the headline would be the post-hoc endpoint switch D-036 already refused once.",
+  "g1_full_strength_branch": {
+    "rule": "PLAN.md G1: continue at full strength if R3_acqctx_pre comes within 0.03 AUROC of the waveform arm on at least one deterioration label",
+    "tolerance": 0.03,
+    "per_label": [
+      {
+        "label": "deterioration_icu_24h",
+        "r3_auroc": 0.7971999468932555,
+        "r6_auroc": 0.8173201009028147,
+        "gap": 0.020120154009559243,
+        "within_tolerance": true
+      },
+      {
+        "label": "deterioration_mortality_28d",
+        "r3_auroc": 0.7586963387905765,
+        "r6_auroc": 0.847317456445638,
+        "gap": 0.08862111765506153,
+        "within_tolerance": false
+      },
+      {
+        "label": "deterioration_mortality_365d",
+        "r3_auroc": 0.7241058215184337,
+        "r6_auroc": 0.8294210012612419,
+        "gap": 0.10531517974280813,
+        "within_tolerance": false
+      }
+    ],
+    "labels_within_tolerance": [
+      "deterioration_icu_24h"
+    ],
+    "resolution": "RESOLVED: R3_acqctx_pre comes within 0.03 AUROC of R6_waveform on 1 of 3 labels (deterioration_icu_24h).",
+    "note": "Left PENDING by D-036 for want of a locally reproduced waveform number, and deferred to P3 by evaluate_g2.py. Evaluated at record level, because rows 3 and 6 must be compared on the same unit (D-050)."
+  },
+  "families": {
+    "acq_context_audit": {
+      "holm_family_size": 15,
+      "tests_present": 12,
+      "tests_pending_r8": 3,
+      "note": "corrected at the DECLARED size of 15 while the three R8 tests are pending, per D-057"
+    },
+    "horizon_ladder": {
+      "note": "a separate family with its own Holm correction; never pooled with acq_context_audit (D-047). Its verdict lives in results/p3_trends.csv and p3_ladder.csv."
+    }
+  },
+  "caveat": "The denominator of every recovery ratio is a locally reproduced row 6 that lands ABOVE the published number (D-054: 0.8474 crop against a published 0.8279). A stronger row 6 makes the 70 percent target harder to meet, not easier, so the target is harder here than it would have been against the published figure. This is the conservative direction and it is stated because a reader's first suspicion of an audit paper is that the audited baseline was weakened."
+}

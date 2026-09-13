@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: If you use this software, please cite both the archive and the paper.
+type: software
+title: ecg-acquisition-context-audit
+abstract: >-
+  Pipeline, pre-declared comparison files, run records and aggregate
+  results for an audit of how much of an ECG deep learning benchmark's
+  reported prognostic value is carried by the circumstances in which
+  the electrocardiogram was recorded.
+authors:
+  - given-names: Anay
+    family-names: Sinhal
+    affiliation: >-
+      Department of Computer and Information Science and Engineering, University of Florida, Gainesville, FL, U.S.A
+  - given-names: Amit
+    family-names: Sinhal
+    affiliation: >-
+      Department of Computer Science and Engineering, JK Lakshmipat University, Jaipur, India
+  - given-names: Arpana
+    family-names: Sinhal
+    affiliation: >-
+      Department of Computer Applications, Manipal University Jaipur, Jaipur, India
+license: MIT
+repository-code: https://github.com/anayy09/ecg-acquisition-context-audit

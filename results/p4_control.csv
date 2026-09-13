@@ -1,0 +1,8 @@
+control,unstratified,within_stratum,n_items,n_strata,demonstrates
+
+single_stratum,0.7383521938885633,0.7383521938885634,800,1,one stratum reproduces plain AUROC exactly
+
+constant_within_stratum,0.7405591389784745,0.5,800,8,a score constant within every stratum collapses to chance
+
+duplicated_rows,0.7383521938885633,0.7383521938885634,800,8,duplicating every row leaves the statistic unchanged
+

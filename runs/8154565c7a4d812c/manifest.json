@@ -1,0 +1,41 @@
+{
+  "run_id": "8154565c7a4d812c",
+  "created_utc": "2026-09-13T01:40:50Z",
+  "tags": {
+    "arm": "R9_triage",
+    "label": "deterioration_mortality_28d",
+    "seed": "0",
+    "comparison": "exploratory_triage",
+    "group": "R9_triage__deterioration_mortality_28d"
+  },
+  "code": {
+    "git_commit": "e77abad9",
+    "git_dirty": true,
+    "git_remote": "https://github.com/anayy09/ECG-Acquisition-Context.git",
+    "entrypoint": "scripts/run_arm.py"
+  },
+  "config": {
+    "path": "configs/base.yaml",
+    "overlays": [
+      "configs/arms/R9_triage.yaml",
+      "configs/generated/R9_triage__deterioration_mortality_28d__seed0.yaml"
+    ],
+    "resolved_sha256": "dbc3ee0f445ff7b91f74ba07c66b64d72f4d6f199d9f384776bffa5b91e1a1d0",
+    "resolved_path": "runs\\8154565c7a4d812c\\config.resolved.yaml"
+  },
+  "data": {
+    "split_file": "$ECG_DATA_ROOT/derived\\split_published.parquet",
+    "split_sha256": "d134667d2e2e4e43f0cdd806aad5e988be8fc79cc2596916debba4151d202c55"
+  },
+  "model": {},
+  "prompt": {},
+  "env": {
+    "python": "3.10.11",
+    "slurm_job_id": null,
+    "slurm_array_job_id": null
+  },
+  "determinism": {
+    "seed": null,
+    "claimed_deterministic": false
+  }
+}

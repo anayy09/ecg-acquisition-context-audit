@@ -1,0 +1,15 @@
+# The environment the reported numbers were produced under.
+# Python 3.10.11 on Windows 11; CUDA 12.1 for the waveform arms.
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+lightgbm==4.7.0
+matplotlib==3.8.2
+PyYAML==6.0.1
+pyarrow==25.0.1
+tqdm==4.70.0
+wfdb==4.3.1
+# Install torch from the CUDA 12.1 index to match the recorded builds:
+#   pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cu121
+torch==2.1.2

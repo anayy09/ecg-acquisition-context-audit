@@ -1,0 +1,41 @@
+{
+  "run_id": "0679a7e560d769a8",
+  "created_utc": "2026-09-03T01:04:35Z",
+  "tags": {
+    "arm": "R1_prevalence",
+    "label": "deterioration_icu_24h",
+    "seed": "1",
+    "comparison": "acq_context_audit",
+    "group": "R1_prevalence__deterioration_icu_24h"
+  },
+  "code": {
+    "git_commit": "c8b7887a",
+    "git_dirty": true,
+    "git_remote": "https://github.com/anayy09/ECG-Acquisition-Context.git",
+    "entrypoint": "scripts/run_arm.py"
+  },
+  "config": {
+    "path": "configs/base.yaml",
+    "overlays": [
+      "configs/arms/R1_prevalence.yaml",
+      "configs/generated/R1_prevalence__deterioration_icu_24h__seed1.yaml"
+    ],
+    "resolved_sha256": "fe7c70332c51fa971621c02f955b7ede408485205a16c8ace815f20ba2b54ecf",
+    "resolved_path": "runs\\0679a7e560d769a8\\config.resolved.yaml"
+  },
+  "data": {
+    "split_file": "$ECG_DATA_ROOT/derived\\split_published.parquet",
+    "split_sha256": "d134667d2e2e4e43f0cdd806aad5e988be8fc79cc2596916debba4151d202c55"
+  },
+  "model": {},
+  "prompt": {},
+  "env": {
+    "python": "3.10.11",
+    "slurm_job_id": null,
+    "slurm_array_job_id": null
+  },
+  "determinism": {
+    "seed": null,
+    "claimed_deterministic": false
+  }
+}
